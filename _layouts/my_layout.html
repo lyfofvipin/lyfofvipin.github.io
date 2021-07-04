@@ -1,0 +1,32 @@
+
+
+<h1> My layout </h1>
+{% include header.html color="blue" %}
+<hr>
+
+{{ content }}
+
+# list all
+{% for post in site.posts %}
+    <h2> {{ post.title }} </h2>
+    <hr>
+{% endfor %}
+
+# List C
+{% for post in site.posts %}
+    {% if post.is_c == "yesy" %}
+        <h2 style="{% if page.title == C2 %} color: aqua; {% endif %}"> {{ post.title }} </h2>
+        <hr>
+    {% endif %}
+{% endfor %}
+
+{% for data in site.data.my_data %}
+    println("{{ data.name }}") <br>
+{% endfor %}
+
+{% for file in site.static_files %}
+    {% if file.image %}
+        <img src="{{ file.path }}" alt="test">
+    {% endif %}
+    println("{{ file.path }}") <br>
+{% endfor %}
