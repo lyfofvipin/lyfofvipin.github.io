@@ -38,21 +38,22 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      tets_var: "test"
-  - scope:
-      path: ""
-      type: "posts/c"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-      type: "posts/meetups"
-    values:
-      layout: "post"
   - scope:
       path: "statics/img"
     values:
       image: true
+
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    twitter: vipin3699
+    github:  vipin3699
+    facebook: vipin3699
+    linkedin: vipin3699
+    youtube_channel: UCogjiQoMtBFOI-jT9y_hQSQ
+    telegram: vipin3699
 
 # Exclude from processing.
 # The following items will not be processed, by default.
