@@ -5,6 +5,8 @@ tags: [meetup]
 
 ---
 
+<img class="img_center" src="statics/img/python_pune_sep2k19.jpg" alt="Python Pune June">
+
 “If there's a book that you want to read, but it hasn't been written yet, then you must write it.”
 ― Toni Morrison
 
