@@ -1,7 +1,8 @@
 ---
 title: Ansible Pune Meetup August 2k19
-categories: c
-tags: [c]
+categories: meetup
+tags: [meetup]
+
 ---
 
 <strong>The more you learn the more you earn.</strong>

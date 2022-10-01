@@ -1,7 +1,8 @@
 ---
 title: Python Pune Meetup September 2k19
-categories: c
-tags: [c]
+categories: meetup
+tags: [meetup]
+
 ---
 
 “If there's a book that you want to read, but it hasn't been written yet, then you must write it.”

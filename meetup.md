@@ -1,15 +1,14 @@
 ---
+permalink: /meetups/
+title: Meetups
+heading: Meetup Posts
 layout: default
 ---
 
 <div class="home">
-  <link rel="shortcut icon" href="#">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- if page.heading -%}
+    <h1 class="page-heading">{{ page.heading }}</h1>
   {%- endif -%}
-
-  {{ content }}
-
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
@@ -25,6 +24,13 @@ layout: default
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
+      {%- assign flag = 0 -%}
+      {%- for tag in post.tags -%}
+        {%- if "meetup" == tag -%}
+          {%- assign flag = 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if flag == 1 -%}
       <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
@@ -36,6 +42,7 @@ layout: default
           {{ post.excerpt }}
         {%- endif -%}
       </li>
+      {%- endif -%}
       {%- endfor -%}
     </ul>
 

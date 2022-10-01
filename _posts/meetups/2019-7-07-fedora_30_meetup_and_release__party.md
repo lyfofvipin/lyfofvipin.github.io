@@ -1,7 +1,7 @@
 ---
 title: Fedora 30 Meetup and Release  Party
-categories: c
-tags: [c]
+categories: meetup
+tags: [meetup]
 ---
 
 Fedora 30 Meetup and release  party

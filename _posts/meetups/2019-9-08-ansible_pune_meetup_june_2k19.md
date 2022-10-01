@@ -1,7 +1,7 @@
 ---
 title: Ansible Pune Meetup June 2k19
-categories: c
-tags: [c]
+categories: meetup
+tags: [meetup]
 ---
 
 Ansible Pune Meetup
