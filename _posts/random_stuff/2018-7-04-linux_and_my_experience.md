@@ -1,7 +1,7 @@
 ---
 title: Linux And My Experience
-categories: c
-tags: [c]
+categories: Linux
+tags: [linux]
 ---
 
 Well, I start using Linux since last 2 years and i became hooked,

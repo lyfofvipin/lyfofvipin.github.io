@@ -4,11 +4,14 @@ categories: meetup
 tags: [meetup]
 ---
 
+
+<img class="img_center" src="statics/img/f30_release_party.png" alt="Fedora Release Party">
+
 Fedora 30 Meetup and release  party
 
 It was a pleasing day, I wake up in the morning and got to know that i can join Fedora Pune meetup and release party for Fedora 30,
 
-so I was very excited about it and i reach there with <a>Pooja Yadav</a> and <a href="https://twitter.com/kumar_pravin">Prveen Kumar</a>,
+so I was very excited about it and i reach there with <a href="https://twitter.com/pooja_yadavv">Pooja Yadav</a> and <a href="https://twitter.com/kumar_pravin">Prveen Kumar</a>,
 
 <a href="https://twitter.com/prravins?lang=en">Pravin Satpute</a> starts the meetup with his talk on new features of Fedora 30.
 

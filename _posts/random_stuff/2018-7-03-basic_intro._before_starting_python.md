@@ -1,7 +1,7 @@
 ---
-title: Basic Intro. Before Starting Python
-categories: python
-tags: [python]
+title: Before You Start Learning Python
+categories: random_stuff
+tags: [random_stuff]
 ---
 
 <h2>What Is Programming?</h2>
