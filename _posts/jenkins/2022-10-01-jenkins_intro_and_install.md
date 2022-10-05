@@ -36,7 +36,7 @@ After Jenkins installation there are a few things you need to do before you star
 
 ### Unlocking the Jenkins 
 
-After Jenkins setup It create a file with the unlock password in windows it's located at `C:\Users\Vipin\.jenkins\secrets\initialAdminPassword` ( replace `Vipin` with your username ) and in linux it's at `/var/lib/jenkins/secrets/initialAdminPassword`.
+After Jenkins setup It create a file with the unlock password in windows it's located at `C:\Users\Vipin\.jenkins\secrets\initialAdminPassword` ( replace `Vipin` with your username ) and in linux it's at `/home/Vipin/.jenkins/secrets/initialAdminPassword` where `Vipin` is my username replace the same with yours.
 
 ### Setting User and Plugins 
 
