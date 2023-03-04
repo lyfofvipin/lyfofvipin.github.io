@@ -10,7 +10,7 @@ Have a fun : )
 
 1. In our this program we will learn how to take inputs in array we will declare a array of length 5 and enter some value into it
 
-<span style="color:#000000;"><a class="css-truncate-target js-navigation-open js-tree-finder-path" style="color:#000000;" href="https://github.com/vipin3699/PROGRSMMING/blob/master/reading-arrey.c"><mark>reading</mark>-array.c</a></span>
+<span style="color:#000000;"><a class="css-truncate-target js-navigation-open js-tree-finder-path" style="color:#000000;" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/reading-arrey.c"><mark>reading</mark>-array.c</a></span>
 
 ```
 #include<stdio.h>;
@@ -44,7 +44,7 @@ All values are stored in the Array
 
 2. In our this program we will read an array and display that on screen , This program will take 5 integer and display them on screen.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/reading-writing-arrey.c"><mark>reading</mark>-writing-array.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/reading-writing-arrey.c"><mark>reading</mark>-writing-array.c</a>
 
 ```
 #include<stdio.h>;
@@ -87,7 +87,7 @@ Entered numbers are :
 
 3. Our this program will take 2 Array and store that in a third Array and display third array on screen.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/sum-of-2-array-in-3.c"><mark>sum</mark>-of-2-<mark>a</mark>rray-in-3.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/sum-of-2-array-in-3.c"><mark>sum</mark>-of-2-<mark>a</mark>rray-in-3.c</a>
 
 ```
 #include<stdio.h>;
@@ -141,7 +141,7 @@ Sum of both array is :
 
 4. Our this Program will take 10 integers and count Positive,Negative and Zeros from that Array.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/counting-pos-neg-zero-in-arrey.c"><mark>count</mark>ing-pos-neg-zero-in-array.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/counting-pos-neg-zero-in-arrey.c"><mark>count</mark>ing-pos-neg-zero-in-array.c</a>
 
 
 ```
@@ -183,7 +183,7 @@ Positive numbers are 4, Negative number are -3 and zeros are 3.
 
 5. It is a kind of calculator which will perform a operation you provide and display result on the screen.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/arey-calculater.c">array-<mark>calcu</mark>later.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/arey-calculater.c">array-<mark>calcu</mark>later.c</a>
 
 ```
 #include<stdio.h>;
@@ -266,7 +266,7 @@ Enter a number : 5
 
 6. Our this program will accept a integer from you and display count number Larger, Smaller and Equal to that number.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/finding-larg-small-=-num-in-arrey.c">finding-larg-small-<mark>=</mark>-num-in-array.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/finding-larg-small-=-num-in-arrey.c">finding-larg-small-<mark>=</mark>-num-in-array.c</a>
 
 ```
 #include<stdio.h>;
@@ -321,7 +321,7 @@ C[0] = A[0];
 
 same process will held with each index.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/finding-large-number-and-storing.c">finding-<mark>larg</mark>e-number-and-storing.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/finding-large-number-and-storing.c">finding-<mark>larg</mark>e-number-and-storing.c</a>
 
 
 ```
@@ -373,7 +373,7 @@ Enter a number :5
 
 8. Our This program will Marge first two array into third array.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/merging-arrey.c"><mark>m</mark>erging-<mark>a</mark>rray.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/merging-arrey.c"><mark>m</mark>erging-<mark>a</mark>rray.c</a>
 
 ```
 #include<stdio.h>;
@@ -427,7 +427,7 @@ Array after merging is :
 
 9. This program will Print reverse of an Array.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/printing-arrey-in-reverse.c">printing-array-in-<mark>reve</mark>r<mark>s</mark>e.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/printing-arrey-in-reverse.c">printing-array-in-<mark>reve</mark>r<mark>s</mark>e.c</a>
 
 ```
 #include<stdio.h>;
@@ -455,7 +455,7 @@ Enter a number :89
 
 10. This program will store reverse of an Array and store it another array and display that.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/reverse-an-arrey-in-another.c"><mark>reve</mark>r<mark>s</mark>e-an-array-in-another.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/reverse-an-arrey-in-another.c"><mark>reve</mark>r<mark>s</mark>e-an-array-in-another.c</a>
 
 ```
 #include<stdio.h>;

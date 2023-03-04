@@ -13,7 +13,7 @@ Let's discuss with help of some example.
 
 1. Let's take two array and print there sum using a function.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/sum-of-2-array-in-3rd-using-function.c"><mark>sum</mark>-of-2-array-in-3rd-using-function.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/sum-of-2-array-in-3rd-using-function.c"><mark>sum</mark>-of-2-array-in-3rd-using-function.c</a>
 
 ```
     int main()
@@ -53,7 +53,7 @@ in <code> c </code> also.
 
 2. Let's copy an array into other using function.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/array-copy-function.c">array-<mark>copy</mark>-function.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/array-copy-function.c">array-<mark>copy</mark>-function.c</a>
 
 ```
     int main()
@@ -88,7 +88,7 @@ Output:-
 In above program we will take values from <code> x </code> and store them in <code> y </code> and,
 as a result value will stored in <code> b </code>.
 <h2>Linear search:-</h2>
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/Linear-search.c"><mark>Lin</mark>ear-search.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/Linear-search.c"><mark>Lin</mark>ear-search.c</a>
 
 The following code implements linear search (Searching algorithm) which is used to find whether,
 a given number is present in an array and if it is present then at what location it occurs.
@@ -146,7 +146,7 @@ In our this Linear search program we have taken an array as input and find a num
 we check each element and if any element match our entered value then we return it's index value,
 and print it, else we return nothing It means there is not such kind of value exist.
 <h2>Binary Search:-</h2>
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/Binary-search.c"><mark>Bin</mark>ary-search.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/Binary-search.c"><mark>Bin</mark>ary-search.c</a>
 
 This code implements binary search in C language.
 It can only be used for sorted arrays, but it's fast as compared to linear search.
