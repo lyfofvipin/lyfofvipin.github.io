@@ -21,7 +21,7 @@ the current position.
 <p style="text-align:justify;"><img class="alignnone size-full wp-image-602" src="https://vipin711.files.wordpress.com/2019/09/f0791-screenshot-from-2018-07-26-23-09-38.png" alt="ascending order selection sory" width="1366" height="768" /></p>
 Here we will make a program for arranging elements in ascending order.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/selection-sort-in-asssanding.c"><mark>sele</mark>ction-sort-in-ascending.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/selection-sort-in-asssanding.c"><mark>sele</mark>ction-sort-in-ascending.c</a>
 ```
 #include<stdio.h>;
 int main()
@@ -64,7 +64,7 @@ Output :-
 
 and here is a program for arranging elements of array in descending order using Selection Sort.
 
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/vipin3699/PROGRSMMING/blob/master/selection-sort-in-disanding.c"><mark>sele</mark>ction-sort-in-discending.c</a>
+<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/selection-sort-in-disanding.c"><mark>sele</mark>ction-sort-in-discending.c</a>
 ```
 #include<stdio.h>;
 int main()
