@@ -47,13 +47,13 @@ Hello world
 ## Keywords
 
 These are words reserved by the language itself and can not be used as variables/identifier.
-
+[Go Doc](https://go.dev/ref/spec#Keywords)
 ```
-break     default      func    interface  select
-case      defer        go      map        struct
-chan      else         goto    package    switch
-const     fallthrough  if      range      type
-continue  for          import  return     var
+break        default      func         interface    select
+case         defer        go           map          struct
+chan         else         goto         package      switch
+const        fallthrough  if           range        type
+continue     for          import       return       var
 ```
 
 ## Character Set
