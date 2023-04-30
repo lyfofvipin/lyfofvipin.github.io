@@ -31,6 +31,7 @@ func main(){
 `import ("fmt")` : Here we are importing a package name `fmt` ( Make sure you use `"` while writing the package name ).
 
 `func main(){` : We are saying that start the program execution from here ( Opening a block for main function ).
+
 **NOTE: `{` should be after the ending bracket of the function `)` or you will get an error.**
 
 `fmt.Println("Hello world")` : Here we are using the `fmt` library and using the `Println` method from the same that will display something on the console (Terminal).
@@ -65,4 +66,8 @@ Alphabets: `A,B,C ...to... Z`  `a,b,c ...to... z`
 Digits: `0,1,2,3,4,5,6,7,8,9`
 
 Spacial Symbols: `~`,\`,`!`,`@`,`#`,`%`,`^`,`&`,*,`(`,`)`,`_`,`-`,`=`,`+`,`|`,`\`,`/`,`{`,`}`,`;`,`:`,`,`,`"`,`'`,`<`,`>`,`.`,`?`,`/`
+
 NOTE: `$` is not supported as a operator in GO language
+
+As we all know that computer only understands Numbers `0`, `1` so There is a standard that represent the Numeric value of each character [ASCII](https://en.wikipedia.org/wiki/ASCII).
+like small `a` is represents as `97` and `A` is represents as `A`.
