@@ -4,9 +4,6 @@ categories: go
 tags: [go]
 ---
 
-Doc was written in this livestream [[Learn Go Day 03 - 02]](https://www.youtube.com/watch?v=0bD7EcF8DJ0)
-and in [[Learn Go Day 04]](https://www.youtube.com/watch?v=9QpYtv1SBwE)
-
 ## Adding Comments
 
 A comment is a statement of a program/library that will not get executed by the compiler during the execution.
@@ -217,7 +214,6 @@ Output:
 $ go run Day04/alert_bell_alert.go 
 This is a  string.
 ```
-Sound:
 
 ### Vertical Tag Character `\v`
 
@@ -339,3 +335,6 @@ You can chose either a\b\c.
 39
 It's vipin and "I am good"
 ```
+
+Doc was written in this livestream [[Learn Go Day 03 - 02]](https://www.youtube.com/watch?v=0bD7EcF8DJ0)
+and in [[Learn Go Day 04]](https://www.youtube.com/watch?v=9QpYtv1SBwE)

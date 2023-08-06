@@ -4,8 +4,6 @@ categories: go
 tags: [go]
 ---
 
-Doc was written in this livestream [[Learn Go Day 03 - 01]](https://www.youtube.com/watch?v=8xfxvhxJfZE) and in [[Learn Go Day 03 - 02]](https://www.youtube.com/watch?v=0bD7EcF8DJ0)
-
 
 ## Intro
 
@@ -71,3 +69,5 @@ NOTE: `$` is not supported as a operator in GO language
 
 As we all know that computer only understands Numbers `0`, `1` so There is a standard that represent the Numeric value of each character [ASCII](https://en.wikipedia.org/wiki/ASCII).
 like small `a` is represents as `97` and `A` is represents as `A`.
+
+Doc was written in this livestream [[Learn Go Day 03 - 01]](https://www.youtube.com/watch?v=8xfxvhxJfZE) and in [[Learn Go Day 03 - 02]](https://www.youtube.com/watch?v=0bD7EcF8DJ0)
