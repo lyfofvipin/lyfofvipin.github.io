@@ -128,3 +128,127 @@ A simple program to understand these data types.
 # Variable
 A variable is a placeholder of some value,
 Each variable name has some data type.
+
+How can we define a variable:
+We need to have a name to which we will be assigning a value I am using `system` and the value I will be putting is this variable is `vipin's system` and we use the keyword `var` to define a variable in go lang.
+
+There are a few rules to define variable names in GO lang:
+
+* A variable names can not have any character then underscore `_`.
+* It should not be a keyword of GO language.
+* A variable names can not start with an numeric value
+* Variable names in go are case sensitive ( variable name `system` and `System` are not same ).
+* A variable name can not be defined twice.
+
+
+Here are a few more examples on how to defining variables:
+```
+package main
+
+import ("fmt")
+
+func main(){
+	var system = "vipin's system"
+	fmt.Println(system)
+}
+```
+
+```
+package main
+
+import ("fmt")
+
+func main(){
+	var system = "vipin's system"
+	var System = "vipin's system"
+	fmt.Println(system)
+	fmt.Println(System)
+}
+```
+
+```
+package main
+
+import ("fmt")
+
+func main(){
+	var a = 545
+	fmt.Println(a)
+}
+```
+
+```
+package main
+
+import ("fmt")
+
+func main(){
+	var b = 'a'
+	fmt.Println(b)
+}
+```
+
+```
+package main
+
+import ("fmt")
+
+func main(){
+	var c = true
+	fmt.Println(c)
+}
+```
+
+A few examples of defining wrong variable names in GO lang:
+```
+package main
+
+import ("fmt")
+
+func main(){
+
+	var import = "wrong variable name because it's a keyword of the go lang"
+	fmt.Println(import)
+
+	var 1wrong_variable_name = "wrong variable name because it's starting from a numeric value"
+	fmt.Println(1wrong_variable_name)
+
+	var wrong-variable_name = "wrong variable name as it has `-` in it"
+	fmt.Println(wrong-variable_name)
+
+	var variable_name = "This is a right variable name to understand the concept of case sensitive"
+	fmt.Println(variable_name)
+
+	var variable_name = "wrong variable name as variable_name is already defined"
+	fmt.Println(variable_name)
+}
+```
+
+NOTE: If a Variable name is defined and not used GO will through an error something like this.
+```
+# command-line-arguments
+<your_file_name>.go:<line:number>: <your variable name> declared but not used
+```
+
+```
+package main
+
+import ("fmt")
+
+func main(){
+
+	var name="vipin"
+}
+
+```
+Output:
+```
+# command-line-arguments
+Day06/wrong_variable_name.go:3:9: imported and not used: "fmt"
+Day06/wrong_variable_name.go:7:6: name declared but not used
+```
+
+
+Doc was written in this livestream [[Learn Go Day 05]](https://www.youtube.com/watch?v=LRRA33vWtlo)
+and in [[Learn Go Day 06]](https://www.youtube.com/watch?v=BtkTn1kjOiE)
+
