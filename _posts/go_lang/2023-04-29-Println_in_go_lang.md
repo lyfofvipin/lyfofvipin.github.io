@@ -66,6 +66,17 @@ Vipin Kumar
 
 It's a method provided by the package/library "fmt" that is used to display things on the console.
 
+
+## Printf
+
+It's a method provided by the package/library "fmt" that is used to display things on the console it is little different then the Println.
+
+
+### Difference Between `Println` and `Printf`.
+**Printf Supports Format specifiers But Println doesn't** ( Will be learning about `Format specifiers` in next blog post )
+
+**Println add an newline in the end but Printf doesn't**
+
 ### Printing Simple Strings.
 
 ```
@@ -83,6 +94,21 @@ Output:
 $ go run Day03/println_in_go.go 
 Hello Vipin.
 This is another line.
+```
+
+```
+package main
+
+import ("fmt")
+
+func main(){
+	fmt.Printf("Hello World!\n")
+}
+```
+Output:
+```
+$ go run Day07/printf_in_go.go 
+Hello World!
 ```
 
 ### Printing Using Escape Sequence In Go Lang
@@ -142,7 +168,9 @@ After Sequence.
 
 This sequence can remove the characters from the console.
 **Adding the same as first element of string will not impact anything**
+
 **Adding the same as last element of string will not impact anything**
+
 **You can not remove the last element of the string with the same**
 
 Example 1:
@@ -336,5 +364,4 @@ You can chose either a\b\c.
 It's vipin and "I am good"
 ```
 
-Doc was written in this livestream [[Learn Go Day 03 - 02]](https://www.youtube.com/watch?v=0bD7EcF8DJ0)
-and in [[Learn Go Day 04]](https://www.youtube.com/watch?v=9QpYtv1SBwE)
+Doc was written in this livestream [[Learn Go Day 03 - 02]](https://www.youtube.com/watch?v=0bD7EcF8DJ0), and in [[Learn Go Day 04]](https://www.youtube.com/watch?v=9QpYtv1SBwE) and in and in [[Learn Go Day 07]](https://www.youtube.com/watch?v=XcSXBAfQJ2w), [[Learn Go Day 07]](https://www.youtube.com/watch?v=kkNJRjr76Is)

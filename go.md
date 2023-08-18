@@ -1,6 +1,6 @@
 ---
 permalink: /go/
-title: go
+title: GO
 heading: Go Language Posts
 layout: default
 ---

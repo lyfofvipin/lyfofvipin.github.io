@@ -122,15 +122,170 @@ There are other Data Type like `Array`, `slice` and `map` which we will be cover
 A simple program to understand these data types.
 
 ```
+package main
 
+import ("fmt")
+
+func main(){
+
+	// Displaying integer 
+	fmt.Println(34435)
+	fmt.Println(0)
+	fmt.Println(-34)
+
+	// Displaying float 
+	fmt.Println(-45.654)
+	fmt.Println(5.0)
+	fmt.Println(0.0)
+
+	// Displaying string 
+	fmt.Println(`sdfgsdf3478347^$%$%`)
+	fmt.Println("asfdsdf$#%$654")
+
+	// Displaying rune
+	fmt.Println('a') // a ASCII value 97
+	fmt.Println('%') // % ASCII value 37
+	fmt.Println('4') // 4 ASCII value 52
+	fmt.Println(')') // ) ASCII value 41
+
+	// Displaying boolean
+	fmt.Println(true)
+	fmt.Println(false)
+}
+```
+
+Output:
+```
+[vipikuma@kvy learn_golang]$ go run Day05/data_type.go 
+34435
+0
+-34
+-45.654
+5
+0
+sdfgsdf3478347^$%$%
+asfdsdf$#%$654
+97
+37
+52
+41
+true
+false
+```
+
+### Format specifiers
+
+Format specifiers helps us in printing multiple data types in a single statement.
+They specifies type of data we are using in the statement.
+
+### %d
+
+This specifier is used to display integers.
+
+### %s
+
+This specifier is used to display strings without `"`.
+
+### %q
+
+This specifier is used to display strings with `"`.
+
+### %f
+
+This specifier is used to display float ( Decimal Values ).
+
+### %t
+
+This specifier is used to display boolean values.
+
+### %T
+
+This specifier is used to display the type of the data/variable.
+
+### %v
+
+This specifier is used to display any kind of data. For example it can do work of `%d`, `%s`, `%f` ,`%t` etc.....
+
+### Examples of Format specifiers
+```
+package main
+
+import ("fmt")
+
+func main(){
+	fmt.Printf("This is an int value %d.\n", 7)
+	fmt.Printf("This is an float value %f.\n", 45.6)
+	fmt.Printf("This is an string value without quote %s.\n", "Vipin")
+	fmt.Printf("This is an string value with quote %q.\n", "vipin")
+	fmt.Printf("This is an boolean value %t.\n", false)
+	fmt.Printf("Type of first value %T, second value %T.\n", 7, "Vipin")
+	fmt.Printf("Print int  %v, print str %v print float.\n", 7, "Vipin", 45.6)
+}
+```
+Output:
+```
+[vipikuma@kvy learn_golang]$ go run Day07/formatspecifiers.go 
+This is an int value 7.
+This is an float value 45.6.
+This is an string value without quote Vipin.
+This is an string value with quote "vipin".
+This is an boolean value false.
+Type of first value int, second value string.
+Print int  7, print str Vipin print float.
+```
+
+Display ony 2 digit after decimal in float value.
+```
+package main
+
+import ("fmt")
+
+func main(){
+	fmt.Printf("It will use space of 10 characters in terminal %10f.\n", 4.5)
+	fmt.Printf("It will display only 2 number after decimal %.2f.\n", 4.5455)
+}
+```
+Output:
+```
+[vipikuma@kvy learn_golang]$ go run Day07/float_specifiers.go 
+It will use space of 10 characters in terminal __4.500000. (__4.500000 = 10 character)
+It will display only 2 number after decimal 4.55.
+```
+
+
+These are a few more specifier GO lang supports.
+
+```
+%b	base 2
+%c	the character represented by the corresponding Unicode code point
+%o	base 8
+%O	base 8 with 0o prefix
+%x	base 16, with lower-case letters for a-f
+%X	base 16, with upper-case letters for A-F
+%U	Unicode format: U+1234; same as "U+%04X"
+%e	scientific notation, e.g. -1.234456e+78
+%E	scientific notation, e.g. -1.234456E+78
+%f	decimal point but no exponent, e.g. 123.456
+%F	synonym for %f
+%g	%e for large exponents, %f otherwise. Precision is discussed below.
+%G	%E for large exponents, %F otherwise
+%p	address of 0th element in base 16 notation, with leading 0x
 ```
 
 # Variable
 A variable is a placeholder of some value,
 Each variable name has some data type.
 
-How can we define a variable:
+## How to define a variable:
+
+Using `var` keyword:
 We need to have a name to which we will be assigning a value I am using `system` and the value I will be putting is this variable is `vipin's system` and we use the keyword `var` to define a variable in go lang.
+
+## Short variable declarations
+you can use `:=` to define a variable in go lang ex: `system := "vipin's system"`.
+Here also we are defining a variable name `system` with value `vipin's system`.
+
+NOTE: In case of Short variable declarations you must assign a value to the variable.
 
 There are a few rules to define variable names in GO lang:
 
@@ -148,7 +303,8 @@ package main
 import ("fmt")
 
 func main(){
-	var system = "vipin's system"
+	var system string
+	system = "vipin's system"
 	fmt.Println(system)
 }
 ```
@@ -250,5 +406,5 @@ Day06/wrong_variable_name.go:7:6: name declared but not used
 
 
 Doc was written in this livestream [[Learn Go Day 05]](https://www.youtube.com/watch?v=LRRA33vWtlo)
-and in [[Learn Go Day 06]](https://www.youtube.com/watch?v=BtkTn1kjOiE)
+and in [[Learn Go Day 06]](https://www.youtube.com/watch?v=BtkTn1kjOiE) and in and in [[Learn Go Day 07]](https://www.youtube.com/watch?v=kkNJRjr76Is)
 
