@@ -73,9 +73,9 @@ It's a method provided by the package/library "fmt" that is used to display thin
 
 
 ### Difference Between `Println` and `Printf`.
-**Printf Supports Format specifiers But Println doesn't** ( Will be learning about `Format specifiers` in next blog post )
+* Printf Supports Format specifiers But Println doesn't ( Will be learning about `Format specifiers` in next blog post )
 
-**Println add an newline in the end but Printf doesn't**
+* Println add an newline in the end but Printf doesn't
 
 ### Printing Simple Strings.
 
@@ -167,11 +167,9 @@ After Sequence.
 #### *backspace* `\b`
 
 This sequence can remove the characters from the console.
-**Adding the same as first element of string will not impact anything**
-
-**Adding the same as last element of string will not impact anything**
-
-**You can not remove the last element of the string with the same**
+* Adding the same as first element of string will not impact anything
+* Adding the same as last element of string will not impact anything
+* You can not remove the last element of the string with the same
 
 Example 1:
 ```
