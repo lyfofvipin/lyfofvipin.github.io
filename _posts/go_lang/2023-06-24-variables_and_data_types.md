@@ -179,31 +179,24 @@ Format specifiers helps us in printing multiple data types in a single statement
 They specifies type of data we are using in the statement.
 
 ### %d
-
 This specifier is used to display integers.
 
 ### %s
-
 This specifier is used to display strings without `"`.
 
 ### %q
-
 This specifier is used to display strings with `"`.
 
 ### %f
-
 This specifier is used to display float ( Decimal Values ).
 
 ### %t
-
 This specifier is used to display boolean values.
 
 ### %T
-
 This specifier is used to display the type of the data/variable.
 
 ### %v
-
 This specifier is used to display any kind of data. For example it can do work of `%d`, `%s`, `%f` ,`%t` etc.....
 
 ### Examples of Format specifiers
@@ -278,10 +271,11 @@ Each variable name has some data type.
 
 ## How to define a variable:
 
-Using `var` keyword:
-We need to have a name to which we will be assigning a value I am using `system` and the value I will be putting is this variable is `vipin's system` and we use the keyword `var` to define a variable in go lang.
+### Using `var` keyword:
 
-## Short variable declarations
+We need to have a name to which we will be assigning a value I am using `system` and the value I will be putting is this variable is `vipin's system` and we use the keyword `var` to define a variable in go lang. if we are not assigning a value then we have to specify the data type like `string`, `int` `float` etc.
+
+### Short variable declarations:
 you can use `:=` to define a variable in go lang ex: `system := "vipin's system"`.
 Here also we are defining a variable name `system` with value `vipin's system`.
 
@@ -297,6 +291,21 @@ There are a few rules to define variable names in GO lang:
 
 
 Here are a few more examples on how to defining variables:
+This will print "" as `string` will define the variable system with blank value if we define it with `int` then the default will be `0` and so on for different data types.
+
+```
+package main
+
+import ("fmt")
+
+func main(){
+	var system string
+	fmt.Println(system)
+}
+```
+
+Here we are defining a variable and assigning a value and printing the same.
+
 ```
 package main
 
@@ -308,6 +317,8 @@ func main(){
 	fmt.Println(system)
 }
 ```
+
+Here we are defining 2 variables `system` and `System` they are 2 different names.
 
 ```
 package main
@@ -322,6 +333,7 @@ func main(){
 }
 ```
 
+We are defining an integer here.
 ```
 package main
 
@@ -333,6 +345,7 @@ func main(){
 }
 ```
 
+We are defining an rune here.
 ```
 package main
 
@@ -344,6 +357,7 @@ func main(){
 }
 ```
 
+We are defining an boolean variable here.
 ```
 package main
 
