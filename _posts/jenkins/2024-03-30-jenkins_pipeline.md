@@ -5,31 +5,31 @@ tags: [jenkins]
 ---
 
 
-# What is Continuous Integration?
+## What is Continuous Integration?
 Continuous Integration is a process of integrating code changes from multiple developers in a single project many times. The software is tested immediately after a code commit. With each code commit, code is built and tested.
 
 
-# What is Continuous Delivery?
+## What is Continuous Delivery?
 A continuous delivery (CD) pipeline is an automated expression of your process for getting software from version control right through to your users and customers. Every change to your software (committed in source control) goes through a complex process on its way to being released. This process involves building the software in a reliable and repeatable manner, as well as progressing the built software (called a "build") through multiple stages of testing and deployment.
 
 
-# What Is Jenkins Pipeline?
+## What Is Jenkins Pipeline?
 
 In Jenkins, a pipeline is a group of events or jobs which are linked with one another in a sequence.
-Now this can be a group of Freestyle Jobs arranged together with help pf the plugin [Build Pipeline](https://plugins.jenkins.io/build-pipeline-plugin/) or we can create a [Jenkins pipeline](#what-is-jenkins-pipeline-Job?).
+Now this can be a group of Freestyle Jobs arranged together with help pf the plugin [Build Pipeline](https://plugins.jenkins.io/build-pipeline-plugin/) or we can create a [Jenkins pipeline](#what-is-jenkins-pipeline-Job).
 
 
-# Why Pipeline?
+## Why Pipeline?
 
 Jenkins is, fundamentally, an automation engine which supports a number of automation patterns. Pipeline adds a powerful set of automation tools onto Jenkins, supporting use cases that span from simple continuous integration to comprehensive CD pipelines
 
 
-# What Is Jenkins Pipeline Job?
+## What Is Jenkins Pipeline Job?
 
 Jenkins Pipeline Job is a combination of plugins that support the integration and implementation of continuous delivery pipelines using Jenkins for more on the same you can follow [this](https://www.jenkins.io/doc/book/pipeline).
 
 
-# Different Between Jenkins Freestyle and Pipeline Jobs
+## Different Between Jenkins Freestyle and Pipeline Jobs
 
 Major differences can be seen in these points:
  
@@ -40,7 +40,7 @@ Major differences can be seen in these points:
  * The Pipeline plugin supports custom extensions to its DSL and multiple options for integration with other plugins.
 
 
-# Writing First Jenkins Pipeline Job
+## Writing First Jenkins Pipeline Job
 
 Pipeline as Code describes a set of features that allow Jenkins users to define pipelined job processes with code, stored and versioned in a source repository. These features allow Jenkins to discover.
 
@@ -52,7 +52,7 @@ But there is limitation as well with the declarative that there is an old [issue
 We will be going through the recommended method for this article.
 
 
-# Creating a Jenkinsfile
+## Creating a Jenkinsfile
 
 Jenkinsfile Domain Specific  Language (DSL) are basic defined semantic to integrate the jenkins plugins in a single pipeline.
 
