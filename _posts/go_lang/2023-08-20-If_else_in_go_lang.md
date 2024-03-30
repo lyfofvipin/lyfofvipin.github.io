@@ -161,3 +161,6 @@ if <condition>
 }
 ```
 is considered as wrong as `{` is in the next line of the if clause.
+
+
+Doc was written in this livestream [[Learn Go Day 08]](https://www.youtube.com/watch?v=)
