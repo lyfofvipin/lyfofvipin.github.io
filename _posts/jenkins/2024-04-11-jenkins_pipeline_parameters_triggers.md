@@ -10,7 +10,7 @@ tags: [jenkins]
 Jenkins parameters can drive the flow using decision making statements In this blog I have the basic syntax how you can use parameters in the pipeline job or in a Jenkinsfile.
 For more details on each parameters you can checkout my this video.
 
-[![Parameterized Jobs In Jenkins](https://img.youtube.com/vi/Tm1-0dffX_A/hqdefault.jpg)](https://www.youtube.com/embed/Tm1-0dffX_A)
+<iframe width="420" height="345"src="https://www.youtube.com/embed/Tm1-0dffX_A"></iframe>
 
 Now let's dive into the code here is a sample pipeline to use different type of parameter.
 
@@ -44,6 +44,7 @@ pipeline {
             }
         }
     }
+
     post{
         always{
             cleanWs()
@@ -116,8 +117,7 @@ pipeline {
 Jenkins triggers are one of the most useful feature in Jenkins they help you in executing the entire pipeline without human interaction.
 Now if you want to know how trigger works in detail you can check this video.
 
-[![Triggers In Jenkins Job](https://img.youtube.com/vi/fbObtG34jJQ/hqdefault.jpg)](https://www.youtube.com/embed/fbObtG34jJQ)
-
+<iframe width="420" height="345"src="https://www.youtube.com/embed/fbObtG34jJQ"></iframe>
 
 Now let's dive into the code here is a sample pipeline to use different type of triggers also we can use more then one trigger in a same pipeline.
 
