@@ -1,5 +1,5 @@
 ---
-title: How To Use Parameters And Triggers In Jenkins Pipeline Job
+title: Getting Started With Parameters And Triggers In Jenkins Pipeline Job
 categories: Jenkins
 tags: [jenkins]
 ---
