@@ -42,11 +42,31 @@ and Download the latest Jenkins Version from [here](https://get.jenkins.io/war-s
 `curl -OL https://get.jenkins.io/war-stable/latest/jenkins.war`
 
 
-Now to start the Jenkins run the command mentioned below.
-```
-export CASC_JENKINS_CONFIG="https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml"
-java -jar jenkins-plugin-manager-*.jar --war jenkins.war --plugins configuration-as-code job-dsl credentials git pipeline-utility-steps
-```
+### Stating The Jenkins Server
+
+
+Setting the Jenkins Home directory
+
+`JENKINS_HOME=".jenkins"`
+
+Setting the CASC file to be used
+
+`export CASC_JENKINS_CONFIG="https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml"`
+
+Download the plugins before starting the Jenkins Server
+
+`java -jar jenkins-plugin-manager-*.jar --war jenkins.war --plugin-download-directory ${JENKINS_HOME}/plugins --plugins configuration-as-code job-dsl credentials git role-strategy pipeline-github-lib workflow-job ssh-slaves`
+
+Validate installed plugin via command 
+
+`ls ${JENKINS_HOME}/plugins/`.
+
+Now Start Jenkins Server
+
+`java -jar jenkins.war`
+
+For more on the same checkout [Jenkins CASC](https://www.jenkins.io/doc/book/managing/casc/)
+
 
 
 ## How To Write JCASC
@@ -238,6 +258,8 @@ Here an complete JCASC configuration based on what we have learned in this lectu
 
 ```
 jenkins:
+  systemMessage: "This is a test JCASC Server for more check the playlist https://www.youtube.com/playlist?list=PL1qKudIXSmxp5KkZMDm2-c_K8Q2QU3VPM"
+
   agentProtocols:
   - "JNLP4-connect"
   - "Ping"
