@@ -34,10 +34,13 @@ Let's start a Jenkins instance with the `Configuration as Code` plugin installed
 ### Download the jar file for plugin-installation-manager
 
 Visit  [releases](https://github.com/jenkinsci/plugin-installation-manager-tool/releases/latest) of plugin-installation-manager and download the war file from there by the time I am writing this post the latest version is `2.12.17`.
+
 `curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.17/jenkins-plugin-manager-2.12.17.jar`
 
 and Download the latest Jenkins Version from [here](https://get.jenkins.io/war-stable/latest).
+
 `curl -OL https://get.jenkins.io/war-stable/latest/jenkins.war`
+
 
 Now to start the Jenkins run the command mentioned below.
 ```
