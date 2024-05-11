@@ -10,10 +10,6 @@ tags: [jenkins]
 Jenkins Configurations As Code as the name says It's a configuration of the entire Jenkins Server in form of code ( yaml ).
 A Jenkins Server have lots of configuration like Jobs, Agent, Credentials, Script Approvals, Global Variables, Plugin Configurations, User, Role Management and Shared Library.
 
-The JCasC plugin searches for `CASC_JENKINS_CONFIG` in the system environment variable.
-* You can pass the JCASC file PATH with this variable here file Name can be anything you want. Example: `CASC_JENKINS_CONFIG="/home/vipikuma/casc.yaml"`. Or
-* You can pass the URL of the YAML file in this variable. Example: `CASC_JENKINS_CONFIG="https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml"`
-
 
 ## If You Have A Jenkins Server Running
 
@@ -23,50 +19,6 @@ If you want to see the JCASC or YAML configuration of your Jenkins you can check
 You can download the same by visiting `Manage Jenkins -> Configuration as Code -> Download Configuration`.
 
 Now you can apply new configurations from here `Manage Jenkins -> Configuration as Code -> Apply new configuration` ( This can be useful while debugging or checking some configurations before pushing the changes to production )
-
-
-
-## Setup New Jenkins Server With JCASC
-
-Let's start a Jenkins instance with the `Configuration as Code` plugin installed we will be using the tool [plugin-installation-manager-tool](https://github.com/jenkinsci/plugin-installation-manager-tool) but there are ways to do the same in rpm install method or on container method to setup Jenkins.
-
-
-### Download the jar file for plugin-installation-manager
-
-Visit  [releases](https://github.com/jenkinsci/plugin-installation-manager-tool/releases/latest) of plugin-installation-manager and download the war file from there by the time I am writing this post the latest version is `2.12.17`.
-
-`curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.17/jenkins-plugin-manager-2.12.17.jar`
-
-and Download the latest Jenkins Version from [here](https://get.jenkins.io/war-stable/latest).
-
-`curl -OL https://get.jenkins.io/war-stable/latest/jenkins.war`
-
-
-### Stating The Jenkins Server
-
-
-Setting the Jenkins Home directory
-
-`JENKINS_HOME=".jenkins"`
-
-Setting the CASC file to be used
-
-`export CASC_JENKINS_CONFIG="https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml"`
-
-Download the plugins before starting the Jenkins Server
-
-`java -jar jenkins-plugin-manager-*.jar --war jenkins.war --plugin-download-directory ${JENKINS_HOME}/plugins --plugins configuration-as-code job-dsl credentials git role-strategy pipeline-github-lib workflow-job ssh-slaves`
-
-Validate installed plugin via command 
-
-`ls ${JENKINS_HOME}/plugins/`.
-
-Now Start Jenkins Server
-
-`java -jar jenkins.war`
-
-For more on the same checkout [Jenkins CASC](https://www.jenkins.io/doc/book/managing/casc/)
-
 
 
 ## How To Write JCASC
@@ -132,13 +84,15 @@ Example 1:
       - id: "test"
         password: "test_jenkins"
         name: "Test User"
-        - mailer:
-            emailAddress: "test@jenkins.com"
+        properties:
+          - mailer:
+              emailAddress: "test@jenkins.com"
       - id: "vipin"
         password: "test_jenkins"
         name: "Kumar Vipin Yadav"
-        - mailer:
-            emailAddress: "abc@jenkins.com"
+        properties:
+          - mailer:
+              emailAddress: "abc@jenkins.com"
 ```
 
 Example 2:
@@ -300,13 +254,15 @@ jenkins:
       - id: "test"
         password: "test_jenkins"
         name: "Test User"
-        - mailer:
-            emailAddress: "test@jenkins.com"
+        properties:
+          - mailer:
+              emailAddress: "test@jenkins.com"
       - id: "vipin"
         password: "test_jenkins"
         name: "Kumar Vipin Yadav"
-        - mailer:
-            emailAddress: "abc@jenkins.com"
+        properties:
+          - mailer:
+              emailAddress: "abc@jenkins.com"
 
   updateCenter:
     sites:
@@ -351,3 +307,49 @@ tool:
 jobs:
   - url: https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jobs/seed_job.groovy
 ```
+
+## Setup New Jenkins Server With JCASC
+
+Let's start a Jenkins instance with the `Configuration as Code` plugin installed we will be using the tool [plugin-installation-manager-tool](https://github.com/jenkinsci/plugin-installation-manager-tool) but there are ways to do the same in rpm install method or on container method to setup Jenkins.
+
+The JCasC plugin searches for `CASC_JENKINS_CONFIG` in the system environment variable.
+* You can pass the JCASC file PATH with this variable here file Name can be anything you want. Example: `CASC_JENKINS_CONFIG="/home/vipikuma/casc.yaml"`. Or
+* You can pass the URL of the YAML file in this variable. Example: `CASC_JENKINS_CONFIG="https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml"`
+
+
+
+### Download the jar file for plugin-installation-manager
+
+Visit  [releases](https://github.com/jenkinsci/plugin-installation-manager-tool/releases/latest) of plugin-installation-manager and download the war file from there by the time I am writing this post the latest version is `2.12.17`.
+
+`curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.17/jenkins-plugin-manager-2.12.17.jar`
+
+and Download the latest Jenkins Version from [here](https://get.jenkins.io/war-stable/latest).
+
+`curl -OL https://get.jenkins.io/war-stable/latest/jenkins.war`
+
+
+### Stating The Jenkins Server
+
+
+Setting the Jenkins Home directory
+
+`export JENKINS_HOME=".jenkins"`
+
+Setting the CASC file to be used
+
+`export CASC_JENKINS_CONFIG="https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml"`
+
+Download the plugins before starting the Jenkins Server
+
+`java -jar jenkins-plugin-manager-*.jar --war jenkins.war --plugin-download-directory ${JENKINS_HOME}/plugins --plugins configuration-as-code job-dsl credentials git role-strategy pipeline-github-lib workflow-job ssh-slaves`
+
+Validate installed plugin via command 
+
+`ls ${JENKINS_HOME}/plugins/`.
+
+Now Start Jenkins Server
+
+`java -jar jenkins.war`
+
+For more on the same checkout [Jenkins CASC](https://www.jenkins.io/doc/book/managing/casc/)
