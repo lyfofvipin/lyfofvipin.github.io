@@ -70,7 +70,7 @@ Here is the flow diagram to understand the same.
 Let's checkout the IF-Else statement Syntax in GO lang.
 
 ```
-if ( <condition> ){
+if <initialization>; <condition> {
 	statements 01
 	statements 02
 	statements 03
@@ -90,7 +90,7 @@ else{
 
 Syntax for using only IF.
 ```
-if ( <condition> ){
+if <initialization>; <condition> {
 	statements 01
 	statements 02
 	statements 03
@@ -102,7 +102,7 @@ if ( <condition> ){
 
 Syntax for using only IF-ELSE-IF-ELSE...
 ```
-if ( <condition> ){
+if <initialization>; <condition> {
 	statements 01
 	statements 02
 	statements 03
@@ -110,7 +110,7 @@ if ( <condition> ){
 	...
 	statements N
 }
-else if ( <condition> ) {
+else if <initialization>; <condition>  {
 	statements 01
 	statements 02
 	statements 03
@@ -118,7 +118,7 @@ else if ( <condition> ) {
 	...
 	statements N
 }
-else if ( <condition> ) {
+else if <initialization>; <condition>  {
 	statements 01
 	statements 02
 	statements 03
@@ -126,7 +126,31 @@ else if ( <condition> ) {
 	...
 	statements N
 }
-else if ( <condition> ) {
+else if <initialization>; <condition>  {
+	statements 01
+	statements 02
+	statements 03
+	...
+	...
+	statements N
+}
+else{
+	statements 01
+	statements 02
+	statements 03
+	...
+	...
+	statements N
+}
+```
+
+`initialization` -> In This step we can assign or create a variable that can be used in the if-else hierarchy it's not mandatory to pass the initialization step but don't forget to add `;` if you are defining.
+If you are defining some variable in `initialization` step then it will not be visible outside the defined if-else hierarchy. 
+
+Now if you are using `()` in if block then you can not use the `initialization` step.
+
+```
+if ( <condition> ) {
 	statements 01
 	statements 02
 	statements 03
@@ -163,4 +187,4 @@ if <condition>
 is considered as wrong as `{` is in the next line of the if clause.
 
 
-Doc was written in this livestream [[Learn Go Day 08]](https://www.youtube.com/watch?v=zRTMA4lim0g)
+Doc was written in this livestream [[Learn Go Day 08]](https://www.youtube.com/watch?v=zRTMA4lim0g) and [[Learn Go Day 10]](https://www.youtube.com/watch?v=LX4DsvuJ7AA)
