@@ -283,6 +283,7 @@ NOTE: In case of Short variable declarations you must assign a value to the vari
 
 There are a few rules to define variable names in GO lang:
 
+## Rules to declare a variable
 * A variable names can not have any character then underscore `_`.
 * It should not be a keyword of GO language.
 * A variable names can not start with an numeric value
@@ -418,6 +419,24 @@ Day06/wrong_variable_name.go:3:9: imported and not used: "fmt"
 Day06/wrong_variable_name.go:7:6: name declared but not used
 ```
 
+## Constant
+There is one more type of variable `const` as the same says you can not change the value of a constant variable.
+
+```
+package main
+
+func main(){
+
+	const PI=3.14
+	PI=3.143
+}
+```
+Output:
+```
+go run Day06/wrong_variable_name.go 
+# command-line-arguments
+Day06/wrong_variable_name.go:6:2: cannot assign to PI (untyped float constant 3.14)
+```
 
 Doc was written in this livestream [[Learn Go Day 05]](https://www.youtube.com/watch?v=LRRA33vWtlo)
 and in [[Learn Go Day 06]](https://www.youtube.com/watch?v=BtkTn1kjOiE) and in and in [[Learn Go Day 07]](https://www.youtube.com/watch?v=kkNJRjr76Is)
