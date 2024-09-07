@@ -77,6 +77,8 @@ This data type only has 2 values.
 
 ## String
 Any values written inside \`\` ( back quote ) or "" ( double quote) is refereed as a string.
+A string is a set of characters it can be of a single character or can be of a multiple characters.
+
 
 Examples:
 
@@ -196,8 +198,13 @@ This specifier is used to display boolean values.
 ### %T
 This specifier is used to display the type of the data/variable.
 
+### %c
+This specifier is used to display the character value hold by a rune
+
 ### %v
 This specifier is used to display any kind of data. For example it can do work of `%d`, `%s`, `%f` ,`%t` etc.....
+
+
 
 ### Examples of Format specifiers
 ```

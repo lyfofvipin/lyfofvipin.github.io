@@ -83,4 +83,57 @@ for {
 `body` -> In this section of the loop we actually wite the code we want to run repetitively writing the body is also not mandatory I know it's useless but it is possible.
 
 
-Doc was written in this livestream [[Learn Go Day 10]](https://www.youtube.com/watch?v=LX4DsvuJ7AA)
+## Using For Loop With Range
+
+`range` keyword in go lang can pass a single value to the loop on every iteration till the end of the iterator.
+for example if you range over `"vipin"` using for loop it will give the value `"v"` on the first run then `"i"` on the second run then `"p"` on the next one and so on.
+Another use case is iterating using a integer.
+
+NOTE: Iterating over an integer can be done using range only after go version `1.22` you can check the same via command `go version`.
+
+Here is the syntax for the same
+
+```
+for <variable_name_for_element> := range <iterator> {
+	<statement>
+	<statement>
+	<statement>
+}
+```
+
+Example:
+
+```
+package main
+
+import ("fmt")
+
+func main(){
+
+	for element := range 10 {
+
+		fmt.Println(element)
+
+	}
+
+}
+```
+
+Output:
+```
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+It always print `1 value less` then the given value as it stats from `0`.
+
+
+Doc was written in this livestream [[Learn Go Day 10]](https://www.youtube.com/watch?v=LX4DsvuJ7AA) and [[Learn Go Day 12]](https://www.youtube.com/watch?v=eE2Ouv6Bxvk)
