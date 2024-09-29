@@ -1,5 +1,5 @@
 ---
-title: Advanced Data Types In Go Lang
+title: Strings In Go Lang
 categories: go
 tags: [go]
 ---
@@ -149,5 +149,46 @@ Index Value 9 has character a.
 Index Value 10 has character r.
 ```
 
+### For Loop With Range On Strings
+
+We can get the length of the string usine `len` function then we can use for loop to iterate from `0` to `length - 1` because string indexing starts from `0`.
+let's say we have a string of length 5 so it's index values are `0,1,2,3,4`.
+
+
+Example:
+```
+package main
+
+import "fmt"
+
+func main() {
+	
+	name := "Vipin Kumar"
+
+	for str := range name {
+
+		fmt.Printf( "Index %d has value %c.\n", str, name[str]  )
+
+	}
+
+}
+```
+
+Output:
+
+```
+go run Day12/forwithoutrange.go 
+Index Value 0 has character V.
+Index Value 1 has character i.
+Index Value 2 has character p.
+Index Value 3 has character i.
+Index Value 4 has character n.
+Index Value 5 has character  .
+Index Value 6 has character K.
+Index Value 7 has character u.
+Index Value 8 has character m.
+Index Value 9 has character a.
+Index Value 10 has character r.
+```
 
 Doc was written in this livestream [[Learn Go Day 12]](https://www.youtube.com/watch?v=eE2Ouv6Bxvk)
