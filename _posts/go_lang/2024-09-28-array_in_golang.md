@@ -167,3 +167,76 @@ Vipin
 M
 ```
 
+Here is a visual representation of the same:
+<img class="img_center" src="statics/img/2darray.png" alt="If-Else">
+
+## Taking input in Arrays
+
+We take input in Arrays in the same way we take normal input here the difference is that we pass the index to `&` for storing the value.
+
+Example:
+```
+package main
+
+import "fmt"
+
+func main(){
+
+	var arr1 [5]int
+
+	fmt.Println(arr1)
+
+	fmt.Println( "Enter value for index 0.")
+	fmt.Scanf( "%d", &arr1[0])
+
+	fmt.Println( "Enter value for index 1.")
+	fmt.Scanf( "%d", &arr1[1])
+
+	fmt.Println( "Enter value for index 2.")
+	fmt.Scanf( "%d", &arr1[2])
+
+	fmt.Println( "Enter value for index 3.")
+	fmt.Scanf( "%d", &arr1[3])
+
+	fmt.Println( "Enter value for index 4.")
+	fmt.Scanf( "%d", &arr1[4])
+
+
+	fmt.Println(arr1)
+
+	for i := 0 ; i < 5; i++ {
+		fmt.Printf( "Enter value for index %d.\n", i)
+		fmt.Scanf( "%d", &arr1[i])
+	}
+
+	fmt.Println(arr1)
+}
+```
+
+Output:
+```
+go run Day13/input.go 
+[0 0 0 0 0]
+Enter value for index 0.
+1
+Enter value for index 1.
+2
+Enter value for index 2.
+3
+Enter value for index 3.
+4
+Enter value for index 4.
+5
+[1 2 3 4 5]
+Enter value for index 0.
+5
+Enter value for index 1.
+4
+Enter value for index 2.
+3
+Enter value for index 3.
+2
+Enter value for index 4.
+1
+[5 4 3 2 1]
+```
