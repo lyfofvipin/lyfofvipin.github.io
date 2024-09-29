@@ -88,6 +88,7 @@ go run Day13/using_colon.go
 ```
 
 In the above example you can see that on `index 9` we have the `value 3434`.
+
 A Array of string act a 2D array.
 
 ## 2D Array
@@ -138,6 +139,9 @@ go run Day13/2Darray.go
 [[0 0] [0 0]] [[1 2] [3 4]] [[1 2 3] [1 2 3] [1 2 3]] [[1 2 3 4 5] [1 2 3 4 5] [1 2 3 4 5] [1 2 3 4 5]]
 ```
 
+Here is a visual representation of the same:
+<img class="img_center" src="statics/img/2darray.png" alt="If-Else">
+
 ## Accessing Values in Array
 
 We can use the index to fetch the value of an array.
@@ -167,12 +171,10 @@ Vipin
 M
 ```
 
-Here is a visual representation of the same:
-<img class="img_center" src="statics/img/2darray.png" alt="If-Else">
 
 ## Taking input in Arrays
 
-We take input in Arrays in the same way we take normal input here the difference is that we pass the index to `&` for storing the value.
+We take input in Arrays in the same way we take normal input here the difference is that we pass the index with the array name to `&` for storing the value.
 
 Example:
 ```
