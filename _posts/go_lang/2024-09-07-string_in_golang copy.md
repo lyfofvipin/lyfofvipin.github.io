@@ -191,4 +191,6 @@ Index Value 9 has character a.
 Index Value 10 has character r.
 ```
 
-Doc was written in this livestream [[Learn Go Day 12]](https://www.youtube.com/watch?v=eE2Ouv6Bxvk)
+**Strings In Go Lang are immutable it means that you can not update the value of a string after initialization.**
+
+Doc was written in this livestream [[Learn Go Day 12]](https://www.youtube.com/watch?v=eE2Ouv6Bxvk) and [[Learn Go Day 14]](https://www.youtube.com/watch?v=-Vp6g79I8C8)

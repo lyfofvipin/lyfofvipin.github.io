@@ -89,11 +89,88 @@ go run Day13/using_colon.go
 
 In the above example you can see that on `index 9` we have the `value 3434`.
 
-A Array of string act a 2D array.
+## Updating Value Of An Array
+
+We can use the index with the array name to update the value of an index.
+
+In below example `arr[0] = 1000` we are updating value of index `0` with integer value `1000`.
+
+Example:
+```
+package main
+
+import "fmt"
+
+func main(){
+
+	arr := [10]int{ 1, 2, 9:3434 }
+
+	fmt.Println(arr)
+
+	arr[0] = 1000
+
+	fmt.Println(arr)
+}
+```
+
+Output:
+```
+go run Day14/udate_str.go 
+[1 2 0 0 0 0 0 0 0 3434]
+[1000 2 0 0 0 0 0 0 0 3434]
+```
+
+## Slicing and Splitting Of Arrays In Go
+
+This is a nice and smooth way of cutting an array or getting sub arrays out of a single array.
+Split mechanism is used to divide an array into a sub array of your choice.
+
+To slice an array we use this syntax `array_name[index_from_where_to_split:index_until_split+1]`.
+
+In above example `array_name` is the array you want to split.
+
+`index_from_where_to_split` Is the integer value from where you want to cut the array.
+
+`index_until_split+1` Is an integer till where you want to cut the array + 1 example if you want array to be cut till index `8` so you have to write `9`.
+
+and `:` is used to septate these integers.
+
+In below example we want to split array `arr` from index `3` to index `6` so we are using statement `arr[3:7]`.
+
+Example:
+```
+package main
+
+import "fmt"
+
+func main(){
+
+	arr := [10]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+	sli := a[3:7]
+
+	fmt.Println(arr)
+	fmt.Println(sli)
+
+}
+```
+
+Output:
+```
+go run Day14/split.go 
+[0 1 2 3 4 5 6 7 8 9]
+[3 4 5 6]
+```
+
+**Now once you split an array you get a slice which is similar to array but not array it's a completely different data type name as Slice.**
+
+For more on Slices you can see slice blog post in below URL: https://lyfofvipin.github.io/go
 
 ## 2D Array
 
 A 1-D array is a collection of several elements that contain only one row of elements. The 2-D array is a collection of rows and columns where each row contains smiler number of columns. The requirement of 2-D array is removing the need of several 1-d array and it may be helpful to create mathematical data structure named as matrix and many more.
+
+*NOTE: A Array of string act a 2D array.*
 
 ### How to define a 2D Array
 
@@ -242,3 +319,7 @@ Enter value for index 4.
 1
 [5 4 3 2 1]
 ```
+
+
+
+Doc was written in this livestream [[Learn Go Day 13]](https://www.youtube.com/watch?v=i7TRweKnyAQ) and [[Learn Go Day 14]](https://www.youtube.com/watch?v=-Vp6g79I8C8)
