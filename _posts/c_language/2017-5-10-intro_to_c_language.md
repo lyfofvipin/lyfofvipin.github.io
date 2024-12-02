@@ -1,5 +1,5 @@
 ---
-title: INTRO to C language.
+title: Intro to C language
 categories: c
 tags: [c]
 ---
@@ -16,12 +16,23 @@ Now let's talk about the levels of language
  	<li><strong>HIGH-LEVEL</strong></li>
 </ul>
 <h3>Low-Level languages</h3>
-To code in a low-level language, we need a good knowledge of binaries and how we can directly interact with hardware. Without knowledge of binaries and hardware, we couldn't use a low-level language.
+To code in a low-level language, we need a good knowledge of binaries and how we can directly interact with hardware. Without knowledge of binaries and hardware, we couldn't use a low-level language. They are focused on *what to do* and *how to do*.
 
 <h3>High-level languages</h3>
-High-level languages are those languages which do not depend on any assembly language knowledge or we can say that a user does not need any knowledge of hardware connectivity via languages because a high-level language is developed that any user can use that without any deep knowledge of assembly language or can directly start writing code without much knowledge of drivers and all.
+High-level languages are those languages which do not depend on any assembly language knowledge or we can say that a user does not need any knowledge of hardware connectivity via languages because a high-level language is developed that any user can use that without any deep knowledge of assembly language or can directly start writing code without much knowledge of drivers and all. These languages are focused on *what to do* because they are easy to code so any developer will be knowing how to do.
 
 That's the different thing that a low-level language is easily understood by computer or we can say the machine but a high-level language is easily understood by us that is why all the languages which are considered in programming are high-level.
+
+## Features Of C Language
+
+* It's a very easy language with only 32 keywords
+* It's a general purpose language
+* It's a structured programming language
+* It support all the structure programming language concepts. 
+  * decision making 
+  * Repetition 
+  * Modular programming 
+And it has a wide set of library ( library set of predefine solutions for example stdio.h )
 
 <h4>Environment to write Code:-</h4>
 So to run a C program you need to have GCC in your system and I would suggest you use <a href="https://code.visualstudio.com/">Visual Studio Code</a> as your text editor and run your code in via Command line. And if you got mess up with setting it in windows then you can use <a href="http://www.codeblocks.org/">Code Block</a>.
@@ -35,7 +46,43 @@ and command
 <pre>./a.out</pre>
 to saw the Output of the program.
 
-Now let's dig into a bit with C.
+## Structure Of A C Language Program
+
+```
+#include<stdio.h>
+
+void main()
+{
+    printf("Hello World.");
+}
+```
+
+`#include<stdio.h>` : By this line we are trying import the standard input output library.
+
+`void main()` : We are saying that start the program execution from here ( Opening a block for main function ) and the `void` in the start says the function is not returning anything.
+
+`{}` : All the code now is written in the `{}` it stats that only this code is part of the main function.
+
+`printf` : Is a function from the `stdio.h` library that can handle outputs on the console.
+
+`printf("Hello World.");`: This is how we use a function with `()` and passing the arguments and a `;` at the end.
+
+**NOTE: `;` is a very important part it represent the end of a statement and it's required after a statement in C language.**
+
+*Here is the execution:*
+
+```
+[vipikuma@kvy c_classes]$ ls
+hello_world.c
+[vipikuma@kvy c_classes]$ gcc hello_world.c
+[vipikuma@kvy c_classes]$ ls
+a.out  hello_world.c
+[vipikuma@kvy c_classes]$ ./a.out
+Hello World.[vipikuma@kvy c_classes]$ 
+[vipikuma@kvy c_classes]$ 
+```
+
+## Keywords Of C Language
 
 So in any language, We have fix words that represent something or we can say are already booked these words are known as <strong>Key Words</strong> similarly we have 32 keywords in C or we call them reserved words.
 <h5>Here is the list of Keywords in C</h5>
@@ -105,26 +152,3 @@ and
 NOTE:
 
 We can use any kind of symbol in C language except  Dollar sign ($) this sign is not supported in any expression or in any statement in C language.
-
-## Hello World In C
-
-```
-#include<stdio.h>
-
-void main()
-{
-    printf("Hello World.");
-}
-```
-
-`#include<stdio.h>` : By this line we are trying import the standard input output library.
-
-`void main()` : We are saying that start the program execution from here ( Opening a block for main function ) and the `void` in the start says the function is not returning anything.
-
-`{}` : All the code now is written in the `{}` it stats that only this code is part of the main function.
-
-`printf` : Is a function from the `stdio.h` library that can handle outputs on the console.
-
-`printf("Hello World.");`: This is how we use a function with `()` and passing the arguments and a `;` at the end.
-
-**NOTE: `;` is a very important part it represent the end of a statement and it's required after a statement in C language.**
