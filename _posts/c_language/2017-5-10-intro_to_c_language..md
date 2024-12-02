@@ -109,7 +109,7 @@ We can use any kind of symbol in C language except  Dollar sign ($) this sign i
 ## Hello World In C
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 
 void main()
 {
@@ -117,7 +117,7 @@ void main()
 }
 ```
 
-`#include<stdio.h>;` : By this line we are trying import the standard input output library.
+`#include<stdio.h>` : By this line we are trying import the standard input output library.
 
 `void main()` : We are saying that start the program execution from here ( Opening a block for main function ) and the `void` in the start says the function is not returning anything.
 
