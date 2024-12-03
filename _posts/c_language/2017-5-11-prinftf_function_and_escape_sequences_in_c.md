@@ -57,8 +57,6 @@ This character is used to redirect output in a new line.
 
 This sequence can remove the characters from the console.
 * Adding the same as first element of string will not impact anything
-* Adding the same as last element of string will not impact anything
-* You can not remove the last element of the string with the same
 
 
 ### Alert or Bell `\a`
