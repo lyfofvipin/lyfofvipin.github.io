@@ -84,12 +84,16 @@ Anything written before this sequence will not be visible on the console.
 This will add a spacial type of pointer that represents end of a page.
 We can not see the same in console.
 
+### % Character `%%`
+
+This sequence is used to print the symbols `%`.
+
 
 ### backslash `\`, single quote `'`, double quote `"`
 
 backslash `\\` sequence is used to display `\` in the console.
-single quote `\'` sequence is used to display `'` in the console ( Only supported in rune )
-double quote `\"` sequence is used to display `"` in the console ( Only supported in String )
+single quote `\'` sequence is used to display `'` in the console
+double quote `\"` sequence is used to display `"` in the console
 
 Example:
 
@@ -105,6 +109,7 @@ void main(){
     printf("Hello This is\t horizontal tab. \n");
     printf("Hello This is\v vertical tab. \n");
     printf("Hello This is\\ backslash. \n");
+    printf("Hello This is%% sequence. \n");
     printf("Hello This is\' single quote. \n");
     printf("Hello This is\" double quote. \n");
 }
@@ -123,6 +128,7 @@ Hello This is	 horizontal tab.
 Hello This is
               vertical tab. 
 Hello This is\ backslash. 
+Hello This is% sequence. 
 Hello This is' single quote. 
 Hello This is" double quote. 
 ```
