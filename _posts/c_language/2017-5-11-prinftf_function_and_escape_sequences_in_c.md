@@ -47,6 +47,7 @@ Following are most commonly used Escape Sequences:
 \\   backslash
 \'   single quote  (valid escape only within rune literals)
 \"   double quote  (valid escape only within string literals)
+%%   % character
 ```
 
 #### *New Line* `\n`

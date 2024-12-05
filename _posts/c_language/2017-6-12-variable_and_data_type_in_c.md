@@ -8,13 +8,13 @@ tags: [c]
 
 C variable is nothing but it is just a name is given to any data type or to any storage area that our program can use.
 
-## Rules To Create Variables in C
+## Rules To Create Variable Names in C
 
 The name of a variable can be composed of letters, digits and the underscores.
 
 * A variable names can not have any character then underscore `_`.
 * A variable names can not start with an numeric value
-* Variable names in go are case sensitive ( variable name `system` and `System` are not same ).
+* Variable names in C are case sensitive ( variable name `system` and `System` are not same ).
 * A variable name can not be defined twice.
 * It should not be a keyword of c.
 * You can not redefine or redeclare a variable in C
@@ -47,6 +47,11 @@ A data type is nothing it is just the type of data we are using like if integer 
 It is Kind of data type which tell that a integer is being used in a program
 in easy language we can say that a number is use in our program.
 
+#### Float data type
+
+It is also act as double data type it also tell that it is a molecule your program
+but it round off that decimal number.
+
 #### Character data type
 
 It is a kind of data type which tell that a character
@@ -57,11 +62,6 @@ even that is symbol for a letter or an alphabet is used in our program.
 This data type tell us that a decimal number is being used a program for printing for taking a decimal number from user
 the same work is being done by float data type but
 float data type round off our number and double data type does not round orf number.
-
-#### Float data type
-
-It is also act as double data type it also tell that it is a molecule your program
-but it round off that decimal number.
 
 #### Void data type
 
