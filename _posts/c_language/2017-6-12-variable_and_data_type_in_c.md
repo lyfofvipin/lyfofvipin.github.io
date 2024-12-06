@@ -88,6 +88,12 @@ Example:
 
 `int var_name = 45;`
 
+`int var_name = +45;`
+
+`int var_name = -45;`
+
+`int var_name = 45, var_name2;`
+
 
 ## Format specifiers
 
