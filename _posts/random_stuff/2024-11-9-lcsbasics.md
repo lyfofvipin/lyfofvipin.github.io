@@ -33,6 +33,73 @@ Examples include:
     Web Browsers: Software for accessing the internet (e.g., Google Chrome, Firefox).
     Games, Media Players, and other Specialized Software: Programs for entertainment, education, or business needs.
 
+# Programming language
+
+Programming language are the tools developers use to write instructions that computers can execute. Each programming language has its syntax, rules, and areas of application. 
+
+## Low-Level Languages
+
+Low-level languages are closer to the hardware and provide less abstraction from the machine's architecture. They give the programmer more control over hardware resources (like memory), but they are generally harder to use due to the complexity of managing things like memory and processor instructions manually.
+
+1. Closer to Machine Code
+
+2. Manual Memory Management
+
+3. Faster Execution
+
+4. Harder to Learn and Use
+
+5. Platform-Specific
+
+
+## High-Level Languages
+
+High-level languages provide a high level of abstraction from the hardware. They are easier for humans to read and write, focusing more on solving problems than managing system resources.
+
+1. Abstracted from Hardware
+
+2. Easier to Learn and Use
+
+3. Less Control over Hardware
+
+4. Portability
+
+5. Slower Execution
+
+
+# Compilers and Interpreter
+
+Compilers and interpreters are both tools that translate source code written in programming languages (like C, Java, or Python) into machine code or an intermediate form that a computer can execute. However, they do this in very different ways.
+
+<img class="img_center" src="statics/img/compiler_and_interpriter.png" alt="Compilers and Interpreter">
+
+
+## Compiler
+
+A compiler is a program that translates the entire source code of a program into machine code or an intermediate code in one go. The output is an executable file that can be run later, independently of the source code.
+
+### *How a Compiler Works*
+
+Source Code: The programmer writes code in a programming language (e.g., C, C++, etc..).
+
+Compilation: The compiler reads the entire source code and translates it into machine code or bytecode (depending on the language). This process happens all at once.
+
+Executable: After successful compilation, the result is an executable file (like .exe on Windows or a binary file on Linux/macOS). This file can be run on any compatible system without needing the source code or the compiler.
+
+Execution: Once compiled, the program is executed independently of the compilation process.
+
+## Interpreter
+
+An interpreter translates and executes the program line-by-line at runtime. It reads each line of source code, translates it to machine code, and then immediately executes it, all in a single process.
+
+### *How an Interpreter Works*
+
+Source Code: The programmer writes the source code in a high-level programming language (e.g., Python, JavaScript).
+
+Interpretation: The interpreter processes the code one statement or line at a time. It translates and executes each line as it reads it.
+
+Execution: The program is executed immediately by the interpreter, without the need for a separate compilation step.
+
 # Type Of Developers
 
 ## Frontend Developer
@@ -189,71 +256,3 @@ Responsibilities: QA developers write tests, automate testing processes, and ide
 Key Skills: Test automation frameworks (Selenium, JUnit), manual testing techniques, debugging, performance testing.
 
 Tools: Testing tools, CI/CD pipelines, version control systems.
-
-
-# Programming language
-
-Programming language are the tools developers use to write instructions that computers can execute. Each programming language has its syntax, rules, and areas of application. 
-
-## Low-Level Languages
-
-Low-level languages are closer to the hardware and provide less abstraction from the machine's architecture. They give the programmer more control over hardware resources (like memory), but they are generally harder to use due to the complexity of managing things like memory and processor instructions manually.
-
-1. Closer to Machine Code
-
-2. Manual Memory Management
-
-3. Faster Execution
-
-4. Harder to Learn and Use
-
-5. Platform-Specific
-
-
-## High-Level Languages
-
-High-level languages provide a high level of abstraction from the hardware. They are easier for humans to read and write, focusing more on solving problems than managing system resources.
-
-1. Abstracted from Hardware
-
-2. Easier to Learn and Use
-
-3. Less Control over Hardware
-
-4. Portability
-
-5. Slower Execution
-
-
-# Compilers and Interpreter
-
-Compilers and interpreters are both tools that translate source code written in programming languages (like C, Java, or Python) into machine code or an intermediate form that a computer can execute. However, they do this in very different ways.
-
-<img class="img_center" src="statics/img/compiler_and_interpriter.png" alt="Compilers and Interpreter">
-
-
-## Compiler
-
-A compiler is a program that translates the entire source code of a program into machine code or an intermediate code in one go. The output is an executable file that can be run later, independently of the source code.
-
-### *How a Compiler Works*
-
-Source Code: The programmer writes code in a programming language (e.g., C, C++, etc..).
-
-Compilation: The compiler reads the entire source code and translates it into machine code or bytecode (depending on the language). This process happens all at once.
-
-Executable: After successful compilation, the result is an executable file (like .exe on Windows or a binary file on Linux/macOS). This file can be run on any compatible system without needing the source code or the compiler.
-
-Execution: Once compiled, the program is executed independently of the compilation process.
-
-## Interpreter
-
-An interpreter translates and executes the program line-by-line at runtime. It reads each line of source code, translates it to machine code, and then immediately executes it, all in a single process.
-
-### *How an Interpreter Works*
-
-Source Code: The programmer writes the source code in a high-level programming language (e.g., Python, JavaScript).
-
-Interpretation: The interpreter processes the code one statement or line at a time. It translates and executes each line as it reads it.
-
-Execution: The program is executed immediately by the interpreter, without the need for a separate compilation step.
