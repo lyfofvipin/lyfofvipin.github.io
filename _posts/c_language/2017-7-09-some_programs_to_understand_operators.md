@@ -85,6 +85,32 @@ gcc operator.c ; ./a.out
 90
 ```
 
+## Add and Multiply Together
+
+```
+#include<stdio.h>
+
+void main()
+{
+    int A, B, C, D;
+
+    A = 2;
+    B = 5;
+    C = 9;
+    D = 3;
+
+    printf("%d\n", A * B * C - D);
+
+}
+```
+Output:
+```
+gcc operator.c ; ./a.out 
+87
+```
+
+*`Note: Here we are getting 87 as C compile are applying the BODMAS Rule here.`*
+
 ## `>=` Operator
 
 ```
@@ -138,20 +164,20 @@ gcc operator.c ; ./a.out
 
 void main()
 {
-    int principal, interest_rate, time_duration, simple_interest;
+    float principal, interest_rate, time_duration, simple_interest;
 
     printf("Enter principal Amount: ");
-    scanf("%d", &principal);
+    scanf("%f", &principal);
 
     printf("Enter interest rate: ");
-    scanf("%d", &interest_rate);
+    scanf("%f", &interest_rate);
 
     printf("Enter time duration: ");
-    scanf("%d", &time_duration);
+    scanf("%f", &time_duration);
 
     simple_interest = ( principal * interest_rate * time_duration ) / 100;
 
-    printf("Your Simple Interest is: %d.\n", simple_interest);
+    printf("Your Simple Interest is: %f.\n", simple_interest);
 }
 ```
 
@@ -159,7 +185,7 @@ Output:
 ```
 gcc operator.c ; ./a.out 
 Enter principal Amount: 100
-Enter interest rate: 12
+Enter interest rate: 7
 Enter time duration: 1
-Your Simple Interest is: 12.
+Your Simple Interest is: 7.000000.
 ```
