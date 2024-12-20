@@ -62,6 +62,20 @@ Like
 there all are arithmetic operator type of binary operator.
 
 
+### Assignment operator
+
+List of the same:
+
+`=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`
+
+Example:
+```
+A = 5
+B = A
+
+A += 1 // A = A + 1
+```
+
 ### Relational operators
 
 From it's come in the name of operator this operator show any
@@ -85,9 +99,27 @@ They are also binary operator
 
 We have three kind of logical operator in C.
 
-`&` and operator
+`&&` and operator
+
+```
+A   |   B   |   A&&B |
+----+-------+--------+
+0   |   0   |    0   |
+0   |   1   |    0   |
+1   |   0   |    0   |
+1   |   1   |    1   |
+```
 
 `||` or operator
+
+```
+A   |   B   |   A||B |
+----+-------+--------+
+0   |   0   |    0   |
+0   |   1   |    1   |
+1   |   0   |    1   |
+1   |   1   |    1   |
+```
 
 `!` not operater
 
@@ -252,7 +284,7 @@ Output of A|B : 13.
 A table to understand the same:
 
 ```
-A   |   B   |   A|B |
+A   |   B   |   A^B |
 ----+-------+-------+
 0   |   0   |   0   |
 0   |   1   |   1   |
@@ -368,19 +400,6 @@ Example:
 int A, B, C;
 ```
 
-### Assignment operator
-
-List of the same:
-
-`=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`
-
-Example:
-```
-A = 5
-B = A
-
-A += 1 // A = A + 1
-```
 
 ### Type Casting Operators
 

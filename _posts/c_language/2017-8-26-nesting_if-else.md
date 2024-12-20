@@ -57,9 +57,47 @@ else
 
 NOTE :--
 
-If you enable to understand them than no need to worry you can easely learn
-with help of some quection.
+If you enable to understand them than no need to worry you can easily learn
+with help of some question.
 
 in above examples you can see we use IF inside IF.
 this is called Nesting Of IF-ELSE.
 Now It's time for some Examples.
+
+
+Examples:
+```
+#include<stdio.h>
+
+void main(){
+
+    int number;
+
+    printf("Enter A number: ");
+    scanf("%d", &number);
+
+    if ( number < 0 ){
+    
+        printf("It's -ve\n");
+    
+    }
+    else if ( number > 0 )
+    {
+        printf("It's +ve\n");
+    
+    } else if ( number == 0 ) {
+    
+        printf("It's 0\n");
+    }
+}
+```
+
+Output:
+```
+gcc if_else.c ; ./a.out 
+Enter A number: 34
+It's +ve
+[vipikuma@kvy c_classes]$ gcc if_else.c ; ./a.out 
+Enter A number: 0
+It's 0
+```
