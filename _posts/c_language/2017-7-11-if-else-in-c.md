@@ -126,3 +126,25 @@ Enter a Year: 2020
 This is leap year.
 Work one more extra day.
 ```
+
+A program to find if a number is odd or even.
+
+```
+#include<stdio.h>
+void main()
+{
+    int number;
+    printf("Enter a number :");
+    scanf("%d",&number);
+    if ( number%2 == 0 )
+        printf("n Entered number is even n");
+    else
+        printf("n Entered number is odd  n");
+}
+```
+
+Output:
+```
+Enter a number : 50
+Entered number is even
+```

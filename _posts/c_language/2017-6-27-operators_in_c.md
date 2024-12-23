@@ -372,6 +372,7 @@ Output of ~ A : -5.
 
 `<<` : BIT wise Left Shift
 
+This operator will left shift the entire binary value and fill it with 0.
 Example:
 ```
 A = 5 // 0000000000000101
@@ -379,10 +380,12 @@ A<<4  // 0000000001010000
 ```
 
 `>>` : BIT wise Right Shift
+
+This operator will right shift the entire binary value and fill it with 0.
 Example:
 ```
 A = 5 // 0000000000000101
-A>>2  // 1100000000000001
+A>>2  // 0000000000000001
 ```
 
 ### Sizeof() operator
