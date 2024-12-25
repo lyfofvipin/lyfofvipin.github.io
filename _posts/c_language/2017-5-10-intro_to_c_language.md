@@ -57,7 +57,9 @@ void main()
 }
 ```
 
-`#include<stdio.h>` : By this line we are trying import the standard input output library.
+`#` in the beginning is known as pre processor statement starting with # are called preprocessor directive ex: `#include` we use it to import the library ex: stdio, conio, math, string, alloc.
+
+`#include<stdio.h>` : By this line we are trying import the standard input output library using the preprocessor directive.
 
 `void main()` : We are saying that start the program execution from here ( Opening a block for main function ) and the `void` in the start says the function is not returning anything.
 
