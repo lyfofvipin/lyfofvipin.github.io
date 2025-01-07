@@ -46,7 +46,7 @@ Defection of a function can not be placed within another function. Definition mu
 <h2>A simple Function who calculate average of 4 integers :</h2>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int A,B,C;

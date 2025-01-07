@@ -16,7 +16,7 @@ Printing
 
 where value of n is 5 taken from keyboard by me
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,j,n;
@@ -44,7 +44,7 @@ void main()
 where value of n is 5 taken from keyboard by me
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,j,n;
@@ -72,7 +72,7 @@ void main()
 where value of n is 5 taken from keyboard by me
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,j,n;

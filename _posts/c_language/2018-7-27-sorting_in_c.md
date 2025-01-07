@@ -23,7 +23,7 @@ Here we will make a program for arranging elements in ascending order.
 
 <a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/selection-sort-in-asssanding.c"><mark>sele</mark>ction-sort-in-ascending.c</a>
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   int A[5] = {5,2,1,4,3};
@@ -66,7 +66,7 @@ and here is a program for arranging elements of array in descending order using 
 
 <a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/selection-sort-in-disanding.c"><mark>sele</mark>ction-sort-in-discending.c</a>
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   int A[5] = {5,2,1,4,3};
@@ -115,7 +115,7 @@ It's algorithm is very simple just compare adjacent element and Swap them.
 
 Let's code a program for arranging elements of array in ascending order.
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   int A[5] = {5,2,1,4,3};
@@ -156,7 +156,7 @@ Output:-
 
 Let's code a program for arranging elements of array in descending order.
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   int A[5] = {5,2,1,4,3};

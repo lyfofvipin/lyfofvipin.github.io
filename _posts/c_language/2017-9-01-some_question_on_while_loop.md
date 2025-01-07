@@ -9,7 +9,7 @@ Find outputs :
 1.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int i = 1;
@@ -39,7 +39,7 @@ value of i is 10.
 2.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int i = 10;
@@ -70,7 +70,7 @@ value of i is 1.
 
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int i = 1;
@@ -101,7 +101,7 @@ value of i is 11.
 
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int i = 1;
@@ -132,7 +132,7 @@ value of i is 100.
 
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int i = 1;
@@ -157,7 +157,7 @@ value of i is 9.
 6.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int i = 1;
@@ -182,7 +182,7 @@ value of i is 10.
 7.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     char i = 'a';
@@ -208,7 +208,7 @@ value of i is 104.
 8.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     char i = 'a';

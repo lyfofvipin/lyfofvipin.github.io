@@ -9,7 +9,7 @@ Here is a program in C language to find the largest number from 10 numbers,
 this code ask you for entering 10 number 1 by one and finally print the largest number among them.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,a,max;

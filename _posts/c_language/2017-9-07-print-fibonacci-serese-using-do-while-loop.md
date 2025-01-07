@@ -14,7 +14,7 @@ where user will give value of N
 
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int sum,first,second,Number;

@@ -5,7 +5,7 @@ tags: [c]
 ---
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int i,x,Square;

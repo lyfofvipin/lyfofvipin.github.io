@@ -39,24 +39,22 @@ loop will execute.
 
 ## Flow Of Control In For Loop :
 
-In this loop first of all the `initialization` part will execute it will execute once then or `conditional` part will execute after initialization it check every time and if it,s true then loop
-will execute after checking the condition the flow of loop will move forwarded now the body of loop will execute after running hole body of loop.
-
-The expression will execute after executing body of loop and
-after it again the condition will check and loop will flow continually until condition become false.
+In this loop first of all the `initialization` part will execute ( This part will run only duing the first iteration of the loop ),. Then or `conditional` part will execute it will run every time and if the condition is true then loop will execute it's body after the execution of the loop body It will execute the expression inside for loop and then it will again check the condition and run the body based on the condition value and it keep on happening until we got any false value in the condition.
 
 
 ## Few More Tips:
 
 *Empty for loop*: You can have an empty loop body if the task is to simply perform an action without needing to do anything inside the loop.
 
-for (int i = 0; i < 10; i++);
+`for (int i = 0; i < 10; i++);`
 
 *Infinite for loop*: If the condition is always true, you can create an infinite loop. For example:
 
+```
 for (;;) {
     // Infinite loop - will run forever
 }
+```
 
 Now ready for a lots of question on for loop.
 

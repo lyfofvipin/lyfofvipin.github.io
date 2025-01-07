@@ -12,7 +12,7 @@ e.g. ->
 6776 is a number and it's reverse is 6776 both the nuber and reverse are equale hence we can say this number is a palindrome.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int Number,reverse,i;

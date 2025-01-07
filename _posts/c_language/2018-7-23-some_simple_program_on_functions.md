@@ -12,7 +12,7 @@ later we will discuss about functions with Array, Strings and with Pointers.
 ## Finding Factorial of a number using function.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
    int factorial( int );
@@ -55,7 +55,7 @@ Factorial is 120.</pre>
 This function will accept a lower case latter and converter it into Uppercase latter.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
    char alpha_converter( char );
@@ -98,7 +98,7 @@ Latter is converted it's D now .</pre>
 ## This function will return 1 give number is Prime else return 0.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
    int Prime( int );

@@ -7,7 +7,7 @@ tags: [c]
 In our this blog we will  code a C program to find lcm of four number
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int number_1,number_2,number_3,number_4,i,max,lcm;

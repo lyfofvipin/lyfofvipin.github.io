@@ -7,7 +7,7 @@ tags: [c]
 In this program we have Read 2 numbers from keyboard and finding power.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
     int i,x,y,power=1;

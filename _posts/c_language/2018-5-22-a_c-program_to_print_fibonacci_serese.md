@@ -15,7 +15,7 @@ For example:
 by adding first two number `0 + 1`  we will get 1.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
    int  number1 , number2 , number3 , number4;

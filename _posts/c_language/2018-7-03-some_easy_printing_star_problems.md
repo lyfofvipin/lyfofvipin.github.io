@@ -14,7 +14,7 @@ tags: [c]
 ## Here n is 5 taken from keyboard.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,j,n;
@@ -54,7 +54,7 @@ Enter a number :
 ## Here n is 5 taken from keyboard.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,j,n;
@@ -93,7 +93,7 @@ Enter a number :
 <h2>Here n is 5 taken from keyboard.</h2>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,j,n;
@@ -133,7 +133,7 @@ Enter a number :
 ## Here n is 5 taken from keyboard.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,j,n;
@@ -175,7 +175,7 @@ Enter a number :
 ## Here n is 5 taken from keyboard.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,j,n;

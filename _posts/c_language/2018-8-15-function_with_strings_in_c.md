@@ -14,7 +14,7 @@ Our this function will copy A into B it work as <code>strcpy()</code> but It is 
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[] = "Vipin is my name";
@@ -67,7 +67,7 @@ Our this function will accept a String and find it's length and return it.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[] = "Vipin is my name";
@@ -104,7 +104,7 @@ Our this function will count vowels in a string.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[] = "Vipin is my name";
@@ -148,7 +148,7 @@ It is same as <code>strcat()</code> but here we code this function.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[50] = "my name is ";
@@ -201,7 +201,7 @@ Our this function will take a string and count that how many words It has.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[50] = "my name is Vipin";
@@ -245,7 +245,7 @@ WE CAN EVEN RETURN ABOVE INFORMATION USING A ARRAY, IT'S YOUR HOME TASK HAVE A F
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[50] = "my name is Vipin";
@@ -291,7 +291,7 @@ Our this function will take a string and convert it into lower case.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[50] = "My Name Is VIPIN";
@@ -332,7 +332,7 @@ Our this function will take a string and convert it into upper case.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[50] = "My Name Is VIPIN";
@@ -374,7 +374,7 @@ and return +ve value if A is greater, -ve value if B is greater and 0 if both ar
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[] = "My Name Is VIPIN";
@@ -419,7 +419,7 @@ Our this function will take 2 string and revers A in B.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[] = "My Name Is VIPIN";
@@ -465,7 +465,7 @@ Our this function will take a string and revers it within it.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[] = "My Name Is VIPIN";
@@ -520,7 +520,7 @@ return 0 if they are not palindrome.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[] = "VIPIN";
@@ -569,7 +569,7 @@ Our this function will take a string and print it's abbrivation.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[] = "Mohan Das Karam Chand Gandhi";
@@ -615,7 +615,7 @@ Our this function will take a string and remove all vowels from it.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     char A[] = "My Name Is Vipin";

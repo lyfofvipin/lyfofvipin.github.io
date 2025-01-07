@@ -12,7 +12,7 @@ this function will copy Source_String into Target_String.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -56,7 +56,7 @@ and it do not affect reaming part of string.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -98,7 +98,7 @@ This function is used to concatenate Source_String just after Target_String or w
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -140,7 +140,7 @@ This function is used to concatenate Source_String just after Target_String or w
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -185,7 +185,7 @@ return <code>0</code> If both are Equal.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -223,7 +223,7 @@ COMPILERS LIKE IN LINUX/UNIX .</code>
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -257,7 +257,7 @@ This function will take a String as argument and return it's length.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -287,7 +287,7 @@ This function of C language will convert all alphabets of String in lowercase.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -315,7 +315,7 @@ COMPILERS LIKE IN LINUX/UNIX .</code>
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -342,7 +342,7 @@ means It take 2 argument a string and a character and replace hole string with t
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -371,7 +371,7 @@ till n .
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {
@@ -399,7 +399,7 @@ in the initial segment of String1 which consist only of characters from String2.
 e.g.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<string.h>;
 int main()
 {

@@ -9,7 +9,7 @@ tags: [c]
 <hr />
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,number,max;

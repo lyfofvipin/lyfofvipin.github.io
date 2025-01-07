@@ -6,7 +6,7 @@ tags: [c]
 
 Here is the file of code
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int i,n,temp=0;

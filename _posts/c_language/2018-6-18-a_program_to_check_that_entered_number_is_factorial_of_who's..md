@@ -9,7 +9,7 @@ This is a program written in C language.
 this code will take a input from the user and display that the entered number is factorial of who's.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 	int n,i,j;

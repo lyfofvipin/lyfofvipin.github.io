@@ -11,7 +11,7 @@ Let's start with a simple series.
 <h2>Printing x+(x/2)+(x/3)+(x/4)+(x/5)...(x/n) series :-</h2>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 { 
     int n,x;
@@ -44,7 +44,7 @@ double series ( int x, int n )
 x-(x^3/3!)+(x^5/5!)-(x^7/7!)+(x^9/9!)+(x^11/11!)...</h2>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 { 
     int n,x;
@@ -113,7 +113,7 @@ int factorial( int x)
 
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 { 
     int n,x;
@@ -176,7 +176,7 @@ int factorial( int x)
 x-(x^2/2!)+(x^3/3!)-(x^4/4!)+(x^5/5!)+(x^6/6!)-(x^7/7!)...</h2>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 { 
     int n,x;
@@ -223,7 +223,7 @@ int power ( int x , int n)
 ## Now we will make a program to print value of e^x series after asking values of x and n
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 { 
     int n,x;

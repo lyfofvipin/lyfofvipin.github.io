@@ -8,7 +8,7 @@ tags: [c]
 //I will give you code and you have to judge the output.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
 int x=1;

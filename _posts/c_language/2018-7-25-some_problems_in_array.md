@@ -13,7 +13,7 @@ Have a fun : )
 <span style="color:#000000;"><a class="css-truncate-target js-navigation-open js-tree-finder-path" style="color:#000000;" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/reading-arrey.c"><mark>reading</mark>-array.c</a></span>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   int a[5],i;
@@ -47,7 +47,7 @@ All values are stored in the Array
 <a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/reading-writing-arrey.c"><mark>reading</mark>-writing-array.c</a>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   int a[5],i;
@@ -90,7 +90,7 @@ Entered numbers are :
 <a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/sum-of-2-array-in-3.c"><mark>sum</mark>-of-2-<mark>a</mark>rray-in-3.c</a>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   float a[5],b[5],c[5];
@@ -145,7 +145,7 @@ Sum of both array is :
 
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   int a[10],z,p,n,i;
@@ -186,7 +186,7 @@ Positive numbers are 4, Negative number are -3 and zeros are 3.
 <a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/arey-calculater.c">array-<mark>calcu</mark>later.c</a>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
 int a[5],b[5],i;
@@ -269,7 +269,7 @@ Enter a number : 5
 <a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/finding-larg-small-=-num-in-arrey.c">finding-larg-small-<mark>=</mark>-num-in-array.c</a>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   int a[10],i,b,l,s,e;
@@ -325,7 +325,7 @@ same process will held with each index.
 
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
   int a[5],i,b[5],c[5];
@@ -376,7 +376,7 @@ Enter a number :5
 <a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/merging-arrey.c"><mark>m</mark>erging-<mark>a</mark>rray.c</a>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
   int a[5],i,b[5],c[10];
@@ -430,7 +430,7 @@ Array after merging is :
 <a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/printing-arrey-in-reverse.c">printing-array-in-<mark>reve</mark>r<mark>s</mark>e.c</a>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
   int a[5],i;
@@ -458,7 +458,7 @@ Enter a number :89
 <a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/reverse-an-arrey-in-another.c"><mark>reve</mark>r<mark>s</mark>e-an-array-in-another.c</a>
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 void main()
 {
   int a[5],b[5],i,j;

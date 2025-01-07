@@ -36,7 +36,7 @@ It will print number if it is positive else it print,
 Entered number is Negative hence breaking the program.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     int n = 1;
@@ -74,7 +74,7 @@ The following program illustrates the use of Continue statement.
 It will read 10 positive number and display there sum.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
  int a,i,sum;
@@ -127,7 +127,7 @@ if it is non-zero then program will terminate with unsuccessful status.
 Try to understand this program.
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 #include<stdlib.h>;
 int main()
 {
@@ -180,7 +180,7 @@ In this Syntax label is an identifier when the control of program reaches to got
 Example :-
 
 ```
-#include<stdio.h>;
+#include<stdio.h>
 int main()
 {
     int i=0;
