@@ -75,10 +75,15 @@ Here N = 5
 <h4>4.Length of array must defined by a constant integer.</h4>
 
 `int A[5];` = OK
+
 `float A[5];` = OK
+
 `int A[];` = error
+
 `int A[5.7];` = error
+
 `int A[l];` = error
+
 `int A[l*2];` = error
 
 <h4>5.The size of array is sum of size of its elements.</h4>
