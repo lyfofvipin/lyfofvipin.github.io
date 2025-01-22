@@ -13,7 +13,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
 	char A[15] = "Vipin Yadav";
@@ -57,7 +57,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
 	char A[15] = "Vipin Yadav";
@@ -99,7 +99,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
 	char A[20] = " Vipin Yadav";
@@ -141,7 +141,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
 	char A[20] = " Vipin Yadav";
@@ -186,7 +186,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
 	char A[20] = "aaaa";
@@ -224,7 +224,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
     char A[20] = "aaaa";
@@ -258,7 +258,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
     char A[20] = "aaaa";
@@ -288,7 +288,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
     char A[20] = "AAAA";
@@ -316,7 +316,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
     char A[20] = "aaaa";
@@ -343,7 +343,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
     char A[20] = "Vipin";
@@ -372,7 +372,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
     char A[20] = "Vipin";
@@ -400,7 +400,7 @@ e.g.
 
 ```
 #include<stdio.h>
-#include<string.h>;
+#include<string.h>
 int main()
 {
     char A[] = "Vipin is my name";
