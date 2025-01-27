@@ -144,7 +144,8 @@ int main()
 
 #### *Output:-*
 
-```Enter Principle : 10000
+```
+Enter Principle : 10000
 Enter Rate : 2.4
 Enter Time : 1.5
 Simple Interest is 360.00%. 
@@ -259,6 +260,7 @@ void Area_of_circle( float *a , float *b )
     *b = 3.14* *a * *a;
 }
 ```
+
 Output:
 
 ```
