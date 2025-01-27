@@ -449,5 +449,8 @@ int main()
         printf("%c",*p);
 
     return 0;
+```
+
+Output:
 
 ` vip`
