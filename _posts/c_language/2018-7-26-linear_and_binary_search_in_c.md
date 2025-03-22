@@ -94,40 +94,40 @@ The following code implements linear search (Searching algorithm) which is used 
 a given number is present in an array and if it is present then at what location it occurs.
 If you give duplicate value then it will return first occurrence of element.
 ```
-    #include
-    int main()
-    {
-        int a[5], i, c , b = -1;
+#include<stdio.h>
+int main()
+{
+    int a[5], i, c , b = -1;
 
-        int search (int [],int);
+    int search (int [],int);
 
-            printf("Enter your array :n");
-            for (i = 0; i < 5; i++)
-            {
-                printf("Enter a number :");
-	            scanf("%d",&a[i]);
-            }
-	    printf("Enter a number u want to search :");
-	    scanf("%d",&c);
-
-	    b = search (a,c);
-
-    	if( b == -1 )
-		    printf("Element is not present in array.n");
-        else
-    		printf("Element is present in array at %d.n",b);
-        return 0;
-    }
-    int search (int a[] , int b )
-    {
-        int i;
-
+        printf("Enter your array :\n");
         for (i = 0; i < 5; i++)
-    	{
-		    if( b == a[i] )
-        		return i;
-    	}
+        {
+            printf("Enter a number :");
+            scanf("%d",&a[i]);
+        }
+    printf("Enter a number u want to search :");
+    scanf("%d",&c);
+
+    b = search (a,c);
+
+    if( b == -1 )
+        printf("Element is not prsent in array.\n");
+    else
+        printf("Element is prsent in array at %d.\n",b);
+    return 0;
+}
+int search (int a[] , int b )
+{
+    int i;
+
+    for (i = 0; i < 5; i++)
+    {
+        if( b == a[i] )
+            return i;
     }
+}
 ```
 
 Output:-
@@ -152,39 +152,44 @@ This code implements binary search in C language.
 It can only be used for sorted arrays, but it's fast as compared to linear search.
 If you wish to use binary search on an array which isn't sorted, then you must sort it using some sorting technique say merge sort and then use the binary search algorithm to find the desired. Element in the list. If the element to be searched is found then its position is printed.
 ```
-	#include
-	int main()
-	{
-	  int a[5],i,b,c = -1;
-	
-	  int search (int [],int,int);
-    printf("Enter your array : n");
-   	for (i = 0; i < 5; i++)
-     	{
-       	printf("Enter a number :");
-	     	scanf("%d",&a[i]);
-     	}
-		printf("Enter a number you want to search :");
-		scanf("%d",&b);
-    i=i-1;
-		c = search (a,b,i);
+#include<stdio.h>
+int main()
+{
+    int a[5],i,b,c = -1;
 
-		if( c != -1 )
-			printf("Element is present in array. n");
-        	else
-			printf("Element is not present in array. n");
-  	}
-	int search(int a[],int b,int h)
-	{
-    	int i,m,l;
-			l=0;
-			while ( l <= h )  			{  				m = (l+h)/2;  				if( m == b )  				  return 1;  				else if( b >; m )
-				  l = m+1;
-				else if( b < m )
-				  h = m-1;
-			}
-		return 0;
-	}
+    int search (int [],int,int);
+printf("Enter your array : \n");
+for (i = 0; i < 5; i++)
+    {
+    printf("Enter a number :");
+        scanf("%d",&a[i]);
+    }
+    printf("Enter a number you want to search :");
+    scanf("%d",&b);
+i=i-1;
+    c = search (a,b,i);
+
+    if( c != -1 )
+        printf("Element is prsent in array. \n");
+        else
+        printf("Element is not prsent in array. \n");
+}
+int search(int a[],int b,int h)
+{
+    int i,m,l;
+        l=0;
+        while ( l <= h )
+        {
+            m = (l+h)/2;
+            if( m == b )
+                return 1;
+            else if( b > m )
+                l = m+1;
+            else if( b < m )
+                h = m-1;
+        }
+    return 0;
+}
 ```
 
 Output:-
