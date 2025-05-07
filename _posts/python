@@ -1,0 +1,1020 @@
+---
+title: Python language Basics
+categories: python
+tags: [python]
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #4CAF50;
+            margin-bottom: 0.5em;
+        }
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            margin: 20px 0;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin: 20px 0 10px 0;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-size: 1.4em;
+            margin: 15px 0 10px 0;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        ul, ol {
+            margin-bottom: 1em;
+            padding-left: 20px;
+        }
+        ul {
+            list-style-type: disc;
+        }
+        ol {
+            list-style-type: decimal;
+        }
+        strong {
+            color: #2196F3;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+            line-height: 1.4;
+            font-size: 0.9em;
+        }
+        blockquote {
+            border-left: 4px solid #4CAF50;
+            padding-left: 10px;
+            margin: 10px 0;
+            font-style: italic;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <h1>BCA-302: Python Programming Notes</h1>
+
+    <h3>Python Concepts</h3>
+    <ul>
+        <li><strong>Origin</strong>: Python was created by Guido van Rossum in the late 1980s, with its first release in 1991. It was conceived as a successor to the ABC programming language, with a focus on code readability and a clear syntax. The name "Python" was inspired by the Monty Python's Flying Circus television show.</li>
+        <li><strong>Comparison</strong>: Python is often compared to other languages like Java, C++, and JavaScript. Key differences include:
+            <ul>
+                <li><strong>Syntax</strong>: Python emphasizes readability with a clean, English-like syntax, using indentation for block delimitation. Java and C++ use braces `{}`. JavaScript is more flexible but can lead to less readable code if not styled carefully.</li>
+                <li><strong>Typing</strong>: Python is dynamically typed (you don't need to declare variable types), while Java and C++ are statically typed (you must declare types). JavaScript is also dynamically typed.</li>
+                <li><strong>Interpretation</strong>: Python is interpreted (code is executed line by line), while Java is compiled to bytecode and then interpreted by the JVM. C++ is compiled directly to machine code.</li>
+                <li><strong>Memory Management</strong>: Python uses automatic memory management (garbage collection), relieving the programmer from manual memory allocation/deallocation. C++ requires manual memory management, which can be a source of errors. Java also uses garbage collection.</li>
+                <li><strong>Use Cases</strong>: Python is widely used for web development, data science, scripting, AI, and more. Java is prevalent in enterprise applications. C++ is used for systems programming, game development, and high-performance computing. JavaScript is the primary language for front-end web development and is also used on the server-side (Node.js).</li>
+            </ul>
+        </li>
+        <li><strong>Comments</strong>: Used to add explanations to code, improving readability and maintainability. Ignored by the Python interpreter.
+            <ul>
+                <li>Single-line comment: <pre># This is a comment</pre></li>
+                <li>Multi-line comment (docstring):<pre>"""This is a
+    multi-line comment,
+    often used as a docstring
+    to document functions
+    or classes."""</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Variables and Assignment</strong>: Variables are names that store data values. Assignment uses the `=` operator to bind a value to a variable name.
+            <pre>x = 10
+name = "Alice"
+pi = 3.14159</pre>
+        </li>
+        <li><strong>Identifiers</strong>: Names given to variables, functions, classes, modules, etc.
+            <ul>
+                <li>Rules:
+                    <ul>
+                        <li>Must start with a letter (a-z, A-Z) or an underscore (\_).</li>
+                        <li>Can contain letters, numbers (0-9), and underscores.</li>
+                        <li>Case-sensitive (e.g., `myVar` and `myvar` are different).</li>
+                        <li>Cannot be a Python keyword (e.g., `if`, `for`, `while`, `def`, `class`).</li>
+                    </ul>
+                </li>
+                <li>Best Practices:
+                    <ul>
+                        <li>Use descriptive names that indicate the variable's purpose.</li>
+                        <li>Use lowercase with underscores for variable and function names (e.g., `my_variable`, `calculate_sum`). This is known as snake_case.</li>
+                        <li>Use CamelCase for class names (e.g., `MyClass`).</li>
+                        <li>Avoid single-character names (except for loop counters in simple cases).</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Basic Style Guidelines (PEP 8)</strong>: PEP 8 is the style guide for Python code. It provides recommendations for:
+            <ul>
+                <li>Indentation: Use 4 spaces per indentation level.</li>
+                <li>Line length: Limit lines to 79 characters.</li>
+                <li>Blank lines: Use blank lines to separate functions and classes, and to improve readability within functions.</li>
+                <li>Naming conventions: As described in Identifiers.</li>
+                <li>Whitespace: Use spaces around operators and after commas.</li>
+                <li>Imports: Place imports at the beginning of the file, group them, and follow a specific order.</li>
+            </ul>
+            Following PEP 8 makes your code more consistent and easier to read by others (and yourself!).
+        </li>
+        <li><strong>Standard Types</strong>: Built-in data types that represent different kinds of values.
+            <ul>
+                <li>Numbers:
+                    <ul>
+                        <li>Integers (`int`): Whole numbers (e.g., `10`, `-5`, `0`).<pre>x = 10
+print(type(x)) # Output: &lt;class 'int'&gt;</pre></li>
+                        <li>Floating-point numbers (`float`): Numbers with a decimal point (e.g., `3.14`, `-2.5`, `0.0`).<pre>y = 3.14
+print(type(y)) # Output: &lt;class 'float'&gt;</pre></li>
+                        <li>Complex numbers (`complex`): Numbers with a real and imaginary part (e.g., `2+3j`, where `j` is the imaginary unit).<pre>z = 2 + 3j
+print(type(z)) # Output: &lt;class 'complex'&gt;</pre></li>
+                    </ul>
+                </li>
+                <li>Strings (`str`): Immutable sequences of characters (e.g., `"Hello"`, `'World'`, `"""This is a multi-line string"""`).<pre>message = "Hello, world!"
+print(type(message)) # Output: &lt;class 'str'&gt;</pre></li>
+                <li>Boolean (`bool`): Represents truth values: `True` or `False`.<pre>is_valid = True
+print(type(is_valid)) # Output: &lt;class 'bool'&gt;</pre></li>
+            </ul>
+        </li>
+        <li><strong>Internal Types</strong>: Types used internally by the Python interpreter. Programmers don't usually interact with these directly. Examples include types related to code objects, frames, and tracebacks.</li>
+        <li><strong>Operators</strong>: Symbols that perform operations on values (operands).
+            <ul>
+                <li>Arithmetic operators: `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division), `//` (floor division - returns the integer part of the division), `%` (modulo - returns the remainder), `**` (exponentiation).
+                    <pre>result = 5 + 2      # 7
+result = 5 - 2      # 3
+result = 5 * 2      # 10
+result = 5 / 2      # 2.5
+result = 5 // 2     # 2
+result = 5 % 2      # 1
+result = 5 ** 2     # 25</pre>
+                </li>
+                <li>Comparison operators: `==` (equal to), `!=` (not equal to), `>` (greater than), `<` (less than), `>=` (greater than or equal to), `<=` (less than or equal to). Return a Boolean value.
+                    <pre>x = 5
+y = 10
+print(x == y)    # False
+print(x != y)    # True
+print(x > y)     # False
+print(x < y)     # True
+print(x >= y)    # False
+print(x <= y)    # True</pre>
+                </li>
+                <li>Logical operators: `and` (returns `True` if both operands are `True`), `or` (returns `True` if at least one operand is `True`), `not` (returns the opposite of the operand's Boolean value).
+                    <pre>a = True
+b = False
+print(a and b)  # False
+print(a or b)   # True
+print(not a)    # False</pre>
+                </li>
+                <li>Assignment operators: `=` (simple assignment), `+=`, `-=`, `*=`, `/=`, `//=`, `%=`, `**=` (compound assignment operators that combine an arithmetic operation with assignment).
+                    <pre>x = 10
+x += 5    # x is now 15
+x -= 5    # x is now 10
+x *= 5    # x is now 50
+x /= 5    # x is now 10.0
+x //= 3   # x is now 3.0
+x %= 3    # x is now 0.0
+x **= 2   # x is now 0.0</pre>
+                </li>
+                <li>Membership operators: `in` (returns `True` if a value is found in a sequence), `not in` (returns `True` if a value is not found in a sequence).
+                    <pre>my_list = [1, 2, 3]
+print(2 in my_list)         # True
+print(4 in my_list)         # False
+print(4 not in my_list)     # True</pre>
+                </li>
+                <li>Identity operators: `is` (returns `True` if two variables refer to the same object), `is not` (returns `True` if two variables do not refer to the same object).
+                    <pre>x = [1, 2, 3]
+y = x
+z = [1, 2, 3]
+print(x is y)    # True (x and y refer to the same object)
+print(x is z)    # False (x and z are different objects, even with the same content)
+print(x is not z) # True</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Built-in Functions</strong>: Functions that are always available in Python without needing to import any modules. Examples: `print()`, `len()`, `type()`, `int()`, `float()`, `str()`, `bool()`, `input()`, `range()`, `sum()`, `max()`, `min()`.
+            <pre>print("Hello")
+length = len("Python")
+print(length)           # Output: 6
+data_type = type(10)
+print(data_type)      # Output: &lt;class 'int'&gt;
+converted_int = int("123")
+print(converted_int) # Output: 123
+converted_float = float("123.45")
+print(converted_float) # Output: 123.45
+text = str(123)
+print(text)          # Output: "123"
+value = bool(0)
+print(value)         # Output: False
+user_input = input("Enter your name: ")
+print("Hello, " + user_input)
+numbers = range(5)
+print(list(numbers))  # Output: [0, 1, 2, 3, 4]
+total = sum([1, 2, 3, 4])
+print(total)         # Output: 10
+maximum = max([1, 5, 2, 8])
+print(maximum)       # Output: 8
+minimum = min([1, 5, 2, 8])
+print(minimum)       # Output: 1</pre>
+        </li>
+        <li><strong>Numbers and Strings</strong>: See "Standard Types" above for more details.</li>
+        <li><strong>Sequences</strong>: Ordered collections of items.
+            <ul>
+                <li>Strings (`str`): Immutable sequences of characters.</li>
+                <li>Lists (`list`): Mutable sequences of items (can contain items of different types).</li>
+                <li>Tuples (`tuple`): Immutable sequences of items.</li>
+            </ul>
+        </li>
+        <li><strong>String Operators & Functions</strong>:
+            <ul>
+                <li>Concatenation (`+`): Joins two strings.<pre>str1 = "Hello"
+str2 = "World"
+result = str1 + " " + str2  # "Hello World"</pre></li>
+                <li>Repetition (`*`): Repeats a string multiple times.<pre>text = "abc"
+repeated_text = text * 3  # "abcabcabc"</pre></li>
+                <li>Slicing (`[start:end:step]`): Extracts a portion of a string.<pre>my_string = "Python"
+substring = my_string[1:4]    # "yth"
+substring = my_string[:3]     # "Pyt"
+substring = my_string[2:]     # "thon"
+substring = my_string[::2]    # "Pto"
+substring = my_string[::-1]   # "nohtyP"</pre></li>
+                <li>Methods: Functions that are called on a string object (e.g., `.upper()`, `.lower()`, `.strip()`, `.find()`, `.replace()`, `.split()`, `.join()`, `.format()`).
+                    <pre>text = "  Python is Fun  "
+upper_text = text.upper()       # "  PYTHON IS FUN  "
+lower_text = text.lower()       # "  python is fun  "
+stripped_text = text.strip()     # "Python is Fun"
+index = text.find("Fun")       # 11
+replaced_text = text.replace("Fun", "Awesome") # "  Python is Awesome  "
+words = text.split()          # ['Python', 'is', 'Fun']
+joined_text = "-".join(words)    # "Python-is-Fun"
+formatted_text = "{} is {}".format("Python", "Awesome") # "Python is Awesome"
+f_string = f"{'Python'} is {'Awesome'}"      # "Python is Awesome"</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Special Features of Strings</strong>:
+            <ul>
+                <li>Immutability: Strings cannot be changed after they are created. Operations that appear to modify a string actually create a new string.</li>
+                <li>String methods: Provide powerful ways to manipulate and work with string data.</li>
+                <li>Formatted string literals (f-strings): A concise way to embed expressions inside string literals.</li>
+            </ul>
+        </li>
+        <li><strong>Memory Management</strong>: Python uses automatic memory management through a process called garbage collection. The interpreter automatically allocates memory for objects and reclaims memory that is no longer being used, reducing the risk of memory leaks and other memory-related errors. Python also has a small object allocator for frequently used small objects, which improves efficiency.</li>
+    </ul>
+
+    <h2>Conditionals and Loops</h2>
+    <ul>
+        <li>`if` statement: Executes a block of code if a condition is `True`. The condition is an expression that evaluates to a Boolean value.
+            <pre>x = 15
+if x > 0:
+    print("Positive")</pre>
+        </li>
+        <li>`else` statement: Provides an alternative block of code to execute if the `if` condition is `False`.
+            <pre>x = 10
+if x % 2 == 0:
+    print("Even")
+else:
+    print("Odd")</pre>
+        </li>
+        <li>`elif` statement: Short for "else if." Allows you to check multiple conditions in sequence.
+            <pre>grade = 85
+if grade >= 90:
+    print("A")
+elif grade >= 80:
+    print("B")
+elif grade >= 70:
+    print("C")
+else:
+    print("Below C")</pre>
+        </li>
+        <li>`while` statement: Repeatedly executes a block of code as long as a condition is `True`. It's used for indefinite iteration (when you don't know in advance how many times the loop will execute).
+            <pre>count = 0
+while count < 5:
+    print(count)
+    count += 1</pre>
+        </li>
+        <li>`for` statement: Iterates over a sequence (e.g., list, tuple, string, range) and executes a block of code for each item in the sequence. It's used for definite iteration (when you know how many times the loop will execute).
+            <pre>fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)</pre>
+        </li>
+        <li>`break` statement: Immediately terminates the innermost loop (either `for` or `while`) and execution continues with the statement after the loop.
+            <pre>for i in range(10):
+    if i == 5:
+        break
+    print(i)</pre>
+        </li>
+        <li>`continue` statement: Skips the rest of the current iteration of the loop and proceeds to the next iteration.
+            <pre>for i in range(5):
+    if i == 3:
+        continue
+    print(i)</pre>
+        </li>
+        <li>`pass` statement: A null operation; it does nothing. It's used as a placeholder where a statement is syntactically required but no code needs to be executed.
+            <pre>if True:
+    pass  # Placeholder</pre>
+        </li>
+        <li>`else` statement with loop:
+            <ul>
+                <li>In a `for` loop, the `else` block is executed after the loop completes normally (i.e., without encountering a `break` statement).
+                    <pre>for i in range(3):
+    print(i)
+else:
+    print("Loop finished normally")</pre>
+                </li>
+                <li>In a `while` loop, the `else` block is executed when the loop condition becomes `False`.
+                    <pre>count = 0
+while count < 3:
+    print(count)
+    count += 1
+else:
+    print("While loop finished")</pre>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Object and Classes</h3>
+    <ul>
+        <li>Classes in Python, Principles of Object Orientation, Creating Classes, Instance Methods, Class variables, Inheritance, Polymorphism. Type Identification, Python libraries(Strings. Data structures & algorithms )</li>
+        <li><strong>Classes</strong>: Blueprints for creating objects.
+            <pre>class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+    def bark(self):
+        print("Woof!")
+my_dog = Dog("Buddy", "Golden Retriever")
+print(my_dog.name)  # Output: Buddy
+my_dog.bark()      # Output: Woof!</pre>
+        </li>
+        <li><strong>Principles of Object Orientation</strong>:
+            <ul>
+                <li>Encapsulation: Bundling data (attributes) and methods that operate on the data within a single unit (class).</li>
+                <li>Abstraction: Hiding complex implementation details and showing only necessary information to the user.</li>
+                <li>Inheritance: Creating new classes (derived or child classes) based on existing classes (base or parent classes), inheriting their attributes and methods.</li>
+                <li>Polymorphism: The ability of objects of different classes to respond to the same method call in their own way.</li>
+            </ul>
+        </li>
+        <li><strong>Creating Classes</strong>: Using the `class` keyword. The `__init__` method is a special constructor.</li>
+        <li><strong>Instance Methods</strong>: Methods that operate on the instance (object) of a class. They have `self` as the first parameter.</li>
+        <li><strong>Class Variables</strong>: Variables that are shared by all instances of a class. They are defined within the class but outside any methods.
+            <pre>class Counter:
+    count = 0 # Class variable
+    def __init__(self):
+        Counter.count += 1
+c1 = Counter()
+c2 = Counter()
+print(Counter.count) # Output: 2</pre>
+        </li>
+        <li><strong>Inheritance</strong>: Creating a new class that inherits from an existing class.
+            <pre>class Animal:
+    def speak(self):
+        print("Generic animal sound")
+class Cat(Animal):
+    def speak(self): # Method overriding
+        print("Meow!")
+my_cat = Cat()
+my_cat.speak() # Output: Meow!</pre>
+        </li>
+        <li><strong>Polymorphism</strong>: Different classes responding to the same method.
+            <pre>def animal_sound(animal):
+    animal.speak()
+animal1 = Animal()
+animal2 = Cat()
+animal_sound(animal1) # Output: Generic animal sound
+animal_sound(animal2) # Output: Meow!</pre>
+        </li>
+        <li><strong>Type Identification</strong>: Using functions like `type()` and `isinstance()` to check the type of an object.
+            <pre>x = 10
+print(type(x))        # &lt;class 'int'&gt;
+print(isinstance(x, int)) # True
+print(isinstance(x, float)) # False</pre>
+        </li>
+        <li>Python libraries(Strings. Data structures & algorithms )</li>
+    </ul>
+
+    <h2>Lists and Sets</h2>
+    <ul>
+        <li>Built-in Functions, List type built in Methods. Tuples. Tuple Operators Special Features of Tuples, Set: Introduction, Accessing, Built-in Methods (Add, Update, Clear, Copy, Discard, Remove), Operations (Union, Intersection, Difference )</li>
+        <li><strong>Lists</strong>: Mutable ordered sequences (already covered in Unit-I).</li>
+        <li><strong>Sets</strong>: Unordered collections of unique elements, defined using curly braces `{}` or the `set()` constructor.
+            <pre>my_set = {1, 2, 3, 3, 4} # {1, 2, 3, 4} (duplicates are automatically removed)
+another_set = set([4, 5, 6])</pre>
+        </li>
+        <li><strong>Built-in Functions (for Lists and Sets)</strong>: `len()`, `max()`, `min()`, `sorted()`, `sum()`.
+            <pre>my_list = [3, 1, 4, 1, 5, 9, 2, 6]
+print(len(my_list))       # 8
+print(max(my_list))       # 9
+print(min(my_list))       # 1
+print(sorted(my_list))    # [1, 1, 2, 3, 4, 5, 6, 9]
+print(sum(my_list))       # 31</pre>
+        </li>
+        <li><strong>Tuples</strong>: Immutable ordered sequences (already covered in Unit-I).</li>
+        <li><strong>Tuple Operators</strong>: Similar to list operators (concatenation `+`, repetition `*`).
+            <pre>tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+combined_tuple = tuple1 + tuple2 # (1, 2, 3, 4, 5, 6)
+repeated_tuple = tuple1 * 2     # (1, 2, 3, 1, 2, 3)</pre>
+        </li>
+        <li><strong>Special Features of Tuples</strong>: Immutability makes them suitable for representing fixed collections of items and as keys in dictionaries.</li>
+        <li><strong>Set Introduction</strong>: Already covered above.</li>
+        <li><strong>Accessing</strong>: You can iterate through sets using a `for` loop, but you cannot access elements by index because they are unordered.
+            <pre>for item in my_set:
+    print(item)</pre>
+        </li>
+        <li><strong>Built-in Methods (Sets)</strong>:
+            <ul>
+                <li>`add(element)`: Adds an element to the set.<pre>my_set.add(10)</pre></li>
+                <li>`update(iterable)`: Adds multiple elements from an iterable.<pre>my_set.update([7, 8, 9])</pre></li>
+                <li>`clear()`: Removes all elements from the set.<pre>my_set.clear()</pre></li>
+                <li>`copy()`: Returns a shallow copy of the set.<pre>new_set = my_set.copy()</pre></li>
+                <li>`discard(element)`: Removes an element if it is present (no error if not found).<pre>my_set.discard(3)</pre></li>
+                <li>`remove(element)`: Removes an element (raises a `KeyError` if not found).<pre>my_set.remove(2)</pre></li>
+            </ul>
+        </li>
+        <li><strong>Operations (Sets)</strong>:
+            <ul>
+                <li><strong>Union (`|` or `union()`)</strong>: Returns a new set containing all elements from both sets.
+                    <pre>set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+union_set = set1 | set2 # {1, 2, 3, 4, 5}
+union_set = set1.union(set2)</pre>
+                </li>
+                <li><strong>Intersection (`&` or `intersection()`)</strong>: Returns a new set containing common elements.
+                    <pre>intersection_set = set1 & set2 # {3}
+intersection_set = set1.intersection(set2)</pre>
+                </li>
+                <li><strong>Difference (`-` or `difference()`)</strong>: Returns a new set containing elements in the first set but not in the second.
+                    <pre>difference_set = set1 - set2 # {1, 2}
+difference_set = set1.difference(set2)</pre>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li>Dictionaries: Introduction to Dictionaries, Built-in Functions, Built-in Methods, Dictionary Keys, Sorting and Looping, Nested Dictionaries.</li>
+        <li><strong>Dictionaries</strong>: Unordered collections of key-value pairs, defined using curly braces `{}` with keys and values separated by colons `:`. Keys must be unique and immutable.
+            <pre>my_dict = {"name": "Alice", "age": 30, "city": "New York"}</pre>
+        </li>
+        <li><strong>Built-in Functions (for Dictionaries)</strong>: `len()`, `str()` (string representation), `type()`.
+            <pre>print(len(my_dict))  # 3
+print(str(my_dict))  # "{'name': 'Alice', 'age': 30, 'city': 'New York'}"
+print(type(my_dict)) # &lt;class 'dict'&gt;</pre>
+        </li>
+        <li><strong>Built-in Methods (for Dictionaries)</strong>:
+            <ul>
+                <li>`keys()`: Returns a view object that displays a list of all the keys in the dictionary.
+                    <pre>keys = my_dict.keys() # dict_keys(['name', 'age', 'city'])
+print(list(keys))    # ['name', 'age', 'city']</pre>
+                </li>
+                <li>`values()`: Returns a view object that displays a list of all the values in the dictionary.
+                    <pre>values = my_dict.values() # dict_values(['Alice', 30, 'New York'])
+print(list(values))  # ['Alice', 30, 'New York']</pre>
+                </li>
+                <li>`items()`: Returns a view object that displays a list of all the key-value pairs (as tuples).
+                    <pre>items = my_dict.items() # dict_items([('name', 'Alice'), ('age', 30), ('city', 'New York')])
+print(list(items))    # [('name', 'Alice'), ('age', 30), ('city', 'New York')]</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Important Dictionary Methods</strong>:
+            <ul>
+                <li>`get(key, default)`: Returns the value for the specified key. If the key is not present, it returns the `default` value (or `None` if no default is provided).
+                    <pre>name = my_dict.get("name")      # "Alice"
+country = my_dict.get("country")  # None
+country = my_dict.get("country", "Unknown") # "Unknown"</pre>
+                </li>
+                <li>`update(other_dict)`: Updates the dictionary with the key-value pairs from `other_dict`. Existing keys are overwritten, new keys are added.
+                    <pre>more_data = {"country": "USA", "occupation": "Engineer"}
+my_dict.update(more_data) # my_dict is now {"name": "Alice", "age": 30, "city": "New York", "country": "USA", "occupation": "Engineer"}</pre>
+                </li>
+                <li>`pop(key, default)`: Removes the key and returns the corresponding value. If the key is not found, it returns the `default` value (or raises a `KeyError` if no default is provided).
+                    <pre>age = my_dict.pop("age") # age is 30, my_dict is now {"name": "Alice", "city": "New York", "country": "USA", "occupation": "Engineer"}
+job = my_dict.pop("job", "Not found") # job is "Not found"</pre>
+                </li>
+                <li>`popitem()`: Removes and returns an arbitrary (key, value) pair from the dictionary.<pre>item = my_dict.popitem()</pre></li>
+                <li>`clear()`: Removes all items from the dictionary.<pre>my_dict.clear()</pre></li>
+            </ul>
+        </li>
+        <li><strong>Dictionary Keys</strong>: Keys must be immutable (e.g., strings, numbers, tuples).</li>
+        <li><strong>Sorting and Looping</strong>:
+            <ul>
+                <li>Iterating through a dictionary:
+                    <pre>for key in my_dict:
+    print(key, my_dict[key])
+for key, value in my_dict.items():
+    print(key, value)</pre>
+                </li>
+                <li>Sorting a dictionary (returns a sorted list of keys):
+                    <pre>sorted_keys = sorted(my_dict) # Sorts by keys
+sorted_items = sorted(my_dict.items(), key=lambda item: item[1]) # Sorts by values
+print(sorted_keys)
+print(sorted_items)</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Nested Dictionaries</strong>: Dictionaries can contain other dictionaries as values, allowing you to represent hierarchical data structures.
+            <pre>employee = {
+    "name": "Alice",
+    "details": {
+        "age": 30,
+        "city": "New York",
+        "office": {
+            "building": "Empire State Building",
+            "floor": 10
+        }
+    }
+}
+print(employee["details"]["office"]["building"]) # "Empire State Building"</pre>
+        </li>
+    </ul>
+
+    <h2>Files</h2>
+    <ul>
+        <li>File Objects, File Built-in Function, File Built-in Methods, File Built-in Attributes, Standard Files, Command-line Arguments. File System. File Execution, Persistent Storage Modules.</li>
+        <li><strong>File Objects</strong>: Represent files in the operating system. You interact with files in Python through file objects.</li>
+        <li><strong>File Built-in Function</strong>: `open()`: Used to open a file. It takes the file path and the mode of opening the file as arguments (e.g., 'r' for read, 'w' for write, 'a' for append, 'b' for binary).
+            <pre>file = open("my_file.txt", "r") # Opens the file in read mode</pre>
+        </li>
+        <li><strong>File Built-in Methods</strong>: Methods for reading from and writing to files.
+            <ul>
+                <li>`read()`: Reads the entire file content as a string.
+                    <pre>file_content = file.read()</pre>
+                </li>
+                <li>`readline()`: Reads a single line from the file.
+                    <pre>line = file.readline()</pre>
+                </li>
+                <li>`readlines()`: Reads all lines from the file and returns them as a list of strings.
+                    <pre>lines = file.readlines()</pre>
+                </li>
+                <li>`write(string)`: Writes a string to the file.
+                    <pre>file.write("Hello, world!")</pre>
+                </li>
+                <li>`writelines(list_of_strings)`: Writes a list of strings to the file.
+                    <pre>file.writelines(["Line 1\n", "Line 2\n"])</pre>
+                </li>
+                <li>`close()`: Closes the file. It's crucial to close files to free up system resources and ensure that any buffered data is written to the file. It's often used with a `try...finally` block or the `with` statement to ensure closure.
+                    <pre>file.close()</pre>
+                    <pre>try:
+    file = open("my_file.txt", "r")
+    # Do something with the file
+finally:
+    file.close()</pre>
+                    <pre>with open("my_file.txt", "r") as file:
+    # Do something with the file
+# File is automatically closed after the 'with' block</pre></li>
+                <li>`seek(offset, whence)`: Changes the file's current position.
+                    <pre>file.seek(0) # Go to the beginning of the file
+file.seek(10) # Go to the 10th byte</pre>
+                </li>
+                <li>`tell()`: Returns the file's current position.
+                    <pre>position = file.tell()
+print(position)</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>File Built-in Attributes</strong>: Attributes of a file object.
+            <ul>
+                <li>`name`: The name of the file.
+                    <pre>print(file.name)</pre>
+                </li>
+                <li>`mode`: The mode in which the file was opened.
+                    <pre>print(file.mode)</pre>
+                </li>
+                <li>`closed`: A Boolean indicating whether the file is closed.
+                    <pre>print(file.closed)</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Standard Files</strong>:
+            <ul>
+                <li>`sys.stdin`: The standard input stream (usually the keyboard).</li>
+                <li>`sys.stdout`: The standard output stream (usually the console).</li>
+                <li>`sys.stderr`: The standard error stream (used for displaying error messages).</li>
+            </ul>
+        </li>
+        <li><strong>Command-line Arguments</strong>: Arguments passed to a Python script when it's executed from the command line. They are accessible through the `sys.argv` list. `sys.argv[0]` is the name of the script itself.
+            <pre>import sys
+print("Script name:", sys.argv[0])
+for i, arg in enumerate(sys.argv[1:]):
+    print(f"Argument {i+1}: {arg}")
+# If you run the script as: python my_script.py arg1 arg2 arg3
+# Output:
+# Script name: my_script.py
+# Argument 1: arg1
+# Argument 2: arg2
+# Argument 3: arg3</pre>
+        </li>
+        <li><strong>File System</strong>: Interacting with the file system using modules like `os` and `shutil`. Operations include:
+            <ul>
+                <li>Creating and deleting directories (`os.mkdir()`, `os.rmdir()`, `os.makedirs()`, `os.removedirs()`).
+                    <pre>import os
+os.mkdir("my_directory")
+os.makedirs("my_directory/sub_directory") # Creates nested directories
+os.rmdir("my_directory") # Removes an empty directory
+os.removedirs("my_directory/sub_directory") # Removes directory and all its sub-directories</pre>
+                </li>
+                <li>Checking file/directory existence (`os.path.exists()`, `os.path.isfile()`, `os.path.isdir()`).
+                    <pre>import os.path
+print(os.path.exists("my_file.txt"))
+print(os.path.isfile("my_file.txt"))
+print(os.path.isdir("my_directory"))</pre>
+                </li>
+                <li>Renaming files/directories (`os.rename()`).
+                    <pre>os.rename("old_name.txt", "new_name.txt")</pre>
+                </li>
+                <li>Copying files (`shutil.copy()`, `shutil.copy2()`, `shutil.copytree()`).
+                    <pre>import shutil
+shutil.copy("file1.txt", "file2.txt") # Copy file1.txt to file2.txt
+shutil.copy2("file1.txt", "file3.txt") # Copy file1.txt to file3.txt with metadata
+shutil.copytree("my_directory", "my_directory_backup") # Copies entire directory tree</pre>
+                </li>
+                <li>Getting file/directory information (e.g., size, modification time: `os.path.getsize()`, `os.path.getmtime()`).
+                    <pre>import os.path
+size = os.path.getsize("my_file.txt")
+mod_time = os.path.getmtime("my_file.txt")
+print(size)
+print(mod_time)</pre>
+                </li>
+                <li>Changing the current working directory (`os.chdir()`, `os.getcwd()`).
+                    <pre>import os
+os.chdir("/path/to/my/directory")
+current_dir = os.getcwd()
+print(current_dir)</pre>
+                </li>
+                <li>Listing files and directories (`os.listdir()`, `os.scandir()`).
+                    <pre>import os
+files = os.listdir()
+print(files)
+with os.scandir() as entries:
+    for entry in entries:
+        print(entry.name, entry.is_file(), entry.is_dir())</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>File Execution</strong>: Running other programs or scripts from within a Python script using modules like `subprocess` or `os.system()`.
+            <pre>import subprocess
+subprocess.run(["ls", "-l"]) # Runs the 'ls -l' command
+# To capture the output:
+result = subprocess.run(["ls", "-l"], capture_output=True, text=True)
+print(result.stdout)</pre>
+        </li>
+        <li><strong>Persistent Storage Modules</strong>: Modules for storing data persistently (i.e., the data remains even after the program terminates).
+            <ul>
+                <li>`pickle`: Serializes Python objects into a byte stream, which can be stored in a file. Used for storing complex data structures.
+                    <pre>import pickle
+data = {"name": "Alice", "age": 30}
+with open("my_data.pickle", "wb") as f:
+    pickle.dump(data, f)
+with open("my_data.pickle", "rb") as f:
+    loaded_data = pickle.load(f)
+print(loaded_data)</pre>
+                </li>
+                <li>`json`: Encodes and decodes data in JSON (JavaScript Object Notation) format, a lightweight and human-readable format. Useful for data exchange between applications.
+                    <pre>import json
+data = {"name": "Alice", "age": 30}
+json_string = json.dumps(data)
+print(json_string)
+with open("my_data.json", "w") as f:
+    json.dump(data, f)
+with open("my_data.json", "r") as f:
+    loaded_data = json.load(f)
+print(loaded_data)</pre>
+                </li>
+                <li>`shelve`: Provides a dictionary-like interface for persistent storage of Python objects, using a database-backed storage.
+                    <pre>import shelve
+with shelve.open("my_data.shelve") as db:
+    db["name"] = "Alice"
+    db["age"] = 30
+with shelve.open("my_data.shelve") as db:
+    print(db["name"])
+    print(db["age"])</pre>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li>Regular Expression: Introduction/Motivation , Special Symbols and Characters for REs , REs and Python.</li>
+        <li><strong>Regular Expressions (Regex)</strong>: Powerful tools for pattern matching in strings. They provide a concise way to search, validate, and manipulate text based on specific patterns.</li>
+        <li><strong>Introduction/Motivation</strong>:
+            <ul>
+                <li>Why use regular expressions?
+                    <ul>
+                        <li><strong>Searching</strong>: Find specific patterns within large amounts of text (e.g., finding all email addresses in a document).</li>
+                        <li><strong>Validation</strong>: Verify that strings conform to a specific format (e.g., validating phone numbers, email addresses, URLs).</li>
+                        <li><strong>Manipulation</strong>: Replace or extract parts of a string based on a pattern (e.g., replacing all occurrences of a word, extracting data from a log file).</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Special Symbols and Characters for REs (Metacharacters)</strong>:
+            <ul>
+                <li>`.` (dot): Matches any character except a newline.<pre>import re
+text = "abc\ndef"
+match = re.search(r".", text)
+if match:
+    print(match.group(0)) # Output: a</pre></li>
+                <li>`^` (caret): Matches the beginning of a string.<pre>text = "Start here"
+match = re.search(r"^Start", text)
+if match:
+    print("Match at the beginning")</pre></li>
+                <li>`$` (dollar): Matches the end of a string.<pre>text = "End here"
+match = re.search(r"here$", text)
+if match:
+    print("Match at the end")</pre></li>
+                <li>`\*` (asterisk): Matches the preceding character zero or more times.<pre>text = "abccc"
+match = re.search(r"bc*", text)
+if match:
+    print(match.group(0)) # Output: bccc</pre></li>
+                <li>`+` (plus): Matches the preceding character one or more times.<pre>text = "abccc"
+match = re.search(r"bc+", text)
+if match:
+    print(match.group(0)) # Output: bccc</pre></li>
+                <li>`?` (question mark): Matches the preceding character zero or one time.<pre>text = "abc"
+match = re.search(r"ab?c", text)
+if match:
+    print(match.group(0)) # Output: abc
+text = "ac"
+match = re.search(r"ab?c", text)
+if match:
+    print(match.group(0)) # Output: ac</pre></li>
+                <li>`[]` (square brackets): Defines a character class, matching any character within the brackets (e.g., `[a-z]` matches any lowercase letter).<pre>text = "a1b2c3d4"
+match = re.findall(r"[a-c]", text)
+print(match) # Output: ['a', 'b', 'c']</pre></li>
+                <li>`[^]` (negated square brackets): Matches any character *not* within the brackets.<pre>text = "a1b2c3d4"
+match = re.findall(r"[^0-9]", text)
+print(match) # Output: ['a', 'b', 'c', 'd']</pre></li>
+                <li>`\` (backslash): Escapes special characters (e.g., `\.` matches a literal dot, `\d` matches a digit).<pre>text = "123.456"
+match = re.search(r"\.", text)
+if match:
+    print(match.group(0)) # Output: .
+text = "abc123def"
+match = re.search(r"\d+", text)
+if match:
+    print(match.group(0)) # Output: 123</pre></li>
+                <li>`|` (pipe): Specifies alternation (e.g., `a|b` matches either "a" or "b").<pre>text = "apple or banana"
+match = re.findall(r"apple|banana", text)
+print(match) # Output: ['apple', 'banana']</pre></li>
+                <li>`()` (parentheses): Groups characters together and creates capturing groups (used for extracting matched portions of the string).<pre>text = "name: John, age: 30"
+match = re.search(r"name: (\w+), age: (\d+)", text)
+if match:
+    print(match.group(1)) # Output: John
+    print(match.group(2)) # Output: 30</pre></li>
+                 <li>`{m,n}` (curly braces): Matches the preceding character at least `m` times and at most `n` times.
+                    <pre>
+text = "aab"
+match = re.search(r"a{2,3}b", text)
+if match:
+  print(match.group(0))  # Output: aab
+text = "aaab"
+match = re.search(r"a{2,3}b", text)
+if match:
+  print(match.group(0)) # Output: aaab
+
+text = "aaaaab"
+match = re.search(r"a{2,3}b", text)
+if match:
+  print(match.group(0)) # Output: None
+                    </pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>REs and Python</strong>: The `re` module in Python provides functions for working with regular expressions.
+            <ul>
+                <li>`re.search(pattern, string)`: Searches for the first occurrence of the pattern in the string. Returns a match object if found, otherwise `None`.<pre>import re
+text = "The quick brown fox"
+match = re.search(r"quick", text)
+if match:
+    print("Found a match!")
+    print(match.start(), match.end()) # 4, 9
+else:
+    print("No match")</pre>
+                </li>
+                <li>`re.match(pattern, string)`: Tries to match the pattern at the \*beginning\* of the string. Returns a match object if found, otherwise `None`.<pre>import re
+text = "The quick brown fox"
+match = re.match(r"The", text)
+if match:
+    print("Match at the beginning")
+else:
+    print("No match at the beginning")
+match = re.match(r"quick", text)
+if match:
+    print("Match at the beginning")
+else:
+    print("No match at the beginning")</pre>
+                </li>
+                <li>`re.findall(pattern, string)`: Finds all occurrences of the pattern in the string and returns them as a list of strings.<pre>import re
+text = "The quick brown fox jumps over the lazy fox"
+matches = re.findall(r"fox", text)
+print(matches) # Output: ['fox', 'fox']</pre></li>
+                <li>`re.finditer(pattern, string)`: Returns an iterator yielding match objects for all occurrences of the pattern.<pre>import re
+text = "The quick brown fox jumps over the lazy fox"
+for match in re.finditer(r"fox", text):
+    print(match.start(), match.end())</pre></li>
+                <li>`re.sub(pattern, replacement, string)`: Replaces occurrences of the pattern in the string with the `replacement` string.<pre>import re
+text = "The quick brown fox"
+new_text = re.sub(r"fox", "dog", text)
+print(new_text) # Output: The quick brown dog</pre></li>
+                <li>`re.split(pattern, string)`: Splits the string into a list of substrings, using the pattern as the delimiter.<pre>import re
+text = "apple,banana,cherry"
+result = re.split(r",", text)
+print(result) # Output: ['apple', 'banana', 'cherry']</pre></li>
+                <li>`re.compile(pattern)`: Compiles the pattern into a regex object, which can be used for multiple matching operations, improving efficiency.<pre>import re
+pattern = re.compile(r"\d+")
+text1 = "abc123def456"
+text2 = "ghi789jkl"
+match1 = pattern.search(text1)
+match2 = pattern.search(text2)
+print(match1.group(0)) # 123
+print(match2.group(0)) # 789</pre></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>UNIT-V</h2>
+    <ul>
+        <li>Database Interaction: SQL Database Connection using Python, Creating and Searching Tables, Reading and storing config information on database, Programming using database connections.</li>
+        <li><strong>SQL Database Connection using Python</strong>: Python can connect to various relational database management systems (RDBMS) using database connectors. Examples:
+            <ul>
+                <li>`sqlite3`: For working with SQLite databases (a lightweight, file-based database). Included in the Python standard library.
+                    <pre>import sqlite3
+conn = sqlite3.connect("my_database.db")
+cursor = conn.cursor()</pre>
+                </li>
+                <li>`psycopg2`: For PostgreSQL.
+                    <pre>import psycopg2
+conn = psycopg2.connect(
+    host="localhost",
+    database="my_database",
+    user="my_user",
+    password="my_password")
+cursor = conn.cursor()</pre>
+                </li>
+                <li>`mysql-connector-python`: For MySQL.
+                    <pre>import mysql.connector
+conn = mysql.connector.connect(
+    host="localhost",
+    user="my_user",
+    password="my_password",
+    database="my_database")
+cursor = conn.cursor()</pre>
+                </li>
+                <li>`pyodbc`: For ODBC connections (can connect to various databases).
+                    <pre>import pyodbc
+conn = pyodbc.connect(
+    "Driver={SQL Server};"
+    "Server=my_server;"
+    "Database=my_database;"
+    "UID=my_user;"
+    "PWD=my_password;")
+cursor = conn.cursor()</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Creating and Searching Tables</strong>: Using SQL statements (e.g., `CREATE TABLE`, `SELECT`, `INSERT`, `UPDATE`, `DELETE`) within Python code to interact with the database. This involves:
+            <ul>
+                <li>Establishing a connection to the database.</li>
+                <li>Creating a cursor object, which allows you to execute SQL queries.</li>
+                <li>Executing SQL queries using the cursor's methods (e.g., `execute()`, `executemany()`).
+                    <pre># Create table
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        age INTEGER
+    )
+""")
+# Insert data
+cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", ("Alice", 30))
+cursor.executemany("INSERT INTO users (name, age) VALUES (?, ?)", [("Bob", 25), ("Charlie", 35)])
+# Select data
+cursor.execute("SELECT * FROM users")
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+# Update data
+cursor.execute("UPDATE users SET age = ? WHERE name = ?", (31, "Alice"))
+# Delete data
+cursor.execute("DELETE FROM users WHERE name = ?", ("Charlie",))
+conn.commit()
+</pre>
+                </li>
+                <li>Fetching data from the result set (e.g., `fetchone()`, `fetchall()`).</li>
+                <li>Committing changes to the database.</li>
+                <li>Closing the cursor and the connection.
+                    <pre>conn.close()</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Reading and storing config information on database</strong>: Databases can be used to store configuration settings for applications, instead of using flat files. This allows for easier management, querying, and updating of configuration data.</li>
+        <li><strong>Programming using database connections</strong>: Building applications that interact with databases to store and retrieve data. This is a fundamental aspect of many software applications, including web applications, data-driven applications, and enterprise systems.</li>
+        <li><strong>Python Multithreading</strong>: Understanding threads, Forking threads, synchronizing the threads, Programming using multithreading.</li>
+        <li><strong>Understanding threads</strong>:
+            <ul>
+                <li>A thread is a lightweight unit of execution within a process. A process can have multiple threads running concurrently.</li>
+                <li>Multithreading allows a program to perform multiple tasks seemingly simultaneously, improving responsiveness and efficiency, especially for I/O-bound operations.</li>
+                <li>The Global Interpreter Lock (GIL) in CPython (the standard Python implementation) limits true parallelism for CPU-bound tasks. Only one thread can hold the GIL at a time. However, multithreading can still be beneficial for I/O-bound tasks, as the GIL is released when a thread is waiting for I/O.</li>
+            </ul>
+        </li>
+        <li><strong>Forking threads</strong>: Creating new threads using the `threading` module.
+            <pre>import threading
+def my_function(arg1, arg2):
+    print(f"Thread started with args: {arg1}, {arg2}")
+    # Perform some task
+thread = threading.Thread(target=my_function, args=("hello", 123))
+thread.start()
+thread.join()  # Wait for the thread to finish</pre>
+        </li>
+        <li><strong>Synchronizing the threads</strong>: Ensuring that multiple threads can access shared resources without causing data corruption or race conditions. Techniques include:
+            <ul>
+                <li><strong>Locks (`threading.Lock`, `threading.RLock`)</strong>: A lock is a synchronization primitive that allows only one thread to acquire it at a time. Threads must acquire the lock before accessing shared resources and release it when they are done. RLock (reentrant lock) allows a thread to acquire the same lock multiple times.
+                    <pre>import threading
+lock = threading.Lock()
+def my_function(shared_resource):
+    lock.acquire()
+    try:
+        # Access and modify the shared resource
+        shared_resource += 1
+    finally:
+        lock.release()</pre>
+                </li>
+                <li><strong>Semaphores (`threading.Semaphore`)</strong>: A semaphore manages a counter that represents the number of available resources. Threads can acquire a resource (decrement the counter) or release a resource (increment the counter).
+                    <pre>import threading
+semaphore = threading.Semaphore(3) # Allow 3 threads to access concurrently
+def my_function(resource):
+    semaphore.acquire()
+    try:
+        # Use the resource
+        print(f"Thread using resource: {resource}")
+    finally:
+        semaphore.release()</pre>
+                </li>
+                <li><strong>Conditions (`threading.Condition`)</strong>: Allows threads to wait for a specific condition to become true. It's used with a lock.
+                    <pre>import threading
+condition = threading.Condition()
+shared_resource = 0
+def producer():
+    global shared_resource
+    condition.acquire()
+    shared_resource = 1
+    condition.notify() # Notify waiting consumer
+    condition.release()
+def consumer():
+    global shared_resource
+    condition.acquire()
+    while shared_resource == 0:
+        condition.wait() # Wait for producer to notify
+    print(f"Consumer got resource: {shared_resource}")
+    condition.release()</pre>
+                </li>
+                <li><strong>Events (`threading.Event`)</strong>: A simple synchronization object that can be set to `True` (signaled) or `False`. Threads can wait for the event to be set.
+                    <pre>import threading
+event = threading.Event()
+def worker():
+    event.wait() # Wait until the event is set
+    print("Worker received the signal")
+def master():
+    # Perform some setup
+    event.set() # Signal the worker thread</pre>
+                </li>
+                <li><strong>Queues (`queue.Queue`, `queue.LifoQueue`, `queue.PriorityQueue`)</strong>: Thread-safe data structures that can be used for communication between threads.
+                    <pre>import queue
+q = queue.Queue()
+def producer():
+    for i in range(5):
+        q.put(i) # Put items in the queue
+def consumer():
+    while not q.empty():
+        item = q.get() # Get items from the queue
+        print(f"Consumer got: {item}")</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Programming using multithreading</strong>: Designing and implementing applications that use multiple threads to improve performance or handle concurrent tasks. Careful consideration is needed to avoid common multithreading problems like:
+            <ul>
+                <li><strong>Race conditions</strong>: When the outcome of a program depends on the unpredictable order of execution of multiple threads.</li>
+                <li><strong>Deadlocks</strong>: When two or more threads are blocked indefinitely, waiting for each other to release resources.</li>
+                <li><strong>Starvation</strong>: When a thread is repeatedly denied access to a resource and cannot make progress.</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
