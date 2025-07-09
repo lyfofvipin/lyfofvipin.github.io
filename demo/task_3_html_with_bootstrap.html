@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tags Showcase</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <header class="bg-primary text-white py-4 mb-4">
+        <div class="container text-center">
+            <h1>Welcome to the HTML Tags Showcase</h1>
+            <nav class="mt-3">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://lyfofvipin.github.io/" target="_blank">lyfofvipin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#form">Form</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#table">Table</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+
+        <!-- Text Formatting -->
+        <section class="mb-5">
+            <h2 class="text-primary">Text Formatting</h2>
+            <p>This is a <strong class="text-danger">strong</strong> word and this is <em class="text-success">emphasized</em>.</p>
+            <p>You can also use <u>underline</u>, <mark>highlight</mark>, <small>small text</small>, <del>deleted</del>, and <ins>inserted</ins> tags.</p>
+            <blockquote class="blockquote">
+                <p>This is a blockquote example.</p>
+            </blockquote>
+            <pre class="bg-light p-3 border rounded"><code>let x = 10;</code></pre>
+        </section>
+
+        <!-- Lists -->
+        <section class="mb-5">
+            <h2 class="text-primary">Lists</h2>
+
+            <h4>Unordered List</h4>
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item">HTML</li>
+                <li class="list-group-item">CSS</li>
+                <li class="list-group-item">JavaScript</li>
+            </ul>
+
+            <h4>Ordered List</h4>
+            <ol class="mb-3">
+                <li>Step 1</li>
+                <li>Step 2</li>
+                <li>Step 3</li>
+            </ol>
+
+            <h4>Description List</h4>
+            <dl class="row">
+                <dt class="col-sm-3">HTML</dt>
+                <dd class="col-sm-9">HyperText Markup Language</dd>
+                <dt class="col-sm-3">CSS</dt>
+                <dd class="col-sm-9">Cascading Style Sheets</dd>
+            </dl>
+        </section>
+
+        <!-- Table -->
+        <section id="table" class="mb-5">
+            <h2 class="text-primary">Table Example</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alice</td>
+                            <td>Developer</td>
+                        </tr>
+                        <tr>
+                            <td>Bob</td>
+                            <td>Designer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Media -->
+        <section class="mb-5">
+            <h2 class="text-primary">Media Tags</h2>
+
+            <h4>Image</h4>
+            <img src="https://via.placeholder.com/150" alt="Placeholder" class="img-thumbnail mb-3">
+
+            <h4>Audio</h4>
+            <audio controls class="w-100 mb-3">
+                <source src="sample.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h4>Video</h4>
+            <video width="100%" height="auto" controls class="border rounded">
+                <source src="sample.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Form -->
+        <section id="form" class="mb-5">
+            <h2 class="text-primary">Form Elements</h2>
+            <form action="#" method="post" class="border p-4 rounded bg-white shadow-sm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country:</label>
+                    <select id="country" name="country" class="form-select">
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="subscribe" name="subscribe">
+                    <label class="form-check-label" for="subscribe">
+                        Subscribe to newsletter
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </section>
+
+        <!-- Semantic Elements -->
+        <article class="mb-4 p-3 bg-white rounded border shadow-sm">
+            <h2 class="text-primary">Article Title</h2>
+            <p>This is a sample article element with real semantic meaning.</p>
+        </article>
+
+        <aside class="mb-5 p-3 bg-light border rounded">
+            <h4>Sidebar</h4>
+            <p>This is an aside content, maybe related links or ads.</p>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 <a href="https://lyfofvipin.github.io/" class="text-warning text-decoration-none">lyfofvipin</a>. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

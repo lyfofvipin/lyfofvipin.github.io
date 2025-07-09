@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bootstrap Calculator</title>
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+          <div class="card-body text-center">
+            <h3 class="card-title mb-4 text-primary">Simple Calculator</h3>
+
+            <!-- Input fields -->
+            <input
+              type="number"
+              id="num1"
+              class="form-control mb-3"
+              placeholder="Enter first number"
+            />
+            <input
+              type="number"
+              id="num2"
+              class="form-control mb-3"
+              placeholder="Enter second number"
+            />
+
+            <!-- Buttons -->
+            <div class="d-grid gap-2 d-md-flex justify-content-center mb-3">
+              <button class="btn btn-primary" onclick="calculate('+')">+</button>
+              <button class="btn btn-primary" onclick="calculate('-')">−</button>
+              <button class="btn btn-primary" onclick="calculate('*')">×</button>
+              <button class="btn btn-primary" onclick="calculate('/')">÷</button>
+            </div>
+
+            <!-- Result -->
+            <div id="result" class="fs-5 fw-semibold text-success"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Logic -->
+  <script>
+    function calculate(operator) {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      let result;
+
+      if (isNaN(num1) || isNaN(num2)) {
+        result = "Please enter both numbers.";
+      } else {
+        switch (operator) {
+          case '+':
+            result = num1 + num2;
+            break;
+          case '-':
+            result = num1 - num2;
+            break;
+          case '*':
+            result = num1 * num2;
+            break;
+          case '/':
+            result = num2 !== 0 ? num1 / num2 : "Cannot divide by zero.";
+            break;
+          default:
+            result = "Unknown operation.";
+        }
+      }
+
+      document.getElementById("result").textContent = "Result: " + result;
+    }
+  </script>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
