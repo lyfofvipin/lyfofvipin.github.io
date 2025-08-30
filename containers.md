@@ -1,7 +1,7 @@
 ---
 permalink: /containers/
-title: containers
-heading: Container Basics
+title: Containers
+heading: Containers
 layout: default
 ---
 
@@ -26,7 +26,7 @@ layout: default
       {%- for post in posts -%}
       {%- assign flag = 0 -%}
       {%- for tag in post.tags -%}
-        {%- if "c" == tag -%}
+        {%- if "containers" == tag -%}
           {%- assign flag = 1 -%}
         {%- endif -%}
       {%- endfor -%}
