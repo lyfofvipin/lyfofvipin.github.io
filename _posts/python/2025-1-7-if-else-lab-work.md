@@ -1,5 +1,5 @@
 ---
-title: Practical Lab Exercises: Conditional Logic Problems in Python
+title: Practical Lab Exercises Conditional Logic Problems in Python
 categories: python
 tags: [python]
 ---
