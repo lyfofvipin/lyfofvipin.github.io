@@ -4,6 +4,8 @@ categories: random_stuff
 tags: [random_stuff, flask, backend, database, python]
 ---
 
+{% raw %}
+
 ## 1. The Development Server: Why Do We Run `flask run`?
 
 When building a website, your Python script cannot talk directly to incoming web traffic out of the box. It needs a gateway module to listen to network ports.
@@ -519,3 +521,4 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 ```
+{% endraw %}
