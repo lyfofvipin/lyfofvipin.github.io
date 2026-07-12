@@ -1,6 +1,6 @@
 ---
 title: The Architectural Deep Dive into Django vs Flask vs FastAPI
-categories: python, web-development
+categories: random_stuff
 tags: [django, flask, fastapi, backend]
 ---
 

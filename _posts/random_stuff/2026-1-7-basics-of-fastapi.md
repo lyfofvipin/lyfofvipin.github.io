@@ -1,6 +1,6 @@
 ---
 title: Basics Of FastAPI In Python
-categories: python, web-development
+categories: random_stuff
 tags: [fastapi, backend, async, databases]
 ---
 
