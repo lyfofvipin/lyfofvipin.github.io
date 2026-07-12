@@ -1,5 +1,5 @@
 ---
-title: Master Guide to File System Automation and Command Line Arguments in Python
+title: File System Automation and Command Line Arguments in Python
 categories: python
 tags: [python]
 ---

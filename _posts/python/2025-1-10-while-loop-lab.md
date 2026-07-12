@@ -1,5 +1,5 @@
 ---
-title: Comprehensive Python Practice Workbook: Data Structures and Control Flow
+title: While Loop Lab Work
 categories: python
 tags: [python]
 ---

@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Sets and Frozensets in Python Operations and Comparisons
+title: Sets and Frozensets in Python Operations and Comparisons
 categories: python
 tags: [python]
 ---

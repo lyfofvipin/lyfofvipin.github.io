@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Dictionaries in Python Key-Value Mappings and Iteration
+title: Dictionaries in Python Key-Value Mappings and Iteration
 categories: python
 tags: [python]
 ---

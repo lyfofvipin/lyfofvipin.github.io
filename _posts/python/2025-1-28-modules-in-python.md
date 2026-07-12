@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Modules, Packages, and Libraries in Python
+title: Modules, Packages, and Libraries in Python
 categories: python
 tags: [python]
 ---

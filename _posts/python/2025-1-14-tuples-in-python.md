@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Tuples in Python Immutability, Unpacking, and Memory Behavior
+title: Tuples in Python Immutability, Unpacking, and Memory Behavior
 categories: python
 tags: [python]
 ---

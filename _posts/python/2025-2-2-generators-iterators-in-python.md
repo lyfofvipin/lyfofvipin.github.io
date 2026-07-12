@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Generators, Iterators, and Memory Optimization in Python
+title: Generators, Iterators, and Memory Optimization in Python
 categories: python
 tags: [python]
 ---

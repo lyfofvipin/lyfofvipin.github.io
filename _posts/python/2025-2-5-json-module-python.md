@@ -1,5 +1,5 @@
 ---
-title: Master Guide to JSON Parsing and Serialization in Python
+title: JSON Parsing and Serialization in Python
 categories: python
 tags: [python, json]
 ---

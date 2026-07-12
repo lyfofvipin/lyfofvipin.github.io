@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Lists in Python Mutability, References, and Core Methods
+title: Lists in Python Mutability, References, and Core Methods
 categories: python
 tags: [python]
 ---

@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Decorators and Wrapper Functions in Python
+title: Decorators and Wrapper Functions in Python
 categories: python
 tags: [python]
 ---

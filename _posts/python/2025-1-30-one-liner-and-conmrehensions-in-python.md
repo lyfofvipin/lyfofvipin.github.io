@@ -1,5 +1,5 @@
 ---
-title: Master Guide to One-Liner Expressions and Comprehensions in Python
+title: One-Liner Expressions and Comprehensions in Python
 categories: python
 tags: [python]
 ---

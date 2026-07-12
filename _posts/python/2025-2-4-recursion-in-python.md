@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Recursion and Call Stack Mechanics in Python
+title: Recursion and Call Stack Mechanics in Python
 categories: python
 tags: [python]
 ---

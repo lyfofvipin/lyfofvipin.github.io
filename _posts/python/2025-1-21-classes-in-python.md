@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Classes and Objects in Python Blueprints and Instance Mechanics
+title: Classes and Objects in Python Blueprints and Instance Mechanics
 categories: python
 tags: [python]
 ---

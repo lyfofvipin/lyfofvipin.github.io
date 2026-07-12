@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Functional Programming, Higher-Order Functions, and Built-in Iterators
+title: Higher-Order Functions, and Built-in Iterators
 categories: python
 tags: [python]
 ---

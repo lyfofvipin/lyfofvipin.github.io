@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Strings in Python Indexing, Slicing, and Methods
+title: Strings in Python Indexing, Slicing, and Methods
 categories: python
 tags: [python]
 ---

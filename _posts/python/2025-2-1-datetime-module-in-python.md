@@ -1,5 +1,5 @@
 ---
-title: Master Guide to the Datetime Module and Time Delta Calculations in Python
+title: Datetime Module and Time Delta Calculations in Python
 categories: python
 tags: [python]
 ---

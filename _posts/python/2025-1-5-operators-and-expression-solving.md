@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Operators and Expression Evaluation in Python
+title: Operators And Expressions In Python
 categories: python
 tags: [python]
 ---

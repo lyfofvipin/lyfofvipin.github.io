@@ -1,5 +1,5 @@
 ---
-title: Master Guide to File Handling in Python Paths, Modes, and Stream Operations
+title: File Handling in Python Paths, Modes, and Stream Operations
 categories: python
 tags: [python]
 ---

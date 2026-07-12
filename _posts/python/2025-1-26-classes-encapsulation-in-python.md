@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Encapsulation and Name Mangling in Python
+title: Encapsulation and Name Mangling in Python
 categories: python
 tags: [python]
 ---

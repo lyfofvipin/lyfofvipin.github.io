@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Object-Oriented Project Design Building a Complete Banking App
+title: Classes Lab In Python
 categories: python
 tags: [python]
 ---

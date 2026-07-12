@@ -1,5 +1,5 @@
 ---
-title: Comprehensive Guide to Python Functions Scope, Arguments, and Return Mechanics
+title: Python Functions Scope, Arguments, and Return Mechanics
 categories: python
 tags: [python]
 ---

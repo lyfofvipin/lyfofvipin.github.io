@@ -1,5 +1,5 @@
 ---
-title: Master Guide to For Loops in Python Iteration, Range, and Multi-Sequence Control
+title: For Loops in Python Iteration, Range, and Multi-Sequence Control
 categories: python
 tags: [python]
 ---

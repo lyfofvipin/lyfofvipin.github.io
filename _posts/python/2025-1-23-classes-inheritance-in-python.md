@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Inheritance and Method Overriding in Python Parent and Child Classes
+title: Inheritance and Method Overriding in Python Parent and Child Classes
 categories: python
 tags: [python]
 ---

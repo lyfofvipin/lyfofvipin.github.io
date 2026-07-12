@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Multilevel and Hybrid Inheritance in Python
+title: Multilevel and Hybrid Inheritance in Python
 categories: python
 tags: [python]
 ---

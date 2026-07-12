@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Operator Overloading and Magic Methods in Python
+title: Operator Overloading and Magic Methods in Python
 categories: python
 tags: [python]
 ---

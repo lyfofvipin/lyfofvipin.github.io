@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Multiple Inheritance and Method Resolution Order in Python
+title: Multiple Inheritance and Method Resolution Order in Python
 categories: python
 tags: [python]
 ---

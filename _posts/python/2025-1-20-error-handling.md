@@ -1,5 +1,5 @@
 ---
-title: Master Guide to Exception Handling in Python Try, Except, Else, and Finally
+title: Error Handling in Python Try, Except, Else, and Finally
 categories: python
 tags: [python]
 ---
