@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrays In Go Lang · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Arrays In Go Lang</h1>
+    
+    <div class="post-meta">
+      <time datetime="2024-09-28T00:00:00Z">
+        Sep 28, 2024
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#go</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#array">Array</a></li>
+    <li><a href="#how-to-create-array-in-go">How to create array in Go</a></li>
+    <li><a href="#using--to-set-custom-values-on-indexes-during-initialization">Using <code>:</code> To Set Custom Values On Indexes During Initialization</a></li>
+    <li><a href="#updating-value-of-an-array">Updating Value Of An Array</a></li>
+    <li><a href="#slicing-and-splitting-of-arrays-in-go">Slicing and Splitting Of Arrays In Go</a></li>
+    <li><a href="#2d-array">2D Array</a>
+      <ul>
+        <li><a href="#how-to-define-a-2d-array">How to define a 2D Array</a></li>
+      </ul>
+    </li>
+    <li><a href="#accessing-values-in-array">Accessing Values in Array</a></li>
+    <li><a href="#taking-input-in-arrays">Taking input in Arrays</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h2 id="array">Array</h2>
+<p>An Array is a collection of several elements of similar data type, where we can store multiple values at a time and these values can be accessed with there index values.</p>
+<p>Here is the visual representation of a Array of Integer type:</p>
+<img class="img_center" src="statics/img/array.png" alt="If-Else">
+<p>Above array is a collection of 5 integers <code>10, 20, 30, 40, 50</code> and has index values <code>0,1,2,3,4</code>.</p>
+<h2 id="how-to-create-array-in-go">How to create array in Go</h2>
+<p>To create a array in Go we have to follow the syntax mentioned below.
+we have to define the name of the variable then we use <code>[]</code> to define the length of the array we can leave it blank if you are initializing array value during the definition we can put value <code>...</code> it will automatically set the length of array based on the values you are passing during initialization, then we define the type of collection array will be for example it will be collection of integers, string, rune and it can be an another array.
+Here are a few examples.</p>
+<pre tabindex="0"><code>package main
+
+import (
+	&#34;fmt&#34;
+)
+
+func main (){
+
+	var arr1 [5]int
+	arr2 := [5]int{ 10, 20, 30, 40, 50 }
+
+	var arr3 = [...]int{ 1, 2, 3, 4, 5 }
+	arr4 := [...]int{ 10, 20, 30, 40, 50 }
+
+	var arr5 = [...]string{ &#34;A&#34;, &#34;a&#34;, &#34;b&#34;, &#34;B&#34;, `c`, `C` }
+	arr6 := [...]rune{ &#39;a&#39;, &#39;4&#39;, &#39;-&#39;, &#39;+&#39; }
+
+	arr7 := [...]bool { true }
+	arr8 := [...]bool { true, false }
+
+	fmt.Println(arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8 )
+
+    // Here are some wrong examples
+    // var arr [...]int
+    // arr := [...]int
+    // arr := [4]int
+    // var arr [1]int = {1}
+    // var arr = [1]int{ 1, 3}
+}
+</code></pre><p>Here are a few points to remember while working with arrays:</p>
+<ul>
+<li>You can access the values using the index which starts from 0.</li>
+<li>A array is a collection of same datatype a array can not have different data types.</li>
+<li>There are multiple ways of initializing array</li>
+<li>If you did not give any value during initializing it will be set to <code>[ ]</code> with string, 0 with int, false with bool and default Nil value of the collection datatype.</li>
+<li>You can use <code>...</code> in the <code>[]</code> to auto detect the length</li>
+<li>You can also use <code>:</code> to define the specific index value during initialization.</li>
+</ul>
+<h2 id="using--to-set-custom-values-on-indexes-during-initialization">Using <code>:</code> To Set Custom Values On Indexes During Initialization</h2>
+<p><code>:</code> Can be used in a pair <code>index:value</code> where left value is the index on which you want to insert anything and on the right side we write the value we want to insert on the given index.</p>
+<p>Example:</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+
+	arr := [10]int{ 1, 2, 9:3434 }
+
+	fmt.Println(arr)
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day13/using_colon.go 
+[1 2 0 0 0 0 0 0 0 3434]
+</code></pre><p>In the above example you can see that on <code>index 9</code> we have the <code>value 3434</code>.</p>
+<h2 id="updating-value-of-an-array">Updating Value Of An Array</h2>
+<p>We can use the index with the array name to update the value of an index.</p>
+<p>In below example <code>arr[0] = 1000</code> we are updating value of index <code>0</code> with integer value <code>1000</code>.</p>
+<p>Example:</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+
+	arr := [10]int{ 1, 2, 9:3434 }
+
+	fmt.Println(arr)
+
+	arr[0] = 1000
+
+	fmt.Println(arr)
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day14/udate_str.go 
+[1 2 0 0 0 0 0 0 0 3434]
+[1000 2 0 0 0 0 0 0 0 3434]
+</code></pre><h2 id="slicing-and-splitting-of-arrays-in-go">Slicing and Splitting Of Arrays In Go</h2>
+<p>This is a nice and smooth way of cutting an array or getting sub arrays out of a single array.
+Split mechanism is used to divide an array into a sub array of your choice.</p>
+<p>To slice an array we use this syntax <code>array_name[index_from_where_to_split:index_until_split+1]</code>.</p>
+<p>In above example <code>array_name</code> is the array you want to split.</p>
+<p><code>index_from_where_to_split</code> Is the integer value from where you want to cut the array.</p>
+<p><code>index_until_split+1</code> Is an integer till where you want to cut the array + 1 example if you want array to be cut till index <code>8</code> so you have to write <code>9</code>.</p>
+<p>and <code>:</code> is used to septate these integers.</p>
+<p>In below example we want to split array <code>arr</code> from index <code>3</code> to index <code>6</code> so we are using statement <code>arr[3:7]</code>.</p>
+<p>Example:</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+
+	arr := [10]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+	sli := a[3:7]
+
+	fmt.Println(arr)
+	fmt.Println(sli)
+
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day14/split.go 
+[0 1 2 3 4 5 6 7 8 9]
+[3 4 5 6]
+</code></pre><p><strong>Now once you split an array you get a slice which is similar to array but not array it&rsquo;s a completely different data type name as Slice.</strong></p>
+<p>For more on Slices you can see slice blog post in below URL: <a href="https://lyfofvipin.github.io/go">https://lyfofvipin.github.io/go</a></p>
+<h2 id="2d-array">2D Array</h2>
+<p>A 1-D array is a collection of several elements that contain only one row of elements. The 2-D array is a collection of rows and columns where each row contains smiler number of columns. The requirement of 2-D array is removing the need of several 1-d array and it may be helpful to create mathematical data structure named as matrix and many more.</p>
+<p><em>NOTE: A Array of string act a 2D array.</em></p>
+<h3 id="how-to-define-a-2d-array">How to define a 2D Array</h3>
+<p>It&rsquo;s similar to 1D array here we use two brackets <code>[][]</code> to set the number of raw and columns of the array.
+Here the first one has the first bracket defines the number of raws and the second one has the number of columns.</p>
+<p>Here are some example of 2D array of Integer type:</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+	
+	var arr1 [2][2]int
+
+	var arr2 = [2][2]int{
+		{ 1, 2 },
+		{ 3, 4 },
+	}
+
+	var arr3 = [3][3]int{
+		{ 1, 2, 3},
+		{ 1, 2, 3},
+		{ 1, 2, 3},
+	}
+
+	var arr4 = [4][5]int{
+		{ 1, 2, 3, 4, 5},
+		{ 1, 2, 3, 4, 5},
+		{ 1, 2, 3, 4, 5},
+		{ 1, 2, 3, 4, 5},
+	}
+
+	fmt.Println(arr1, arr2, arr3, arr4)
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day13/2Darray.go 
+[[0 0] [0 0]] [[1 2] [3 4]] [[1 2 3] [1 2 3] [1 2 3]] [[1 2 3 4 5] [1 2 3 4 5] [1 2 3 4 5] [1 2 3 4 5]]
+</code></pre><p>Here is a visual representation of the same:
+<img class="img_center" src="statics/img/2darray.png" alt="If-Else"></p>
+<h2 id="accessing-values-in-array">Accessing Values in Array</h2>
+<p>We can use the index to fetch the value of an array.
+Here are a few example for the same:</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+
+	arr1 := [5]string{ &#34;My&#34;, &#34;Name&#34;, &#34;Is&#34;, &#34;Vipin&#34;, &#34;Yadav&#34; }
+
+	fmt.Println(arr1[3])
+
+	// To get the specific value from the string we can use it&#39;s index
+	fmt.Printf( &#34;%c\n&#34;, arr1[0][0] )
+
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day13/access_value.go 
+Vipin
+M
+</code></pre><h2 id="taking-input-in-arrays">Taking input in Arrays</h2>
+<p>We take input in Arrays in the same way we take normal input here the difference is that we pass the index with the array name to <code>&amp;</code> for storing the value.</p>
+<p>Example:</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+
+	var arr1 [5]int
+
+	fmt.Println(arr1)
+
+	fmt.Println( &#34;Enter value for index 0.&#34;)
+	fmt.Scanf( &#34;%d&#34;, &amp;arr1[0])
+
+	fmt.Println( &#34;Enter value for index 1.&#34;)
+	fmt.Scanf( &#34;%d&#34;, &amp;arr1[1])
+
+	fmt.Println( &#34;Enter value for index 2.&#34;)
+	fmt.Scanf( &#34;%d&#34;, &amp;arr1[2])
+
+	fmt.Println( &#34;Enter value for index 3.&#34;)
+	fmt.Scanf( &#34;%d&#34;, &amp;arr1[3])
+
+	fmt.Println( &#34;Enter value for index 4.&#34;)
+	fmt.Scanf( &#34;%d&#34;, &amp;arr1[4])
+
+
+	fmt.Println(arr1)
+
+	for i := 0 ; i &lt; 5; i++ {
+		fmt.Printf( &#34;Enter value for index %d.\n&#34;, i)
+		fmt.Scanf( &#34;%d&#34;, &amp;arr1[i])
+	}
+
+	fmt.Println(arr1)
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day13/input.go 
+[0 0 0 0 0]
+Enter value for index 0.
+1
+Enter value for index 1.
+2
+Enter value for index 2.
+3
+Enter value for index 3.
+4
+Enter value for index 4.
+5
+[1 2 3 4 5]
+Enter value for index 0.
+5
+Enter value for index 1.
+4
+Enter value for index 2.
+3
+Enter value for index 3.
+2
+Enter value for index 4.
+1
+[5 4 3 2 1]
+</code></pre><p>Doc was written in this livestream <a href="https://www.youtube.com/watch?v=i7TRweKnyAQ">[Learn Go Day 13]</a> and <a href="https://www.youtube.com/watch?v=-Vp6g79I8C8">[Learn Go Day 14]</a></p>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

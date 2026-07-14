@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classes and Objects in Python Blueprints and Instance Mechanics · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Classes and Objects in Python Blueprints and Instance Mechanics</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-21T00:00:00Z">
+        Jan 21, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-core-mechanics-blueprints-vs-instances">1. Core Mechanics: Blueprints vs. Instances</a>
+      <ul>
+        <li><a href="#general-layout-syntax">General Layout Syntax</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-demystifying-self-and-instance-scope">2. Demystifying <code>self</code> and Instance Scope</a></li>
+    <li><a href="#3-the-__init__-method-the-constructor">3. The <code>__init__()</code> Method (The Constructor)</a></li>
+    <li><a href="#4-attributes-class-vs-instance">4. Attributes: Class vs. Instance</a></li>
+    <li><a href="#5-method-execution-constraints">5. Method Execution Constraints</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="master-guide-to-classes-and-objects-in-python-blueprints-and-instance-mechanics">Master Guide to Classes and Objects in Python Blueprints and Instance Mechanics</h1>
+<p>Hello Everyone! Today we are exploring Object-Oriented Programming (OOP) by focusing on <strong>Classes and Objects</strong>.</p>
+<p>A <strong>class</strong> is a blueprint or template for creating objects. Think of a class like a formal structural blueprint for a house: it defines where the rooms, windows, and doors go, but it isn&rsquo;t a physical house itself. By establishing custom classes, you can model real-world concepts and build your own custom data types.</p>
+<h2 id="1-core-mechanics-blueprints-vs-instances">1. Core Mechanics: Blueprints vs. Instances</h2>
+<p>OOP breaks down complex systems into two essential structural elements:</p>
+<ul>
+<li><strong>Attributes (The Data):</strong> Variables bound directly inside an object that store state properties. For a <code>Car</code> class, attributes might include <code>color</code>, <code>brand</code>, or <code>mileage</code>.</li>
+<li><strong>Methods (The Behavior):</strong> Functions defined inside a class that an object can perform. For a <code>Car</code> class, methods might include <code>start_engine()</code>, <code>drive()</code>, or <code>honk()</code>.</li>
+</ul>
+<h3 id="general-layout-syntax">General Layout Syntax</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Car</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Class attributes (shared by all instances)</span>
+</span></span><span style="display:flex;"><span>    wheels <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">4</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Methods define instance behaviors</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">honk</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Beep beep!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Creating an instance object from the blueprint</span>
+</span></span><span style="display:flex;"><span>my_car <span style="color:#ff79c6">=</span> Car()
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(my_car)) <span style="color:#6272a4"># Output: &lt;class &#39;__main__.Car&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>my_car<span style="color:#ff79c6">.</span>honk()       <span style="color:#6272a4"># Output: Beep beep!</span>
+</span></span></code></pre></div><hr>
+<h2 id="2-demystifying-self-and-instance-scope">2. Demystifying <code>self</code> and Instance Scope</h2>
+<p>When you define a method inside a class, it requires a parameter named <strong><code>self</code></strong> as its very first argument.</p>
+<blockquote>
+<p><strong>What is <code>self</code>?</strong> It is a pointer reference targeting the specific, individual object instance currently calling that method. It ensures that operations update the calling instance&rsquo;s memory space rather than impacting all instances globally.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Dog</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">eat</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>         <span style="color:#6272a4"># Binding a variable to self restricts its scope to the instance object</span>
+</span></span><span style="display:flex;"><span>         <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>bone_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Eating...&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">bark</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>         <span style="color:#6272a4"># Accessing an instance attribute across different methods via self</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Dog has </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>bone_count<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> bones left and says Woof!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rex <span style="color:#ff79c6">=</span> Dog()
+</span></span><span style="display:flex;"><span>rex<span style="color:#ff79c6">.</span>eat()
+</span></span><span style="display:flex;"><span>rex<span style="color:#ff79c6">.</span>bark() <span style="color:#6272a4"># Output: Dog has 5 bones left and says Woof!</span>
+</span></span></code></pre></div><hr>
+<h2 id="3-the-__init__-method-the-constructor">3. The <code>__init__()</code> Method (The Constructor)</h2>
+<p>The <code>__init__()</code> method is a special, built-in dunder method automatically executed the exact millisecond a new instance object is instantiated. Its main job is to <strong>initialize instance attributes</strong> with custom startup values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Dog</span>:
+</span></span><span style="display:flex;"><span>    species <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Canine&#34;</span> <span style="color:#6272a4"># Class Attribute</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">__init__</span>(<span style="font-style:italic">self</span>, name, age<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Instance Attributes</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>dog_name <span style="color:#ff79c6">=</span> name
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>age <span style="color:#ff79c6">=</span> age
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_hungry <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">bark</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>dog_name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> says woof!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Instantiating objects with unique structural parameters</span>
+</span></span><span style="display:flex;"><span>dog_a <span style="color:#ff79c6">=</span> Dog(name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Tom&#34;</span>, age<span style="color:#ff79c6">=</span><span style="color:#bd93f9">4</span>)
+</span></span><span style="display:flex;"><span>dog_b <span style="color:#ff79c6">=</span> Dog(name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Tuffy&#34;</span>, age<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dog_a<span style="color:#ff79c6">.</span>bark() <span style="color:#6272a4"># Output: Tom says woof!</span>
+</span></span><span style="display:flex;"><span>dog_b<span style="color:#ff79c6">.</span>bark() <span style="color:#6272a4"># Output: Tuffy says woof!</span>
+</span></span></code></pre></div><hr>
+<h2 id="4-attributes-class-vs-instance">4. Attributes: Class vs. Instance</h2>
+<p>Understanding the scope separation between Class attributes and Instance attributes is essential for shared data state management:</p>
+<ul>
+<li><strong>Instance Attributes:</strong> Declared inside methods using <code>self.attribute_name</code>. These are completely unique to each individual object.</li>
+<li><strong>Class Attributes:</strong> Declared directly inside the main class body block, outside of any methods. These are <strong>shared globally</strong> by every single object spawned from that class.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">GST</span>:
+</span></span><span style="display:flex;"><span>    TAX_RATE <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">18</span> <span style="color:#6272a4"># Class attribute shared across all items</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">__init__</span>(<span style="font-style:italic">self</span>, item_name):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>name <span style="color:#ff79c6">=</span> item_name <span style="color:#6272a4"># Instance attribute unique to this specific item</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>milk <span style="color:#ff79c6">=</span> GST(<span style="color:#f1fa8c">&#34;Saras Milk&#34;</span>)
+</span></span><span style="display:flex;"><span>bread <span style="color:#ff79c6">=</span> GST(<span style="color:#f1fa8c">&#34;Amul Bread&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">{</span>milk<span style="color:#ff79c6">.</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> tax: </span><span style="color:#f1fa8c">{</span>milk<span style="color:#ff79c6">.</span>TAX_RATE<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">%&#34;</span>) <span style="color:#6272a4"># Output: Saras Milk tax: 18%</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Modifying a Class Attribute updates the state globally for all instances</span>
+</span></span><span style="display:flex;"><span>GST<span style="color:#ff79c6">.</span>TAX_RATE <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">{</span>bread<span style="color:#ff79c6">.</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> tax: </span><span style="color:#f1fa8c">{</span>bread<span style="color:#ff79c6">.</span>TAX_RATE<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">%&#34;</span>) <span style="color:#6272a4"># Output: Amul Bread tax: 5%</span>
+</span></span></code></pre></div><hr>
+<h2 id="5-method-execution-constraints">5. Method Execution Constraints</h2>
+<p>The presence or absence of the <code>self</code> parameter impacts how a method can be safely invoked:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Demo</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">standard_method</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Instance method called.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">standalone_method</span>():
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Static background logic called.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Instance Call behavior</span>
+</span></span><span style="display:flex;"><span>obj <span style="color:#ff79c6">=</span> Demo()
+</span></span><span style="display:flex;"><span>obj<span style="color:#ff79c6">.</span>standard_method() <span style="color:#6272a4"># Valid: Implicitly passes &#39;obj&#39; into &#39;self&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># obj.standalone_method() # Crashes! Passes &#39;obj&#39; to a method expecting 0 arguments.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Class Call behavior</span>
+</span></span><span style="display:flex;"><span>Demo<span style="color:#ff79c6">.</span>standalone_method() <span style="color:#6272a4"># Valid: Called directly via the class blueprint name</span>
+</span></span></code></pre></div>
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello World And Escape Sequence In Python · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Hello World And Escape Sequence In Python</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-01T00:00:00Z">
+        Jan 1, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#features-of-python-language">Features Of Python Language</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#environment-to-write-code">Environment to write Code:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#structure-of-a-python-program">Structure Of A Python Program</a></li>
+    <li><a href="#working-with-strings--quotes">Working With Strings &amp; Quotes</a></li>
+    <li><a href="#what-are-escape-sequences">What Are Escape Sequences?</a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#lets-see-them-in-action">Let&rsquo;s See Them In Action</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="hello-world-and-escape-sequences-in-python">Hello World And Escape Sequences In Python</h1>
+<p>Hello Everyone Python is a very easy and simple language.</p>
+<p>Let us start with it.</p>
+<p>First of all, I will tell you that Python is a high-level, interpreted programming language, which was developed by Guido van Rossum and released in 1991. Unlike languages where you have to worry about memory management, Python takes care of it for you, allowing you to focus entirely on <em>what to do</em>.</p>
+<p>It is one of the most popular languages because it is easy to read, write, and run across multiple platforms like Windows, Mac, and Linux.</p>
+<hr>
+<h2 id="features-of-python-language">Features Of Python Language</h2>
+<ul>
+<li>It’s a very easy language with a clean and readable syntax</li>
+<li>It’s a general-purpose language used in Web Dev, Data Science, and Automation</li>
+<li>It supports multiple programming paradigms (Procedural, Object-Oriented, and Functional)</li>
+<li>It has a massive standard library providing predefined solutions for almost any task</li>
+</ul>
+<h4 id="environment-to-write-code">Environment to write Code:</h4>
+<p>So to run a Python program, you just need Python installed on your system. I would suggest you use a simple Text Editor or Notepad as your text editor and run your code via Terminal or PowerShell.</p>
+<p>In Linux and Mac, we open the terminal and use the command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 name_of_program.py
+</span></span></code></pre></div><p>In Windows, we open the PowerShell or Command Prompt and use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>python name_of_program.py
+</span></span></code></pre></div><p>This will instantly execute and show you the Output of the program without needing a separate compilation step.</p>
+<hr>
+<h2 id="structure-of-a-python-program">Structure Of A Python Program</h2>
+<p>Unlike C, Python doesn&rsquo;t require boilerplate code like <code>#include</code> or <code>main()</code> blocks to print something. You can directly write a statement, and it executes.</p>
+<p>Let&rsquo;s look at a basic setup to print text:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello World.&#34;</span>)
+</span></span></code></pre></div><p><code>print()</code> : Is a built-in function in Python that handles outputting text to the console.</p>
+<p><code>&quot;Hello World.&quot;</code> : The text inside the quotation marks is a string passed as an argument to the function.</p>
+<p><strong>NOTE: Unlike C, Python does NOT require a semicolon (<code>;</code>) at the end of a statement. A new line itself represents the end of a statement.</strong></p>
+<p><em>Here is the execution:</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls
+</span></span><span style="display:flex;"><span>hello_world.py
+</span></span><span style="display:flex;"><span>$ python3 hello_world.py
+</span></span><span style="display:flex;"><span>Hello World.
+</span></span><span style="display:flex;"><span>$ 
+</span></span></code></pre></div><hr>
+<h2 id="working-with-strings--quotes">Working With Strings &amp; Quotes</h2>
+<p>In Python, you can define strings using either single quotes (<code>' '</code>) or double quotes (<code>&quot; &quot;</code>). This gives you a lot of flexibility when your text contains quote characters.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#39;It&#34;s her choice&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;It&#39;s her choice.&#34;</span>)
+</span></span></code></pre></div><p>If your sentence contains a single quote (like <em>It&rsquo;s</em>), you can enclose the whole string in double quotes so Python doesn&rsquo;t get confused about where the string ends.</p>
+<hr>
+<h2 id="what-are-escape-sequences">What Are Escape Sequences?</h2>
+<p>Sometimes we want to print special characters or format our output (like adding a new line or a tab) inside a string. To do this, we use a backslash (<code>\</code>) followed by a specific character. This combination is known as an <strong>Escape Sequence</strong>.</p>
+<h5 id="here-is-the-list-of-escape-sequences-in-python">Here is the list of Escape Sequences in Python</h5>
+<table>
+  <thead>
+      <tr>
+          <th>Escape Sequence</th>
+          <th>Description</th>
+          <th>Example Output</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>\n</code></td>
+          <td>New line</td>
+          <td>Hello<code>\n</code>World → Splits into two lines</td>
+      </tr>
+      <tr>
+          <td><code>\t</code></td>
+          <td>Horizontal tab</td>
+          <td>Hello<code>\t</code>World → Adds a wide space</td>
+      </tr>
+      <tr>
+          <td><code>\r</code></td>
+          <td>Carriage return</td>
+          <td>Hello<code>\r</code>World → Overwrites the line starting with World</td>
+      </tr>
+      <tr>
+          <td><code>\b</code></td>
+          <td>Backspace</td>
+          <td>Helloo<code>\b</code> → Deletes the extra &lsquo;o&rsquo;</td>
+      </tr>
+      <tr>
+          <td><code>\f</code></td>
+          <td>Form feed</td>
+          <td>Rarely used</td>
+      </tr>
+      <tr>
+          <td><code>\v</code></td>
+          <td>Vertical feed</td>
+          <td>Rarely used</td>
+      </tr>
+      <tr>
+          <td><code>\a</code></td>
+          <td>Bell (alert)</td>
+          <td>May beep or alert on some systems</td>
+      </tr>
+      <tr>
+          <td><code>\\</code></td>
+          <td>Backslash</td>
+          <td>Used to print a literal <code>\</code></td>
+      </tr>
+      <tr>
+          <td><code>\'</code></td>
+          <td>Single quote</td>
+          <td>Used to print a literal <code>'</code> inside single quotes</td>
+      </tr>
+      <tr>
+          <td><code>\&quot;</code></td>
+          <td>Double quote</td>
+          <td>Used to print a literal <code>&quot;</code> inside double quotes</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="lets-see-them-in-action">Let&rsquo;s See Them In Action</h2>
+<p>Let&rsquo;s write a script containing all these concepts to see how they impact our output console.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello</span><span style="color:#f1fa8c">\a</span><span style="color:#f1fa8c">World.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello</span><span style="color:#f1fa8c">\a</span><span style="color:#f1fa8c">world.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;she</span><span style="color:#f1fa8c">\\</span><span style="color:#f1fa8c">her&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;they</span><span style="color:#f1fa8c">\\</span><span style="color:#f1fa8c">them&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c"> line feed or newline. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\b</span><span style="color:#f1fa8c"> backspace. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\a</span><span style="color:#f1fa8c"> alert or bell. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\f</span><span style="color:#f1fa8c"> form feed. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\v</span><span style="color:#f1fa8c"> vertical tab. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\r</span><span style="color:#f1fa8c"> carriage return. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\t</span><span style="color:#f1fa8c"> horizontal tab. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\\</span><span style="color:#f1fa8c"> backslash. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\&#39;</span><span style="color:#f1fa8c"> single quote. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello This is</span><span style="color:#f1fa8c">\&#34;</span><span style="color:#f1fa8c"> double quote. </span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><p>When you run this script, the backslash characters won&rsquo;t print directly. Instead, they change the formatting—causing lines to break, spaces to stretch, characters to clear backwards, or even your console to trigger a system beep!</p>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

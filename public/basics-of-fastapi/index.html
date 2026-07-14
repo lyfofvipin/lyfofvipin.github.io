@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basics Of FastAPI In Python · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Basics Of FastAPI In Python</h1>
+    
+    <div class="post-meta">
+      <time datetime="2026-01-07T00:00:00Z">
+        Jan 7, 2026
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#fastapi</span>
+        
+        <span class="tag">#backend</span>
+        
+        <span class="tag">#async</span>
+        
+        <span class="tag">#databases</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-the-asgi-server-architecture-why-uvicorn-mainapp---reload">1. The ASGI Server Architecture: Why <code>uvicorn main:app --reload</code>?</a>
+      <ul>
+        <li><a href="#why-do-we-run-uvicorn">Why Do We Run Uvicorn?</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-http-operations-status-codes-and-routes-in-fastapi">2. HTTP Operations, Status Codes, and Routes in FastAPI</a>
+      <ul>
+        <li><a href="#operations-and-decorator-syntax">Operations and Decorator Syntax</a></li>
+        <li><a href="#returning-explicit-status-codes">Returning Explicit Status Codes</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-advanced-dynamic-routing-and-data-extraction">3. Advanced Dynamic Routing and Data Extraction</a></li>
+    <li><a href="#4-input-validation-layer-pydantic-schemas">4. Input Validation Layer: Pydantic Schemas</a>
+      <ul>
+        <li><a href="#what-is-a-pydantic-model">What is a Pydantic Model?</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-capturing-request-data-body-payload-vs-html-forms">5. Capturing Request Data (<code>Body</code> Payload vs. HTML Forms)</a></li>
+    <li><a href="#6-asynchronous-database-integrations-with-sqlalchemy-orm">6. Asynchronous Database Integrations with SQLAlchemy ORM</a>
+      <ul>
+        <li><a href="#the-async-complete-data-pipeline-setup">The Async Complete Data Pipeline Setup</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-session-cookies-vs-stateless-jwt-architecture">7. Session Cookies vs. Stateless JWT Architecture</a>
+      <ul>
+        <li><a href="#why-use-jwt-over-server-sessions">Why Use JWT Over Server Sessions?</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-implementing-security-authentication--authorization">8. Implementing Security: Authentication &amp; Authorization</a></li>
+    <li><a href="#9-automatic-interactive-documentation-swagger-ui">9. Automatic Interactive Documentation (Swagger UI)</a>
+      <ul>
+        <li><a href="#how-to-access-the-docs-portal">How to Access the Docs Portal</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="the-comprehensive-guide-to-modern-api-development-with-fastapi-and-sqlalchemy">The Comprehensive Guide to Modern API Development with FastAPI and SQLAlchemy</h1>
+<p>Hello Everyone! Today we are shifting into modern backend design <strong>FastAPI</strong>.</p>
+<p>While Flask is an excellent synchronous framework, <strong>FastAPI</strong> is a cutting-edge, high-performance web framework designed from the ground up for building production-ready APIs using modern Python features. It leverages asynchronous execution (<code>async</code>/<code>await</code>), automatic structural data validation via <strong>Pydantic</strong>, and native documentation generation out of the box.</p>
+<p>Let&rsquo;s break down how to rebuild our entire backend pipeline using FastAPI, exploring why it has become the standard for modern enterprise development.</p>
+<h2 id="1-the-asgi-server-architecture-why-uvicorn-mainapp---reload">1. The ASGI Server Architecture: Why <code>uvicorn main:app --reload</code>?</h2>
+<p>In Flask, we used a WSGI (Web Server Gateway Interface) development server, which handles requests sequentially (one after the other). FastAPI uses <strong>ASGI</strong> (Asynchronous Server Gateway Interface), which is designed to handle thousands of concurrent incoming network connections simultaneously.</p>
+<p>When you run <code>uvicorn main:app --reload</code> in your terminal, you are launching <strong>Uvicorn</strong>, a lightning-fast ASGI server wrapper.</p>
+<h3 id="why-do-we-run-uvicorn">Why Do We Run Uvicorn?</h3>
+<ul>
+<li><strong>Asynchronous Concurrency:</strong> Traditional servers block a worker thread whenever a request is waiting on something slow (like a slow database query or an external API call). An ASGI server pauses the waiting request, handles hundreds of other incoming requests in the meantime, and resumes the original request the millisecond the database answers.</li>
+<li><strong>The Application Reference (<code>main:app</code>):</strong> <code>main</code> tells Uvicorn to look inside your <code>main.py</code> script file, and <code>app</code> points directly to the instantiated FastAPI object inside it.</li>
+<li><strong><code>--reload</code> (Hot Swapping):</strong> Monitors your code changes. The exact instant you hit save, the Uvicorn workers reboot safely in milliseconds.</li>
+</ul>
+<hr>
+<h2 id="2-http-operations-status-codes-and-routes-in-fastapi">2. HTTP Operations, Status Codes, and Routes in FastAPI</h2>
+<p>FastAPI handles routing explicitly, using standard Python type hints to ensure data validation before it ever enters your backend functions.</p>
+<h3 id="operations-and-decorator-syntax">Operations and Decorator Syntax</h3>
+<p>FastAPI maps HTTP actions directly onto decorator methods named after the action itself (e.g., <code>@app.get()</code>, <code>@app.post()</code>, <code>@app.put()</code>, <code>@app.delete()</code>).</p>
+<h3 id="returning-explicit-status-codes">Returning Explicit Status Codes</h3>
+<p>Instead of passing numbers or manual tuples back, FastAPI provides a clean <code>status</code> module that makes your code highly readable and readable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> fastapi <span style="color:#ff79c6">import</span> FastAPI, status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#ff79c6">=</span> FastAPI()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.get(<span style="color:#f1fa8c">&#34;/health&#34;</span>, status_code<span style="color:#ff79c6">=</span>status<span style="color:#ff79c6">.</span>HTTP_200_OK)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">health_check</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;operational&#34;</span>, <span style="color:#f1fa8c">&#34;message&#34;</span>: <span style="color:#f1fa8c">&#34;Server is running smoothly.&#34;</span>}
+</span></span></code></pre></div><hr>
+<h2 id="3-advanced-dynamic-routing-and-data-extraction">3. Advanced Dynamic Routing and Data Extraction</h2>
+<p>FastAPI treats path parameters and query parameters with strict structural precision. It reads your function signature and automatically converts and validates incoming data types.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> fastapi <span style="color:#ff79c6">import</span> FastAPI, Path, Query
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#ff79c6">=</span> FastAPI()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 1. Dynamic Path Parameter with Type Validation</span>
+</span></span><span style="display:flex;"><span>@app.get(<span style="color:#f1fa8c">&#34;/items/</span><span style="color:#f1fa8c">{item_id}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">read_item</span>(item_id: <span style="color:#8be9fd;font-style:italic">int</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># FastAPI automatically throws a clean &#39;422 Unprocessable Entity&#39; error </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># if a user tries to send a string like &#34;/items/abc&#34; instead of an integer.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;item_id&#34;</span>: item_id, <span style="color:#f1fa8c">&#34;type&#34;</span>: <span style="color:#8be9fd;font-style:italic">type</span>(item_id)<span style="color:#ff79c6">.</span><span style="color:#8be9fd;font-style:italic">__name__</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. Query Parameters (Extracted automatically from URL query strings)</span>
+</span></span><span style="display:flex;"><span>@app.get(<span style="color:#f1fa8c">&#34;/search&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">search_database</span>(q: <span style="color:#8be9fd;font-style:italic">str</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>, limit: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Matches URLs like: /search?q=python&amp;limit=5</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;query&#34;</span>: q, <span style="color:#f1fa8c">&#34;limit&#34;</span>: limit}
+</span></span></code></pre></div><hr>
+<h2 id="4-input-validation-layer-pydantic-schemas">4. Input Validation Layer: Pydantic Schemas</h2>
+<p>One of FastAPI&rsquo;s greatest strengths is its native integration with <strong>Pydantic</strong>.</p>
+<h3 id="what-is-a-pydantic-model">What is a Pydantic Model?</h3>
+<p>When users submit <code>POST</code> form data or complex JSON payloads, we need a clean, structured way to validate the data before processing it. A Pydantic model defines the exact shape, structural rules, and data types that the incoming request payload <strong>must</strong> match.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> typing <span style="color:#ff79c6">import</span> Optional
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pydantic <span style="color:#ff79c6">import</span> BaseModel, EmailStr, Field
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Define the structural schema blueprint for incoming registration requests</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">UserSignUpSchema</span>(BaseModel):
+</span></span><span style="display:flex;"><span>    username: <span style="color:#8be9fd;font-style:italic">str</span> <span style="color:#ff79c6">=</span> Field(<span style="color:#ff79c6">...</span>, min_length<span style="color:#ff79c6">=</span><span style="color:#bd93f9">3</span>, max_length<span style="color:#ff79c6">=</span><span style="color:#bd93f9">20</span>)
+</span></span><span style="display:flex;"><span>    email: <span style="color:#8be9fd;font-style:italic">str</span>
+</span></span><span style="display:flex;"><span>    age: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> Field(<span style="color:#ff79c6">...</span>, ge<span style="color:#ff79c6">=</span><span style="color:#bd93f9">18</span>) <span style="color:#6272a4"># Age must be greater than or equal to 18</span>
+</span></span><span style="display:flex;"><span>    premium_member: <span style="color:#8be9fd;font-style:italic">bool</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span></code></pre></div><hr>
+<h2 id="5-capturing-request-data-body-payload-vs-html-forms">5. Capturing Request Data (<code>Body</code> Payload vs. HTML Forms)</h2>
+<p>FastAPI is highly optimized for JSON API data exchange out of the box, but it can easily process classic HTML form submissions by installing the <code>python-multipart</code> module.</p>
+<p>Here is how to capture both JSON and Form inputs side-by-side using the same Pydantic schema logic:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> fastapi <span style="color:#ff79c6">import</span> FastAPI, Form, Depends
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pydantic <span style="color:#ff79c6">import</span> BaseModel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#ff79c6">=</span> FastAPI()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">StudentPayload</span>(BaseModel):
+</span></span><span style="display:flex;"><span>    name: <span style="color:#8be9fd;font-style:italic">str</span>
+</span></span><span style="display:flex;"><span>    course: <span style="color:#8be9fd;font-style:italic">str</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># A. Capturing a raw JSON Payload (Standard API behavior)</span>
+</span></span><span style="display:flex;"><span>@app.post(<span style="color:#f1fa8c">&#34;/students/json&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">add_student_json</span>(payload: StudentPayload):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;source&#34;</span>: <span style="color:#f1fa8c">&#34;JSON Body&#34;</span>, <span style="color:#f1fa8c">&#34;received_data&#34;</span>: payload<span style="color:#ff79c6">.</span>dict()}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># B. Capturing traditional HTML Form Data (Web Form submission behavior)</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># We use Depends to unpack form elements directly into our schema layout cleanly</span>
+</span></span><span style="display:flex;"><span>@app.post(<span style="color:#f1fa8c">&#34;/students/form&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">add_student_form</span>(name: <span style="color:#8be9fd;font-style:italic">str</span> <span style="color:#ff79c6">=</span> Form(<span style="color:#ff79c6">...</span>), course: <span style="color:#8be9fd;font-style:italic">str</span> <span style="color:#ff79c6">=</span> Form(<span style="color:#ff79c6">...</span>)):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;source&#34;</span>: <span style="color:#f1fa8c">&#34;HTML Form&#34;</span>, <span style="color:#f1fa8c">&#34;name&#34;</span>: name, <span style="color:#f1fa8c">&#34;course&#34;</span>: course}
+</span></span></code></pre></div><hr>
+<h2 id="6-asynchronous-database-integrations-with-sqlalchemy-orm">6. Asynchronous Database Integrations with SQLAlchemy ORM</h2>
+<p>To fully leverage FastAPI’s high-performance architecture, your database layer should ideally support asynchronous operations. We will use the async features of <strong>SQLAlchemy</strong> to build an isolated, non-blocking database pipeline.</p>
+<h3 id="the-async-complete-data-pipeline-setup">The Async Complete Data Pipeline Setup</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> fastapi <span style="color:#ff79c6">import</span> FastAPI, Depends, HTTPException, status
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sqlalchemy.ext.asyncio <span style="color:#ff79c6">import</span> create_async_engine, AsyncSession
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sqlalchemy.orm <span style="color:#ff79c6">import</span> declarative_base, sessionmaker
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> sqlalchemy <span style="color:#ff79c6">import</span> Column, Integer, String, select
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pydantic <span style="color:#ff79c6">import</span> BaseModel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 1. Initialize FastAPI Application</span>
+</span></span><span style="display:flex;"><span>app <span style="color:#ff79c6">=</span> FastAPI(title<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Async FastAPI Database Pipeline&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. Database Architectural Configurations (Using Async SQLite driver)</span>
+</span></span><span style="display:flex;"><span>DATABASE_URL <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sqlite+aiosqlite:///./fastapi_app.db&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>engine <span style="color:#ff79c6">=</span> create_async_engine(DATABASE_URL, echo<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>)
+</span></span><span style="display:flex;"><span>AsyncSessionLocal <span style="color:#ff79c6">=</span> sessionmaker(engine, class_<span style="color:#ff79c6">=</span>AsyncSession, expire_on_commit<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>)
+</span></span><span style="display:flex;"><span>Base <span style="color:#ff79c6">=</span> declarative_base()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 3. SQLAlchemy Database Model Class Definition</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">DBStudent</span>(Base):
+</span></span><span style="display:flex;"><span>    __tablename__ <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;students&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">id</span> <span style="color:#ff79c6">=</span> Column(Integer, primary_key<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>, index<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>)
+</span></span><span style="display:flex;"><span>    name <span style="color:#ff79c6">=</span> Column(String, nullable<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>)
+</span></span><span style="display:flex;"><span>    course <span style="color:#ff79c6">=</span> Column(String, nullable<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 4. Initialize Database Tables on Startup Loop Context</span>
+</span></span><span style="display:flex;"><span>@app.on_event(<span style="color:#f1fa8c">&#34;startup&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">async</span> <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">startup_database_tables</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">async</span> <span style="color:#ff79c6">with</span> engine<span style="color:#ff79c6">.</span>begin() <span style="color:#ff79c6">as</span> conn:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">await</span> conn<span style="color:#ff79c6">.</span>run_sync(Base<span style="color:#ff79c6">.</span>metadata<span style="color:#ff79c6">.</span>create_all)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 5. Dependency Injection Pattern to manage Database Sessions safely</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">async</span> <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">get_db_session</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">async</span> <span style="color:#ff79c6">with</span> AsyncSessionLocal() <span style="color:#ff79c6">as</span> session:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">yield</span> session <span style="color:#6272a4"># Yield ensures the session cleanly closes after the request completes</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 6. Pydantic Validation Schema for Request Data Inputs</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">StudentCreateSchema</span>(BaseModel):
+</span></span><span style="display:flex;"><span>    name: <span style="color:#8be9fd;font-style:italic">str</span>
+</span></span><span style="display:flex;"><span>    course: <span style="color:#8be9fd;font-style:italic">str</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 7. Complete Core Write Route Integration</span>
+</span></span><span style="display:flex;"><span>@app.post(<span style="color:#f1fa8c">&#34;/students&#34;</span>, status_code<span style="color:#ff79c6">=</span>status<span style="color:#ff79c6">.</span>HTTP_201_CREATED)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">async</span> <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">create_student_record</span>(payload: StudentCreateSchema, db: AsyncSession <span style="color:#ff79c6">=</span> Depends(get_db_session)):
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Instantiate database model using data validated by Pydantic</span>
+</span></span><span style="display:flex;"><span>    new_student <span style="color:#ff79c6">=</span> DBStudent(name<span style="color:#ff79c6">=</span>payload<span style="color:#ff79c6">.</span>name, course<span style="color:#ff79c6">=</span>payload<span style="color:#ff79c6">.</span>course)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    db<span style="color:#ff79c6">.</span>add(new_student)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">await</span> db<span style="color:#ff79c6">.</span>commit()       <span style="color:#6272a4"># Await the database write operation without blocking the server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">await</span> db<span style="color:#ff79c6">.</span>refresh(new_student)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> new_student
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 8. Complete Core Read Route Integration</span>
+</span></span><span style="display:flex;"><span>@app.get(<span style="color:#f1fa8c">&#34;/students&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">async</span> <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">fetch_all_students</span>(db: AsyncSession <span style="color:#ff79c6">=</span> Depends(get_db_session)):
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Execute query using an explicit select statement</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> db<span style="color:#ff79c6">.</span>execute(select(DBStudent))
+</span></span><span style="display:flex;"><span>    students_list <span style="color:#ff79c6">=</span> result<span style="color:#ff79c6">.</span>scalars()<span style="color:#ff79c6">.</span>all()
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> students_list
+</span></span></code></pre></div><hr>
+<h2 id="7-session-cookies-vs-stateless-jwt-architecture">7. Session Cookies vs. Stateless JWT Architecture</h2>
+<p>In Flask, we relied on server-side sessions, where the server keeps track of logged-in users by storing state data in memory or files. For modern APIs, FastAPI shifts to a stateless <strong>JWT (JSON Web Token)</strong> architecture.</p>
+<h3 id="why-use-jwt-over-server-sessions">Why Use JWT Over Server Sessions?</h3>
+<ul>
+<li><strong>Stateless Scaling:</strong> In a stateless setup, the server does not save any session data in its memory. Instead, once a user logs in, the server generates a signed cryptographic token called a JWT and hands it to the browser.</li>
+<li><strong>Self-Contained Data:</strong> The client attaches this token to the header of every subsequent request. The server simply verifies the token&rsquo;s signature using its secret key. If the signature is valid, the request is instantly authorized, making it highly scalable across multi-server networks.</li>
+</ul>
+<hr>
+<h2 id="8-implementing-security-authentication--authorization">8. Implementing Security: Authentication &amp; Authorization</h2>
+<p>Let&rsquo;s build a secure authentication pipeline using JWT tokens. To make this work seamlessly, we will use FastAPI&rsquo;s built-in OAuth2 security utilities (<code>OAuth2PasswordBearer</code>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime, timedelta
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> fastapi <span style="color:#ff79c6">import</span> FastAPI, Depends, HTTPException, status
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> fastapi.security <span style="color:#ff79c6">import</span> OAuth2PasswordBearer, OAuth2PasswordRequestForm
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> jose <span style="color:#ff79c6">import</span> jwt, JWTError
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pydantic <span style="color:#ff79c6">import</span> BaseModel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#ff79c6">=</span> FastAPI()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Security Configurations</span>
+</span></span><span style="display:flex;"><span>SECRET_KEY <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;super_high_level_production_secret_key_salt&#34;</span>
+</span></span><span style="display:flex;"><span>ALGORITHM <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;HS256&#34;</span>
+</span></span><span style="display:flex;"><span>TOKEN_EXPIRATION_MINUTES <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">30</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Secure security gateway locator target configuration</span>
+</span></span><span style="display:flex;"><span>oauth2_scheme <span style="color:#ff79c6">=</span> OAuth2PasswordBearer(tokenUrl<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;token&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># --- TOKEN GENERATION UTILITY ---</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">create_access_token</span>(data: <span style="color:#8be9fd;font-style:italic">dict</span>):
+</span></span><span style="display:flex;"><span>    payload_to_encode <span style="color:#ff79c6">=</span> data<span style="color:#ff79c6">.</span>copy()
+</span></span><span style="display:flex;"><span>    expire_time <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>utcnow() <span style="color:#ff79c6">+</span> timedelta(minutes<span style="color:#ff79c6">=</span>TOKEN_EXPIRATION_MINUTES)
+</span></span><span style="display:flex;"><span>    payload_to_encode<span style="color:#ff79c6">.</span>update({<span style="color:#f1fa8c">&#34;exp&#34;</span>: expire_time})
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> jwt<span style="color:#ff79c6">.</span>encode(payload_to_encode, SECRET_KEY, algorithm<span style="color:#ff79c6">=</span>ALGORITHM)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># --- MIDDLEWARE AUTHENTICATION GATE DEPENDENCY ---</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">async</span> <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">get_current_user_gate</span>(token: <span style="color:#8be9fd;font-style:italic">str</span> <span style="color:#ff79c6">=</span> Depends(oauth2_scheme)):
+</span></span><span style="display:flex;"><span>    credentials_exception <span style="color:#ff79c6">=</span> HTTPException(
+</span></span><span style="display:flex;"><span>        status_code<span style="color:#ff79c6">=</span>status<span style="color:#ff79c6">.</span>HTTP_401_UNAUTHORIZED,
+</span></span><span style="display:flex;"><span>        detail<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Could not validate signature credentials. Please log in again.&#34;</span>,
+</span></span><span style="display:flex;"><span>        headers<span style="color:#ff79c6">=</span>{<span style="color:#f1fa8c">&#34;WWW-Authenticate&#34;</span>: <span style="color:#f1fa8c">&#34;Bearer&#34;</span>},
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Decode the cryptographically signed JWT token payload</span>
+</span></span><span style="display:flex;"><span>        payload <span style="color:#ff79c6">=</span> jwt<span style="color:#ff79c6">.</span>decode(token, SECRET_KEY, algorithms<span style="color:#ff79c6">=</span>[ALGORITHM])
+</span></span><span style="display:flex;"><span>        username: <span style="color:#8be9fd;font-style:italic">str</span> <span style="color:#ff79c6">=</span> payload<span style="color:#ff79c6">.</span>get(<span style="color:#f1fa8c">&#34;sub&#34;</span>)
+</span></span><span style="display:flex;"><span>        role: <span style="color:#8be9fd;font-style:italic">str</span> <span style="color:#ff79c6">=</span> payload<span style="color:#ff79c6">.</span>get(<span style="color:#f1fa8c">&#34;role&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> username <span style="color:#ff79c6">is</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">raise</span> credentials_exception
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;username&#34;</span>: username, <span style="color:#f1fa8c">&#34;role&#34;</span>: role}
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">except</span> JWTError:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">raise</span> credentials_exception
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># --- ROUTES ---</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.post(<span style="color:#f1fa8c">&#34;/token&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">authenticate_user</span>(form_data: OAuth2PasswordRequestForm <span style="color:#ff79c6">=</span> Depends()):
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Simulated database validation check</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> form_data<span style="color:#ff79c6">.</span>username <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;vipin&#34;</span> <span style="color:#ff79c6">and</span> form_data<span style="color:#ff79c6">.</span>password <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;secure123&#34;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Generate token payload containing identity markers and authorization roles</span>
+</span></span><span style="display:flex;"><span>        token <span style="color:#ff79c6">=</span> create_access_token(data<span style="color:#ff79c6">=</span>{<span style="color:#f1fa8c">&#34;sub&#34;</span>: form_data<span style="color:#ff79c6">.</span>username, <span style="color:#f1fa8c">&#34;role&#34;</span>: <span style="color:#f1fa8c">&#34;admin&#34;</span>})
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;access_token&#34;</span>: token, <span style="color:#f1fa8c">&#34;token_type&#34;</span>: <span style="color:#f1fa8c">&#34;bearer&#34;</span>}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">raise</span> HTTPException(status_code<span style="color:#ff79c6">=</span><span style="color:#bd93f9">400</span>, detail<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Incorrect username or password configuration.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.get(<span style="color:#f1fa8c">&#34;/admin/panel&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">view_admin_panel</span>(current_user: <span style="color:#8be9fd;font-style:italic">dict</span> <span style="color:#ff79c6">=</span> Depends(get_current_user_gate)):
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Authorization Access Check</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> current_user[<span style="color:#f1fa8c">&#34;role&#34;</span>] <span style="color:#ff79c6">!=</span> <span style="color:#f1fa8c">&#34;admin&#34;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">raise</span> HTTPException(
+</span></span><span style="display:flex;"><span>            status_code<span style="color:#ff79c6">=</span>status<span style="color:#ff79c6">.</span>HTTP_403_FORBIDDEN, 
+</span></span><span style="display:flex;"><span>            detail<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Access Denied: You do not have sufficient authorization privileges.&#34;</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;message&#34;</span>: <span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Welcome back Administrator </span><span style="color:#f1fa8c">{</span>current_user[<span style="color:#f1fa8c">&#39;username&#39;</span>]<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">! Opening control systems...&#34;</span>}
+</span></span></code></pre></div><hr>
+<h2 id="9-automatic-interactive-documentation-swagger-ui">9. Automatic Interactive Documentation (Swagger UI)</h2>
+<p>One of the most useful out-of-the-box features of FastAPI is its automatic interactive documentation.</p>
+<p>The moment you declare your Pydantic schemas and add type hints to your routes, FastAPI automatically generates a complete openAPI documentation portal for your project.</p>
+<h3 id="how-to-access-the-docs-portal">How to Access the Docs Portal</h3>
+<p>While your Uvicorn server is running locally, open your web browser and navigate to:</p>
+<ul>
+<li><strong>Swagger UI Documentation:</strong> <code>http://127.0.0.1:8000/docs</code> (An interactive testing dashboard where you can run live test queries directly from your browser).</li>
+<li><strong>ReDoc Documentation:</strong> <code>http://127.0.0.1:8000/redoc</code> (A beautifully clean, structured corporate documentation layout).</li>
+</ul>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

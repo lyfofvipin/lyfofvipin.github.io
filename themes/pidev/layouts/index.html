@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="home-container">
+  <h1 class="page-title">All Posts</h1>
+  
+  <ul class="post-list">
+    {{ $posts := (where .Site.RegularPages "Section" "!=" "") }}
+    {{ range $posts }}
+    <li class="post-item">
+      <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+          {{ .Date.Format $.Site.Params.dateFormat }}
+        </time>
+        <span class="post-section-badge"><a href="{{ (printf "/%s/" .Section) | relURL }}">{{ .Section | upper }}</a></span>
+      </div>
+      <h2 class="post-title-link">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+    </li>
+    {{ else }}
+    <li class="no-posts">No posts found.</li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

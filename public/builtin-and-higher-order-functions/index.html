@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Higher-Order Functions, and Built-in Iterators · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Higher-Order Functions, and Built-in Iterators</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-31T00:00:00Z">
+        Jan 31, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-what-are-higher-order-functions">1. What are Higher-Order Functions?</a>
+      <ul>
+        <li><a href="#a-passing-functions-as-arguments">A. Passing Functions as Arguments</a></li>
+        <li><a href="#b-returning-functions">B. Returning Functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-core-built-in-higher-order-functions-map-filter-reduce">2. Core Built-In Higher-Order Functions (<code>map</code>, <code>filter</code>, <code>reduce</code>)</a>
+      <ul>
+        <li><a href="#a-the-map-function">A. The <code>map()</code> Function</a></li>
+        <li><a href="#b-the-filter-function">B. The <code>filter()</code> Function</a></li>
+        <li><a href="#c-the-reduce-function">C. The <code>reduce()</code> Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-sequence-boolean-checkers-any-and-all">3. Sequence Boolean Checkers: <code>any()</code> and <code>all()</code></a></li>
+    <li><a href="#4-more-essential-built-in-functional-tools">4. More Essential Built-In Functional Tools</a>
+      <ul>
+        <li><a href="#a-aggregation-sum-max-min-len">A. Aggregation: <code>sum()</code>, <code>max()</code>, <code>min()</code>, <code>len()</code></a></li>
+        <li><a href="#b-index-mapping-enumerate">B. Index Mapping: <code>enumerate()</code></a></li>
+        <li><a href="#c-parallel-iteration-zip">C. Parallel Iteration: <code>zip()</code></a></li>
+        <li><a href="#d-transformation-reversed-and-sorted">D. Transformation: <code>reversed()</code> and <code>sorted()</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="master-guide-to-functional-programming-higher-order-functions-and-built-in-iterators">Master Guide to Functional Programming, Higher-Order Functions, and Built-in Iterators</h1>
+<p>Hello Everyone! Today we are diving into <strong>Functional Programming Paradigms</strong> in Python.</p>
+<p>In standard programming, we focus on passing data variables into functions. In functional programming, we treat functions as <strong>First-Class Citizens</strong>. This means you can store functions inside variables, pass them as arguments to other functions, and return them out of functions as data.</p>
+<h2 id="1-what-are-higher-order-functions">1. What are Higher-Order Functions?</h2>
+<p>A function is classified as a <strong>Higher-Order Function</strong> if it satisfies at least one of these two criteria:</p>
+<ol>
+<li>It accepts one or more functions as input arguments.</li>
+<li>It returns an entirely new function as its output result.</li>
+</ol>
+<h3 id="a-passing-functions-as-arguments">A. Passing Functions as Arguments</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">add</span>(a, b): <span style="color:#ff79c6">return</span> a <span style="color:#ff79c6">+</span> b
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">mul</span>(a, b): <span style="color:#ff79c6">return</span> a <span style="color:#ff79c6">*</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Higher-Order Function: The first parameter &#39;action&#39; accepts a function definition</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">calculator</span>(action, num1, num2):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> action(num1, num2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(calculator(mul, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">2</span>))  <span style="color:#6272a4"># Output: 20</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(calculator(add, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">2</span>))  <span style="color:#6272a4"># Output: 12</span>
+</span></span></code></pre></div><h3 id="b-returning-functions">B. Returning Functions</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">parent_function</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">local_subtraction</span>(a, b):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> a <span style="color:#ff79c6">-</span> b
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> local_subtraction  <span style="color:#6272a4"># Returning the function object itself without running it</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>action_ref <span style="color:#ff79c6">=</span> parent_function()
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(action_ref(<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">4</span>))  <span style="color:#6272a4"># Output: 6</span>
+</span></span></code></pre></div><hr>
+<h2 id="2-core-built-in-higher-order-functions-map-filter-reduce">2. Core Built-In Higher-Order Functions (<code>map</code>, <code>filter</code>, <code>reduce</code>)</h2>
+<p>Python provides three essential pre-built higher-order functions designed to transform, clean, and compute values across data sequences.</p>
+<h3 id="a-the-map-function">A. The <code>map()</code> Function</h3>
+<p><code>map()</code> runs a target function on <strong>every single element</strong> inside an iterable and returns a memory-efficient iterator.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>numbers <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Style 1: Using a standard named function</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">square</span>(x): <span style="color:#ff79c6">return</span> x <span style="color:#ff79c6">*</span> x
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#8be9fd;font-style:italic">map</span>(square, numbers)))  <span style="color:#6272a4"># Output: [1, 4, 9, 16, 25]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Style 2: Using an anonymous lambda one-liner function</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#8be9fd;font-style:italic">map</span>(<span style="color:#ff79c6">lambda</span> x: x <span style="color:#ff79c6">*</span> x, numbers)))  <span style="color:#6272a4"># Output: [1, 4, 9, 16, 25]</span>
+</span></span></code></pre></div><h3 id="b-the-filter-function">B. The <code>filter()</code> Function</h3>
+<p><code>filter()</code> extracts only the elements from an iterable for which a conditional checking function returns <strong><code>True</code></strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>dataset <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">23</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">43</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">34</span>, <span style="color:#bd93f9">54</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">654</span>, <span style="color:#bd93f9">656</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Keeps only values that evaluate to True against the condition</span>
+</span></span><span style="display:flex;"><span>positive_nums <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#8be9fd;font-style:italic">filter</span>(<span style="color:#ff79c6">lambda</span> x: x <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">0</span>, dataset))
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(positive_nums)  <span style="color:#6272a4"># Output: [23, 43, 54, 656]</span>
+</span></span></code></pre></div><h3 id="c-the-reduce-function">C. The <code>reduce()</code> Function</h3>
+<p>Unlike <code>map()</code> or <code>filter()</code>, which return sub-collections, <code>reduce()</code> processes an entire sequence from left to right, combining elements using an accumulator logic to collapse the sequence into a <strong>single final value</strong>. You must import this tool from the built-in <code>functools</code> module.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> functools <span style="color:#ff79c6">import</span> reduce
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Continually multiplies: (((1*2)*3)*4)*5</span>
+</span></span><span style="display:flex;"><span>factorial_five <span style="color:#ff79c6">=</span> reduce(<span style="color:#ff79c6">lambda</span> accumulator, item: accumulator <span style="color:#ff79c6">*</span> item, <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">6</span>))
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(factorial_five)  <span style="color:#6272a4"># Output: 120</span>
+</span></span></code></pre></div><hr>
+<h2 id="3-sequence-boolean-checkers-any-and-all">3. Sequence Boolean Checkers: <code>any()</code> and <code>all()</code></h2>
+<p>When you need to test truth value states across entire lists or collections without writing manual <code>for-loop</code> breaks, use <code>any()</code> and <code>all()</code>:</p>
+<ul>
+<li><strong><code>any(iterable)</code></strong>: Returns <code>True</code> if <strong>at least one</strong> element inside the collection evaluates to a truthy value.</li>
+<li><strong><code>all(iterable)</code></strong>: Returns <code>True</code> only if <strong>every single element</strong> inside the collection evaluates to a truthy value.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Remember: 0, False, empty strings &#34;&#34;, empty lists [] are Falsy. Non-zero numbers are Truthy.</span>
+</span></span><span style="display:flex;"><span>mixed_flags <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">False</span>, <span style="color:#f1fa8c">&#34;&#34;</span>, [], <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">0</span>]
+</span></span><span style="display:flex;"><span>pure_falsy  <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">False</span>, <span style="color:#ff79c6">None</span>]
+</span></span><span style="display:flex;"><span>pure_truthy <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">any</span>(mixed_flags)) <span style="color:#6272a4"># Output: True (because &#39;1&#39; is truthy)</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">any</span>(pure_falsy))  <span style="color:#6272a4"># Output: False (no truthy items exist)</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">all</span>(pure_truthy)) <span style="color:#6272a4"># Output: True (every element is non-zero)</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">all</span>(mixed_flags)) <span style="color:#6272a4"># Output: False (contains zeros and falsy types)</span>
+</span></span></code></pre></div><hr>
+<h2 id="4-more-essential-built-in-functional-tools">4. More Essential Built-In Functional Tools</h2>
+<p>To complement your functional programming toolkit, here are more essential built-in utilities frequently used alongside high-level iterators:</p>
+<h3 id="a-aggregation-sum-max-min-len">A. Aggregation: <code>sum()</code>, <code>max()</code>, <code>min()</code>, <code>len()</code></h3>
+<p>These functions quickly reduce arrays into structural scalar metadata:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>arr <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">40</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">sum</span>(arr)) <span style="color:#6272a4"># Output: 75</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">max</span>(arr)) <span style="color:#6272a4"># Output: 40</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">min</span>(arr)) <span style="color:#6272a4"># Output: 5</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">len</span>(arr)) <span style="color:#6272a4"># Output: 4</span>
+</span></span></code></pre></div><h3 id="b-index-mapping-enumerate">B. Index Mapping: <code>enumerate()</code></h3>
+<p>Pairs items in an iterable with an automatically incrementing index counter, eliminating the need to track an external loop counter variable manually.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>names <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;Vipin&#34;</span>, <span style="color:#f1fa8c">&#34;Rohit&#34;</span>, <span style="color:#f1fa8c">&#34;Aman&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> index, name <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">enumerate</span>(names, start<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Position </span><span style="color:#f1fa8c">{</span>index<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">: </span><span style="color:#f1fa8c">{</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Output:</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Position 1: Vipin</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Position 2: Rohit</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Position 3: Aman</span>
+</span></span></code></pre></div><h3 id="c-parallel-iteration-zip">C. Parallel Iteration: <code>zip()</code></h3>
+<p>Combines multiple independent iterables into pairs element-by-element, stopping as soon as the shortest input collection is exhausted.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>keys <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;name&#34;</span>, <span style="color:#f1fa8c">&#34;age&#34;</span>, <span style="color:#f1fa8c">&#34;role&#34;</span>]
+</span></span><span style="display:flex;"><span>vals <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;Vipin&#34;</span>, <span style="color:#bd93f9">23</span>, <span style="color:#f1fa8c">&#34;Instructor&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>combined_dict <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">dict</span>(<span style="color:#8be9fd;font-style:italic">zip</span>(keys, vals))
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(combined_dict) <span style="color:#6272a4"># Output: {&#39;name&#39;: &#39;Vipin&#39;, &#39;age&#39;: 23, &#39;role&#39;: &#39;Instructor&#39;}</span>
+</span></span></code></pre></div><h3 id="d-transformation-reversed-and-sorted">D. Transformation: <code>reversed()</code> and <code>sorted()</code></h3>
+<p>Unlike direct collection methods like <code>.sort()</code> or <code>.reverse()</code> which modify your data directly in-place, <code>reversed()</code> and <code>sorted()</code> generate an <strong>entirely new</strong> altered copy of your sequence, leaving the original data unchanged.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>scores <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">50</span>, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">90</span>, <span style="color:#bd93f9">40</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">sorted</span>(scores))                     <span style="color:#6272a4"># Output: [10, 40, 50, 90]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#8be9fd;font-style:italic">reversed</span>(<span style="color:#8be9fd;font-style:italic">sorted</span>(scores))))     <span style="color:#6272a4"># Output: [90, 50, 40, 10]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(scores)                             <span style="color:#6272a4"># Output: [50, 10, 90, 40] (Original Safe!)</span>
+</span></span></code></pre></div>
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

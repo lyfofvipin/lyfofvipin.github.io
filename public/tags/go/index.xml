@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Kumar Vipin Yadav</title>
+    <link>http://localhost:1313/tags/go/</link>
+    <description>Recent content in Go on Kumar Vipin Yadav</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Slices In Go Lang</title>
+      <link>http://localhost:1313/slices_in_go_lang/</link>
+      <pubDate>Wed, 02 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/slices_in_go_lang/</guid>
+      <description>&lt;h2 id=&#34;slices&#34;&gt;Slices&lt;/h2&gt;&#xA;&lt;p&gt;Slice is a data structure that identify the portion of an array by determining it&amp;rsquo;s starting index and length of the portion even during the definition we will be using similar syntax without the length, In GO language slices are similar to array it&amp;rsquo;s just the length of slice is flexible it can be changed. In Slice also we can only store similar type of elements.&lt;/p&gt;&#xA;&lt;h2 id=&#34;difference-between-slice-and-array&#34;&gt;Difference Between Slice And Array&lt;/h2&gt;&#xA;&lt;p&gt;Slices are more flexible than array. In array we can not add any element and resize it but in Slice we can add or remove any element and resized it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arrays In Go Lang</title>
+      <link>http://localhost:1313/array_in_golang/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/array_in_golang/</guid>
+      <description>&lt;h2 id=&#34;array&#34;&gt;Array&lt;/h2&gt;&#xA;&lt;p&gt;An Array is a collection of several elements of similar data type, where we can store multiple values at a time and these values can be accessed with there index values.&lt;/p&gt;&#xA;&lt;p&gt;Here is the visual representation of a Array of Integer type:&lt;/p&gt;&#xA;&lt;img class=&#34;img_center&#34; src=&#34;statics/img/array.png&#34; alt=&#34;If-Else&#34;&gt;&#xA;&lt;p&gt;Above array is a collection of 5 integers &lt;code&gt;10, 20, 30, 40, 50&lt;/code&gt; and has index values &lt;code&gt;0,1,2,3,4&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-create-array-in-go&#34;&gt;How to create array in Go&lt;/h2&gt;&#xA;&lt;p&gt;To create a array in Go we have to follow the syntax mentioned below.&#xA;we have to define the name of the variable then we use &lt;code&gt;[]&lt;/code&gt; to define the length of the array we can leave it blank if you are initializing array value during the definition we can put value &lt;code&gt;...&lt;/code&gt; it will automatically set the length of array based on the values you are passing during initialization, then we define the type of collection array will be for example it will be collection of integers, string, rune and it can be an another array.&#xA;Here are a few examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Strings In Go Lang</title>
+      <link>http://localhost:1313/string_in_golang-copy/</link>
+      <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/string_in_golang-copy/</guid>
+      <description>&lt;p&gt;When we say advanced data type it means that we are learning about the another data types that exist in GO lang but required some extra knowledge to understand.&lt;/p&gt;&#xA;&lt;h2 id=&#34;string&#34;&gt;String&lt;/h2&gt;&#xA;&lt;p&gt;A string is a set of characters it can be of a single character or can be of a multiple characters.&#xA;In golang we write sting inside `` ( back quote ) or &amp;quot;&amp;quot; ( double quote) for example &lt;code&gt;string1&lt;/code&gt; and &lt;code&gt;&amp;quot;s&amp;quot;&lt;/code&gt; are two different strings in go lang &lt;code&gt;&#39;&#39;&lt;/code&gt; is not used with strings It&amp;rsquo;s a separate data type that can hold a single character for more checkout this post &lt;a href=&#34;https://lyfofvipin.github.io/variables_and_data_types&#34;&gt;Variables and Data Types&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introduction to Switch Case In Go Lang</title>
+      <link>http://localhost:1313/introduction_to_switch_case_in_golang/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/introduction_to_switch_case_in_golang/</guid>
+      <description>&lt;h1 id=&#34;what-is-switch-case-in-go-lang-and-how-it-works&#34;&gt;What is Switch Case In Go Lang And How It Works&lt;/h1&gt;&#xA;&lt;p&gt;Switch case is also a decision making statement it can be used in scenarios where we have to chose 1 value among a lot of choices.&lt;/p&gt;&#xA;&lt;p&gt;In switch case we get a value and multiple scenarios. If the value match any case we run all the statements of that case, There is a section named as default which will be executed if non of the scenario match the case. It is quite similar to &lt;code&gt;else if&lt;/code&gt; statements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Loop In Go Lang</title>
+      <link>http://localhost:1313/loop_in_go_lang/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/loop_in_go_lang/</guid>
+      <description>&lt;h1 id=&#34;what-is-a-loop-and-why-we-need-loop-in-programming&#34;&gt;What Is A Loop And Why We Need Loop In Programming&lt;/h1&gt;&#xA;&lt;p&gt;Loop help us in doing the repetitive task for example you have to clean your house daily now this is a repetitive task to solve the same we get a tool a cleaning machine to do the moping for us now we need loops to to all our repetitive task in the world of programming language.&lt;/p&gt;&#xA;&lt;h1 id=&#34;lets-take-a-deeper-look&#34;&gt;Let&amp;rsquo;s Take A Deeper Look&lt;/h1&gt;&#xA;&lt;p&gt;For example you want to display table of 2 (2, 4, 6, 7 ..) now you are not going to write so many print statements to do te same we can use a loop and just write one print statement in that loop and it will do the task to print all the cities for us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>If Else In Go Lang</title>
+      <link>http://localhost:1313/if_else_in_go_lang/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/if_else_in_go_lang/</guid>
+      <description>&lt;h1 id=&#34;decision-making-statement-in-go-language&#34;&gt;Decision Making Statement In GO language&lt;/h1&gt;&#xA;&lt;p&gt;At some point we do take some decisions in our life similarly in the world of programming languages we have to take a lot of decisions and to serve those purpose we have these statements which help us in taking the decisions while coding.&lt;/p&gt;&#xA;&lt;p&gt;Go language has 2 type of decision making statements.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;IF - ELSE&lt;/li&gt;&#xA;&lt;li&gt;Switch&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;We will be learning about IF-ELSE in This one.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Operators In Go Lang</title>
+      <link>http://localhost:1313/operators_in_go_lang/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/operators_in_go_lang/</guid>
+      <description>&lt;h1 id=&#34;what-are-operators-and-why-we-need-them&#34;&gt;What Are Operators And Why We Need Them&lt;/h1&gt;&#xA;&lt;p&gt;Operators are used to perform any operations on the variables or on different values for example performing mathematical operations like &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;%&lt;/code&gt; etc.. on integers.&lt;/p&gt;&#xA;&lt;p&gt;Here is a list of type of operators in GO:&lt;/p&gt;&#xA;&lt;h3 id=&#34;arithmetic-operators&#34;&gt;Arithmetic operators&lt;/h3&gt;&#xA;&lt;p&gt;Arithmetic operators are you to perform any mathematical operation&lt;/p&gt;&#xA;&lt;p&gt;Like&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;+&lt;/code&gt; adding&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;-&lt;/code&gt; subtracting&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;*&lt;/code&gt; multiply&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;/&lt;/code&gt; divide&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;%&lt;/code&gt; finding remainder.{10%3=1(remainder)}&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;package main&#xA;&#xA;import (&amp;#34;fmt&amp;#34;)&#xA;&#xA;func main(){&#xA;&#xA;&#x9;i := 12&#xA;&#x9;j := 4&#xA;&#xA;&#x9;fmt.Println(&amp;#34;Arithmetic Operators: &amp;#34;)&#xA;&#xA;&#x9;fmt.Println( i - j )&#xA;&#x9;fmt.Println( i + j )&#xA;&#x9;fmt.Println( i / j )&#xA;&#x9;fmt.Println( i % j )&#xA;&#x9;fmt.Println( i * j )&#xA;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;relational-operators&#34;&gt;Relational operators&lt;/h3&gt;&#xA;&lt;p&gt;From it&amp;rsquo;s come in the name of operator this operator show any&#xA;relation between two operands.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Variables and Data Types</title>
+      <link>http://localhost:1313/variables_and_data_types/</link>
+      <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/variables_and_data_types/</guid>
+      <description>&lt;h1 id=&#34;data-type&#34;&gt;Data Type&lt;/h1&gt;&#xA;&lt;p&gt;Data Types is a way to find the type of values in programming languages.&#xA;There can be multiple type of data for example.&lt;/p&gt;&#xA;&lt;h2 id=&#34;integers&#34;&gt;Integers&lt;/h2&gt;&#xA;&lt;p&gt;Any non-decimal numeric value is referred as an Integer.&lt;/p&gt;&#xA;&lt;p&gt;Examples:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;3&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Yes&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;0&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Yes&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;-3243&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Yes&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;-2&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Yes&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;1.5&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;No&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;-4.5&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;No&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;4.0&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;No&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;There can be multiple type of integers in GO language based on the computer architecture:&#xA;This can help in implementing specific type of application for specific architecture.&#xA;Let&amp;rsquo;s say if you are building a application for only 32 bit architecture then you can use &lt;code&gt;int32&lt;/code&gt;.&#xA;But if you only specify &lt;code&gt;int&lt;/code&gt; then it will auto detect the architecture and compile the code based on that.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Input In Go Lang</title>
+      <link>http://localhost:1313/input_in_golang/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/input_in_golang/</guid>
+      <description>&lt;h1 id=&#34;why-do-we-need-input&#34;&gt;Why do we need input&lt;/h1&gt;&#xA;&lt;p&gt;In any application user input plays a vittle role any application react based on the input user is giving.&#xA;for example in most of the websites we give date of birth as input and based on that it will show awesome result.&lt;/p&gt;&#xA;&lt;h1 id=&#34;input-in-go-lang&#34;&gt;Input In Go Lang&lt;/h1&gt;&#xA;&lt;p&gt;In GO we basically have three methods to take input and to take a input.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Scan&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Scanln&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Scanf&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;We need to have a variable before we use the scan methods. Variable type should be based on the type of input you want from user.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Println In Go Lang</title>
+      <link>http://localhost:1313/println_in_go_lang/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/println_in_go_lang/</guid>
+      <description>&lt;h2 id=&#34;adding-comments&#34;&gt;Adding Comments&lt;/h2&gt;&#xA;&lt;p&gt;A comment is a statement of a program/library that will not get executed by the compiler during the execution.&lt;/p&gt;&#xA;&lt;h3 id=&#34;single-line-comment&#34;&gt;Single Line Comment&lt;/h3&gt;&#xA;&lt;p&gt;A Single line comment can be written with the help of &lt;code&gt;//&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Example:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;package main&#xA;&#xA;import (&amp;#34;fmt&amp;#34;)&#xA;&#xA;func main(){&#xA;&#xA;&#x9;// This is a comment&#xA;&#x9;fmt.Println(&amp;#34;Vipin&amp;#34;)&#xA;&#x9;// This is also an comment&#xA;&#x9;//  This os also an comment&#xA;&#x9;fmt.Println(&amp;#34;Kumar&amp;#34;)&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ go run Day04/single_line_comments.go &#xA;Vipin&#xA;Kumar&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;multiline-comment&#34;&gt;Multiline Comment&lt;/h3&gt;&#xA;&lt;p&gt;Anything written inside &lt;code&gt;/*&lt;/code&gt; and &lt;code&gt;*/&lt;/code&gt; will be a comment but here you can write as many comments you want.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

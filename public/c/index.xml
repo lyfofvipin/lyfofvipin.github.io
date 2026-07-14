@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cs on Kumar Vipin Yadav</title>
+    <link>http://localhost:1313/c/</link>
+    <description>Recent content in Cs on Kumar Vipin Yadav</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>STRUCTURE IN C</title>
+      <link>http://localhost:1313/structure_in_c/</link>
+      <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/structure_in_c/</guid>
+      <description>&lt;p&gt;STRUCTURE:&#xA;You are aware that a variable stores a single value of a data type.&lt;/p&gt;&#xA;&lt;p&gt;Arrays can store many values of similar data type.&lt;/p&gt;&#xA;&lt;p&gt;Data in the array is of the same composition in nature as far as type is concerned.&lt;/p&gt;&#xA;&lt;p&gt;In real life we need to have different data type for example to maintain employees information we should have information such as name,age,qualification,salary etc.&lt;/p&gt;&#xA;&lt;p&gt;Here,to maintain the information of employees dissimilar data types are required.&#xA;Name and qualification of the employee are char data type, age is integer, and salary is float. All these data types can not be expressed in a single array.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2-D Array and 2-D strings in C</title>
+      <link>http://localhost:1313/2-d_array_and_2-d_strings_in_c/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2-d_array_and_2-d_strings_in_c/</guid>
+      <description>&lt;h2&gt; 2D Array and 2D strings &lt;/h2&gt;&#xA;A 1-D array is a collection of several elements that contain only one row of elements. &#xA;&lt;p&gt;The  2-D array is a collection of rows and columns where each row contains smiler number of columns.&lt;/p&gt;&#xA;&lt;p&gt;The requirement of 2-D array is removing the need of several 1-d array and it may be helpful to create&#xA;mathematical data structure named as matrix.&lt;/p&gt;&#xA;&lt;h4&gt;Initializing 2-D Array &lt;/h4&gt;&#xA;&lt;h4&gt; Taking input in a 2-D Array :- &lt;/h4&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int main()&#xA;{&#xA;    int a[3][2];&#xA;    int i,j;&#xA;&#xA;    for( i = 0 ; i &amp;lt; 3 ; i++ )&#xA;    {&#xA;        for( j = 0 ; j &amp;lt; 2 ; j++ )&#xA;        {&#xA;            printf(Enter [%d][%d] element of array : ,i,j);&#xA;            scanf(%d,&amp;amp;a[i][j]);&#xA;        }&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pointers In C</title>
+      <link>http://localhost:1313/pointers_in_c/</link>
+      <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pointers_in_c/</guid>
+      <description>&lt;h3 id=&#34;pointers-in-c&#34;&gt;Pointers in C&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;pointer is a user define data type.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;A pointer variable stores address of another variable or NULL because pointer stores address,&#xA;of another variable so that with the help of pointer variable we can process the variable.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Run time memory allocation scheme can be applied only with pointers in c.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;As we know in c language we ca no access variable of a function into another function but this can&#xA;be possible with help of pointers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FUNCTION WITH STRINGS IN C</title>
+      <link>http://localhost:1313/function_with_strings_in_c/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/function_with_strings_in_c/</guid>
+      <description>&lt;h2&gt;Functions with Strings :-&lt;/h2&gt;&#xA;We have a studied about inbuilt function of strings now we will create our own functions or,&#xA;we will learn function with strings.&#xA;&lt;h4&gt;1. Copy function:-&lt;/h4&gt;&#xA;&lt;code&gt;copy( A, B )&lt;/code&gt;&#xA;Our this function will copy A into B it work as &lt;code&gt;strcpy()&lt;/code&gt; but It is coded by you :).&#xA;&lt;p&gt;e.g.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;int main()&#xA;{&#xA;    char A[] = &amp;#34;Vipin is my name&amp;#34;;&#xA;    char B[20] = &amp;#34;Empty :)&amp;#34;;&#xA;&#xA;    void copy( char [] , char [] );&#xA;    printf(&amp;#34;Values before changes : nn&amp;#34;);&#xA;    puts(A);&#xA;    puts(B);&#xA;&#xA;    copy(A,B);&#xA;&#xA;    printf(&amp;#34;nValues after changes : nn&amp;#34;);&#xA;    puts(A);&#xA;    puts(B);&#xA;&#xA;    return 0;&#xA;}&#xA;void copy( char x[] , char y[])&#xA;{&#xA;    int i;&#xA;&#xA;    for( i = 0 ; x[i] != 0 ; i++ )&#xA;    // Here 0 condition represent NULL&#xA;    {&#xA;        y[i] = x[i];&#xA;    }&#xA;    y[i] = 0;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Inbuilt Functions In C</title>
+      <link>http://localhost:1313/inbuilt_functions_in_c/</link>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/inbuilt_functions_in_c/</guid>
+      <description>&lt;h2&gt;Inbuilt function for String Processing :-&lt;/h2&gt;&#xA;&lt;code&gt; NOTE : All Inbuilt Function of String need string.h library.&lt;/code&gt;&#xA;&lt;h4&gt;1. strcpy(Target_String , Source_String ) :-&lt;/h4&gt;&#xA;This function will take 2 string as argument one is Target_String and another is Source_String,&#xA;this function will copy Source_String into Target_String.&#xA;e.g.&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;#include&amp;lt;string.h&amp;gt;&#xA;int main()&#xA;{&#xA;&#x9;char A[15] = &amp;#34;Vipin Yadav&amp;#34;;&#xA;&#x9;char B[15] = &amp;#34;- - - - -&amp;#34;;&#xA;&#xA;&#x9;printf(&amp;#34;Value of A and B before calling function. nn&amp;#34;);&#xA;&#x9;puts(A);&#xA;&#x9;puts(B);&#xA;&#xA;&#x9;strcpy(B,A);&#xA;  // It will copy A in B as you can see in Output.&#xA;&#xA;&#x9;printf(&amp;#34;nValue of A and B after calling function. nn&amp;#34;);&#xA;&#x9;puts(A);&#xA;&#x9;puts(B);&#xA;&#xA;  return 0;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Strings In C language</title>
+      <link>http://localhost:1313/strings_in_c_language/</link>
+      <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/strings_in_c_language/</guid>
+      <description>&lt;h2&gt;String:-&lt;/h2&gt;&#xA;String is group of alphabets,digits and symobls. In C language, a string represented by &lt;code&gt;char&lt;/code&gt; array.&#xA;&lt;pre&gt;e.g.  char S[20];&lt;/pre&gt;&#xA;In this example S is a string of 20 characters but it can hold a string of only 19 characters,&#xA;because the last character of a string is always NULL.&#xA;&lt;p&gt;&lt;code&gt;NULL :-&#xA;It is a character used to repersent end of String.&#xA;It has three repersentactions:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;NULL   (need stdio.h)&lt;/li&gt;&#xA;&lt;li&gt;&#39;&#39;&lt;/li&gt;&#xA;&lt;li&gt;0&#xA;&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2&gt;&lt;img class=&#34;alignnone size-full wp-image-609&#34; src=&#34;https://vipin711.files.wordpress.com/2019/09/4bd11-screenshot-from-2018-07-27-19-13-54-e1532699103824.png&#34; alt=&#34;String example&#34; width=&#34;916&#34; height=&#34;338&#34; /&gt;&lt;/h2&gt;&#xA;&lt;h2&gt;Output with String:-&lt;/h2&gt;&#xA;&lt;h4&gt;1. Using &lt;code&gt;printf()&lt;/code&gt; function:&lt;/h4&gt;&#xA;printf will display the entire String using %s&#xA;&lt;pre&gt;e.g.&#xA;&lt;p&gt;char a[20] = &amp;ldquo;Vipin Yadav&amp;rdquo;;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sorting In C</title>
+      <link>http://localhost:1313/sorting_in_c/</link>
+      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sorting_in_c/</guid>
+      <description>&lt;p&gt;Hope you have haired about sorting , Arrange elements of an array either in ascending or descending,&#xA;order is called sorting.&#xA;we have a lot&amp;rsquo;s of sorting algorithm but here we will discuss about&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Selection Sort&lt;/li&gt;&#xA;&lt;li&gt;Bubble Sort&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2&gt;Selection Sort:-&lt;/h2&gt;&#xA;Selection sort works by finding the smallest unsorted item in the list and swapping it with the item in&#xA;the current position.&#xA;&lt;h3&gt;The algorithm work works as follows:&lt;/h3&gt;&#xA;1. set first position as current position.&#xA;2. Find the minimum value in the list.&#xA;3. Swap it with the value in current position.&#xA;4. Set next position as current position.&#xA;5. Respect Steps 2-4 until you reach end of list.&#xA;&lt;p style=&#34;text-align:justify;&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-602&#34; src=&#34;https://vipin711.files.wordpress.com/2019/09/f0791-screenshot-from-2018-07-26-23-09-38.png&#34; alt=&#34;ascending order selection sory&#34; width=&#34;1366&#34; height=&#34;768&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Linear And Binary Search In C</title>
+      <link>http://localhost:1313/linear_and_binary_search_in_c/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/linear_and_binary_search_in_c/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s discuss about function with arrays:-&lt;/p&gt;&#xA;&lt;p&gt;When we pass an array to the function the target variable is the reference of passed array.&#xA;So that any operation on the reference variable will be performed It will directly affect&#xA;the original value of the variable.&#xA;Let&amp;rsquo;s discuss with help of some example.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Let&amp;rsquo;s take two array and print there sum using a function.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;a class=&#34;css-truncate-target js-navigation-open js-tree-finder-path&#34; href=&#34;https://github.com/lyfofvipin/PROGRSMMING/blob/master/sum-of-2-array-in-3rd-using-function.c&#34;&gt;&lt;mark&gt;sum&lt;/mark&gt;-of-2-array-in-3rd-using-function.c&lt;/a&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    int main()&#xA;    {&#xA;        int a[] = {1,2,3,4,5};&#xA;        int b[] = {1,2,3,4,5};&#xA;        int c[5],i;&#xA;&#xA;    // Declaring function sum and telling it that we give 2 arrays as arguments&#xA;        void sum ( int [] , int [] , int []);&#xA;&#xA;    // Calling sum function&#xA;        sum(a,b);&#xA;&#xA;      for( i = 0 ; i &amp;lt; 5 ; i++ )&#xA;          printf(&amp;amp;quot;%d  &amp;amp;quot;,c[i] );&#xA;      return 0;&#xA;    }&#xA;    // Here we have defining our function&#xA;    void sum( int x[] , int y[] , int z[] )&#xA;    {&#xA;        int i;&#xA;&#xA;        for( i = 0 ; i &amp;lt; 5 ; i++ )&#xA;            z[i] = x[i]+y[i];&#xA;    }&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Problems In Array</title>
+      <link>http://localhost:1313/some_problems_in_array/</link>
+      <pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/some_problems_in_array/</guid>
+      <description>&lt;p&gt;Here in my this blog we will learn how to take input in an array and display that on screen and we perform some others operation on Arrays.&lt;/p&gt;&#xA;&lt;p&gt;Have a fun : )&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;In our this program we will learn how to take inputs in array we will declare a array of length 5 and enter some value into it&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;span style=&#34;color:#000000;&#34;&gt;&lt;a class=&#34;css-truncate-target js-navigation-open js-tree-finder-path&#34; style=&#34;color:#000000;&#34; href=&#34;https://github.com/lyfofvipin/PROGRSMMING/blob/master/reading-arrey.c&#34;&gt;&lt;mark&gt;reading&lt;/mark&gt;-array.c&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;int main()&#xA;{&#xA;  int a[5],i;&#xA;  for (i = 0; i &amp;lt; 5; i++)&#xA;  {&#xA;    printf(&amp;#34;Enter a number :n&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;a[i]);&#xA;  }&#xA;  printf(&amp;#34;All values are stored in the Array&amp;#34;);&#xA;  return 0;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Output :-&#xA;Enter a number :&#xA;5&#xA;Enter a number :&#xA;4&#xA;Enter a number :&#xA;3&#xA;Enter a number :&#xA;2&#xA;Enter a number :&#xA;1&#xA;All values are stored in the Array&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;In our this program we will read an array and display that on screen , This program will take 5 integer and display them on screen.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;a class=&#34;css-truncate-target js-navigation-open js-tree-finder-path&#34; href=&#34;https://github.com/lyfofvipin/PROGRSMMING/blob/master/reading-writing-arrey.c&#34;&gt;&lt;mark&gt;reading&lt;/mark&gt;-writing-array.c&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ARRAY IN C</title>
+      <link>http://localhost:1313/array_in_c/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/array_in_c/</guid>
+      <description>&lt;p&gt;An Array is user define data type. It is collection of several elements of similar data&#xA;type, where we can store multiple values at a time.&lt;/p&gt;&#xA;&lt;p&gt;Syntax:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Data Type ArrayName [ No_of_element ];&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;e.g.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;int Arr[5]&lt;/code&gt;&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&lt;tbody&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2&gt;Properties of Array:-&lt;/h2&gt;&#xA;&lt;h4&gt;1. All elements exist on continues memory locations.&lt;/h4&gt;&#xA;Here i am assuming that it starts from location 100 in memory.&#xA;&lt;p&gt;&lt;code&gt;int A[5];&lt;/code&gt;&lt;/p&gt;&#xA;&lt;table style=&#34;height:39px;&#34; width=&#34;587&#34;&gt;&#xA;&lt;tbody&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;100                                  102                                   104                               106                           108&#xA;&lt;h4&gt;2.Each element is identified by a number, which called as index no.&#xA;The index no begins from 0 to N-1.&lt;/h4&gt;&#xA;&lt;p&gt;&lt;code&gt;int A[5];&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PRINTING SIN, COS, LOG AND E^X SERIES IN C</title>
+      <link>http://localhost:1313/printing_sin_cos_log_and_ex_series_in_c/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/printing_sin_cos_log_and_ex_series_in_c/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s learn some series printing with help of loop and functions,&#xA;it is like summering what we have study till now&#xA;Let&amp;rsquo;s start with a simple series.&lt;/p&gt;&#xA;&lt;h2&gt;Printing x+(x/2)+(x/3)+(x/4)+(x/5)...(x/n) series :-&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;int main()&#xA;{ &#xA;    int n,x;&#xA;    double result;&#xA;    double series ( int ,int );&#xA;    printf(&amp;#34;Enter value of x : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;x);&#xA;    printf(&amp;#34;Enter value of n : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;    result = series(x,n);&#xA;    printf(&amp;#34;Result is : %.3lf&amp;#34;,result);&#xA;    return 0;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;double series ( int x, int n )&#xA;{&#xA;    int i;&#xA;    double res = 0.0;&#xA;    for ( i = 1 ; i &amp;lt;= n ; i++ )&#xA;    res = res + x/(double)i;&#xA;    return res;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;now-we-will-make-a-program-to-print-value-of-sinx-series-after-asking-values-of-x-and-n&#34;&gt;Now we will make a program to print value of sin(x) series after asking values of x and n.&lt;/h2&gt;&#xA;&lt;h2&gt;Printing sin(x) series:-&#xA;x-(x^3/3!)+(x^5/5!)-(x^7/7!)+(x^9/9!)+(x^11/11!)...&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;int main()&#xA;{ &#xA;    int n,x;&#xA;    double result;&#xA;&#xA;    double series ( int ,int );&#xA;&#xA;    printf(&amp;#34;Enter value of x : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;x);&#xA;&#xA;    printf(&amp;#34;Enter value of n : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;&#xA;    result = series(x,n);&#xA;    printf(&amp;#34;Result is : %.3lf&amp;#34;,result);&#xA;    return 0;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;double series ( int x, int n )&#xA;{&#xA;    int i,pow,fact,number;&#xA;&#xA;    int factorial( int );&#xA;    int power( int , int );&#xA;    double res = 0.0;&#xA;    for ( i = 1 ; i &amp;lt;= n ; i++ )&#xA;    {&#xA;        number = 2*i - 1 ; // To bring even number every time&#xA;        pow = power(x,number);&#xA;        fact = factorial(number);&#xA;        if ( i%2 != 0 )&#xA;        res = res + pow/(double)fact;&#xA;        else&#xA;        res = res - pow/(double)fact;&#xA;    }&#xA;    return res;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int power ( int x , int n)&#xA;{&#xA;    int i,pow = 1;&#xA;    for ( i = 1 ; i &amp;lt;= n ; i++ )&#xA;    pow = pow*x;&#xA;    return pow;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int factorial( int x)&#xA;{&#xA;    int i,fact = 1;&#xA;    for ( i = 1 ; i &amp;lt;= x ; i++ )&#xA;    fact = fact*i;&#xA;    return fact;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;now-we-will-make-a-program-to-print-value-of-cosx-series-after-asking-values-of-x-and-n&#34;&gt;Now we will make a program to print value of cos(x) series after asking values of x and n&lt;/h2&gt;&#xA;&lt;h2&gt;Printing cos(x) series:-&#xA;1-(x^2/2!)+(x^4/4!)-(x^6/6!)+(x^6/6!)+(x^6/6!)-(x^8/8!)...&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;int main()&#xA;{ &#xA;    int n,x;&#xA;    double result;&#xA;    double series ( int ,int );&#xA;    printf(&amp;#34;Enter value of x : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;x);&#xA;    printf(&amp;#34;Enter value of n : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;    result = series(x,n);&#xA;    printf(&amp;#34;Result is : %.3lf&amp;#34;,result);&#xA;    return 0;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;double series ( int x, int n )&#xA;{&#xA;    int i,pow,fact,number;&#xA;    int factorial( int );&#xA;    int power( int , int );&#xA;    double res = 0.0;&#xA;    for ( i = 0 ; i &amp;lt;= n ; i++ )&#xA;    {&#xA;        number = 2*i ; // To bring odd number every time&#xA;        pow = power(x,number);&#xA;        fact = factorial(number);&#xA;        if ( i%2 != 0 )&#xA;        res = res + pow/(double)fact;&#xA;        else&#xA;        res = res - pow/(double)fact;&#xA;    }&#xA;    return res;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int power ( int x , int n)&#xA;{&#xA;    int i,pow = 1;&#xA;    for ( i = 1 ; i &amp;lt;= n ; i++ )&#xA;    pow = pow*x;&#xA;    return pow;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int factorial( int x)&#xA;{&#xA;    int i,fact = 1;&#xA;    for ( i = 1 ; i &amp;lt;= x ; i++ )&#xA;    fact = fact*i;&#xA;    return fact;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;now-we-will-make-a-program-to-print-value-of-log1x-series-after-asking-values-of-x-and-n&#34;&gt;Now we will make a program to print value of log(1+x) series after asking values of x and n.&lt;/h2&gt;&#xA;&lt;h2&gt;Printing log(1+x) series.&#xA;x-(x^2/2!)+(x^3/3!)-(x^4/4!)+(x^5/5!)+(x^6/6!)-(x^7/7!)...&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;int main()&#xA;{ &#xA;    int n,x;&#xA;    double result;&#xA;    double series ( int ,int );&#xA;    printf(&amp;#34;Enter value of x : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;x);&#xA;    printf(&amp;#34;Enter value of n : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;    result = series(x,n);&#xA;    printf(&amp;#34;Result is : %.3lf&amp;#34;,result);&#xA;    return 0;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;double series ( int x, int n )&#xA;{&#xA;    int i,pow;&#xA;    int power( int ,int );&#xA;    double res = 0.0;&#xA;    for ( i = 1 ; i &amp;lt;= n ; i++ )&#xA;    {&#xA;        pow = power(x,i);&#xA;        if ( i%2 != 0 )&#xA;        res = res + pow/(double)i;&#xA;        else&#xA;        res = res - pow/(double)i;&#xA;    }&#xA;    return res;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int power ( int x , int n)&#xA;{&#xA;    int i,pow = 1;&#xA;    for ( i = 1 ; i &amp;lt;= n ; i++ )&#xA;    pow = pow*x;&#xA;    return pow;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;now-we-will-make-a-program-to-print-value-of-ex-series-after-asking-values-of-x-and-n&#34;&gt;Now we will make a program to print value of e^x series after asking values of x and n&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;int main()&#xA;{ &#xA;    int n,x;&#xA;    double result;&#xA;    double ( int ,int );&#xA;    printf(&amp;#34;Enter value of x : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;x);&#xA;    printf(&amp;#34;Enter value of n : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;    result = series(x,n);&#xA;    printf(&amp;#34;Result is : %.3lf&amp;#34;,result);&#xA;    return 0;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;double series ( int x, int n )&#xA;{&#xA;    int i,pow,fact;&#xA;    int power( int ,int );&#xA;    int factorial( int );&#xA;    double res = 0.0;&#xA;    for ( i = 0 ; i &amp;lt;= n ; i++ )&#xA;    {&#xA;        pow = power(x,i);&#xA;        fact = factorial(i);&#xA;        res = res + pow/(double)fact;&#xA;    }&#xA;    return res;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int power ( int x , int n)&#xA;{&#xA;    int i,pow = 1;&#xA;    for ( i = 1 ; i &amp;lt;= n ; i++ )&#xA;    pow = pow*x;&#xA;    return pow;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int factorial( int x)&#xA;{&#xA;int i,fact = 1;&#xA;for ( i = 1 ; i &amp;lt;= x ; i++ )&#xA;fact = fact*i;&#xA;return fact;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Some Simple Program on Functions</title>
+      <link>http://localhost:1313/some_simple_program_on_functions/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/some_simple_program_on_functions/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s discuss some very simple example on Functions&#xA;By solving these problem you can able to solve simple problem based on functions&#xA;later we will discuss about functions with Array, Strings and with Pointers.&lt;/p&gt;&#xA;&lt;h2&gt;Factorial function :-&lt;/h2&gt;&#xA;&lt;h2 id=&#34;finding-factorial-of-a-number-using-function&#34;&gt;Finding Factorial of a number using function.&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;int main()&#xA;{&#xA;   int factorial( int );&#xA;   int n , facto; &#xA;     // we can&amp;#39;t access these variables in function but we can &#xA;     //create variable there with same name&#xA;   printf(&amp;#34;Enter a number : &amp;#34;);&#xA;   scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;&#xA;   facto = factorial(n);&#xA;&#xA;   printf(&amp;#34;Factorial is %d. n&amp;#34;,facto);&#xA;   return 0;&#xA; }&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int factorial( int a )&#xA; {&#xA;    int i,fact;&#xA;    for ( i = 1 , fact = 1 ; i &amp;lt;= a ; i ++ )&#xA;    fact = fact * i ;&#xA;    return fact;&#xA; }&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output :-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jump Statements In C</title>
+      <link>http://localhost:1313/jump_statements_in_c/</link>
+      <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/jump_statements_in_c/</guid>
+      <description>&lt;h1&gt;Jump Statements In C :-&lt;/h1&gt;&#xA;Before moving on function problems let&#39;s read about jump statements.&#xA;&lt;p&gt;Jump Statements are the Statements those shift the control of execution.&#xA;IN c language we have 5 jump Statements.&lt;/p&gt;&#xA;&lt;h4&gt;1. Break&#xA;2. Continue&#xA;3. Exit&#xA;4. Goto&#xA;5. Return&lt;/h4&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s read about return statement first.&lt;/p&gt;&#xA;&lt;h2&gt;Return:-&lt;/h2&gt;&#xA;A function may or may not return a value. A return statement returns a value to the calling function,&#xA;and assigns to the variable in the left side of the calling function.&#xA;If a function does not return a value, the return type in the function definition and declaration, is specified as void.&#xA;&lt;h2&gt;Break Statements :-&lt;/h2&gt;&#xA;&lt;p&gt;The break statement is a jump instruction and can be used inside a switch construct, for loop, while loop and do-while loop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Function In C</title>
+      <link>http://localhost:1313/function_in_c/</link>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/function_in_c/</guid>
+      <description>&lt;h1&gt;Modular programming:&lt;/h1&gt;&#xA;Modular programming is programming concept. This concept allow us to divide a large solution&#xA;into several small modules. Each module is devloped independently and act is a solution of small problem.&#xA;&lt;h2&gt;Need/Advantages of modular programming :&lt;/h2&gt;&#xA;1. A module developed once and reuse several times in a program.&#xA;2. Due to readability, A problem will have less no of instruction.&#xA;3. A problem has less numbers of instruction has less number of errors.&#xA;4. program is easily maintainable .&#xA;5. program is easily extendable.&#xA;&lt;p&gt;In C language to apply modular programming we use function or structures.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Hard Pattern Printing Programs</title>
+      <link>http://localhost:1313/some_hard_pattern_printing_programs/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/some_hard_pattern_printing_programs/</guid>
+      <description>&lt;h4&gt;Here are some hard pattern printing programs&lt;/h4&gt;&#xA;&lt;h2&gt;Printing :-&#xA;*&#xA;***&#xA;*****&#xA;*******&#xA;*********&lt;/h2&gt;&#xA;&lt;h2 id=&#34;here-value-is-5-given-by-keyboard&#34;&gt;Here value is 5 given by keyboard.&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int i,j,n;&#xA;&#x9;printf(&amp;#34;Enter a number :n&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;       for (i=1;i&amp;lt;=n;i++)&#xA;&#x9;  {&#xA;&#xA;&#x9;&#x9;  for(j=1;j&amp;lt;= 2*i-1 ;j++)&#xA;&#x9;&#x9;    {&#xA;&#x9;&#x9;      printf(&amp;#34;*&amp;#34;);&#xA;&#x9;&#x9;    }&#xA;&#x9;&#x9;  printf(&amp;#34;n&amp;#34;);&#xA;&#x9;  }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:-&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Enter a number :&#xA;5&#xA;*&#xA;***&#xA;*****&#xA;*******&#xA;*********&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Printing :-&#xA;*&#xA;+++&#xA;*****&#xA;+++++++&#xA;*********&lt;/h2&gt;&#xA;&lt;h2 id=&#34;here-value-is-5-given-by-keyboard-1&#34;&gt;Here value is 5 given by keyboard.&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int i,j,n;&#xA;&#x9;printf(&amp;#34;Enter a number : n&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;&#x9;for(i=1;i&amp;lt;=n;i++)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;for(j=1;j&amp;lt;=2*i-1;j++)&#xA;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;if(i%2!=0)&#xA;&#x9;&#x9;&#x9;&#x9;printf(&amp;#34;*&amp;#34;);&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;printf(&amp;#34;+&amp;#34;);&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;printf(&amp;#34;n&amp;#34;);&#xA;&#x9;&#x9;}&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Easy Printing Star Problems</title>
+      <link>http://localhost:1313/some_easy_printing_star_problems/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/some_easy_printing_star_problems/</guid>
+      <description>&lt;h2&gt;Printing:-&#xA;*&#xA;**&#xA;***&#xA;****&#xA;*****&lt;/h2&gt;&#xA;&lt;h2 id=&#34;here-n-is-5-taken-from-keyboard&#34;&gt;Here n is 5 taken from keyboard.&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int i,j,n;&#xA;&#x9;printf(&amp;#34;Enter a number : n&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;       for (i=1;i&amp;lt;=n;i++)&#xA;&#x9;  {&#xA;&#xA;&#x9;&#x9;  for(j=1;j&amp;lt;=i ;j++)&#xA;&#x9;&#x9;    {&#xA;&#x9;&#x9;      printf(&amp;#34;*&amp;#34;);&#xA;&#x9;&#x9;    }&#xA;&#x9;&#x9;  printf(&amp;#34;n&amp;#34;);&#xA;&#x9;  }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output :&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Enter a number : &#xA;5&#xA;*&#xA;**&#xA;***&#xA;****&#xA;*****&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Printing:-&#xA;*&#xA;* *&#xA;* * *&#xA;* * * *&#xA;* * * * *&lt;/h2&gt;&#xA;&lt;h2 id=&#34;here-n-is-5-taken-from-keyboard-1&#34;&gt;Here n is 5 taken from keyboard.&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int i,j,n;&#xA;&#x9;printf(&amp;#34;Enter a number : n&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;       for (i=1;i&amp;lt;=n;i++)&#xA;&#x9;  {&#xA;&#xA;&#x9;&#x9;  for(j=1;j&amp;lt;=i ;j++)&#xA;&#x9;&#x9;    {&#xA;&#x9;&#x9;      printf(&amp;#34;* &amp;#34;);&#xA;&#x9;&#x9;    }&#xA;&#x9;&#x9;  printf(&amp;#34;n&amp;#34;);&#xA;&#x9;  }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output :-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nesting  Of   Loops</title>
+      <link>http://localhost:1313/nesting__of___loops/</link>
+      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/nesting__of___loops/</guid>
+      <description>&lt;p&gt;In my this blog we will see some basic syntex of loops .&lt;/p&gt;&#xA;&lt;h1&gt;what is the meaning of nesting loops?&lt;/h1&gt;&#xA;Nesting behavior refers to loops within loops.&#xA;means using a loop within an another loop.&#xA;&lt;p&gt;Let&amp;rsquo;s understand it with help of some synnex.&lt;/p&gt;&#xA;&lt;h2&gt;Nesting loop syntex for for loop :-&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for ( initialize ; condition ; expressions )&#xA;{&#xA;   // this for loop is within a for loop so this is &#xA;   //nesting of for loops&#xA;for ( initialize ; condition ; expressions )&#xA;  {&#xA;     statement(s);&#xA;  }&#xA; statement(s);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Nesting loop syntex for for loop :-&lt;/h2&gt;&#xA;```&#xA;while ( condition )&#xA;{&#xA;   // this while loop is within a while loop so this is &#xA;  //nesting of while loops&#xA; whlie ( condition )&#xA;   {&#xA;      statement(s);&#xA;   }&#xA; statement(s);&#xA;}&#xA;```&#xA;&lt;h2&gt;Nesting loop syntex for for loop :-&lt;/h2&gt;&#xA;```&#xA;do&#xA;{&#xA;   // this do-while loop is within a do-while loop so this is &#xA;  //nesting of do-while loops&#xA; do&#xA;  {&#xA;     statement(s);&#xA;  }while ( condition );&#xA; statement(s);&#xA;}while ( condition );&#xA;```&#xA;&lt;p&gt;loops within loop is called nesting of loops.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Programs On Nesting Of For Loops</title>
+      <link>http://localhost:1313/some_programs_on_nesting_of_for_loops/</link>
+      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/some_programs_on_nesting_of_for_loops/</guid>
+      <description>&lt;p&gt;Here are some programs on nesting of for loops.&lt;/p&gt;&#xA;&lt;h2&gt;&#xA;Printing&#xA;1&#xA;1,2&#xA;1,2,3&#xA;1,2,3,4&#xA;1,2,3,4,5 ...n&lt;/h2&gt;&#xA;&lt;p&gt;where value of n is 5 taken from keyboard by me&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int i,j,n;&#xA;&#x9;printf(&amp;#34;Enter a number : n&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;       for (i=1;i&amp;lt;=n;i++)&#xA;&#x9;  {&#xA;&#xA;&#x9;&#x9;  for(j=1;j&amp;lt;=i ;j++)&#xA;&#x9;&#x9;    {&#xA;&#x9;&#x9;      printf(&amp;#34;%d&amp;#34;,j);&#xA;&#x9;&#x9;    }&#xA;&#x9;&#x9;  printf(&amp;#34;n&amp;#34;);&#xA;&#x9;  }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Printing&#xA;1&#xA;2,2&#xA;3,3,3&#xA;4,4,4,4&#xA;5,5,5,5,5 ...n&lt;/h2&gt;&#xA;&lt;p&gt;where value of n is 5 taken from keyboard by me&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int i,j,n;&#xA;&#x9;printf(&amp;#34;Enter a number : n&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;       for (i=1;i&amp;lt;=n;i++)&#xA;&#x9;  {&#xA;&#xA;&#x9;&#x9;  for(j=1;j&amp;lt;=i ;j++)&#xA;&#x9;&#x9;    {&#xA;&#x9;&#x9;      printf(&amp;#34;%d&amp;#34;,i);&#xA;&#x9;&#x9;    }&#xA;&#x9;&#x9;  printf(&amp;#34;n&amp;#34;);&#xA;&#x9;  }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Printing&#xA;5&#xA;4,5&#xA;3,4,5&#xA;2,3,4,5&#xA;1,2,3,4,5&lt;/h2&gt;&#xA;&lt;p&gt;where value of n is 5 taken from keyboard by me&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A C program to check weather the number is prime using for loop</title>
+      <link>http://localhost:1313/a_c_program_to_check_weather_the_number_is_prime_using_for_loop/</link>
+      <pubDate>Sat, 30 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/a_c_program_to_check_weather_the_number_is_prime_using_for_loop/</guid>
+      <description>&lt;p&gt;Here is the file of code&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int i,n,temp=0;&#xA;               printf(&amp;#34;Enter a number : n&amp;#34;);&#xA;               scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;&#xA;&#x9;    for (i=2;i&amp;lt;n-1;i++)&#xA;&#x9;      {&#xA;                 if ( n%i==0 )&#xA;&#x9;           {&#xA;&#x9;&#x9;          temp=1;&#xA;&#x9;&#x9;&#x9;   break;&#xA;&#x9;&#x9;   }&#xA;&#x9;      }&#xA;&#x9;if(temp==1||n==1)&#xA;            printf(&amp;#34;Enterd number is a  prime number n&amp;#34;);&#xA;&#x9;else&#xA;            printf(&amp;#34;primen&amp;#34;);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>A C program to find largest number from 10 number using for loop</title>
+      <link>http://localhost:1313/a_c_program_to_find_largest_number_from_10_number_using_for_loop/</link>
+      <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/a_c_program_to_find_largest_number_from_10_number_using_for_loop/</guid>
+      <description>&lt;p&gt;Here is a program in C language to find the largest number from 10 numbers,&lt;/p&gt;&#xA;&lt;p&gt;this code ask you for entering 10 number 1 by one and finally print the largest number among them.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int i,a,max;&#xA;&#x9;printf(&amp;#34;enter a numbern&amp;#34;);&#xA;        scanf(&amp;#34;%d&amp;#34;,&amp;amp;a);&#xA;&#x9;max=a;&#xA;&#x9;for(i=1;i&amp;lt;=10;i++) &#x9;&#xA;        { &#x9;&#xA;             printf(&amp;#34;enter a numbern&amp;#34;); &#xA;             scanf(&amp;#34;%d&amp;#34;,&amp;amp;a);&#xA; &#x9;&#x9;if(a&amp;gt;;max)&#xA;&#x9;&#x9;max=a;&#xA;&#x9;}&#xA;&#x9;printf(&amp;#34;%d&amp;#34;,max);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>A program to check that entered number is factorial of who&#39;s.</title>
+      <link>http://localhost:1313/a_program_to_check_that_entered_number_is_factorial_of_whos./</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/a_program_to_check_that_entered_number_is_factorial_of_whos./</guid>
+      <description>&lt;p&gt;This is a program written in C language.&lt;/p&gt;&#xA;&lt;p&gt;this code will take a input from the user and display that the entered number is factorial of who&amp;rsquo;s.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int n,i,j;&#xA;&#x9;printf(&amp;#34;enter a number&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);&#xA;          // we have taken input from user in variable n.&#xA;        j=1;&#xA;&#x9;for(i=1;i&amp;lt;=n;i++)&#xA;&#x9;{&#xA;&#x9;j=j*i;&#xA;&#x9;if( j == n )&#xA;&#x9;&#x9;{&#xA;            // if j is equal to n than n become -1 &#xA;&#x9;&#x9;&#x9;n = -1;&#xA;           &#x9;break;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#x9;if(n==-1) &#xA;&#x9;&#x9;printf(&amp;#34;%d&amp;#34;,i);&#xA;&#x9;else&#xA;&#x9;&#x9;printf(&amp;#34;invalid numbern&amp;#34;);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;in above program, if you enter a number it will tell you about the number who&amp;rsquo;s&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A C-program to print fibonacci serese</title>
+      <link>http://localhost:1313/a_c-program_to_print_fibonacci_serese/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/a_c-program_to_print_fibonacci_serese/</guid>
+      <description>&lt;p&gt;In mathematics, the &lt;b&gt;Fibonacci numbers&lt;/b&gt; are the numbers in the following integer sequence, called the &lt;b&gt;Fibonacci sequence&lt;/b&gt;, and characterized by the fact that every number after the first two is the sum of the two preceding ones.&lt;/p&gt;&#xA;&lt;p&gt;0,1,1,2,3,5,8&amp;hellip;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;in programing it achieve by  adding first 2 number&lt;/p&gt;&#xA;&lt;p&gt;For example:&lt;/p&gt;&#xA;&lt;p&gt;by adding first two number &lt;code&gt;0 + 1&lt;/code&gt;  we will get 1.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;   int  number1 , number2 , number3 , number4;&#xA;   printf( &amp;#34; Enter your number : n &amp;#34;);&#xA;   scanf( &amp;#34;%d&amp;#34; , &amp;amp;number1 );&#xA;   for( number2=0 , number3=1 , number4=0  ;  number1 &amp;gt;= 1 ;  number1-- )&#xA;   {&#xA;        printf(&amp;#34;%dn&amp;#34;,number2);&#xA;        number4=number2+number3;&#xA;        number2=number3;&#xA;        number3=number4;&#xA;   }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In above code number1 will accept number 1 from user and then using number2,number3 and number4 we will do our calculation and print Fibonacci sequence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reversing a number using for loop</title>
+      <link>http://localhost:1313/reversing_a_number_using_for_loop/</link>
+      <pubDate>Sun, 24 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reversing_a_number_using_for_loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;   int number,i;&#xA;   printf(&amp;#34;Enter a numbern&amp;#34;);&#xA;   scanf(&amp;#34;%d&amp;#34;,&amp;amp;number);&#xA;   for( i = 0 ; number &amp;gt;; 0 ; a = number/10 )&#xA;   {&#xA;         i=i*10+a%10;&#xA;   }&#xA;   printf(&amp;#34;%d&amp;#34;,i);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In above code we will take an integer as an input, and further using some mathematical expression we, can reverse that number and store that in variable &lt;code&gt;i&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Finding largest number from five number using for loop</title>
+      <link>http://localhost:1313/finding_largest_number_from_five_number_using_for_loop/</link>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/finding_largest_number_from_five_number_using_for_loop/</guid>
+      <description>&lt;h2 id=&#34;in-our-this-blog-we-are-going-to-find-the-largest-number-from-five-number&#34;&gt;In our this blog we are going to find the largest number from five number.&lt;/h2&gt;&#xA;&lt;hr /&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int i,number,max;&#xA;&#x9;printf(&amp;#34;nenter a number : &amp;#34;);&#xA;        scanf(&amp;#34;%d&amp;#34;,&amp;amp;number);&#xA;                  // because we need something in max &#xA;                  // else there will be a garbage value&#xA;                  // in max.&#xA;        max=number;&#xA;&#x9;for( i = 1 ; i &amp;lt;= 5 ; i++ )   &#xA;        {                &#xA;                printf(&amp;#34;nenter a number : &amp;#34;);&#xA;                scanf(&amp;#34;%d&amp;#34;,&amp;amp;number);&#xA;                if( number &amp;gt;; max)&#xA;                // it compair each value and store large&#xA;                // one in max .&#xA;                max = number;&#xA;        }&#xA;&#x9;printf(&amp;#34;  n largest number is :  %d&amp;#34;,max);&#xA;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>A program to find power using for loop</title>
+      <link>http://localhost:1313/a_program_to_find_power_using_for_loop/</link>
+      <pubDate>Mon, 02 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/a_program_to_find_power_using_for_loop/</guid>
+      <description>&lt;p&gt;In our this blog we will  code a C program to find lcm of four number&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;&#x9;int number_1,number_2,number_3,number_4,i,max,lcm;&#xA;&#x9;printf(&amp;#34;n enter number 1 :&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;number_1);&#xA;&#x9;printf(&amp;#34;n enter number 2 :&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;number_2);&#xA;&#x9;printf(&amp;#34;n enter number 3 :&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;number_3);&#xA;&#x9;printf(&amp;#34;n enter number 4 :&amp;#34;);&#xA;&#x9;scanf(&amp;#34;%d&amp;#34;,&amp;amp;number_4);&#xA;&#x9;max=number_1*number_2*number_3*number_4;&#xA;&#x9;for( i=1 ; i &amp;lt;= max ; i++ )&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;if( i%number_1 == 0 &amp;amp;&amp;amp;amp; i%number_2 == 0 &amp;amp;amp;&amp;amp;amp; i%number_3 == 0 &amp;amp;amp;&amp;amp;amp; i%number_4 == 0 )&#xA;&#x9;&#x9;&#x9;{&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;lcm=i;&#xA;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;        printf(&amp;#34;   n  lcm is   :  %d &amp;#34;,lcm);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Printing-N-to-1-using-for-loop</title>
+      <link>http://localhost:1313/printing-n-to-1-using-for-loop/</link>
+      <pubDate>Mon, 02 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/printing-n-to-1-using-for-loop/</guid>
+      <description>&lt;h2 id=&#34;in-this-blog-we-do-a-simple-program-on-for-loop&#34;&gt;IN this blog we do a simple program on for loop&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i,N ;&#xA;    printf(&amp;#34;Enter a number : &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;    for ( i = N ; i &amp;gt;;= 1 ; i-- ) // or for( ; N &amp;amp;gt;= 1 ; N--)&#xA;    printf( &amp;#34; %d n &amp;#34;,i );&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;// I hope now you will able to understend for loop in C.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understanding-for-loop</title>
+      <link>http://localhost:1313/understanding-for-loop/</link>
+      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/understanding-for-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i ;&#xA;    for ( i = 1 ; i &amp;lt;= 10 ; i++ )&#xA;    printf( &amp;#34; Now the value of i is %d .n &amp;#34;,i );&#xA;        /* OR&#xA;        i = 1 ;&#xA;        for( ; i &amp;lt;= 10 ; )&#xA;        {&#xA;        printf(&amp;#34;Now the value of i is %d.n &amp;#34;,i);&#xA;        i++;&#xA;        }&#xA;        */&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here &lt;code&gt;i = 1&lt;/code&gt; is initialization&#xA;and &lt;code&gt;i &amp;lt;= 10&lt;/code&gt; is condonation part and&#xA;&lt;code&gt;i++&lt;/code&gt; is expression part.&#xA;they run according to there flow as we explained in last blog.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FOR LOOP In C</title>
+      <link>http://localhost:1313/for-loop-in-c/</link>
+      <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/for-loop-in-c/</guid>
+      <description>&lt;p&gt;The for loop in C is a control flow statement that allows you to repeatedly execute a block of code a specific number of times. It&amp;rsquo;s commonly used when the number of iterations is known beforehand or can be determined by a certain condition.&lt;/p&gt;&#xA;&lt;p&gt;SYNTAX :&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for( initialization ; condition ; expression )&#xA;statement ;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for( initialization ; condition ; expression )&#xA;{&#xA;    statement_1 ;&#xA;    statement_2 ;&#xA;    statement_3 ;&#xA;    statement_......;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;NOTE : remember the &lt;code&gt;;&lt;/code&gt; semicolon after each part.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Print-fibonacci-serese-using-do-while-loop</title>
+      <link>http://localhost:1313/print-fibonacci-serese-using-do-while-loop/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/print-fibonacci-serese-using-do-while-loop/</guid>
+      <description>&lt;p&gt;Let me tell you what a fibonacci serese it&amp;rsquo;s a serese in which numbers are to be arange in a sequence the sequence is given below&lt;/p&gt;&#xA;&lt;p&gt;0 1 1 2 3 5 8 &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;and we have to print this serese till N.&#xA;where user will give value of N&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int sum,first,second,Number;&#xA;&#xA;    printf(&amp;#34;Enter a number : &amp;#34;);&#xA;    scanf(&amp;#34; %d&amp;#34;,&amp;amp;Number);&#xA;&#xA;    sum = 0 , second = 1 , first = 0;&#xA;&#xA;    do&#xA;    {&#xA;        printf( &amp;#34; %d &amp;#34;,first );&#xA;        sum = first + second ;&#xA;        first = second ;&#xA;        second = sum ;&#xA;        Number--;&#xA;    }&#xA;    while ( Number &amp;gt;;= 1 );&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Print-lucas-serese-using-do-while-loop</title>
+      <link>http://localhost:1313/print-lucas-serese-using-do-while-loop/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/print-lucas-serese-using-do-while-loop/</guid>
+      <description>&lt;p&gt;Let me tell you what a lucas serese it&amp;rsquo;s a serese in which numbers are to be arange in a sequence the sequence is given below&lt;/p&gt;&#xA;&lt;p&gt;1 3 4 7 11 18 29 &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;and we have to print this serese till N.&#xA;where user will give value of N&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int sum,first,second,Number;&#xA;&#xA;    printf(&amp;#34;Enter a number : &amp;#34;);&#xA;    scanf(&amp;#34; %d&amp;#34;,&amp;amp;Number);&#xA;&#xA;    sum = 0 , second = 3 , first = 1;&#xA;&#xA;    do&#xA;    {&#xA;        printf( &amp;#34; %d &amp;#34;,first );&#xA;        sum = first + second ;&#xA;        first = second ;&#xA;        second = sum ;&#xA;        Number--;&#xA;    }&#xA;    while ( Number &amp;gt;;= 1 );&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-a-number-and-check-it-is-palindrome-or-not-using-do-while</title>
+      <link>http://localhost:1313/read-a-number-and-check-it-is-palindrome-or-not-using-do-while/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-a-number-and-check-it-is-palindrome-or-not-using-do-while/</guid>
+      <description>&lt;p&gt;If you know what is a palindrome then you can directly move to code else read a few line given below a number is said to be palindrome if it&amp;rsquo;s reverse is same as number.&lt;/p&gt;&#xA;&lt;p&gt;e.g. -&amp;gt;&#xA;1234 is a number and reverse of number is 4321 hence it is not a palindrome.&#xA;6776 is a number and it&amp;rsquo;s reverse is 6776 both the nuber and reverse are equale hence we can say this number is a palindrome.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Read-a-number-and-check-it-is-prime-or-not-using-do-while</title>
+      <link>http://localhost:1313/read-a-number-and-check-it-is-prime-or-not-using-do-while/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-a-number-and-check-it-is-prime-or-not-using-do-while/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int Number,i,flag;&#xA;    printf(&amp;#34;Enter a Number :&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;Number);&#xA;    i = 2; // because every number is divesible by 1 ;&#xA;    flag = 1; // we can give any value to flag.&#xA;    do&#xA;    {&#xA;        if ( Number % i == 0 )&#xA;        flag = 0; // if number divide by any number from 1 to number-1 then flag become 0.&#xA;        i++;&#xA;    }while( i &amp;lt; Number ); // because each number is divesible by itself so we move from 2 to Number-1.&#xA;    if( flag == 0 || Number == 1 )&#xA;        printf(&amp;#34;Enterd number is not an prime number&amp;#34;);&#xA;    else&#xA;        printf(&amp;#34;yes enterd number is an prime number&amp;#34;);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-a-number-x-and-print-x-power-x-using-do-while-loop</title>
+      <link>http://localhost:1313/read-a-number-x-and-print-x-power-x-using-do-while-loop/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-a-number-x-and-print-x-power-x-using-do-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i,x,Square;&#xA;    printf(&amp;#34;Enter a number:&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;x);&#xA;    i = Square = 1;&#xA;    do&#xA;    {&#xA;        Square = Square * x;&#xA;        i++;&#xA;    }while( i &amp;lt;= x );&#xA;    printf(&amp;#34;Power is %d.&amp;#34;,Square);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>A simple program on while loop</title>
+      <link>http://localhost:1313/a_simple_program_on_while_loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/a_simple_program_on_while_loop/</guid>
+      <description>&lt;p&gt;//let&amp;rsquo;s play a quiz.&#xA;//I will give you code and you have to judge the output.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;int x=1;&#xA;&#xA;while ( x &amp;lt;= 10) // this is our condiction now x is 1 so it&amp;#39;s true&#xA;// so loop will execute it&amp;#39;s statement&#xA;{&#xA;printf(&amp;#34;MY NAME IS VIPINn&amp;#34;);&#xA;x = x+1; // here x become 2&#xA;} // after closing of loop block condiction is recheck it will again true&#xA;// because x was 2&#xA;// same process will go on untill the condiction become falce.&#xA;&#xA;printf(&amp;#34;LOOP HAS OVER&amp;#34;); // when x become 11 then condiction become false&#xA;// and then other statements will run.&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;can you guess if yes than very good else don&amp;rsquo;t worry I will tell you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DO-WHILE LOOP</title>
+      <link>http://localhost:1313/do-while_loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/do-while_loop/</guid>
+      <description>&lt;h1 id=&#34;do-while-loop-in-c-&#34;&gt;DO-WHILE LOOP in C :&lt;/h1&gt;&#xA;&lt;p&gt;This loop in C creates a structured loop that executes as long as a specified condition&#xA;is true at the end of each pass through the loop.&lt;/p&gt;&#xA;&lt;p&gt;SYNTAX :&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;do&#xA;{&#xA;    statement;&#xA;    statement;&#xA;    statement;&#xA;    statement;&#xA;    statement;&#xA;} while( condition );&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;condition_expression is an expression that is evaluated at end of each pass through the loop. if the value of the&#xA;expression is &amp;quot; false &amp;quot; (that is compares equal to zero )the loop is exited.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Increment-Decrement-operator</title>
+      <link>http://localhost:1313/increment-decrement-operator/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/increment-decrement-operator/</guid>
+      <description>&lt;h2 id=&#34;before-we-move-forward-we-will-take-knowledge-of-some-more-operator-&#34;&gt;Before we move forward we will take knowledge of some more operator .&lt;/h2&gt;&#xA;&lt;p&gt;They are those kind of operator who increase or decrease the value of a variable&#xA;by 1.these are unary operators and can only applied with variables.&lt;/p&gt;&#xA;&lt;p&gt;EX:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int a = 5;&#xA;a++;&#xA;printf( &amp;#34; n %d n &amp;#34;,a ); // Output: 6&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int n = 5;&#xA;n--;&#xA;printf( &amp;#34; n %d n &amp;#34;,n ); // Output: 4&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;these-operator-has-two-forms&#34;&gt;These operator has two forms:&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;prefix: In this case operator placed before variable.The expression return&#xA;changed value.it solved before all operator .&#xA;&lt;code&gt;++variable --variable&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Printing-1-to-N-using-while-loop</title>
+      <link>http://localhost:1313/printing-1-to-n-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/printing-1-to-n-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int N,i;&#xA;&#xA;    printf(&amp;#34;Enter value of N :&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;    i=1;&#xA;    while( i &amp;lt;= N )&#xA;    {&#xA;        printf(&amp;#34;%dn&amp;#34;,i);&#xA;        i = i+1;&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Printing-even-number-from-1-to-N-using-while-loop</title>
+      <link>http://localhost:1313/printing-even-number-from-1-to-n-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/printing-even-number-from-1-to-n-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int N,i;&#xA;&#xA;    printf(&amp;#34;Enter value of N :&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;    i=1;&#xA;    while( i &amp;lt;= N )&#xA;    {&#xA;        if( i%2 == 0 )&#xA;        printf(&amp;#34;%dn&amp;#34;,i);&#xA;        i = i+1;&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Printing-N-to-1-using-while-loop</title>
+      <link>http://localhost:1313/printing-n-to-1-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/printing-n-to-1-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int N,i;&#xA;&#xA;    printf(&amp;#34;Enter value of N :&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;    i=N;&#xA;    while( i &amp;gt;;= 1 )&#xA;    {&#xA;        printf(&amp;#34;%dn&amp;#34;,i);&#xA;        i = i-1;&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Printing-odd-number-from-1-to-N-using-while-loop</title>
+      <link>http://localhost:1313/printing-odd-number-from-1-to-n-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/printing-odd-number-from-1-to-n-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int N,i;&#xA;&#xA;    printf(&amp;#34;Enter value of N :&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;    i=1;&#xA;    while( i &amp;lt;= N )&#xA;    {&#xA;        if( i%2 != 0 )&#xA;        printf(&amp;#34;%dn&amp;#34;,i);&#xA;        i = i+1;&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-10-number-and-find-there-sum-and-avrage-using-while-loop</title>
+      <link>http://localhost:1313/read-10-number-and-find-there-sum-and-avrage-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-10-number-and-find-there-sum-and-avrage-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int N,i,sum;&#xA;    float avg;&#xA;    avg = sum = 0;&#xA;    i=1;&#xA;    while( i &amp;lt;= 10 )&#xA;    {&#xA;        printf(&amp;#34;Enter value of N :&amp;#34;);&#xA;        scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;        sum = sum + N;&#xA;    }&#xA;    avg = avg / 10;&#xA;    printf(&amp;#34;The sum of number is %d and the avrage is %f&amp;#34;,sum,avg);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-10-number-from-keybord-and-count-odd-and-even-number-using-while-loop</title>
+      <link>http://localhost:1313/read-10-number-from-keybord-and-count-odd-and-even-number-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-10-number-from-keybord-and-count-odd-and-even-number-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i,N,odd,even;&#xA;    odd = even = 0, i = 1;&#xA;    while( i &amp;lt;= 10 )&#xA;    {&#xA;        printf(&amp;#34;Enter a numbern&amp;#34;);&#xA;        scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;        if( N%2 == 0 )&#xA;        even = even+1;&#xA;        else&#xA;        odd = odd+1;&#xA;        i = i+1;&#xA;    }&#xA;    printf(&amp;#34;number of Odd numbers are = %d n and number of Even Numbers are = %d&amp;#34;,odd,even);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-10-number-from-keybord-and-count-pos.-and-neg-using-while-loop</title>
+      <link>http://localhost:1313/read-10-number-from-keybord-and-count-pos.-and-neg-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-10-number-from-keybord-and-count-pos.-and-neg-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int N,i,pos,neg;&#xA;    neg=pos=0; // if we not give zero than&#xA;    // there would be some gurbage value in these&#xA;    i = 1;&#xA;    while( i &amp;lt;= 10 )&#xA;    {&#xA;        printf(&amp;#34;Enter a number N :&amp;#34;);&#xA;        scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;        if( N &amp;gt;; 0)&#xA;        pos = pos+1;&#xA;        else&#xA;        neg = neg+1;&#xA;        i = i+1;&#xA;    }&#xA;    printf(&amp;#34;Positive Number are %d,and Negetive Number are %d.&amp;#34;,pos,neg);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-10-number-from-keybord-and-display-largest-number-using-while-loop</title>
+      <link>http://localhost:1313/read-10-number-from-keybord-and-display-largest-number-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-10-number-from-keybord-and-display-largest-number-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i,N,large;&#xA;    i = 1;&#xA;    printf(&amp;#34;Enter a numbern&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;    large = N;&#xA;    while( i &amp;lt;= 9 )&#xA;    {&#xA;        printf(&amp;#34;Enter a numbern&amp;#34;);&#xA;        scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;        if( N &amp;gt;; large )&#xA;        large = N;&#xA;        i = i+1;&#xA;    }&#xA;    printf(&amp;#34;The largest number is %d&amp;#34;,large);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-10-number-from-keybord-and-display-square-from-1-to-N-using-do-while-loop</title>
+      <link>http://localhost:1313/read-10-number-from-keybord-and-display-square-from-1-to-n-using-do-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-10-number-from-keybord-and-display-square-from-1-to-n-using-do-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i,N,r;&#xA;    printf(&amp;#34;Enter a number:&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;    i = 1;&#xA;    do&#xA;    {&#xA;        r = i*i;&#xA;        printf(&amp;#34;Square of %d is %d.n&amp;#34;,i,r); // or printf(&amp;#34;Square of %d is %d.n&amp;#34;,i,i*i);&#xA;        i++;&#xA;    }while( i &amp;lt;= N );&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-10-number-from-keybord-and-find-smallest-and-largest-using-while-loop</title>
+      <link>http://localhost:1313/read-10-number-from-keybord-and-find-smallest-and-largest-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-10-number-from-keybord-and-find-smallest-and-largest-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i,N,largest,smallest;&#xA;    i = 1;&#xA;    printf(&amp;#34;Enter a numbern&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;    largest = smallest = N;&#xA;    while( i &amp;lt;= 9 )&#xA;    {&#xA;        printf(&amp;#34;Enter a numbern&amp;#34;);&#xA;        scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;        if( N &amp;gt;; largest )&#xA;        largest = N;&#xA;        if( N &amp;lt; smallest )&#xA;        smallest = N;&#xA;        i = i+1;&#xA;    }&#xA;    printf(&amp;#34;largest Number is = %d n and smallest Number = %d&amp;#34;,largest,smallest);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-2number-and-find-power-using-while-loop</title>
+      <link>http://localhost:1313/read-2number-and-find-power-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-2number-and-find-power-using-while-loop/</guid>
+      <description>&lt;p&gt;In this program we have Read 2 numbers from keyboard and finding power.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i,x,y,power=1;&#xA;&#xA;    printf(&amp;#34;Enter basen&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;x);&#xA;&#xA;    printf(&amp;#34;Enter powern&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;y);&#xA;&#xA;    while( i &amp;lt;= y )&#xA;    {&#xA;        power = power*x;&#xA;        i = i+1;&#xA;    }&#xA;    printf(&amp;#34; x power y = %d where %d is x and %d is y&amp;#34;,power,x,y);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-a-number-and-print-its-factoreal-using-while-loop</title>
+      <link>http://localhost:1313/read-a-number-and-print-its-factoreal-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-a-number-and-print-its-factoreal-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i,Number,factorial;&#xA;    i = factorial = 1;&#xA;    printf(&amp;#34;Enter your Numbern&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;Number);&#xA;    while( i &amp;lt;= Number )&#xA;    {&#xA;        factorial = factorial*i;&#xA;        i = i+1;&#xA;    }&#xA;    printf(&amp;#34;Factorial of the number is %d&amp;#34;,factorial);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-a-number-and-print-its-table-using-while-loop</title>
+      <link>http://localhost:1313/read-a-number-and-print-its-table-using-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-a-number-and-print-its-table-using-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int N,i;&#xA;    printf(&amp;#34;Enter value of N :&amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;N);&#xA;    i=1;&#xA;    while( i &amp;lt;= 10 )&#xA;    {&#xA;        printf(&amp;#34;%dn&amp;#34;,N*i);&#xA;        i = i+1;&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-a-number-from-keybord-and-count-its-degit-using-do-while-loop</title>
+      <link>http://localhost:1313/read-a-number-from-keybord-and-count-its-degit-using-do-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-a-number-from-keybord-and-count-its-degit-using-do-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int Number,counter;&#xA;    printf(&amp;#34; Enter a number &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;Number);&#xA;    counter = 0;&#xA;    do&#xA;    {&#xA;        counter++;&#xA;        Number = Number / 10;&#xA;    }while( Number != 0 );&#xA;    printf(&amp;#34; Number of degits are %d.&amp;#34;,counter);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Read-a-number-from-keybord-and-reverse-it-using-do-while-loop</title>
+      <link>http://localhost:1313/read-a-number-from-keybord-and-reverse-it-using-do-while-loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/read-a-number-from-keybord-and-reverse-it-using-do-while-loop/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int Number,rev;&#xA;    printf(&amp;#34; Enter a number &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;Number);&#xA;    rev = 0;&#xA;    do&#xA;    {&#xA;        rev = rev *10 + Number % 10 ;&#xA;        Number = Number / 10;&#xA;    }while( Number != 0 );&#xA;    printf(&amp;#34; Reverce of Number is %d.&amp;#34;,rev);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Some question on while loop</title>
+      <link>http://localhost:1313/some_question_on_while_loop/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/some_question_on_while_loop/</guid>
+      <description>&lt;p&gt;Find outputs :&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i = 1;&#xA;    while ( i &amp;lt;= 10 )&#xA;    {&#xA;        printf(&amp;#34;value of i is %d.n&amp;#34;,i);&#xA;        i = i+1;&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OUTPUT :&lt;/p&gt;&#xA;&lt;p&gt;value of i is 1.&#xA;value of i is 2.&#xA;value of i is 3.&#xA;value of i is 4.&#xA;value of i is 5.&#xA;value of i is 6.&#xA;value of i is 7.&#xA;value of i is 8.&#xA;value of i is 9.&#xA;value of i is 10.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LOOPS in C</title>
+      <link>http://localhost:1313/loop_in_c/</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/loop_in_c/</guid>
+      <description>&lt;h1 id=&#34;loop-iteration-or-repetition-controls&#34;&gt;LOOP iteration or repetition controls&lt;/h1&gt;&#xA;&lt;p&gt;In C programming, loops are used to repeat a block of code multiple times. There are three primary types of loops in C:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;while&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The while loop repeats a block of code as long as the specified condition is true. The condition is checked before each iteration.&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;do-while&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The do-while loop is similar to the while loop, but it guarantees at least one execution of the code block, because the condition is checked after the execution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>while loop in C</title>
+      <link>http://localhost:1313/while_loop_in_c/</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/while_loop_in_c/</guid>
+      <description>&lt;h1 id=&#34;while-loop-&#34;&gt;WHILE LOOP :&lt;/h1&gt;&#xA;&lt;p&gt;This is a pre tested loop where condition is tested and if it is true then,&#xA;statements will execute and so on.&lt;/p&gt;&#xA;&lt;p&gt;syntax :&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;while ( condition )&#xA;    statement_1;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;while ( condition )&#xA;{&#xA;    statement_1;&#xA;    statement_2;&#xA;    statement_3;&#xA;    statement_......;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example To Understand For Loop:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;void main()&#xA;{&#xA;    int i;&#xA;    i=1;&#xA;&#xA;    while ( i &amp;lt;= 10 )&#xA;    {&#xA;        printf(&amp;#34;Now i is %d so according to condition %d &amp;lt;= 10 which is true &amp;#34;,i,i);&#xA;        printf(&amp;#34;so loop will execute it&amp;#39;s statements&amp;#34;);&#xA;        i = i+1;&#xA;    }&#xA;    printf(&amp;#34;Now i is %d so according to condition %d &amp;lt;= 10 which is not true &amp;#34;,i,i);&#xA;    printf(&amp;#34;so loop will stop and it&amp;#39;s other statements will run&amp;#34;);&#xA;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SWITCH Case in C</title>
+      <link>http://localhost:1313/switch-case_in_c/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/switch-case_in_c/</guid>
+      <description>&lt;p&gt;The SWITCH-CASE is a multi way branch statement.&lt;/p&gt;&#xA;&lt;p&gt;The switch statement in C provides a way to execute different blocks of code based on the value of a single variable or expression. It&amp;rsquo;s an alternative to a long chain of if-else if statements, especially when comparing a variable against multiple constant values.&lt;/p&gt;&#xA;&lt;p&gt;It accept an expression/variable and test it&amp;rsquo;s value with written value in case.&lt;/p&gt;&#xA;&lt;p&gt;if it match to any case than it switch flow of program there and statements written in that case will run and the break statement will transfer flow of program out of switch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nesting IF-ELSE</title>
+      <link>http://localhost:1313/nesting_if-else/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/nesting_if-else/</guid>
+      <description>&lt;p&gt;OK i think now you all has a great knowledge of IF-ELSE so let us start our&#xA;next topic :&lt;/p&gt;&#xA;&lt;h1 id=&#34;nesting-of-if-else&#34;&gt;NESTING OF IF-ELSE&lt;/h1&gt;&#xA;&lt;p&gt;While we use IF-ELSE inside IF-ELSE this kind of&#xA;condition&amp;rsquo;s called Nesting IF-ELSE.&#xA;let us understand with help of some example.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if (condition)&#xA;{&#xA;    statements....;&#xA;    if(condition)&#xA;    {&#xA;&#xA;    }&#xA;}&#xA;else&#xA;{&#xA;    statements....;&#xA;    if(condition)&#xA;    {&#xA;&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;or&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if (condition)&#xA;{&#xA;    statements....;&#xA;}&#xA;else if (condition)&#xA;{&#xA;    statements....;&#xA;}&#xA;else if (condition)&#xA;{&#xA;&#xA;}&#xA;else&#xA;{&#xA;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;NOTE :&amp;ndash;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ASCII and it&#39;s Importence</title>
+      <link>http://localhost:1313/ascii_and_its_importence/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ascii_and_its_importence/</guid>
+      <description>&lt;h1 id=&#34;ascii--american-standard-code-for-information-interchange&#34;&gt;ASCII ( American Standard Code for Information Interchange)&lt;/h1&gt;&#xA;&lt;p&gt;ASCII is a character encoding standard for electronic communication.&#xA;ASCII codes represent text in computers,&#xA;telecommunications equipment, and other devices.&#xA;Most modern character-encoding schemes are based on ASCII,&#xA;although they support many additional characters.&lt;/p&gt;&#xA;&lt;p&gt;IN C all character has a specific ASCII value,&#xA;alphabets also has a specific value.&#xA;given below,&#xA;ASCII value of character&amp;rsquo;s are given below.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Dec  Char&#xA;----     -----&#xA;0 NUL (null)&#xA;1 SOH (start of heading)&#xA;2 STX (start of text)&#xA;3 ETX (end of text)&#xA;4 EOT (end of transmission)&#xA;5 ENQ (enquiry)&#xA;6 ACK (acknowledge)&#xA;7 BEL (bell)&#xA;8 BS (backspace)&#xA;9 TAB (horizontal tab)&#xA;10 LF (NL line feed, new line)&#xA;11 VT (vertical tab)&#xA;12 FF (NP form feed, new page)&#xA;13 CR (carriage return)&#xA;14 SO (shift out)&#xA;15 SI (shift in)&#xA;16 DLE (data link escape)&#xA;17 DC1 (device control 1)&#xA;18 DC2 (device control 2)&#xA;19 DC3 (device control 3)&#xA;20 DC4 (device control 4)&#xA;21 NAK (negative acknowledge)&#xA;22 SYN (synchronous idle)&#xA;23 ETB (end of trans. block)&#xA;24 CAN (cancel)&#xA;25 EM (end of medium)&#xA;26 SUB (substitute)&#xA;27 ESC (escape)&#xA;28 FS (file separator)&#xA;29 GS (group separator)&#xA;30 RS (record separator)&#xA;31 US (unit separator)&#xA;32 SPACE 64 @ 96 `&#xA;33 !&#xA;34 &amp;#34;&#xA;35 #&#xA;36 $&#xA;37 %&#xA;38 &amp;amp;&#xA;39 &amp;#39;&#xA;40 (&#xA;41 )&#xA;42 *&#xA;43 +&#xA;44 ,&#xA;45 -&#xA;46 .&#xA;47 /&#xA;48 0&#xA;49 1&#xA;50 2&#xA;51 3&#xA;52 4&#xA;53 5&#xA;54 6&#xA;55 7&#xA;56 8&#xA;57 9&#xA;58 :&#xA;59 ;&#xA;60 &amp;lt;&#xA;61 =&#xA;62 &amp;gt;&#xA;63 ?&#xA;64 @&#xA;65 A&#xA;66 B&#xA;67 C&#xA;68 D&#xA;69 E&#xA;70 F&#xA;71 G&#xA;72 H&#xA;73 I&#xA;74 J&#xA;75 K&#xA;76 L&#xA;77 M&#xA;78 N&#xA;79 O&#xA;80 P&#xA;81 Q&#xA;82 R&#xA;83 S&#xA;84 T&#xA;85 U&#xA;86 V&#xA;87 W&#xA;88 X&#xA;89 Y&#xA;90 Z&#xA;91 [&#xA;92 &#xA;93 ]&#xA;94 ^&#xA;95 _&#xA;96 `&#xA;97 a&#xA;98 b&#xA;99 c&#xA;100 d&#xA;101 e&#xA;102 f&#xA;103 g&#xA;104 h&#xA;105 i&#xA;106 j&#xA;107 k&#xA;108 l&#xA;109 m&#xA;110 n&#xA;111 o&#xA;112 p&#xA;113 q&#xA;114 r&#xA;115 s&#xA;116 t&#xA;117 u&#xA;118 v&#xA;119 w&#xA;120 x&#xA;121 y&#xA;122 z&#xA;123 {&#xA;124 |&#xA;125 }&#xA;126 ~&#xA;127 DEL&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;NOTE :- You no need to remember these.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>If Else In C</title>
+      <link>http://localhost:1313/if-else-in-c/</link>
+      <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/if-else-in-c/</guid>
+      <description>&lt;h1 id=&#34;if-else-in-c&#34;&gt;If Else In C&lt;/h1&gt;&#xA;&lt;p&gt;In C programming, the &lt;code&gt;if-else&lt;/code&gt; statement is used to make decisions in the code. It allows you to execute a block of code based on whether a condition is &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;img class=&#34;img_center&#34; src=&#34;statics/img/if_else.png&#34; alt=&#34;If-Else&#34;&gt;&#xA;&lt;p&gt;Syntax:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if ( condition ) {&#xA;&#xA;    // Code to execute if the condition is true&#xA;&#xA;}&#xA;&#xA;else {&#xA;&#xA;    // Code to execute if the condition is false&#xA;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;condition&lt;/code&gt;: This is an expression that evaluates to either true (non-zero) or false (zero).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ternary Operator In C</title>
+      <link>http://localhost:1313/ternary-operator-in-c/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ternary-operator-in-c/</guid>
+      <description>&lt;h2 id=&#34;ternary-operator-conditional-operator&#34;&gt;Ternary Operator (conditional operator)&lt;/h2&gt;&#xA;&lt;p&gt;The ternary operator in C is a shorthand way to express a simple if-else statement. It&amp;rsquo;s called &amp;ldquo;ternary&amp;rdquo; because it involves three operands.&lt;/p&gt;&#xA;&lt;p&gt;syntax :&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;condition ? expression_if_true : expression_if_false;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Here C compiler will evaluate the condition and if it is true then &lt;code&gt;expression_1&lt;/code&gt; will run&#xA;and if condition will not true then &lt;code&gt;expression_2&lt;/code&gt; will run.&lt;/p&gt;&#xA;&lt;h2 id=&#34;advantages&#34;&gt;Advantages&lt;/h2&gt;&#xA;&lt;h3 id=&#34;conciseness&#34;&gt;Conciseness&lt;/h3&gt;&#xA;&lt;p&gt;It makes the code more compact, especially for simple conditional assignments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Programs To Understand Operators</title>
+      <link>http://localhost:1313/some_programs_to_understand_operators/</link>
+      <pubDate>Sun, 09 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/some_programs_to_understand_operators/</guid>
+      <description>&lt;h1 id=&#34;to-know-more-on-the-same-checkout-the-theory&#34;&gt;To Know More On The Same Checkout The Theory&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://lyfofvipin.github.io/operators_in_c&#34;&gt;https://lyfofvipin.github.io/operators_in_c&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;adding-2-number&#34;&gt;Adding 2 Number&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;&#xA;void main()&#xA;{&#xA;    int A, B, C;&#xA;&#xA;    A = 45;&#xA;    B = 45;&#xA;&#xA;    C = A + B;&#xA;&#xA;    printf(&amp;#34;%d\n&amp;#34;, A + B);&#xA;&#xA;    printf(&amp;#34;%d\n&amp;#34;, C);&#xA;    &#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gcc operator.c ; ./a.out &#xA;90&#xA;90&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;subtracting-2-number&#34;&gt;Subtracting 2 Number&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;&#xA;void main()&#xA;{&#xA;    int A, B;&#xA;&#xA;    A = 45;&#xA;    B = 55;&#xA;&#xA;    printf(&amp;#34;%d\n&amp;#34;, A - B);&#xA;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gcc operator.c ; ./a.out &#xA;-10&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;multiply-3-numbers&#34;&gt;Multiply 3 Numbers&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;&#xA;void main()&#xA;{&#xA;    int A, B, C;&#xA;&#xA;    A = 2;&#xA;    B = 5;&#xA;    C = 9;&#xA;&#xA;    printf(&amp;#34;%d\n&amp;#34;, A * B * C);&#xA;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>operators in C</title>
+      <link>http://localhost:1313/operators_in_c/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/operators_in_c/</guid>
+      <description>&lt;h1 id=&#34;and-now-we-will-discuss-about-operators-in-c&#34;&gt;And now we will discuss about operators in C.&lt;/h1&gt;&#xA;&lt;p&gt;An operator is a symbol which specify the kind of operation we want to do on the value.&lt;/p&gt;&#xA;&lt;h2 id=&#34;generally-we-classify-operators-in-3-catagories&#34;&gt;Generally We classify operators in 3 catagories&lt;/h2&gt;&#xA;&lt;p&gt;1 Unary operator&lt;/p&gt;&#xA;&lt;p&gt;2 Binary operator&lt;/p&gt;&#xA;&lt;p&gt;3 Ternary operator or conditional operator&lt;/p&gt;&#xA;&lt;h3 id=&#34;unary-operator&#34;&gt;Unary operator&lt;/h3&gt;&#xA;&lt;p&gt;Unary operators are used only single operands&lt;/p&gt;&#xA;&lt;p&gt;For example &lt;code&gt;()&lt;/code&gt;, &lt;code&gt;[]&lt;/code&gt; , &lt;code&gt;{}&lt;/code&gt;, &lt;code&gt;&amp;amp;&lt;/code&gt; etc.&lt;/p&gt;&#xA;&lt;h3 id=&#34;binary-operator&#34;&gt;Binary operator&lt;/h3&gt;&#xA;&lt;p&gt;Binary operator need two operands&#xA;For example addition ,subtraction, multiplication etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Scanf Function In C Language</title>
+      <link>http://localhost:1313/scanf_function_in_c/</link>
+      <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/scanf_function_in_c/</guid>
+      <description>&lt;h1 id=&#34;scanf&#34;&gt;Scanf&lt;/h1&gt;&#xA;&lt;p&gt;Scanf is a built in function from stdio.h This function is used to read data from keyboard at program runtime. The data will be stored in specified variable.&lt;/p&gt;&#xA;&lt;p&gt;Syntax:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;scanf(&amp;quot;format specifier&amp;quot;, &amp;amp;var_name)&lt;/code&gt;  Here &lt;code&gt;&amp;amp;&lt;/code&gt; ( also known as address of operator ) help us to write things on the memory address of the variable.&lt;/p&gt;&#xA;&lt;p&gt;Examples:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;&#xA;void main()&#xA;{&#xA;    char var_name3;&#xA;    printf(&amp;#34;Enter a Character: &amp;#34;);&#xA;    scanf(&amp;#34;%c&amp;#34;,&amp;amp;var_name3);&#xA;    printf(&amp;#34;You Enter %c .\n&amp;#34;, var_name3);&#xA;&#xA;    int var_name;&#xA;    printf(&amp;#34;Enter a Number: &amp;#34;);&#xA;    scanf(&amp;#34;%d&amp;#34;,&amp;amp;var_name);&#xA;    printf(&amp;#34;You Enter %d .\n&amp;#34;, var_name);&#xA;&#xA;    float var_name2;&#xA;    printf(&amp;#34;Enter a Float Value: &amp;#34;);&#xA;    scanf(&amp;#34;%f&amp;#34;,&amp;amp;var_name2);&#xA;    printf(&amp;#34;You Enter %f .\n&amp;#34;, var_name2);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Variable and data type  in C</title>
+      <link>http://localhost:1313/variable_and_data_type_in_c/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/variable_and_data_type_in_c/</guid>
+      <description>&lt;h1 id=&#34;using-variables&#34;&gt;Using variables&lt;/h1&gt;&#xA;&lt;p&gt;C variable is nothing but it is just a name is given to any data type or to any storage area that our program can use.&lt;/p&gt;&#xA;&lt;h2 id=&#34;rules-to-create-variable-names-in-c&#34;&gt;Rules To Create Variable Names in C&lt;/h2&gt;&#xA;&lt;p&gt;The name of a variable can be composed of letters, digits and the underscores.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A variable names can not have any character then underscore &lt;code&gt;_&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;A variable names can not start with an numeric value&lt;/li&gt;&#xA;&lt;li&gt;Variable names in C are case sensitive ( variable name &lt;code&gt;system&lt;/code&gt; and &lt;code&gt;System&lt;/code&gt; are not same ).&lt;/li&gt;&#xA;&lt;li&gt;A variable name can not be defined twice.&lt;/li&gt;&#xA;&lt;li&gt;It should not be a keyword of c.&lt;/li&gt;&#xA;&lt;li&gt;You can not redefine or redeclare a variable in C&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;NOTE: Name of variable should be of your choice.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Printf Function and Escape Sequences In C Language</title>
+      <link>http://localhost:1313/prinftf_function_and_escape_sequences_in_c/</link>
+      <pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/prinftf_function_and_escape_sequences_in_c/</guid>
+      <description>&lt;h1 id=&#34;printf&#34;&gt;Printf&lt;/h1&gt;&#xA;&lt;p&gt;Printf ( also known as print formatted text ) the Printf is an inbuilt function which accept a message from user and display it on the Standard output device which is the monitor this function this is declared in the stdio.h library file.&lt;/p&gt;&#xA;&lt;p&gt;Example:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&#xA;&#xA;void main()&#xA;{&#xA;    printf(&amp;#34;Hello World!&amp;#34;);&#xA;    printf(&amp;#34;Hello Students!&amp;#34;);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[vipikuma@kvy c_classes]$ gcc hello_world.c ; ./a.out&#xA;Hello World!Hello Students![vipikuma@kvy c_classes]$&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;escape-sequences&#34;&gt;Escape Sequences&lt;/h1&gt;&#xA;&lt;p&gt;In C language escape sequence is a character. It has special effect on the output the escape sequence is a combination of two letters where the first character has to be a back slash ( \ ) and second letter can be an alphabet or a symbol.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intro to C language</title>
+      <link>http://localhost:1313/intro_to_c_language/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/intro_to_c_language/</guid>
+      <description>&lt;p&gt;Hello Everyone C is a very easy and simple language.&lt;/p&gt;&#xA;&lt;p&gt;Let us start with it.&lt;/p&gt;&#xA;&lt;p&gt;First of all, I will tell you that C is a high-level language, which developed by Dennis Ritchie, in 1972, in AT and T&amp;rsquo;s bell laboratory California&lt;/p&gt;&#xA;&lt;p&gt;Now let&amp;rsquo;s talk about the levels of language&lt;/p&gt;&#xA;&lt;ul&gt;&#xA; &#x9;&lt;li&gt;&lt;strong&gt;LOW-LEVEL &lt;/strong&gt;&lt;/li&gt;&#xA; &#x9;&lt;li&gt;&lt;strong&gt;HIGH-LEVEL&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3&gt;Low-Level languages&lt;/h3&gt;&#xA;To code in a low-level language, we need a good knowledge of binaries and how we can directly interact with hardware. Without knowledge of binaries and hardware, we couldn&#39;t use a low-level language. They are focused on *what to do* and *how to do*.&#xA;&lt;h3&gt;High-level languages&lt;/h3&gt;&#xA;High-level languages are those languages which do not depend on any assembly language knowledge or we can say that a user does not need any knowledge of hardware connectivity via languages because a high-level language is developed that any user can use that without any deep knowledge of assembly language or can directly start writing code without much knowledge of drivers and all. These languages are focused on *what to do* because they are easy to code so any developer will be knowing how to do.&#xA;&lt;p&gt;That&amp;rsquo;s the different thing that a low-level language is easily understood by computer or we can say the machine but a high-level language is easily understood by us that is why all the languages which are considered in programming are high-level.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

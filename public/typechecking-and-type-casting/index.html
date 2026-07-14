@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Type Checking and Type Conversion in Python · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Type Checking and Type Conversion in Python</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-03T00:00:00Z">
+        Jan 3, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#type-checking-with-type">Type Checking with <code>type()</code></a></li>
+    <li><a href="#converting-string-to-integer-str--int">Converting String to Integer (<code>str</code> → <code>int</code>)</a></li>
+    <li><a href="#converting-float-to-integer-float--int">Converting Float to Integer (<code>float</code> → <code>int</code>)</a></li>
+    <li><a href="#converting-string-to-float-str--float">Converting String to Float (<code>str</code> → <code>float</code>)</a></li>
+    <li><a href="#converting-integer-to-float-int--float">Converting Integer to Float (<code>int</code> → <code>float</code>)</a></li>
+    <li><a href="#converting-anything-to-a-string-any--str">Converting Anything to a String (<code>any</code> → <code>str</code>)</a></li>
+    <li><a href="#converting-to-boolean-any--bool">Converting to Boolean (<code>any</code> → <code>bool</code>)</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="type-checking-and-type-conversion-in-python">Type Checking and Type Conversion in Python</h1>
+<p>Hello Everyone! Today we are going to look into how Python manages different types of data, how to check them, and how you can convert data from one type to another.</p>
+<p>In programming, this process of changing data types is known as <strong>Type Casting</strong> or <strong>Type Conversion</strong>. Let&rsquo;s break it down into simple, practical rules.</p>
+<h2 id="type-checking-with-type">Type Checking with <code>type()</code></h2>
+<p>Before converting anything, you often need to see what you are currently working with. As we saw earlier, you can pass any value or variable into the <code>type()</code> function to find out its class.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(<span style="color:#bd93f9">45</span>))  <span style="color:#6272a4"># Output: &lt;class &#39;int&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Test&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;str&#39;&gt;</span>
+</span></span></code></pre></div><hr>
+<h2 id="converting-string-to-integer-str--int">Converting String to Integer (<code>str</code> → <code>int</code>)</h2>
+<p>You can convert text into a whole number using the <code>int()</code> function, but Python has strict rules about what kind of text is allowed:</p>
+<ul>
+<li><strong>Rule 1:</strong> The string must contain only numeric characters.</li>
+<li><strong>Rule 2:</strong> Plus (<code>+</code>) or minus (<code>-</code>) signs are allowed, but <strong>only at the very beginning</strong> of the text.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Valid Conversion</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;+3249&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;str&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;int&#39;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(a)         <span style="color:#6272a4"># Output: 3249</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Invalid Conversion (This will throw a ValueError!)</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;324+9&#34;</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(a)       <span style="color:#6272a4"># Error! The &#39;+&#39; sign is in the middle, not at the start.</span>
+</span></span></code></pre></div><hr>
+<h2 id="converting-float-to-integer-float--int">Converting Float to Integer (<code>float</code> → <code>int</code>)</h2>
+<p>When you pass a decimal number (float) into <code>int()</code>, Python does not round it up or down. Instead, it completely slices off everything after the decimal point. This is called truncation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">45.6</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;float&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(a)         <span style="color:#6272a4"># Output: 45 (The .6 is dropped!)</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;int&#39;&gt;</span>
+</span></span></code></pre></div><hr>
+<h2 id="converting-string-to-float-str--float">Converting String to Float (<code>str</code> → <code>float</code>)</h2>
+<p>To change a string into a decimal number, you use the <code>float()</code> function. The formatting rules are very similar to integer conversion:</p>
+<ul>
+<li><strong>Rule 1:</strong> Only digits are allowed.</li>
+<li><strong>Rule 2:</strong> Only <strong>one</strong> decimal point (<code>.</code>) is permitted.</li>
+<li><strong>Rule 3:</strong> A <code>+</code> or <code>-</code> sign is only allowed right at the start.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Valid Conversion</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;+342323.7&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;str&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">float</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(a)         <span style="color:#6272a4"># Output: 342323.7</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;float&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Quick note on conversion vs layout</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;-45&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">float</span>(a))  <span style="color:#6272a4"># Output: -45.0 (Temporary conversion for display)</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;str&#39;&gt; (The original variable remains a string!)</span>
+</span></span></code></pre></div><hr>
+<h2 id="converting-integer-to-float-int--float">Converting Integer to Float (<code>int</code> → <code>float</code>)</h2>
+<p>Converting a whole number to a decimal is very straightforward. Python simply attaches a <code>.0</code> to the end of the number.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">34</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;int&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">float</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(a)         <span style="color:#6272a4"># Output: 34.0</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;float&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Text decimals can also safely convert directly to float</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;34.00&#34;</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">float</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;float&#39;&gt;</span>
+</span></span></code></pre></div><hr>
+<h2 id="converting-anything-to-a-string-any--str">Converting Anything to a String (<code>any</code> → <code>str</code>)</h2>
+<p>The easiest conversion in Python is moving data into a string using <code>str()</code>. Python can wrap literally anything (numbers, decimals, lists, dictionaries) inside quote marks to turn it into text.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">3434.34343</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;float&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">str</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;str&#39;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(a)         <span style="color:#6272a4"># Output: &#34;-3434.34343&#34;</span>
+</span></span></code></pre></div><hr>
+<h2 id="converting-to-boolean-any--bool">Converting to Boolean (<code>any</code> → <code>bool</code>)</h2>
+<p>When you convert data types into a Boolean (<code>True</code> or <code>False</code>), Python evaluates them based on whether they are <strong>empty</strong> or <strong>filled</strong>. An empty container, zero, or an empty string converts to <code>False</code>. Anything with substance converts to <code>True</code>.</p>
+<p>Let&rsquo;s look at an empty dictionary <code>{}</code> for example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> {}           <span style="color:#6272a4"># An empty dictionary</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;dict&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">bool</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(a)         <span style="color:#6272a4"># Output: False (Because the dictionary was empty!)</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))   <span style="color:#6272a4"># Output: &lt;class &#39;bool&#39;&gt;</span>
+</span></span></code></pre></div>
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

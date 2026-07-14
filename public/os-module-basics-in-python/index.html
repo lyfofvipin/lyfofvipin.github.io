@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>File System Automation and Command Line Arguments in Python · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">File System Automation and Command Line Arguments in Python</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-29T00:00:00Z">
+        Jan 29, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-deep-dive-into-file-system-automation-with-os">1. Deep Dive into File System Automation with <code>os</code></a>
+      <ul>
+        <li><a href="#common-file-system-operations">Common File System Operations</a></li>
+        <li><a href="#classifying-directories-vs-files">Classifying Directories vs. Files</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-hands-on-project-building-a-custom-terminal-simulator">2. Hands-On Project: Building a Custom Terminal Simulator</a></li>
+    <li><a href="#3-capturing-terminal-input-with-command-line-arguments-sysargv">3. Capturing Terminal Input with Command Line Arguments (<code>sys.argv</code>)</a>
+      <ul>
+        <li><a href="#script-implementation-example-tradepy">Script Implementation Example (<code>trade.py</code>)</a></li>
+        <li><a href="#how-to-execute-this-in-your-terminal">How to Execute This in Your Terminal</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="master-guide-to-file-system-automation-and-command-line-arguments-in-python">Master Guide to File System Automation and Command Line Arguments in Python</h1>
+<p>Hello Everyone! Today we are diving into interacting with the operating system using Python&rsquo;s built-in <strong><code>os</code></strong> and <strong><code>sys</code></strong> modules.</p>
+<p>With these tools, you can automate repetitive file tasks, filter directories, build custom terminal-like interfaces, and pass inputs into your scripts directly from the command line.</p>
+<h2 id="1-deep-dive-into-file-system-automation-with-os">1. Deep Dive into File System Automation with <code>os</code></h2>
+<p>The <code>os</code> module provides a powerful suite of functions to navigate, inspect, and modify directories and files on your computer.</p>
+<h3 id="common-file-system-operations">Common File System Operations</h3>
+<ul>
+<li><strong><code>os.listdir()</code></strong>: Returns a raw list containing the names of all entries (both files and folders) inside the current directory.</li>
+<li><strong><code>os.remove(filename)</code></strong>: Permanently deletes a specific file from the file system.</li>
+<li><strong><code>os.path.exists(path)</code></strong>: Returns <code>True</code> or <code>False</code> depending on whether a specific file or directory path physically exists.</li>
+</ul>
+<h3 id="classifying-directories-vs-files">Classifying Directories vs. Files</h3>
+<p>When you read a directory using <code>os.listdir()</code>, it returns strings representing the names of items. To check what those items actually are, use the <strong><code>os.path</code></strong> sub-module:</p>
+<ul>
+<li><strong><code>os.path.isdir(item)</code></strong>: Checks if the item is a folder/directory.</li>
+<li><strong><code>os.path.isfile(item)</code></strong>: Checks if the item is a standalone file.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Filter and display Python files only</span>
+</span></span><span style="display:flex;"><span>all_items <span style="color:#ff79c6">=</span> os<span style="color:#ff79c6">.</span>listdir()
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;--- Python Files ---&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> all_items:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> item<span style="color:#ff79c6">.</span>endswith(<span style="color:#f1fa8c">&#34;.py&#34;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(item)
+</span></span></code></pre></div><hr>
+<h2 id="2-hands-on-project-building-a-custom-terminal-simulator">2. Hands-On Project: Building a Custom Terminal Simulator</h2>
+<p>By combining a <code>while True</code> loop, <code>match-case</code> state controls, and <code>os.path</code> validation methods, you can build a interactive command-line simulator to filter directories on the fly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;=== Custom Python Terminal Shell Initialized ===&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Commands: ls | lsfolder | lsfiles | exit&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> <span style="color:#ff79c6">True</span>:
+</span></span><span style="display:flex;"><span>    command <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;--&gt; &#34;</span>)<span style="color:#ff79c6">.</span>strip()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">match</span> command:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;ls&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># Direct raw list dump of the directory</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(os<span style="color:#ff79c6">.</span>listdir())
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;lsfolder&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># Loop through and print directories only</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> os<span style="color:#ff79c6">.</span>listdir():
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> os<span style="color:#ff79c6">.</span>path<span style="color:#ff79c6">.</span>isdir(item):
+</span></span><span style="display:flex;"><span>                    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;[Folder] </span><span style="color:#f1fa8c">{</span>item<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;lsfiles&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># Loop through and print files only</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> os<span style="color:#ff79c6">.</span>listdir():
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> os<span style="color:#ff79c6">.</span>path<span style="color:#ff79c6">.</span>isfile(item):
+</span></span><span style="display:flex;"><span>                    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;[File]   </span><span style="color:#f1fa8c">{</span>item<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;exit&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Closing terminal simulator...&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">break</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> _:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Invalid command! Please use: ls, lsfolder, lsfiles, or exit.&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="3-capturing-terminal-input-with-command-line-arguments-sysargv">3. Capturing Terminal Input with Command Line Arguments (<code>sys.argv</code>)</h2>
+<p>Sometimes you don&rsquo;t want your program to pause and wait for an interactive <code>input()</code> prompt. Instead, you want to pass arguments into the script the exact moment you run it from your terminal window.</p>
+<p>We do this using <strong><code>sys.argv</code></strong>.</p>
+<blockquote>
+<p><strong>What is <code>sys.argv</code>?</strong> It is a built-in Python list that automatically stores the arguments passed to a script from the command line.</p>
+<ul>
+<li><code>sys.argv[0]</code> always holds the name of the script itself.</li>
+<li><code>sys.argv[1]</code> captures the very first input modifier string typed after the script name.</li>
+</ul>
+</blockquote>
+<h3 id="script-implementation-example-tradepy">Script Implementation Example (<code>trade.py</code>)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">buy_stocks</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Executing BUY order processing...&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">sell_stocks</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Executing SELL order processing...&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Ensure an argument was actually passed to prevent IndexError crashes</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">len</span>(sys<span style="color:#ff79c6">.</span>argv) <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">2</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Error: Missing operation argument! Usage: python trade.py [buy|sell]&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Capture the flag passed at index index index index 1</span>
+</span></span><span style="display:flex;"><span>    operation <span style="color:#ff79c6">=</span> sys<span style="color:#ff79c6">.</span>argv[<span style="color:#bd93f9">1</span>]<span style="color:#ff79c6">.</span>lower()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> operation <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;buy&#34;</span>:
+</span></span><span style="display:flex;"><span>        buy_stocks()
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> operation <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;sell&#34;</span>:
+</span></span><span style="display:flex;"><span>        sell_stocks()
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Error: Unknown operation &#39;</span><span style="color:#f1fa8c">{</span>operation<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#39;. Use &#39;buy&#39; or &#39;sell&#39;.&#34;</span>)
+</span></span></code></pre></div><h3 id="how-to-execute-this-in-your-terminal">How to Execute This in Your Terminal</h3>
+<p>To run this application, pass your argument modifiers right after calling the script file name:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python trade.py buy
+</span></span><span style="display:flex;"><span>Executing BUY order processing...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ python trade.py sell
+</span></span><span style="display:flex;"><span>Executing SELL order processing...
+</span></span></code></pre></div>
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Containers on Kumar Vipin Yadav</title>
+    <link>http://localhost:1313/tags/containers/</link>
+    <description>Recent content in Containers on Kumar Vipin Yadav</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/containers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Are Containers | Podman Vs Docker | Podman Basics</title>
+      <link>http://localhost:1313/introduction_to_containers/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/introduction_to_containers/</guid>
+      <description>&lt;h1 id=&#34;before-we-go-ahead-read-this&#34;&gt;&lt;a href=&#34;https://lyfofvipin.github.io/virtulization&#34;&gt;Before We Go Ahead Read This&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;h3 id=&#34;virtual-machines-vms&#34;&gt;Virtual Machines (VMs)&lt;/h3&gt;&#xA;&lt;p&gt;A Virtual Machine is an abstraction of an entire computer, from the hardware level up. It virtualizes the physical hardware, including the CPU, memory, storage, and networking interfaces. On top of this virtualized hardware, a hypervisor (like VMware, VirtualBox, or KVM) runs a full-fledged guest operating system (OS).&lt;/p&gt;&#xA;&lt;h2 id=&#34;container&#34;&gt;Container&lt;/h2&gt;&#xA;&lt;p&gt;A container is a lightweight, portable, and self-sufficient software package that bundles an application&amp;rsquo;s code with all its dependencies—like libraries, frameworks, and configuration files. It&amp;rsquo;s an isolated environment that allows an application to run consistently across different computing environments.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

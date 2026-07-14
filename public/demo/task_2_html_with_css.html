@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Demo</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; color: #333;">
+
+    <!-- Header Section -->
+    <header style="background-color: #004080; color: white; padding: 15px;">
+        <h1 style="margin: 0;">Welcome to the HTML Tags Showcase</h1>
+        <nav>
+            <ul style="list-style-type: none; padding: 0; margin: 10px 0;">
+                <li><a href="https://lyfofvipin.github.io/" target="_blank" style="color: #ffcc00;">lyfofvipin</a></li>
+                <li><a href="#form" style="color: #ffcc00;">Form</a></li>
+                <li><a href="#table" style="color: #ffcc00;">Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section with Headings and Paragraphs -->
+    <section style="margin-top: 20px;">
+        <h2 style="color: #006699;">Text Formatting</h2>
+        <p>This is a <strong style="color: red;">strong</strong> word and this is <em style="color: green;">emphasized</em>.</p>
+        <p>
+            You can also use <u style="text-decoration: underline;">underline</u>, 
+            <mark style="background-color: yellow;">highlight</mark>, 
+            <small style="font-size: smaller;">small text</small>, 
+            <del style="color: gray;">deleted</del>, and 
+            <ins style="text-decoration: underline; color: green;">inserted</ins> tags.
+        </p>
+        <blockquote cite="https://example.com" style="border-left: 4px solid #ccc; margin-left: 0; padding-left: 10px;">
+            This is a blockquote example.
+        </blockquote>
+        <pre style="background-color: #eee; padding: 10px;"><code style="background-color: #f4f4f4; padding: 2px 4px;">let x = 10;</code></pre>
+    </section>
+
+    <!-- Lists -->
+    <section style="margin-top: 20px;">
+        <h2 style="color: #006699;">Lists</h2>
+        <h3>Unordered List</h3>
+        <ul>
+            <li style="color: purple;">HTML</li>
+            <li style="color: purple;">CSS</li>
+            <li style="color: purple;">JavaScript</li>
+        </ul>
+
+        <h3>Ordered List</h3>
+        <ol>
+            <li style="color: teal;">Step 1</li>
+            <li style="color: teal;">Step 2</li>
+            <li style="color: teal;">Step 3</li>
+        </ol>
+
+        <h3>Description List</h3>
+        <dl>
+            <dt style="font-weight: bold;">HTML</dt>
+            <dd style="margin-left: 20px;">HyperText Markup Language</dd>
+            <dt style="font-weight: bold;">CSS</dt>
+            <dd style="margin-left: 20px;">Cascading Style Sheets</dd>
+        </dl>
+    </section>
+
+    <!-- Table -->
+    <section id="table" style="margin-top: 20px;">
+        <h2 style="color: #006699;">Table Example</h2>
+        <table style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #ddd;">Name</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #ddd;">Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">Alice</td>
+                    <td style="border: 1px solid black; padding: 8px;">Developer</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">Bob</td>
+                    <td style="border: 1px solid black; padding: 8px;">Designer</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media -->
+    <section style="margin-top: 20px;">
+        <h2 style="color: #006699;">Media Tags</h2>
+        <h3>Image</h3>
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image" style="border: 2px solid #ccc;">
+
+        <h3>Audio</h3>
+        <audio controls style="width: 100%;">
+            <source src="sample.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video</h3>
+        <video width="320" height="240" controls style="border: 1px solid #333;">
+            <source src="sample.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Form -->
+    <section id="form" style="margin-top: 20px;">
+        <h2 style="color: #006699;">Form Elements</h2>
+        <form action="#" method="post" style="background-color: #f4f4f4; padding: 15px;">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" style="width: 100%;"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" style="width: 100%;"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" style="width: 100%; height: 80px;"></textarea><br><br>
+
+            <label for="country">Country:</label><br>
+            <select id="country" name="country" style="width: 100%;">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+            </select><br><br>
+
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Subscribe to newsletter</label><br><br>
+
+            <input type="submit" value="Submit" style="background-color: #006699; color: white; padding: 8px 16px; border: none; cursor: pointer;">
+        </form>
+    </section>
+
+    <!-- Semantic Elements -->
+    <article style="margin-top: 20px; background-color: #e6f7ff; padding: 10px;">
+        <h2>Article Title</h2>
+        <p>This is a sample article element with real semantic meaning.</p>
+    </article>
+
+    <aside style="margin-top: 20px; background-color: #fff8dc; padding: 10px;">
+        <h3>Sidebar</h3>
+        <p>This is an aside content, maybe related links or ads.</p>
+    </aside>
+
+    <footer style="background-color: #004080; color: white; text-align: center; padding: 10px; margin-top: 30px;">
+        <p>&copy; 2025 <a href="https://lyfofvipin.github.io/" style="color: #ffcc00;">lyfofvipin</a>. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

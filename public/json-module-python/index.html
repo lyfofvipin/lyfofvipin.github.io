@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON Parsing and Serialization in Python · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">JSON Parsing and Serialization in Python</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-02-05T00:00:00Z">
+        Feb 5, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+        <span class="tag">#json</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-what-is-json">1. What is JSON?</a>
+      <ul>
+        <li><a href="#data-type-mapping-differences">Data Type Mapping Differences</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-encoding-converting-python-to-json-serialization">2. Encoding: Converting Python to JSON (Serialization)</a></li>
+    <li><a href="#3-decoding-converting-json-to-python-parsing">3. Decoding: Converting JSON to Python (Parsing)</a></li>
+    <li><a href="#4-summary-memory-rule-the-s-rule">4. Summary Memory Rule: The &ldquo;s&rdquo; Rule</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="master-guide-to-json-parsing-and-serialization-in-python">Master Guide to JSON Parsing and Serialization in Python</h1>
+<p>Hello Everyone! Today we are exploring <strong>JSON (JavaScript Object Notation)</strong> and learning how to translate it into native Python objects using the built-in <strong><code>json</code></strong> module.</p>
+<p>JSON is the standard format for web data exchange. Whether you are building web APIs, fetching data from external services, or saving local configuration files, you will use JSON constantly.</p>
+<h2 id="1-what-is-json">1. What is JSON?</h2>
+<p>JSON is a lightweight, plain-text, language-independent data format. Even though it has &ldquo;JavaScript&rdquo; in its name, almost all programming languages have built-in tools to read and write it.</p>
+<p>JSON data maps incredibly closely to structures you already know in Python:</p>
+<ul>
+<li>**Objects <code>{}**</code>: Exactly like Python <strong>dictionaries</strong>. They store key-value pairs, but keys <em>must</em> be strings wrapped in double quotes.</li>
+<li>**Arrays <code>[]**</code>: Exactly like Python <strong>lists</strong>. They store ordered sequences of values.</li>
+</ul>
+<h3 id="data-type-mapping-differences">Data Type Mapping Differences</h3>
+<p>When data moves between Python and JSON, the types change slightly to match platform specifications:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Python Data Type</th>
+          <th>JSON Equivalent Data Type</th>
+          <th>Key Difference / Note</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong><code>dict</code></strong></td>
+          <td><code>object</code></td>
+          <td>JSON objects use curly braces <code>{}</code>.</td>
+      </tr>
+      <tr>
+          <td><strong><code>list</code></strong>, <code>tuple</code></td>
+          <td><code>array</code></td>
+          <td>JSON arrays use square brackets <code>[]</code>.</td>
+      </tr>
+      <tr>
+          <td><strong><code>str</code></strong></td>
+          <td><code>string</code></td>
+          <td><strong>Must</strong> use double quotes (<code>&quot;text&quot;</code>), never single quotes.</td>
+      </tr>
+      <tr>
+          <td><strong><code>True</code></strong> / <strong><code>False</code></strong></td>
+          <td><code>true</code> / <code>false</code></td>
+          <td>JSON booleans are entirely lowercase.</td>
+      </tr>
+      <tr>
+          <td><strong><code>None</code></strong></td>
+          <td><code>null</code></td>
+          <td>Used for empty or missing data values.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="2-encoding-converting-python-to-json-serialization">2. Encoding: Converting Python to JSON (Serialization)</h2>
+<p>The process of converting a Python object into a JSON format is called <strong>Encoding</strong> or <strong>Serialization</strong>. The <code>json</code> module provides two distinct functions depending on your target output destination:</p>
+<ul>
+<li><strong><code>json.dumps()</code> (Dump String):</strong> Converts a Python dictionary/list into a single JSON-formatted string. Use this when sending data over networks.</li>
+<li><strong><code>json.dump()</code> (Dump File):</strong> Writes a Python object directly onto an open text file on your hard drive. Use this for saving data or app settings.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>python_data <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Bob&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;items&#34;</span>: [<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">30</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;is_vip&#34;</span>: <span style="color:#ff79c6">False</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;notes&#34;</span>: <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 1. Serialize to a JSON String</span>
+</span></span><span style="display:flex;"><span>json_string <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>dumps(python_data)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(json_string)       <span style="color:#6272a4"># Output: {&#34;name&#34;: &#34;Bob&#34;, &#34;items&#34;: [10, 20, 30], &#34;is_vip&#34;: false, &#34;notes&#34;: null}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(json_string)) <span style="color:#6272a4"># Output: &lt;class &#39;str&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. Serialize and save directly to a File</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Use the &#39;indent&#39; parameter to add clean spacing and make the file beautiful to read!</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">with</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#34;data_output.json&#34;</span>, <span style="color:#f1fa8c">&#34;w&#34;</span>) <span style="color:#ff79c6">as</span> f:
+</span></span><span style="display:flex;"><span>    json<span style="color:#ff79c6">.</span>dump(python_data, f, indent<span style="color:#ff79c6">=</span><span style="color:#bd93f9">4</span>)
+</span></span></code></pre></div><hr>
+<h2 id="3-decoding-converting-json-to-python-parsing">3. Decoding: Converting JSON to Python (Parsing)</h2>
+<p>The process of translating JSON format back into native Python types is called <strong>Decoding</strong> or <strong>Parsing</strong>. Just like encoding, you choose your tool based on your data source:</p>
+<ul>
+<li><strong><code>json.loads()</code> (Load String):</strong> Parses a raw JSON string into a native Python dictionary or list.</li>
+<li><strong><code>json.load()</code> (Load File):</strong> Reads a <code>.json</code> file from your disk and parses it straight into native Python objects.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 1. Parsing a JSON String</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># CRITICAL: The JSON string itself can use single quotes outside, but internal keys MUST use double quotes!</span>
+</span></span><span style="display:flex;"><span>json_input_string <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;{&#34;city&#34;: &#34;London&#34;, &#34;temperature&#34;: 15.5, &#34;unit&#34;: true}&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>python_dict <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>loads(json_input_string)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(python_dict)               <span style="color:#6272a4"># Output: {&#39;city&#39;: &#39;London&#39;, &#39;temperature&#39;: 15.5, &#39;unit&#39;: True}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(python_dict))         <span style="color:#6272a4"># Output: &lt;class &#39;dict&#39;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(python_dict[<span style="color:#f1fa8c">&#34;temperature&#34;</span>]) <span style="color:#6272a4"># Accessible exactly like any normal dictionary key!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. Parsing directly from a File</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">with</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#34;data_output.json&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>) <span style="color:#ff79c6">as</span> f:
+</span></span><span style="display:flex;"><span>    loaded_data <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>load(f)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(loaded_data)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(loaded_data)) <span style="color:#6272a4"># Output: &lt;class &#39;dict&#39;&gt;</span>
+</span></span></code></pre></div><hr>
+<h2 id="4-summary-memory-rule-the-s-rule">4. Summary Memory Rule: The &ldquo;s&rdquo; Rule</h2>
+<p>It is easy to mix up these four functions when you are coding. Use this simple memory rule to keep them straight:</p>
+<blockquote>
+<p>If the function ends with an <strong>&ldquo;s&rdquo;</strong> (<code>dumps</code>, <code>loads</code>), it operates on a <strong>S</strong>tring.
+If it does <strong>not</strong> end with an &ldquo;s&rdquo; (<code>dump</code>, <code>load</code>), it operates on a <strong>F</strong>ile stream interface!</p>
+</blockquote>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

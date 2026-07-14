@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Error Handling in Python Try, Except, Else, and Finally · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Error Handling in Python Try, Except, Else, and Finally</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-20T00:00:00Z">
+        Jan 20, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-what-is-an-exception">1. What is an Exception?</a>
+      <ul>
+        <li><a href="#the-fundamental-tryexcept-tool">The Fundamental <code>try...except</code> Tool</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-common-built-in-exceptions">2. Common Built-in Exceptions</a></li>
+    <li><a href="#3-multiple-except-blocks-and-exception-aliasing">3. Multiple Except Blocks and Exception Aliasing</a>
+      <ul>
+        <li><a href="#capturing-error-strings-with-as-e">Capturing Error Strings with <code>as e</code></a></li>
+        <li><a href="#the-universal-catch-all-trap">The Universal Catch-All Trap</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-the-complete-workflow-architecture-else-and-finally">4. The Complete Workflow Architecture: <code>else</code> and <code>finally</code></a></li>
+    <li><a href="#5-intentionally-triggering-faults-the-raise-keyword">5. Intentionally Triggering Faults: The <code>raise</code> Keyword</a></li>
+    <li><a href="#6-advanced-edge-case-return-overrides-in-finally">6. Advanced Edge Case: Return Overrides in <code>finally</code></a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="master-guide-to-exception-handling-in-python-try-except-else-and-finally">Master Guide to Exception Handling in Python: Try, Except, Else, and Finally</h1>
+<p>Hello Everyone! Today we are exploring <strong>Exception Handling</strong>.</p>
+<p>Errors are an unavoidable part of programming. Code failure can happen due to unexpected user inputs, missing system files, or networks dropping out. Exception handling is the structured process of anticipating, trapping, and managing these runtime anomalies so your application can recover gracefully instead of crashing abruptly.</p>
+<h2 id="1-what-is-an-exception">1. What is an Exception?</h2>
+<p>An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. It is different from a <em>Syntax Error</em> (which prevents the code from running at all). An exception happens while the code is actively running.</p>
+<h3 id="the-fundamental-tryexcept-tool">The Fundamental <code>try...except</code> Tool</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Code block to execute normally</span>
+</span></span><span style="display:flex;"><span>    numerator <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>    denominator <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter denominator: &#34;</span>))
+</span></span><span style="display:flex;"><span>    result <span style="color:#ff79c6">=</span> numerator <span style="color:#ff79c6">/</span> denominator
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Result: </span><span style="color:#f1fa8c">{</span>result<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>) <span style="color:#6272a4"># Skipped instantly if an exception occurs above!</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> ZeroDivisionError:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># This block executes ONLY if a ZeroDivisionError happens inside the try block</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Error: You cannot divide a number by zero.&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="2-common-built-in-exceptions">2. Common Built-in Exceptions</h2>
+<p>Python provides specific built-in exception types to categorize exactly what went wrong. Handling specific exceptions is a best practice; it avoids masking unrelated runtime bugs.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Exception Class Type</th>
+          <th>Root Cause of the Interruption</th>
+          <th>Practical Code Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong><code>ZeroDivisionError</code></strong></td>
+          <td>Dividing a numeric value by <code>0</code>.</td>
+          <td><code>10 / 0</code></td>
+      </tr>
+      <tr>
+          <td><strong><code>ValueError</code></strong></td>
+          <td>Right type, but inappropriate inner value.</td>
+          <td><code>int(&quot;hello&quot;)</code></td>
+      </tr>
+      <tr>
+          <td><strong><code>TypeError</code></strong></td>
+          <td>Operation applied to a mismatched data type.</td>
+          <td><code>&quot;hello&quot; + 5</code></td>
+      </tr>
+      <tr>
+          <td><strong><code>IndexError</code></strong></td>
+          <td>Sequence index lookup falls outside valid boundaries.</td>
+          <td><code>[1, 2][5]</code></td>
+      </tr>
+      <tr>
+          <td><strong><code>KeyError</code></strong></td>
+          <td>Dictionary key lookup does not exist.</td>
+          <td><code>{&quot;a&quot;: 1}[&quot;b&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><strong><code>FileNotFoundError</code></strong></td>
+          <td>Stream engine attempts to read a missing file track.</td>
+          <td><code>open(&quot;ghost.txt&quot;, &quot;r&quot;)</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="3-multiple-except-blocks-and-exception-aliasing">3. Multiple Except Blocks and Exception Aliasing</h2>
+<p>You can catch different types of errors by chaining multiple <code>except</code> statements, or group them together in a single statement using a tuple.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>    my_list <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">20</span>]
+</span></span><span style="display:flex;"><span>    idx <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter array index track layout: &#34;</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(my_list[idx])
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> ValueError:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Error: Please input valid integers only.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> IndexError:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Error: That index tracking point is out of range.&#34;</span>)
+</span></span></code></pre></div><h3 id="capturing-error-strings-with-as-e">Capturing Error Strings with <code>as e</code></h3>
+<p>To inspect the specific error message generated by Python, use the <code>as</code> keyword to store the exception object in a variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Grouping related exceptions into a single structural trap</span>
+</span></span><span style="display:flex;"><span>    user_input <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter an index: &#34;</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>([<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>][user_input])
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> (IndexError, ValueError) <span style="color:#ff79c6">as</span> error_msg:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;System intercepted a managed fault: </span><span style="color:#f1fa8c">{</span>error_msg<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><h3 id="the-universal-catch-all-trap">The Universal Catch-All Trap</h3>
+<p>You can capture all remaining runtime failures by targeting the base <code>Exception</code> class. Always place this at the very bottom of your exception chain to act as a safety net.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Unknown volatile environment process</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> ZeroDivisionError:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Handled division by zero.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> Exception <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Captures absolutely anything else that goes wrong</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;An unexpected error occurred: </span><span style="color:#f1fa8c">{</span>e<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="4-the-complete-workflow-architecture-else-and-finally">4. The Complete Workflow Architecture: <code>else</code> and <code>finally</code></h2>
+<p>For comprehensive flow control, Python builds onto the <code>try...except</code> framework with two optional blocks:</p>
+<ul>
+<li><strong><code>else</code></strong>: Runs <strong>only if</strong> the code in the <code>try</code> block completes successfully without raising any exceptions.</li>
+<li><strong><code>finally</code></strong>: Runs <strong>no matter what</strong>. It executes whether an exception occurred, was caught, or completely crashed the system. It is perfect for cleanup operations, like closing open file streams or dropping database connections.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>    file <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#34;data.txt&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>)
+</span></span><span style="display:flex;"><span>    content <span style="color:#ff79c6">=</span> file<span style="color:#ff79c6">.</span>read()
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> FileNotFoundError:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;The target data file could not be found.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;File read successfully with zero internal exceptions!&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">finally</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># This clean-up guard executes at all costs</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> <span style="color:#f1fa8c">&#39;file&#39;</span> <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">locals</span>() <span style="color:#ff79c6">and</span> <span style="color:#ff79c6">not</span> file<span style="color:#ff79c6">.</span>closed:
+</span></span><span style="display:flex;"><span>        file<span style="color:#ff79c6">.</span>close()
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;System resources safely released.&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="5-intentionally-triggering-faults-the-raise-keyword">5. Intentionally Triggering Faults: The <code>raise</code> Keyword</h2>
+<p>You can intentionally trigger an exception when validation conditions fail by using the <code>raise</code> keyword. This helps enforce data integrity constraints.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>age <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">16</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> age <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">18</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Voter registration approved.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Halts execution manually and passes an error message up the stack</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">raise</span> ValueError(<span style="color:#f1fa8c">&#34;Registration Rejected: Applicant must be 18 or older.&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="6-advanced-edge-case-return-overrides-in-finally">6. Advanced Edge Case: Return Overrides in <code>finally</code></h2>
+<p>An interesting edge case occurs when a function includes <code>return</code> statements in both the <code>try</code> block and the <code>finally</code> block. Because the <code>finally</code> block is guaranteed to run before exiting, its <code>return</code> statement will <strong>override</strong> any previous return values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">check_return_priority</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;Returned from Try Block&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">finally</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;Returned from Finally Block&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(check_return_priority()) 
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Output: Returned from Finally Block</span>
+</span></span></code></pre></div>
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

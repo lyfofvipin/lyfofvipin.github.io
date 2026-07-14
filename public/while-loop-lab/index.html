@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>While Loop Lab Work · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">While Loop Lab Work</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-10T00:00:00Z">
+        Jan 10, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#master-table-of-contents">Master Table of Contents</a></li>
+    <li><a href="#1-while-loops--algorithmic-patterns">1. While Loops &amp; Algorithmic Patterns</a>
+      <ul>
+        <li><a href="#visual-star-patterns">Visual Star Patterns</a>
+          <ul>
+            <li><a href="#square-block-matrix">Square Block Matrix</a></li>
+            <li><a href="#left-aligned-growing-triangle">Left-Aligned Growing Triangle</a></li>
+            <li><a href="#left-aligned-inverted-triangle">Left-Aligned Inverted Triangle</a></li>
+            <li><a href="#right-aligned-growing-triangle">Right-Aligned Growing Triangle</a></li>
+            <li><a href="#symmetrical-isosceles-pyramid">Symmetrical Isosceles Pyramid</a></li>
+            <li><a href="#symmetric-diamond-pattern">Symmetric Diamond Pattern</a></li>
+          </ul>
+        </li>
+        <li><a href="#mathematical-loops">Mathematical Loops</a>
+          <ul>
+            <li><a href="#digit-reversal-via-math-operations">Digit Reversal via Math Operations</a></li>
+          </ul>
+        </li>
+        <li><a href="#loops-with-strings">Loops with Strings</a>
+          <ul>
+            <li><a href="#character-vowel-extraction-scanner">Character Vowel Extraction Scanner</a></li>
+            <li><a href="#case-inversion-character-switcher">Case Inversion Character Switcher</a></li>
+          </ul>
+        </li>
+        <li><a href="#input-validation-loops">Input Validation Loops</a>
+          <ul>
+            <li><a href="#multi-criteria-secure-gatekeeper">Multi-Criteria Secure Gatekeeper</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#2-strings-deep-dive">2. Strings Deep Dive</a>
+      <ul>
+        <li><a href="#string-system-operations-no-loops">String System Operations (No Loops)</a>
+          <ul>
+            <li><a href="#14-string-mutability-conceptual-prediction-case">14. String Mutability Conceptual Prediction Case</a></li>
+            <li><a href="#slicing-searching-and-core-string-system-methods-questions-quick-answers">Slicing, Searching, and Core String System Methods Questions (Quick Answers)</a></li>
+          </ul>
+        </li>
+        <li><a href="#loop-based-string-aggregations">Loop-Based String Aggregations</a>
+          <ul>
+            <li><a href="#individual-character-extraction-line-iterator">Individual Character Extraction Line Iterator</a></li>
+            <li><a href="#loop-driven-structural-inversion-engine">Loop-Driven Structural Inversion Engine</a></li>
+            <li><a href="#accumulator-space-tracking-metrics-scanner">Accumulator Space Tracking Metrics Scanner</a></li>
+            <li><a href="#manual-index-element-allocation-copy-test">Manual Index Element Allocation Copy Test</a></li>
+            <li><a href="#alternate-array-index-structural-upper-case-shift">Alternate Array Index Structural Upper-Case Shift</a></li>
+            <li><a href="#manual-unique-collection-filter-duplicate-eliminator-loop">Manual Unique Collection Filter (Duplicate Eliminator Loop)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#3-lists-deep-dive">3. Lists Deep Dive</a>
+      <ul>
+        <li><a href="#list-reference--slicing-operations-no-loops">List Reference &amp; Slicing Operations (No Loops)</a>
+          <ul>
+            <li><a href="#ui-undo-feature-reference-mutability-assessment">UI Undo Feature Reference Mutability Assessment</a></li>
+            <li><a href="#sorting-order-priority-case-breakdown">Sorting Order Priority Case Breakdown</a></li>
+            <li><a href="#deep-destructuring-extraction-multi-layer-index-route">Deep Destructuring Extraction Multi-Layer Index Route</a></li>
+            <li><a href="#appending-vs-extending-structural-execution-contrast">Appending vs Extending Structural Execution Contrast</a></li>
+            <li><a href="#core-list-methods-quick-queries-no-loops-allowed">Core List Methods Quick Queries (No Loops Allowed)</a></li>
+          </ul>
+        </li>
+        <li><a href="#loop-based-list-mutators">Loop-Based List Mutators</a>
+          <ul>
+            <li><a href="#extraction-loop-squares-mapping-transform">Extraction Loop Squares Mapping Transform</a></li>
+            <li><a href="#manual-search-logic-verification-block">Manual Search Logic Verification Block</a></li>
+            <li><a href="#elements-array-zero-stride-displacement-shuffle">Elements Array Zero Stride Displacement Shuffle</a></li>
+            <li><a href="#multi-dimensional-nested-sequence-extraction-flattening-array">Multi-Dimensional Nested Sequence Extraction (Flattening Array)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-sets-deep-dive">4. Sets Deep Dive</a>
+      <ul>
+        <li><a href="#set-iterations-and-calculations-with-loops">Set Iterations and Calculations With Loops</a></li>
+        <li><a href="#direct-set-core-systems-operations-no-loops">Direct Set Core Systems Operations (No Loops)</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-dictionaries-deep-dive">5. Dictionaries Deep Dive</a>
+      <ul>
+        <li><a href="#dictionary-processing-tasks-with-loops">Dictionary Processing Tasks With Loops</a>
+          <ul>
+            <li><a href="#5-generate-numbers-and-squares-using-a-while-loop">5. Generate Numbers and Squares using a <code>while</code> loop</a></li>
+          </ul>
+        </li>
+        <li><a href="#direct-dictionary-key-lookups-and-manipulation-no-loops">Direct Dictionary Key lookups and Manipulation (No Loops)</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-tuples-deep-dive">6. Tuples Deep Dive</a>
+      <ul>
+        <li><a href="#tuple-processing-tasks-with-loops">Tuple Processing Tasks With Loops</a>
+          <ul>
+            <li><a href="#5-manual-elements-search-flag-checking">5. Manual Elements Search Flag Checking</a></li>
+          </ul>
+        </li>
+        <li><a href="#direct-tuple-core-operations-no-loops">Direct Tuple Core Operations (No Loops)</a>
+          <ul>
+            <li><a href="#immutability-constraints-evaluation">Immutability Constraints Evaluation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="comprehensive-python-practice-workbook-data-structures-and-control-flow">Comprehensive Python Practice Workbook: Data Structures and Control Flow</h1>
+<p>Hello Everyone! Welcome to your master practice repository. This comprehensive workbook combines core structural algorithmic control streams with deep-dive technical interview scenarios across every foundational Python collection container type: <strong>Strings</strong>, <strong>Lists</strong>, <strong>Sets</strong>, <strong>Dictionaries</strong>, and <strong>Tuples</strong>.</p>
+<h2 id="master-table-of-contents">Master Table of Contents</h2>
+<ul>
+<li>While Loops &amp; Algorithmic Patterns</li>
+<li>Visual Star Patterns</li>
+<li>Mathematical Loops</li>
+<li>Loops with Strings</li>
+<li>Input Validation Loops</li>
+<li>Strings Deep Dive</li>
+<li>String System Operations (No Loops)</li>
+<li>Loop-Based String Aggregations</li>
+<li>Lists Deep Dive</li>
+<li>List Reference &amp; Slicing Operations (No Loops)</li>
+<li>Loop-Based List Mutators</li>
+<li>Sets Deep Dive</li>
+<li>Dictionaries Deep Dive</li>
+<li>Tuples Deep Dive</li>
+</ul>
+<hr>
+<h2 id="1-while-loops--algorithmic-patterns">1. While Loops &amp; Algorithmic Patterns</h2>
+<h3 id="visual-star-patterns">Visual Star Patterns</h3>
+<pre tabindex="0"><code>Star Printing QNA:
+* * * *
+* * * *
+* * * *
+* * * *
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+* * * * *
+* * * *
+* * *
+* *
+*
+
+
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+
+
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+
+
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+</code></pre><h4 id="square-block-matrix">Square Block Matrix</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>row <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> row <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">4</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;* &#34;</span> <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">4</span>)
+</span></span><span style="display:flex;"><span>     row <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span></code></pre></div><h4 id="left-aligned-growing-triangle">Left-Aligned Growing Triangle</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>row <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> row <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">5</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;* &#34;</span> <span style="color:#ff79c6">*</span> row)
+</span></span><span style="display:flex;"><span>     row <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span></code></pre></div><h4 id="left-aligned-inverted-triangle">Left-Aligned Inverted Triangle</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>row <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> row <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">1</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;* &#34;</span> <span style="color:#ff79c6">*</span> row)
+</span></span><span style="display:flex;"><span>     row <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">1</span>
+</span></span></code></pre></div><h4 id="right-aligned-growing-triangle">Right-Aligned Growing Triangle</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>row <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> row <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">5</span>:
+</span></span><span style="display:flex;"><span>     spaces <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;  &#34;</span> <span style="color:#ff79c6">*</span> (<span style="color:#bd93f9">5</span> <span style="color:#ff79c6">-</span> row)
+</span></span><span style="display:flex;"><span>     stars <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;* &#34;</span> <span style="color:#ff79c6">*</span> row
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(spaces <span style="color:#ff79c6">+</span> stars)
+</span></span><span style="display:flex;"><span>     row <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span></code></pre></div><h4 id="symmetrical-isosceles-pyramid">Symmetrical Isosceles Pyramid</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>row <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> row <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">5</span>:
+</span></span><span style="display:flex;"><span>     spaces <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">*</span> (<span style="color:#bd93f9">5</span> <span style="color:#ff79c6">-</span> row)
+</span></span><span style="display:flex;"><span>     stars <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;* &#34;</span> <span style="color:#ff79c6">*</span> row
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(spaces <span style="color:#ff79c6">+</span> stars)
+</span></span><span style="display:flex;"><span>     row <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span></code></pre></div><h4 id="symmetric-diamond-pattern">Symmetric Diamond Pattern</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Upper Triangle</span>
+</span></span><span style="display:flex;"><span>row <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> row <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">5</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">*</span> (<span style="color:#bd93f9">5</span> <span style="color:#ff79c6">-</span> row) <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;* &#34;</span> <span style="color:#ff79c6">*</span> row)
+</span></span><span style="display:flex;"><span>     row <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Lower Inverted Triangle</span>
+</span></span><span style="display:flex;"><span>row <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> row <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">1</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">*</span> (<span style="color:#bd93f9">5</span> <span style="color:#ff79c6">-</span> row) <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;* &#34;</span> <span style="color:#ff79c6">*</span> row)
+</span></span><span style="display:flex;"><span>     row <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">1</span>
+</span></span></code></pre></div><hr>
+<h3 id="mathematical-loops">Mathematical Loops</h3>
+<h4 id="digit-reversal-via-math-operations">Digit Reversal via Math Operations</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>number <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter an integer to reverse: &#34;</span>))
+</span></span><span style="display:flex;"><span>reversed_num <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> number <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     remainder <span style="color:#ff79c6">=</span> number <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>     reversed_num <span style="color:#ff79c6">=</span> (reversed_num <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">10</span>) <span style="color:#ff79c6">+</span> remainder
+</span></span><span style="display:flex;"><span>     number <span style="color:#ff79c6">=</span> number <span style="color:#ff79c6">//</span> <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Reversed Number: </span><span style="color:#f1fa8c">{</span>reversed_num<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><hr>
+<h3 id="loops-with-strings">Loops with Strings</h3>
+<h4 id="character-vowel-extraction-scanner">Character Vowel Extraction Scanner</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>text <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter a string: &#34;</span>)
+</span></span><span style="display:flex;"><span>index <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>vowel_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> index <span style="color:#ff79c6">&lt;</span> <span style="color:#8be9fd;font-style:italic">len</span>(text):
+</span></span><span style="display:flex;"><span>     char <span style="color:#ff79c6">=</span> text[index]
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> char <span style="color:#ff79c6">in</span> <span style="color:#f1fa8c">&#34;aeiouAEIOU&#34;</span>:
+</span></span><span style="display:flex;"><span>          vowel_count <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>     index <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Total Vowels: </span><span style="color:#f1fa8c">{</span>vowel_count<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><h4 id="case-inversion-character-switcher">Case Inversion Character Switcher</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>text <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter mixed case string (e.g. PyThOn): &#34;</span>)
+</span></span><span style="display:flex;"><span>index <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>result_str <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> index <span style="color:#ff79c6">&lt;</span> <span style="color:#8be9fd;font-style:italic">len</span>(text):
+</span></span><span style="display:flex;"><span>     char <span style="color:#ff79c6">=</span> text[index]
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> char<span style="color:#ff79c6">.</span>isupper():
+</span></span><span style="display:flex;"><span>          result_str <span style="color:#ff79c6">+=</span> char<span style="color:#ff79c6">.</span>lower()
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">elif</span> char<span style="color:#ff79c6">.</span>islower():
+</span></span><span style="display:flex;"><span>          result_str <span style="color:#ff79c6">+=</span> char<span style="color:#ff79c6">.</span>upper()
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>          result_str <span style="color:#ff79c6">+=</span> char
+</span></span><span style="display:flex;"><span>     index <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Inverted Output: </span><span style="color:#f1fa8c">{</span>result_str<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><hr>
+<h3 id="input-validation-loops">Input Validation Loops</h3>
+<h4 id="multi-criteria-secure-gatekeeper">Multi-Criteria Secure Gatekeeper</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">while</span> <span style="color:#ff79c6">True</span>:
+</span></span><span style="display:flex;"><span>     password <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Establish a secure password: &#34;</span>)
+</span></span><span style="display:flex;"><span>     
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">len</span>(password) <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">8</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Fail: Entry must be at least 8 characters long.&#34;</span>)
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">continue</span>
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>     <span style="color:#6272a4"># Check for digits and special characters manually</span>
+</span></span><span style="display:flex;"><span>     has_digit <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>     has_special <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>     index <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>     
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">while</span> index <span style="color:#ff79c6">&lt;</span> <span style="color:#8be9fd;font-style:italic">len</span>(password):
+</span></span><span style="display:flex;"><span>          char <span style="color:#ff79c6">=</span> password[index]
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">if</span> char<span style="color:#ff79c6">.</span>isdigit():
+</span></span><span style="display:flex;"><span>               has_digit <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">elif</span> char <span style="color:#ff79c6">in</span> <span style="color:#f1fa8c">&#34;$#@!%^&amp;*()-_=+[{]};:&#39;,&lt;.&gt;/?`~|</span><span style="color:#f1fa8c">\\</span><span style="color:#f1fa8c">&#34;</span>:
+</span></span><span style="display:flex;"><span>               has_special <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>          index <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> has_digit:
+</span></span><span style="display:flex;"><span>          <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Fail: Must contain at least one digit (0-9).&#34;</span>)
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">continue</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> has_special:
+</span></span><span style="display:flex;"><span>          <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Fail: Must contain at least one special character ($ or # or @).&#34;</span>)
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">continue</span>
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Password accepted!&#34;</span>)
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">break</span>
+</span></span></code></pre></div><hr>
+<h2 id="2-strings-deep-dive">2. Strings Deep Dive</h2>
+<h3 id="string-system-operations-no-loops">String System Operations (No Loops)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># 1. Whitespace Sanitizer</span>
+</span></span><span style="display:flex;"><span>email <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;   alex@gmail.com   &#34;</span>
+</span></span><span style="display:flex;"><span>cleaned_email <span style="color:#ff79c6">=</span> email<span style="color:#ff79c6">.</span>strip()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. Protocol Header Verification</span>
+</span></span><span style="display:flex;"><span>url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://xyz.com&#34;</span>
+</span></span><span style="display:flex;"><span>is_secure <span style="color:#ff79c6">=</span> url<span style="color:#ff79c6">.</span>startswith(<span style="color:#f1fa8c">&#34;https&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 3. Trailing Boundary Eraser</span>
+</span></span><span style="display:flex;"><span>log_entry <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;[ERROR]===System Crash===&#34;</span>
+</span></span><span style="display:flex;"><span>cleaned_log <span style="color:#ff79c6">=</span> log_entry<span style="color:#ff79c6">.</span>rstrip(<span style="color:#f1fa8c">&#34;=&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 4. File Extension Validator</span>
+</span></span><span style="display:flex;"><span>document <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;final_report.pdf&#34;</span>
+</span></span><span style="display:flex;"><span>is_pdf <span style="color:#ff79c6">=</span> document<span style="color:#ff79c6">.</span>endswith(<span style="color:#f1fa8c">&#34;.pdf&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 5. Case-Insensitive Search Converter</span>
+</span></span><span style="display:flex;"><span>user_search <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;IPHONE&#34;</span>
+</span></span><span style="display:flex;"><span>db_query <span style="color:#ff79c6">=</span> user_search<span style="color:#ff79c6">.</span>lower()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 6. Structured Right-Justification Padding</span>
+</span></span><span style="display:flex;"><span>price <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;450&#34;</span>
+</span></span><span style="display:flex;"><span>aligned_price <span style="color:#ff79c6">=</span> price<span style="color:#ff79c6">.</span>rjust(<span style="color:#bd93f9">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 7. Substring Replacement Mapping</span>
+</span></span><span style="display:flex;"><span>msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;This software has a nasty bug&#34;</span>
+</span></span><span style="display:flex;"><span>fixed_msg <span style="color:#ff79c6">=</span> msg<span style="color:#ff79c6">.</span>replace(<span style="color:#f1fa8c">&#34;bug&#34;</span>, <span style="color:#f1fa8c">&#34;feature&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 8. Syntax Comment Sign Check</span>
+</span></span><span style="display:flex;"><span>line <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;# This is a comment line&#34;</span>
+</span></span><span style="display:flex;"><span>is_comment <span style="color:#ff79c6">=</span> line<span style="color:#ff79c6">.</span>startswith(<span style="color:#f1fa8c">&#34;#&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 9. Left Side Boundary Truncation</span>
+</span></span><span style="display:flex;"><span>domain <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;www.google.com&#34;</span>
+</span></span><span style="display:flex;"><span>clean_domain <span style="color:#ff79c6">=</span> domain<span style="color:#ff79c6">.</span>lstrip(<span style="color:#f1fa8c">&#34;w.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 10. Retro Arcade Zero Padding Formatter</span>
+</span></span><span style="display:flex;"><span>score <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;75&#34;</span>
+</span></span><span style="display:flex;"><span>padded_score <span style="color:#ff79c6">=</span> score<span style="color:#ff79c6">.</span>zfill(<span style="color:#bd93f9">5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 11. Clean URL Slug Generator</span>
+</span></span><span style="display:flex;"><span>title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;blue running shoes&#34;</span>
+</span></span><span style="display:flex;"><span>url_slug <span style="color:#ff79c6">=</span> title<span style="color:#ff79c6">.</span>replace(<span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;-&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 12. Newline Character Strip Safety Clean</span>
+</span></span><span style="display:flex;"><span>key <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;KEY123XYZ</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span>clean_key <span style="color:#ff79c6">=</span> key<span style="color:#ff79c6">.</span>rstrip(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 13. High Visibility Upper-Case Converter</span>
+</span></span><span style="display:flex;"><span>server <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sub-domain-01&#34;</span>
+</span></span><span style="display:flex;"><span>loud_server <span style="color:#ff79c6">=</span> server<span style="color:#ff79c6">.</span>upper()
+</span></span></code></pre></div><h4 id="14-string-mutability-conceptual-prediction-case">14. String Mutability Conceptual Prediction Case</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>username <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;guest123&#34;</span>
+</span></span><span style="display:flex;"><span>username<span style="color:#ff79c6">.</span>upper()
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(username)
+</span></span></code></pre></div><p><strong>Output:</strong> <code>guest123</code></p>
+<p><strong>Technical Reason:</strong> Strings in Python are <strong>immutable</strong> (unchangeable in memory). Running <code>.upper()</code> creates a completely brand-new string object in memory rather than modifying the original instance. Because the result was not reassigned back to the variable (<code>username = username.upper()</code>), the print output remains unaffected.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># 15. Spam Filter Core Substring Index Finder</span>
+</span></span><span style="display:flex;"><span>email_body <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Get rich quick! Click here now!&#34;</span>
+</span></span><span style="display:flex;"><span>position <span style="color:#ff79c6">=</span> email_body<span style="color:#ff79c6">.</span>find(<span style="color:#f1fa8c">&#34;Click&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 16. Specific Token Occurrence Calculator</span>
+</span></span><span style="display:flex;"><span>paragraph <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Python is great because python code is easy to read&#34;</span>
+</span></span><span style="display:flex;"><span>python_count <span style="color:#ff79c6">=</span> paragraph<span style="color:#ff79c6">.</span>lower()<span style="color:#ff79c6">.</span>count(<span style="color:#f1fa8c">&#34;python&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 17. Alphanumeric Rule Enforcement</span>
+</span></span><span style="display:flex;"><span>username_input <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;coder_99&#34;</span>
+</span></span><span style="display:flex;"><span>is_valid_user <span style="color:#ff79c6">=</span> username_input<span style="color:#ff79c6">.</span>isalnum() <span style="color:#6272a4"># False due to underscore &#39;_&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 18. Pre-Conversion Digit Guard Verification</span>
+</span></span><span style="display:flex;"><span>birth_year <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;2005&#34;</span>
+</span></span><span style="display:flex;"><span>is_numeric_year <span style="color:#ff79c6">=</span> birth_year<span style="color:#ff79c6">.</span>isdigit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 19. Initial Sentence Capitalization</span>
+</span></span><span style="display:flex;"><span>blog_title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;10 tips for learning python&#34;</span>
+</span></span><span style="display:flex;"><span>clean_title <span style="color:#ff79c6">=</span> blog_title<span style="color:#ff79c6">.</span>capitalize()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 20. Shouting Character Evaluation</span>
+</span></span><span style="display:flex;"><span>chat <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;HELP ME PLEASE!!&#34;</span>
+</span></span><span style="display:flex;"><span>is_shouting <span style="color:#ff79c6">=</span> chat<span style="color:#ff79c6">.</span>isupper()
+</span></span></code></pre></div><h4 id="slicing-searching-and-core-string-system-methods-questions-quick-answers">Slicing, Searching, and Core String System Methods Questions (Quick Answers)</h4>
+<ul>
+<li><strong>Reversing a string via slicing:</strong> <code>reversed_str = text[::-1]</code></li>
+<li><strong>Convert initial character only to uppercase, rest to lowercase:</strong> <code>text.capitalize()</code></li>
+<li><strong>Extract length constraint calculation:</strong> <code>len(text)</code></li>
+<li><strong>Count matching character hits without a loop:</strong> <code>text.count('a')</code></li>
+<li><strong>Isolate initial 3 indexing blocks:</strong> <code>text[0:3]</code> or <code>text[:3]</code></li>
+<li><strong>Verify specific terminal characters without a loop:</strong> <code>text.endswith(&quot;ing&quot;)</code></li>
+<li><strong>Swap spaces for structural hyphens:</strong> <code>text.replace(&quot; &quot;, &quot;-&quot;)</code></li>
+<li><strong>Verify absolute digit content composition:</strong> <code>text.isdigit()</code></li>
+<li><strong>Locate starting index tracker coordinate of substring:</strong> <code>text.find(&quot;Python&quot;)</code></li>
+<li><strong>Verify Palindrome symmetry state via slicing:</strong> <code>is_palindrome = (text == text[::-1])</code></li>
+</ul>
+<hr>
+<h3 id="loop-based-string-aggregations">Loop-Based String Aggregations</h3>
+<h4 id="individual-character-extraction-line-iterator">Individual Character Extraction Line Iterator</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>text <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Python&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> char <span style="color:#ff79c6">in</span> text:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(char)
+</span></span></code></pre></div><h4 id="loop-driven-structural-inversion-engine">Loop-Driven Structural Inversion Engine</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>original <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Data&#34;</span>
+</span></span><span style="display:flex;"><span>reversed_str <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> char <span style="color:#ff79c6">in</span> original:
+</span></span><span style="display:flex;"><span>     reversed_str <span style="color:#ff79c6">=</span> char <span style="color:#ff79c6">+</span> reversed_str
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(reversed_str)
+</span></span></code></pre></div><h4 id="accumulator-space-tracking-metrics-scanner">Accumulator Space Tracking Metrics Scanner</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sentence <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;System Logs Track Terminal Entries&#34;</span>
+</span></span><span style="display:flex;"><span>space_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> char <span style="color:#ff79c6">in</span> sentence:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> char <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34; &#34;</span>:
+</span></span><span style="display:flex;"><span>          space_count <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Total Spaces: </span><span style="color:#f1fa8c">{</span>space_count<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><h4 id="manual-index-element-allocation-copy-test">Manual Index Element Allocation Copy Test</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>source <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Catalyst&#34;</span>
+</span></span><span style="display:flex;"><span>destination <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> char <span style="color:#ff79c6">in</span> source:
+</span></span><span style="display:flex;"><span>     destination <span style="color:#ff79c6">+=</span> char
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(destination)
+</span></span></code></pre></div><h4 id="alternate-array-index-structural-upper-case-shift">Alternate Array Index Structural Upper-Case Shift</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>input_str <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;python&#34;</span>
+</span></span><span style="display:flex;"><span>output_str <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> index <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#8be9fd;font-style:italic">len</span>(input_str)):
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> index <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>          output_str <span style="color:#ff79c6">+=</span> input_str[index]<span style="color:#ff79c6">.</span>upper()
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>          output_str <span style="color:#ff79c6">+=</span> input_str[index]<span style="color:#ff79c6">.</span>lower()
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(output_str) <span style="color:#6272a4"># Output: PyThOn</span>
+</span></span></code></pre></div><h4 id="manual-unique-collection-filter-duplicate-eliminator-loop">Manual Unique Collection Filter (Duplicate Eliminator Loop)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>raw_input <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;bookkeeper&#34;</span>
+</span></span><span style="display:flex;"><span>unique_str <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> char <span style="color:#ff79c6">in</span> raw_input:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> char <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">in</span> unique_str:
+</span></span><span style="display:flex;"><span>          unique_str <span style="color:#ff79c6">+=</span> char
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(unique_str)
+</span></span></code></pre></div><hr>
+<h2 id="3-lists-deep-dive">3. Lists Deep Dive</h2>
+<h3 id="list-reference--slicing-operations-no-loops">List Reference &amp; Slicing Operations (No Loops)</h3>
+<h4 id="ui-undo-feature-reference-mutability-assessment">UI Undo Feature Reference Mutability Assessment</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>current_actions <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;line&#34;</span>, <span style="color:#f1fa8c">&#34;circle&#34;</span>, <span style="color:#f1fa8c">&#34;square&#34;</span>]
+</span></span><span style="display:flex;"><span>backup_actions <span style="color:#ff79c6">=</span> current_actions
+</span></span><span style="display:flex;"><span>current_actions<span style="color:#ff79c6">.</span>append(<span style="color:#f1fa8c">&#34;triangle&#34;</span>)
+</span></span></code></pre></div><p><strong>Output of <code>backup_actions</code>:</strong> <code>[&quot;line&quot;, &quot;circle&quot;, &quot;square&quot;, &quot;triangle&quot;]</code></p>
+<p><strong>Technical Reason:</strong> Assigning a list variable directly to another (<code>backup_actions = current_actions</code>) does not create a clean copy of the data. Instead, it copies the <strong>memory address reference reference</strong>. Both variables point to the exact same list entity in memory, meaning operations done through either handle affect the shared target block.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># E-Commerce Terminal Reverse Extract Slicing</span>
+</span></span><span style="display:flex;"><span>cart <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;shoes&#34;</span>, <span style="color:#f1fa8c">&#34;shirt&#34;</span>, <span style="color:#f1fa8c">&#34;watch&#34;</span>, <span style="color:#f1fa8c">&#34;hat&#34;</span>, <span style="color:#f1fa8c">&#34;belt&#34;</span>, <span style="color:#f1fa8c">&#34;socks&#34;</span>]
+</span></span><span style="display:flex;"><span>last_three <span style="color:#ff79c6">=</span> cart[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">3</span>:]
+</span></span></code></pre></div><h4 id="sorting-order-priority-case-breakdown">Sorting Order Priority Case Breakdown</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tags <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;banana&#34;</span>, <span style="color:#f1fa8c">&#34;Vipia&#34;</span>, <span style="color:#f1fa8c">&#34;apple&#34;</span>, <span style="color:#f1fa8c">&#34;cherry&#34;</span>, <span style="color:#f1fa8c">&#34;vipin&#34;</span>]
+</span></span><span style="display:flex;"><span>tags<span style="color:#ff79c6">.</span>sort()
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(tags)
+</span></span></code></pre></div><p><strong>Sorted Array Output:</strong> <code>['Vipia', 'apple', 'banana', 'cherry', 'vipin']</code></p>
+<p><strong>Technical Reason:</strong> Python sorts items based on their internal alphanumeric ASCII dictionary definitions. All <strong>uppercase character symbols</strong> are categorized ahead of lowercase variants (e.g., <code>'V'</code> has an ASCII index of 86, whereas <code>'a'</code> is 97).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Downsample Slicing Step Extraction</span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">7</span>, <span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">9</span>]
+</span></span><span style="display:flex;"><span>every_fourth <span style="color:#ff79c6">=</span> numbers[::<span style="color:#bd93f9">4</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Position-Based Index Feed Insertion</span>
+</span></span><span style="display:flex;"><span>notifications <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;Like&#34;</span>, <span style="color:#f1fa8c">&#34;Comment&#34;</span>]
+</span></span><span style="display:flex;"><span>notifications<span style="color:#ff79c6">.</span>insert(<span style="color:#bd93f9">0</span>, <span style="color:#f1fa8c">&#34;New Follower&#34;</span>)
+</span></span></code></pre></div><h4 id="deep-destructuring-extraction-multi-layer-index-route">Deep Destructuring Extraction Multi-Layer Index Route</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>log_data <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;Vipin&#34;</span>, <span style="color:#bd93f9">25</span>, <span style="color:#f1fa8c">&#34;Jaipur&#34;</span>, <span style="color:#bd93f9">302020</span>, <span style="color:#ff79c6">True</span>, [<span style="color:#f1fa8c">&#34;Test&#34;</span>, <span style="color:#bd93f9">43</span>, [<span style="color:#bd93f9">23242</span>, [<span style="color:#bd93f9">234234</span>]]]]
+</span></span><span style="display:flex;"><span>target_value <span style="color:#ff79c6">=</span> log_data[<span style="color:#bd93f9">5</span>][<span style="color:#bd93f9">2</span>][<span style="color:#bd93f9">1</span>][<span style="color:#bd93f9">0</span>]
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(target_value) <span style="color:#6272a4"># 234234</span>
+</span></span></code></pre></div><h4 id="appending-vs-extending-structural-execution-contrast">Appending vs Extending Structural Execution Contrast</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ledger <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">100</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">50</span>, <span style="color:#bd93f9">200</span>]
+</span></span><span style="display:flex;"><span>new_batch <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">500</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">30</span>]
+</span></span></code></pre></div><ul>
+<li>**Case A: <code>ledger.append(new_batch)**</code> Inserts the incoming object directly as a single new nested block element:
+<code>[100, -50, 200, [500, -20, 30]]</code></li>
+<li>**Case B: <code>ledger.extend(new_batch)**</code> Unpacks the elements inside the incoming sequence, appending each individually:
+<code>[100, -50, 200, 500, -20, 30]</code></li>
+</ul>
+<h4 id="core-list-methods-quick-queries-no-loops-allowed">Core List Methods Quick Queries (No Loops Allowed)</h4>
+<ul>
+<li><strong>Access final array item element:</strong> <code>last_item = my_list[-1]</code></li>
+<li><strong>Invert index sequence via stride slicing execution:</strong> <code>reversed_list = my_list[::-1]</code></li>
+<li><strong>Append item tracking update to base end:</strong> <code>my_list.append(new_element)</code></li>
+<li><strong>Extract container population metric dimension:</strong> <code>len(my_list)</code></li>
+<li><strong>Sum numeric collection instantly without iteration:</strong> <code>sum(my_list)</code></li>
+<li><strong>Extract absolute maximum and minimum metrics:</strong> <code>max(my_list)</code>, <code>min(my_list)</code></li>
+<li><strong>Quantify specific occurrence matches:</strong> <code>my_list.count(5)</code></li>
+<li><strong>Slice out initial three tracking array units:</strong> <code>my_list[:3]</code></li>
+<li><strong>Purge all container content elements completely:</strong> <code>my_list.clear()</code></li>
+<li><strong>Verify absolute item existence flag:</strong> <code>&quot;Python&quot; in my_list</code></li>
+</ul>
+<hr>
+<h3 id="loop-based-list-mutators">Loop-Based List Mutators</h3>
+<h4 id="extraction-loop-squares-mapping-transform">Extraction Loop Squares Mapping Transform</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>base_numbers <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>]
+</span></span><span style="display:flex;"><span>squares_list <span style="color:#ff79c6">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> num <span style="color:#ff79c6">in</span> base_numbers:
+</span></span><span style="display:flex;"><span>     squares_list<span style="color:#ff79c6">.</span>append(num <span style="color:#ff79c6">**</span> <span style="color:#bd93f9">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(squares_list) <span style="color:#6272a4"># [4, 9, 16]</span>
+</span></span></code></pre></div><h4 id="manual-search-logic-verification-block">Manual Search Logic Verification Block</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Checking for item without using the &#39;in&#39; keyword</span>
+</span></span><span style="display:flex;"><span>target <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;vipin&#34;</span>
+</span></span><span style="display:flex;"><span>items <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;apple&#34;</span>, <span style="color:#f1fa8c">&#34;cherry&#34;</span>, <span style="color:#f1fa8c">&#34;vipin&#34;</span>]
+</span></span><span style="display:flex;"><span>found <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> items:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> item <span style="color:#ff79c6">==</span> target:
+</span></span><span style="display:flex;"><span>          found <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">break</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Target present state match: </span><span style="color:#f1fa8c">{</span>found<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><h4 id="elements-array-zero-stride-displacement-shuffle">Elements Array Zero Stride Displacement Shuffle</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>raw_array <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">12</span>]
+</span></span><span style="display:flex;"><span>non_zeros <span style="color:#ff79c6">=</span> []
+</span></span><span style="display:flex;"><span>zeros_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> num <span style="color:#ff79c6">in</span> raw_array:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> num <span style="color:#ff79c6">!=</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>          non_zeros<span style="color:#ff79c6">.</span>append(num)
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>          zeros_count <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sorted_output <span style="color:#ff79c6">=</span> non_zeros <span style="color:#ff79c6">+</span> ([<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">*</span> zeros_count)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(sorted_output) <span style="color:#6272a4"># [1, 3, 12, 0, 0]</span>
+</span></span></code></pre></div><h4 id="multi-dimensional-nested-sequence-extraction-flattening-array">Multi-Dimensional Nested Sequence Extraction (Flattening Array)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>matrix <span style="color:#ff79c6">=</span> [[<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>], [<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>]]
+</span></span><span style="display:flex;"><span>flat_list <span style="color:#ff79c6">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> sublist <span style="color:#ff79c6">in</span> matrix:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> sublist:
+</span></span><span style="display:flex;"><span>          flat_list<span style="color:#ff79c6">.</span>append(item)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(flat_list) <span style="color:#6272a4"># [1, 2, 3, 4]</span>
+</span></span></code></pre></div><hr>
+<h2 id="4-sets-deep-dive">4. Sets Deep Dive</h2>
+<p>Sets are unordered collections of unique elements. They are exceptionally fast for membership testing and eliminating duplicates.</p>
+<h3 id="set-iterations-and-calculations-with-loops">Set Iterations and Calculations With Loops</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># 1. Stride Value Multiplier</span>
+</span></span><span style="display:flex;"><span>num_set <span style="color:#ff79c6">=</span> {<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> num_set:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(item <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. Manual Sum Tracker</span>
+</span></span><span style="display:flex;"><span>total_sum <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> num_set:
+</span></span><span style="display:flex;"><span>     total_sum <span style="color:#ff79c6">+=</span> item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 3. String length evaluation filter</span>
+</span></span><span style="display:flex;"><span>str_set <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#34;apple&#34;</span>, <span style="color:#f1fa8c">&#34;kiwi&#34;</span>, <span style="color:#f1fa8c">&#34;banana&#34;</span>}
+</span></span><span style="display:flex;"><span>long_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> s <span style="color:#ff79c6">in</span> str_set:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">len</span>(s) <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">4</span>:
+</span></span><span style="display:flex;"><span>          long_count <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 4. Odd values extraction sorting</span>
+</span></span><span style="display:flex;"><span>mixed_nums <span style="color:#ff79c6">=</span> {<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>}
+</span></span><span style="display:flex;"><span>odd_set <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">set</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> num <span style="color:#ff79c6">in</span> mixed_nums:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> num <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">!=</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>          odd_set<span style="color:#ff79c6">.</span>add(num)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 5. Union of multiple sets inside a list</span>
+</span></span><span style="display:flex;"><span>list_of_sets <span style="color:#ff79c6">=</span> [{<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>}, {<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>}, {<span style="color:#bd93f9">4</span>}]
+</span></span><span style="display:flex;"><span>unified_set <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">set</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> s <span style="color:#ff79c6">in</span> list_of_sets:
+</span></span><span style="display:flex;"><span>     unified_set <span style="color:#ff79c6">=</span> unified_set<span style="color:#ff79c6">.</span>union(s)
+</span></span></code></pre></div><h3 id="direct-set-core-systems-operations-no-loops">Direct Set Core Systems Operations (No Loops)</h3>
+<ul>
+<li><strong>Check item dimension capacity:</strong> <code>len(my_set)</code></li>
+<li><strong>Isolate intersecting values between sets:</strong> <code>setA.intersection(setB)</code></li>
+<li><strong>Add single item vs update with multiple values:</strong> <code>my_set.add(item)</code>, <code>my_set.update([item1, item2])</code></li>
+<li><strong>Combine all distinct elements across sets:</strong> <code>setA.union(setB)</code></li>
+<li><strong>Remove an element safely without throwing errors:</strong> <code>my_set.discard(target_element)</code></li>
+<li><strong>Verify containment match profile criteria:</strong> <code>setA.issubset(setB)</code></li>
+<li><strong>Purge all components from set completely:</strong> <code>my_set.clear()</code></li>
+</ul>
+<hr>
+<h2 id="5-dictionaries-deep-dive">5. Dictionaries Deep Dive</h2>
+<p>Dictionaries store data in key-value pairs, allowing you to look up values instantly using their keys.</p>
+<h3 id="dictionary-processing-tasks-with-loops">Dictionary Processing Tasks With Loops</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>inventory <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#34;apple&#34;</span>: <span style="color:#bd93f9">2.5</span>, <span style="color:#f1fa8c">&#34;banana&#34;</span>: <span style="color:#bd93f9">1.8</span>, <span style="color:#f1fa8c">&#34;cherry&#34;</span>: <span style="color:#bd93f9">4.2</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 1. Print all keys</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> key <span style="color:#ff79c6">in</span> inventory<span style="color:#ff79c6">.</span>keys():
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(key)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. Print all values</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> val <span style="color:#ff79c6">in</span> inventory<span style="color:#ff79c6">.</span>values():
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(val)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 3. Side-by-side pair presentation</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> key, val <span style="color:#ff79c6">in</span> inventory<span style="color:#ff79c6">.</span>items():
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Key: </span><span style="color:#f1fa8c">{</span>key<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> -&gt; Value: </span><span style="color:#f1fa8c">{</span>val<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 4. Cumulative evaluation cost total sum</span>
+</span></span><span style="display:flex;"><span>total_cost <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> price <span style="color:#ff79c6">in</span> inventory<span style="color:#ff79c6">.</span>values():
+</span></span><span style="display:flex;"><span>     total_cost <span style="color:#ff79c6">+=</span> price
+</span></span></code></pre></div><h4 id="5-generate-numbers-and-squares-using-a-while-loop">5. Generate Numbers and Squares using a <code>while</code> loop</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>squares_dict <span style="color:#ff79c6">=</span> {}
+</span></span><span style="display:flex;"><span>num <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> num <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">5</span>:
+</span></span><span style="display:flex;"><span>     squares_dict[num] <span style="color:#ff79c6">=</span> num <span style="color:#ff79c6">**</span> <span style="color:#bd93f9">2</span>
+</span></span><span style="display:flex;"><span>     num <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(squares_dict)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># 6. Values Filter Map Extraction</span>
+</span></span><span style="display:flex;"><span>raw_data <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#34;a&#34;</span>: <span style="color:#bd93f9">1</span>, <span style="color:#f1fa8c">&#34;b&#34;</span>: <span style="color:#bd93f9">2</span>, <span style="color:#f1fa8c">&#34;c&#34;</span>: <span style="color:#bd93f9">4</span>}
+</span></span><span style="display:flex;"><span>even_val_dict <span style="color:#ff79c6">=</span> {}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> k, v <span style="color:#ff79c6">in</span> raw_data<span style="color:#ff79c6">.</span>items():
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> v <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>          even_val_dict[k] <span style="color:#ff79c6">=</span> v
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 7. Max Metric Evaluation Tracker Search</span>
+</span></span><span style="display:flex;"><span>high_score_dict <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#34;player1&#34;</span>: <span style="color:#bd93f9">45</span>, <span style="color:#f1fa8c">&#34;player2&#34;</span>: <span style="color:#bd93f9">92</span>, <span style="color:#f1fa8c">&#34;player3&#34;</span>: <span style="color:#bd93f9">78</span>}
+</span></span><span style="display:flex;"><span>highest_key <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> k <span style="color:#ff79c6">in</span> high_score_dict:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> highest_key <span style="color:#ff79c6">is</span> <span style="color:#ff79c6">None</span> <span style="color:#ff79c6">or</span> high_score_dict[k] <span style="color:#ff79c6">&gt;</span> high_score_dict[highest_key]:
+</span></span><span style="display:flex;"><span>          highest_key <span style="color:#ff79c6">=</span> k
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 8. Structural Key-Value Inversion Swap</span>
+</span></span><span style="display:flex;"><span>base_map <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#34;X&#34;</span>: <span style="color:#bd93f9">10</span>, <span style="color:#f1fa8c">&#34;Y&#34;</span>: <span style="color:#bd93f9">20</span>}
+</span></span><span style="display:flex;"><span>inverted_map <span style="color:#ff79c6">=</span> {}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> k, v <span style="color:#ff79c6">in</span> base_map<span style="color:#ff79c6">.</span>items():
+</span></span><span style="display:flex;"><span>     inverted_map[v] <span style="color:#ff79c6">=</span> k
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 9. Manual Loop-Driven Merging Dictionary Combine</span>
+</span></span><span style="display:flex;"><span>dictA <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#34;a&#34;</span>: <span style="color:#bd93f9">1</span>, <span style="color:#f1fa8c">&#34;b&#34;</span>: <span style="color:#bd93f9">2</span>}
+</span></span><span style="display:flex;"><span>dictB <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#34;b&#34;</span>: <span style="color:#bd93f9">99</span>, <span style="color:#f1fa8c">&#34;c&#34;</span>: <span style="color:#bd93f9">4</span>}
+</span></span><span style="display:flex;"><span>merged_dict <span style="color:#ff79c6">=</span> dictA<span style="color:#ff79c6">.</span>copy()
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> k, v <span style="color:#ff79c6">in</span> dictB<span style="color:#ff79c6">.</span>items():
+</span></span><span style="display:flex;"><span>     merged_dict[k] <span style="color:#ff79c6">=</span> v
+</span></span></code></pre></div><h3 id="direct-dictionary-key-lookups-and-manipulation-no-loops">Direct Dictionary Key lookups and Manipulation (No Loops)</h3>
+<ul>
+<li><strong>Safe key lookup to avoid a <code>KeyError</code>:</strong> <code>my_dict.get(&quot;target_key&quot;, default_value)</code></li>
+<li><strong>Count key-value pairs:</strong> <code>len(my_dict)</code></li>
+<li><strong>Add or update an entry:</strong> <code>my_dict[&quot;new_or_existing_key&quot;] = new_value</code></li>
+<li><strong>Extract and remove a key-value pair simultaneously:</strong> <code>removed_value = my_dict.pop(&quot;target_key&quot;)</code></li>
+<li><strong>Check if a key exists:</strong> <code>&quot;target_key&quot; in my_dict</code></li>
+<li><strong>Empty a dictionary completely:</strong> <code>my_dict.clear()</code></li>
+<li><strong>Merge two dictionaries in a single line:</strong> <code>merged = {dictA, dictB}</code> or <code>dictA.update(dictB)</code></li>
+<li><strong>Extract all keys into a clean list:</strong> <code>keys_list = list(my_dict)</code></li>
+<li><strong>Initialize a dictionary from a list of keys with a default value of 0:</strong> <code>new_dict = dict.fromkeys(list_of_keys, 0)</code></li>
+<li><strong>Create a shallow copy of a dictionary:</strong> <code>cloned_dict = my_dict.copy()</code></li>
+</ul>
+<hr>
+<h2 id="6-tuples-deep-dive">6. Tuples Deep Dive</h2>
+<p>Tuples are ordered collections that are <strong>immutable</strong> (cannot be changed after creation). They are often used to protect data from accidental modifications.</p>
+<h3 id="tuple-processing-tasks-with-loops">Tuple Processing Tasks With Loops</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mixed_tuple <span style="color:#ff79c6">=</span> (<span style="color:#bd93f9">10</span>, <span style="color:#f1fa8c">&#34;apple&#34;</span>, <span style="color:#bd93f9">20</span>, <span style="color:#f1fa8c">&#34;banana&#34;</span>, <span style="color:#bd93f9">30</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 1. Multiline element presentation extraction loop</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> mixed_tuple:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(item)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. Cumulative summation calculator logic</span>
+</span></span><span style="display:flex;"><span>num_tuple <span style="color:#ff79c6">=</span> (<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">30</span>)
+</span></span><span style="display:flex;"><span>running_total <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> n <span style="color:#ff79c6">in</span> num_tuple:
+</span></span><span style="display:flex;"><span>     running_total <span style="color:#ff79c6">+=</span> n
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 3. Even values tally scanner</span>
+</span></span><span style="display:flex;"><span>even_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> n <span style="color:#ff79c6">in</span> num_tuple:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> n <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>          even_count <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 4. String sequence merger to sentence string builder</span>
+</span></span><span style="display:flex;"><span>words <span style="color:#ff79c6">=</span> (<span style="color:#f1fa8c">&#34;Python&#34;</span>, <span style="color:#f1fa8c">&#34;is&#34;</span>, <span style="color:#f1fa8c">&#34;awesome&#34;</span>)
+</span></span><span style="display:flex;"><span>sentence <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> w <span style="color:#ff79c6">in</span> words:
+</span></span><span style="display:flex;"><span>     sentence <span style="color:#ff79c6">+=</span> w <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; &#34;</span>
+</span></span><span style="display:flex;"><span>sentence <span style="color:#ff79c6">=</span> sentence<span style="color:#ff79c6">.</span>strip()
+</span></span></code></pre></div><h4 id="5-manual-elements-search-flag-checking">5. Manual Elements Search Flag Checking</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Check if an element exists without using the &#39;in&#39; keyword</span>
+</span></span><span style="display:flex;"><span>target <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20</span>
+</span></span><span style="display:flex;"><span>found <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> num_tuple:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> item <span style="color:#ff79c6">==</span> target:
+</span></span><span style="display:flex;"><span>          found <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">break</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># 6. Type filtering data list extraction</span>
+</span></span><span style="display:flex;"><span>integers_only <span style="color:#ff79c6">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> item <span style="color:#ff79c6">in</span> mixed_tuple:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">type</span>(item) <span style="color:#ff79c6">is</span> <span style="color:#8be9fd;font-style:italic">int</span>:
+</span></span><span style="display:flex;"><span>          integers_only<span style="color:#ff79c6">.</span>append(item)
+</span></span><span style="display:flex;"><span>extracted_tuple <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">tuple</span>(integers_only)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 7. Maximum extraction scanner algorithm</span>
+</span></span><span style="display:flex;"><span>max_val <span style="color:#ff79c6">=</span> num_tuple[<span style="color:#bd93f9">0</span>]
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> n <span style="color:#ff79c6">in</span> num_tuple:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> n <span style="color:#ff79c6">&gt;</span> max_val:
+</span></span><span style="display:flex;"><span>          max_val <span style="color:#ff79c6">=</span> n
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 8. Inverse structural data assignment array transfer</span>
+</span></span><span style="display:flex;"><span>cloned_list_reversed <span style="color:#ff79c6">=</span> []
+</span></span><span style="display:flex;"><span>index <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(mixed_tuple) <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> index <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     cloned_list_reversed<span style="color:#ff79c6">.</span>append(mixed_tuple[index])
+</span></span><span style="display:flex;"><span>     index <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 9. Manual locator coordinate calculation index position algorithm</span>
+</span></span><span style="display:flex;"><span>target_element <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;banana&#34;</span>
+</span></span><span style="display:flex;"><span>found_index <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#8be9fd;font-style:italic">len</span>(mixed_tuple)):
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> mixed_tuple[i] <span style="color:#ff79c6">==</span> target_element:
+</span></span><span style="display:flex;"><span>          found_index <span style="color:#ff79c6">=</span> i
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 10. Multi-Dimensional Nested Tuple Sequence Array Loops</span>
+</span></span><span style="display:flex;"><span>nested_matrix <span style="color:#ff79c6">=</span> ((<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>), (<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> row <span style="color:#ff79c6">in</span> nested_matrix:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">for</span> element <span style="color:#ff79c6">in</span> row:
+</span></span><span style="display:flex;"><span>          <span style="color:#8be9fd;font-style:italic">print</span>(element)
+</span></span></code></pre></div><h3 id="direct-tuple-core-operations-no-loops">Direct Tuple Core Operations (No Loops)</h3>
+<ul>
+<li><strong>Count total items inside a tuple:</strong> <code>len(my_tuple)</code></li>
+<li><strong>Count how many times a value appears:</strong> <code>my_tuple.count(target_value)</code></li>
+<li><strong>Find the first index position of a value:</strong> <code>my_tuple.index(target_value)</code></li>
+<li><strong>Unpack elements into individual variables:</strong> <code>var1, var2, var3 = my_tuple</code> (The number of variables must match the tuple&rsquo;s length exactly!)</li>
+<li><strong>Reverse a tuple using slicing:</strong> <code>reversed_tuple = my_tuple[::-1]</code></li>
+<li><strong>Concatenate (join) two tuples:</strong> <code>combined_tuple = tupleA + tupleB</code></li>
+<li><strong>Repeat a tuple&rsquo;s elements multiple times:</strong> <code>repeated_tuple = my_tuple * 3</code></li>
+<li><strong>Extract a slice containing the first three items:</strong> <code>sliced_tuple = my_tuple[:3]</code></li>
+<li><strong>Check if an item exists inside a tuple in one line:</strong> <code>if item in my_tuple:</code></li>
+</ul>
+<h4 id="immutability-constraints-evaluation">Immutability Constraints Evaluation</h4>
+<blockquote>
+<p><strong>Can you change, add, or remove an element from a tuple after it is created?</strong> &gt; No, because tuples are defined as <strong>immutable</strong> structures in Python&rsquo;s memory architecture. If you need to modify its contents, you must first convert it into a list using <code>list()</code>, apply your changes, and convert it back using <code>tuple()</code>.</p>
+</blockquote>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

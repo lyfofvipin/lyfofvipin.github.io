@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Async on Kumar Vipin Yadav</title>
+    <link>http://localhost:1313/tags/async/</link>
+    <description>Recent content in Async on Kumar Vipin Yadav</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/async/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basics Of FastAPI In Python</title>
+      <link>http://localhost:1313/basics-of-fastapi/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/basics-of-fastapi/</guid>
+      <description>&lt;h1 id=&#34;the-comprehensive-guide-to-modern-api-development-with-fastapi-and-sqlalchemy&#34;&gt;The Comprehensive Guide to Modern API Development with FastAPI and SQLAlchemy&lt;/h1&gt;&#xA;&lt;p&gt;Hello Everyone! Today we are shifting into modern backend design &lt;strong&gt;FastAPI&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;While Flask is an excellent synchronous framework, &lt;strong&gt;FastAPI&lt;/strong&gt; is a cutting-edge, high-performance web framework designed from the ground up for building production-ready APIs using modern Python features. It leverages asynchronous execution (&lt;code&gt;async&lt;/code&gt;/&lt;code&gt;await&lt;/code&gt;), automatic structural data validation via &lt;strong&gt;Pydantic&lt;/strong&gt;, and native documentation generation out of the box.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s break down how to rebuild our entire backend pipeline using FastAPI, exploring why it has become the standard for modern enterprise development.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

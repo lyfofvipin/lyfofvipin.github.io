@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classes Lab In Python · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Classes Lab In Python</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-22T00:00:00Z">
+        Jan 22, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-project-blueprint-the-bankaccount-system-architecture">1. Project Blueprint: The BankAccount System Architecture</a>
+      <ul>
+        <li><a href="#complete-project-implementation-code">Complete Project Implementation Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-breaking-down-real-world-object-design-models">2. Breaking Down Real-World Object Design Models</a>
+      <ul>
+        <li><a href="#a-e-commerce-shoppingcart-blueprint">A. E-Commerce (ShoppingCart Blueprint)</a></li>
+        <li><a href="#b-hotel-management-hotelroom-blueprint">B. Hotel Management (HotelRoom Blueprint)</a></li>
+        <li><a href="#c-ride-sharing-apps-riderequest-blueprint">C. Ride-Sharing Apps (RideRequest Blueprint)</a></li>
+        <li><a href="#d-digital-library-operations-book-blueprint">D. Digital Library Operations (Book Blueprint)</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-structural-code-blueprints-for-practice">3. Structural Code Blueprints for Practice</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="master-guide-to-object-oriented-project-design-building-a-complete-banking-app">Master Guide to Object-Oriented Project Design Building a Complete Banking App</h1>
+<p>Hello Everyone! Today we are bringing together everything we have learned about <strong>Classes, Objects, Methods, Lists, and Loop Controls</strong> to build a complete, real-world terminal application.</p>
+<p>When you build applications, you will often need to manage multiple instances of a class (like managing hundreds of different customer bank accounts). We handle this by combining Object-Oriented blueprints with collections like Lists to store and manage our structural objects dynamically.</p>
+<h2 id="1-project-blueprint-the-bankaccount-system-architecture">1. Project Blueprint: The BankAccount System Architecture</h2>
+<p>To manage a bank branch efficiently, our system needs a clear division of labor. We use a <code>BankAccount</code> class to hold individual customer states and behaviors, combined with a central management loop that manages the collection of all accounts.</p>
+<h3 id="complete-project-implementation-code">Complete Project Implementation Code</h3>
+<p>Here is the fully functional, clean code that brings together our class definition, helper search logic, and interactive user menu interface:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">BankAccount</span>:
+</span></span><span style="display:flex;"><span>    BANK_NAME <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;SBI&#34;</span>  <span style="color:#6272a4"># Class Attribute shared by all customers</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">__init__</span>(<span style="font-style:italic">self</span>, name, mob, age, dob, balance<span style="color:#ff79c6">=</span><span style="color:#bd93f9">500</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Instance Attributes unique to each individual user</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>name <span style="color:#ff79c6">=</span> name
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>mob <span style="color:#ff79c6">=</span> mob
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>age <span style="color:#ff79c6">=</span> age
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>dob <span style="color:#ff79c6">=</span> dob
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">=</span> balance
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">show_info</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">--- Account Details (</span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>BANK_NAME<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">) ---&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Holder Name: </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Mobile No. : </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>mob<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Current Age: </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>age<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Birth Date : </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>dob<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Net Balance: </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>balance<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> INR&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;-&#34;</span> <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">30</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">deposit</span>(<span style="font-style:italic">self</span>, amount):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> amount <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Error] Invalid Amount! Deposit must be greater than 0.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">+=</span> amount
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Success] Deposited </span><span style="color:#f1fa8c">{</span>amount<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> INR. New Balance: </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>balance<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> INR&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">withdraw</span>(<span style="font-style:italic">self</span>, amount):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> amount <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Error] Invalid Amount! Withdrawal must be greater than 0.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">elif</span> amount <span style="color:#ff79c6">&gt;</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>balance:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Error] Transaction Denied! Insufficient balance. Available: </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>balance<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> INR&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">-=</span> amount
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Success] Withdrew </span><span style="color:#f1fa8c">{</span>amount<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> INR. Remaining Balance: </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>balance<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> INR&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Helper Function to search for an account object inside our storage list</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">search_account</span>(account_list, mobile_number):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> account <span style="color:#ff79c6">in</span> account_list:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> account<span style="color:#ff79c6">.</span>mob <span style="color:#ff79c6">==</span> mobile_number:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> account  <span style="color:#6272a4"># Returns the actual object instance if found</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">None</span>  <span style="color:#6272a4"># Returns None if no matching phone number exists</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># --- Central Management Application Loop ---</span>
+</span></span><span style="display:flex;"><span>all_accounts <span style="color:#ff79c6">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> <span style="color:#ff79c6">True</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">==== STATE BANK OF INDIA MENU ====
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">A. Create New Account
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">B. Check Account Details
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">C. Deposit Money
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">D. Withdraw Money
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">E. Exit
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">=================================
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    &#34;&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    choice <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Choice (A-E): &#34;</span>)<span style="color:#ff79c6">.</span>upper()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">match</span> choice:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;A&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">--- Open New Account ---&#34;</span>)
+</span></span><span style="display:flex;"><span>            name <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Name: &#34;</span>)
+</span></span><span style="display:flex;"><span>            age <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Age: &#34;</span>))
+</span></span><span style="display:flex;"><span>            mob <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Mobile Number: &#34;</span>)
+</span></span><span style="display:flex;"><span>            dob <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your DOB (DD/MM/YYYY): &#34;</span>)
+</span></span><span style="display:flex;"><span>            initial_deposit <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Initial Deposit (Minimum 500): &#34;</span>))
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> initial_deposit <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">500</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Error] Account creation failed. Minimum starting balance is 500.&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#6272a4"># Instantiating and saving the object inside our tracking list</span>
+</span></span><span style="display:flex;"><span>                new_account <span style="color:#ff79c6">=</span> BankAccount(name, mob, age, dob, initial_deposit)
+</span></span><span style="display:flex;"><span>                all_accounts<span style="color:#ff79c6">.</span>append(new_account)
+</span></span><span style="display:flex;"><span>                <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Success] Welcome </span><span style="color:#f1fa8c">{</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">! Your account has been registered successfully.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;B&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">--- Account Inquiry ---&#34;</span>)
+</span></span><span style="display:flex;"><span>            target_mob <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Registered Mobile Number: &#34;</span>)
+</span></span><span style="display:flex;"><span>            account <span style="color:#ff79c6">=</span> search_account(all_accounts, target_mob)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> account:
+</span></span><span style="display:flex;"><span>                account<span style="color:#ff79c6">.</span>show_info()
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Error] No account registered with that mobile number.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;C&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">--- Deposit Transaction ---&#34;</span>)
+</span></span><span style="display:flex;"><span>            target_mob <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Registered Mobile Number: &#34;</span>)
+</span></span><span style="display:flex;"><span>            account <span style="color:#ff79c6">=</span> search_account(all_accounts, target_mob)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> account:
+</span></span><span style="display:flex;"><span>                amount <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Amount to Deposit: &#34;</span>))
+</span></span><span style="display:flex;"><span>                account<span style="color:#ff79c6">.</span>deposit(amount)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Error] No account registered with that mobile number.&#34;</span>)
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;D&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">--- Withdrawal Transaction ---&#34;</span>)
+</span></span><span style="display:flex;"><span>            target_mob <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Registered Mobile Number: &#34;</span>)
+</span></span><span style="display:flex;"><span>            account <span style="color:#ff79c6">=</span> search_account(all_accounts, target_mob)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> account:
+</span></span><span style="display:flex;"><span>                amount <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Amount to Withdraw: &#34;</span>))
+</span></span><span style="display:flex;"><span>                account<span style="color:#ff79c6">.</span>withdraw(amount)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Error] No account registered with that mobile number.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;E&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">Thank you for banking with SBI. Goodbye!&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">case</span> _:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[Invalid Choice] Please select a valid option from A to E.&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="2-breaking-down-real-world-object-design-models">2. Breaking Down Real-World Object Design Models</h2>
+<p>To master Object-Oriented design, you need to practice breaking down everyday real-world systems into code properties (<strong>Attributes</strong>) and operations (<strong>Methods</strong>). Let&rsquo;s review four essential structural architectures:</p>
+<h3 id="a-e-commerce-shoppingcart-blueprint">A. E-Commerce (ShoppingCart Blueprint)</h3>
+<ul>
+<li><strong>The Concept:</strong> When shopping online, a user needs a digital container to hold items before checkout. The system needs to dynamically update as products are added or removed, and compute final totals with taxes applied.</li>
+<li><strong>Attributes:</strong> <code>user_id</code> (links the cart to a specific user), <code>items</code> (a dictionary tracking <code>product_name: price</code> mappings).</li>
+<li><strong>Methods:</strong> <code>add_item()</code>, <code>remove_item()</code>, <code>calculate_total()</code>.</li>
+</ul>
+<h3 id="b-hotel-management-hotelroom-blueprint">B. Hotel Management (HotelRoom Blueprint)</h3>
+<ul>
+<li><strong>The Concept:</strong> A hotel front desk clerk needs software to manage room availability, track room categories, and calculate billing charges upon check-out.</li>
+<li><strong>Attributes:</strong> <code>room_number</code>, <code>room_type</code> (&ldquo;Suite&rdquo;, &ldquo;Deluxe&rdquo;), <code>price</code>, <code>is_occupied</code> (True/False status flag).</li>
+<li><strong>Methods:</strong> <code>check_in()</code> (flips flag if vacant), <code>check_out()</code> (calculates bill and frees up room space).</li>
+</ul>
+<h3 id="c-ride-sharing-apps-riderequest-blueprint">C. Ride-Sharing Apps (RideRequest Blueprint)</h3>
+<ul>
+<li><strong>The Concept:</strong> An application coordinate system designed to match passengers with local drivers while computing fares dynamically based on distance metrics.</li>
+<li><strong>Attributes:</strong> <code>rider</code>, <code>pickup</code>, <code>dropoff</code>, <code>driver</code> (starts as <code>None</code>), <code>status</code> (&ldquo;Searching&rdquo;, &ldquo;En Route&rdquo;, &ldquo;Completed&rdquo;).</li>
+<li><strong>Methods:</strong> <code>assign_driver()</code>, <code>complete_ride()</code>.</li>
+</ul>
+<h3 id="d-digital-library-operations-book-blueprint">D. Digital Library Operations (Book Blueprint)</h3>
+<ul>
+<li><strong>The Concept:</strong> A cataloging database tracking the shelf availability of books. If a book is checked out, other library patrons are blocked from borrowing it until it is returned.</li>
+<li><strong>Attributes:</strong> <code>title</code>, <code>author</code>, <code>isbn</code> (unique barcode identifier), <code>is_available</code> (boolean status flag).</li>
+<li><strong>Methods:</strong> <code>borrow_book()</code>, <code>return_book()</code>.</li>
+</ul>
+<hr>
+<h2 id="3-structural-code-blueprints-for-practice">3. Structural Code Blueprints for Practice</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">ShoppingCart</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">__init__</span>(<span style="font-style:italic">self</span>, user_id):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>user_id <span style="color:#ff79c6">=</span> user_id
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>items <span style="color:#ff79c6">=</span> {}  <span style="color:#6272a4"># Store items as {item_name: price}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">add_item</span>(<span style="font-style:italic">self</span>, item_name, price):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>items[item_name] <span style="color:#ff79c6">=</span> price
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Added </span><span style="color:#f1fa8c">{</span>item_name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> to cart.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">remove_item</span>(<span style="font-style:italic">self</span>, item_name):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> item_name <span style="color:#ff79c6">in</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>items:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">del</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>items[item_name]
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Removed </span><span style="color:#f1fa8c">{</span>item_name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> from cart.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">calculate_total</span>(<span style="font-style:italic">self</span>, tax_rate<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.08</span>):
+</span></span><span style="display:flex;"><span>        subtotal <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">sum</span>(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>items<span style="color:#ff79c6">.</span>values())
+</span></span><span style="display:flex;"><span>        total <span style="color:#ff79c6">=</span> subtotal <span style="color:#ff79c6">+</span> (subtotal <span style="color:#ff79c6">*</span> tax_rate)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">round</span>(total, <span style="color:#bd93f9">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">HotelRoom</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">__init__</span>(<span style="font-style:italic">self</span>, room_number, room_type, price_per_night):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>room_number <span style="color:#ff79c6">=</span> room_number
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>room_type <span style="color:#ff79c6">=</span> room_type
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>price <span style="color:#ff79c6">=</span> price_per_night
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_occupied <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">check_in</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_occupied:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_occupied <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Room </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>room_number<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> is now checked in.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Room </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>room_number<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> is already occupied!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">check_out</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_occupied:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_occupied <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Room </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>room_number<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> is now vacant and ready for cleaning.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Room </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>room_number<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> is already vacant.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">RideRequest</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">__init__</span>(<span style="font-style:italic">self</span>, rider_name, pickup_location, dropoff_location):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>rider <span style="color:#ff79c6">=</span> rider_name
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>pickup <span style="color:#ff79c6">=</span> pickup_location
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>dropoff <span style="color:#ff79c6">=</span> dropoff_location
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>driver <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>status <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Searching for driver&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">assign_driver</span>(<span style="font-style:italic">self</span>, driver_name):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>driver <span style="color:#ff79c6">=</span> driver_name
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>status <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Driver en route&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Driver </span><span style="color:#f1fa8c">{</span>driver_name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> accepted </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>rider<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#39;s request.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">complete_ride</span>(<span style="font-style:italic">self</span>, distance_miles):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>status <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Completed&#34;</span>
+</span></span><span style="display:flex;"><span>        fare <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2.50</span> <span style="color:#ff79c6">+</span> (distance_miles <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">1.75</span>)  <span style="color:#6272a4"># Base fare + per mile rate</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Ride finished. Total fare billed to </span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>rider<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">: $</span><span style="color:#f1fa8c">{</span>fare<span style="color:#f1fa8c">:</span><span style="color:#f1fa8c">.2f</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Book</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">__init__</span>(<span style="font-style:italic">self</span>, title, author, isbn):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>title <span style="color:#ff79c6">=</span> title
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>author <span style="color:#ff79c6">=</span> author
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>isbn <span style="color:#ff79c6">=</span> isbn
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_available <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">borrow_book</span>(<span style="font-style:italic">self</span>, borrower_name):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_available:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_available <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;&#39;</span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>title<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#39; successfully lent to </span><span style="color:#f1fa8c">{</span>borrower_name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Sorry, &#39;</span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>title<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#39; is currently checked out.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">return_book</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>is_available <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;&#39;</span><span style="color:#f1fa8c">{</span><span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>title<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#39; has been returned to the library shelf.&#34;</span>)
+</span></span></code></pre></div>
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

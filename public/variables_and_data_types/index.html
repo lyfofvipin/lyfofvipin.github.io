@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variables and Data Types · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Variables and Data Types</h1>
+    
+    <div class="post-meta">
+      <time datetime="2023-06-24T00:00:00Z">
+        Jun 24, 2023
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#go</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#integers">Integers</a></li>
+    <li><a href="#float">Float</a></li>
+    <li><a href="#boolean">Boolean</a></li>
+    <li><a href="#string">String</a></li>
+    <li><a href="#rune">Rune</a>
+      <ul>
+        <li><a href="#format-specifiers">Format specifiers</a></li>
+        <li><a href="#d">%d</a></li>
+        <li><a href="#s">%s</a></li>
+        <li><a href="#q">%q</a></li>
+        <li><a href="#f">%f</a></li>
+        <li><a href="#t">%t</a></li>
+        <li><a href="#t-1">%T</a></li>
+        <li><a href="#c">%c</a></li>
+        <li><a href="#v">%v</a></li>
+        <li><a href="#examples-of-format-specifiers">Examples of Format specifiers</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#how-to-define-a-variable">How to define a variable:</a>
+      <ul>
+        <li><a href="#using-var-keyword">Using <code>var</code> keyword:</a></li>
+        <li><a href="#short-variable-declarations">Short variable declarations:</a></li>
+      </ul>
+    </li>
+    <li><a href="#rules-to-declare-a-variable">Rules to declare a variable</a></li>
+    <li><a href="#constant">Constant</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="data-type">Data Type</h1>
+<p>Data Types is a way to find the type of values in programming languages.
+There can be multiple type of data for example.</p>
+<h2 id="integers">Integers</h2>
+<p>Any non-decimal numeric value is referred as an Integer.</p>
+<p>Examples:</p>
+<p><code>3</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>0</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>-3243</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>-2</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>1.5</code> &ndash;&gt; <code>No</code></p>
+<p><code>-4.5</code> &ndash;&gt; <code>No</code></p>
+<p><code>4.0</code> &ndash;&gt; <code>No</code></p>
+<p>There can be multiple type of integers in GO language based on the computer architecture:
+This can help in implementing specific type of application for specific architecture.
+Let&rsquo;s say if you are building a application for only 32 bit architecture then you can use <code>int32</code>.
+But if you only specify <code>int</code> then it will auto detect the architecture and compile the code based on that.</p>
+<pre tabindex="0"><code>uint8       unsigned  8-bit integers (0 to 255)
+uint16      unsigned 16-bit integers (0 to 65535)
+uint32      unsigned 32-bit integers (0 to 4294967295)
+uint64      unsigned 64-bit integers (0 to 18446744073709551615)
+int8        signed  8-bit integers (-128 to 127)
+int16       signed 16-bit integers (-32768 to 32767)
+int32       signed 32-bit integers (-2147483648 to 2147483647)
+int64       signed 64-bit integers (-9223372036854775808 to 9223372036854775807)
+</code></pre><h2 id="float">Float</h2>
+<p>Any decimal numeric value is referred as an Float.</p>
+<p>Examples:</p>
+<p><code>1.0</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>-435.6</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>0.0</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>34.5</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>43</code>  &ndash;&gt; <code>No</code></p>
+<p>There can be multiple type of floats in GO language based on the computer architecture:
+This can help in implementing specific type of application for specific architecture.
+Let&rsquo;s say if you are building a application for only 32 bit architecture then you can use <code>float32</code>.
+But if you only specify <code>float</code> then it will auto detect the architecture and compile the code based on that.</p>
+<pre tabindex="0"><code>float32     IEEE-754 32-bit floating-point numbers
+float64     IEEE-754 64-bit floating-point numbers
+complex64   complex numbers with float32 real and imaginary parts
+complex128  complex numbers with float64 real and imaginary parts
+</code></pre><h2 id="boolean">Boolean</h2>
+<p>This data type only has 2 values.
+<code>true</code> and <code>false</code> This data type can be very helpful while working with the conditions in loops and if-else statements ( will be reading the same soon ).</p>
+<h2 id="string">String</h2>
+<p>Any values written inside `` ( back quote ) or &quot;&quot; ( double quote) is refereed as a string.
+A string is a set of characters it can be of a single character or can be of a multiple characters.</p>
+<p>Examples:</p>
+<p>&ldquo;Vipin&rdquo; &ndash;&gt; <code>Yes</code></p>
+<p>`test` &ndash;&gt; <code>Yes</code></p>
+<p>`122343` &ndash;&gt; <code>Yes</code></p>
+<p>&ldquo;&amp;*$#(chartest&rdquo; &ndash;&gt; <code>Yes</code></p>
+<p>&ldquo;test space&rdquo; &ndash;&gt; <code>Yes</code></p>
+<p>`true`  &ndash;&gt; <code>Yes</code></p>
+<p>true  &ndash;&gt; <code>No</code></p>
+<p>2323242 &ndash;&gt; <code>No</code></p>
+<h2 id="rune">Rune</h2>
+<p>Any single character written inside <code>''</code> is referred as a rune.</p>
+<p>Examples:</p>
+<p><code>'4'</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>'a'</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>'$'</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>'%'</code> &ndash;&gt; <code>Yes</code></p>
+<p><code>'23'</code> &ndash;&gt; <code>No</code></p>
+<p><code>'t%'</code> &ndash;&gt; <code>No</code></p>
+<p>If you try to display a rune type value It will display the <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>) ( A numeric representation of characters for electronic communication ) value for the same.</p>
+<p>There are other Data Type like <code>Array</code>, <code>slice</code> and <code>map</code> which we will be covering later as we need some understanding of these basic data types first.</p>
+<p>A simple program to understand these data types.</p>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+
+	// Displaying integer 
+	fmt.Println(34435)
+	fmt.Println(0)
+	fmt.Println(-34)
+
+	// Displaying float 
+	fmt.Println(-45.654)
+	fmt.Println(5.0)
+	fmt.Println(0.0)
+
+	// Displaying string 
+	fmt.Println(`sdfgsdf3478347^$%$%`)
+	fmt.Println(&#34;asfdsdf$#%$654&#34;)
+
+	// Displaying rune
+	fmt.Println(&#39;a&#39;) // a ASCII value 97
+	fmt.Println(&#39;%&#39;) // % ASCII value 37
+	fmt.Println(&#39;4&#39;) // 4 ASCII value 52
+	fmt.Println(&#39;)&#39;) // ) ASCII value 41
+
+	// Displaying boolean
+	fmt.Println(true)
+	fmt.Println(false)
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>[vipikuma@kvy learn_golang]$ go run Day05/data_type.go 
+34435
+0
+-34
+-45.654
+5
+0
+sdfgsdf3478347^$%$%
+asfdsdf$#%$654
+97
+37
+52
+41
+true
+false
+</code></pre><h3 id="format-specifiers">Format specifiers</h3>
+<p>Format specifiers helps us in printing multiple data types in a single statement.
+They specifies type of data we are using in the statement.</p>
+<h3 id="d">%d</h3>
+<p>This specifier is used to display integers.</p>
+<h3 id="s">%s</h3>
+<p>This specifier is used to display strings without <code>&quot;</code>.</p>
+<h3 id="q">%q</h3>
+<p>This specifier is used to display strings with <code>&quot;</code>.</p>
+<h3 id="f">%f</h3>
+<p>This specifier is used to display float ( Decimal Values ).</p>
+<h3 id="t">%t</h3>
+<p>This specifier is used to display boolean values.</p>
+<h3 id="t-1">%T</h3>
+<p>This specifier is used to display the type of the data/variable.</p>
+<h3 id="c">%c</h3>
+<p>This specifier is used to display the character value hold by a rune</p>
+<h3 id="v">%v</h3>
+<p>This specifier is used to display any kind of data. For example it can do work of <code>%d</code>, <code>%s</code>, <code>%f</code> ,<code>%t</code> etc&hellip;..</p>
+<h3 id="examples-of-format-specifiers">Examples of Format specifiers</h3>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+	fmt.Printf(&#34;This is an int value %d.\n&#34;, 7)
+	fmt.Printf(&#34;This is an float value %f.\n&#34;, 45.6)
+	fmt.Printf(&#34;This is an string value without quote %s.\n&#34;, &#34;Vipin&#34;)
+	fmt.Printf(&#34;This is an string value with quote %q.\n&#34;, &#34;vipin&#34;)
+	fmt.Printf(&#34;This is an boolean value %t.\n&#34;, false)
+	fmt.Printf(&#34;Type of first value %T, second value %T.\n&#34;, 7, &#34;Vipin&#34;)
+	fmt.Printf(&#34;Print int  %v, print str %v print float.\n&#34;, 7, &#34;Vipin&#34;, 45.6)
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>[vipikuma@kvy learn_golang]$ go run Day07/formatspecifiers.go 
+This is an int value 7.
+This is an float value 45.6.
+This is an string value without quote Vipin.
+This is an string value with quote &#34;vipin&#34;.
+This is an boolean value false.
+Type of first value int, second value string.
+Print int  7, print str Vipin print float.
+</code></pre><p>Display ony 2 digit after decimal in float value.</p>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+	fmt.Printf(&#34;It will use space of 10 characters in terminal %10f.\n&#34;, 4.5)
+	fmt.Printf(&#34;It will display only 2 number after decimal %.2f.\n&#34;, 4.5455)
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>[vipikuma@kvy learn_golang]$ go run Day07/float_specifiers.go 
+It will use space of 10 characters in terminal __4.500000. (__4.500000 = 10 character)
+It will display only 2 number after decimal 4.55.
+</code></pre><p>These are a few more specifier GO lang supports.</p>
+<pre tabindex="0"><code>%b	base 2
+%c	the character represented by the corresponding Unicode code point
+%o	base 8
+%O	base 8 with 0o prefix
+%x	base 16, with lower-case letters for a-f
+%X	base 16, with upper-case letters for A-F
+%U	Unicode format: U+1234; same as &#34;U+%04X&#34;
+%e	scientific notation, e.g. -1.234456e+78
+%E	scientific notation, e.g. -1.234456E+78
+%f	decimal point but no exponent, e.g. 123.456
+%F	synonym for %f
+%g	%e for large exponents, %f otherwise. Precision is discussed below.
+%G	%E for large exponents, %F otherwise
+%p	address of 0th element in base 16 notation, with leading 0x
+</code></pre><h1 id="variable">Variable</h1>
+<p>A variable is a placeholder of some value,
+Each variable name has some data type.</p>
+<h2 id="how-to-define-a-variable">How to define a variable:</h2>
+<h3 id="using-var-keyword">Using <code>var</code> keyword:</h3>
+<p>We need to have a name to which we will be assigning a value I am using <code>system</code> and the value I will be putting is this variable is <code>vipin's system</code> and we use the keyword <code>var</code> to define a variable in go lang. if we are not assigning a value then we have to specify the data type like <code>string</code>, <code>int</code> <code>float</code> etc.</p>
+<h3 id="short-variable-declarations">Short variable declarations:</h3>
+<p>you can use <code>:=</code> to define a variable in go lang ex: <code>system := &quot;vipin's system&quot;</code>.
+Here also we are defining a variable name <code>system</code> with value <code>vipin's system</code>.</p>
+<p>NOTE: In case of Short variable declarations you must assign a value to the variable.</p>
+<p>There are a few rules to define variable names in GO lang:</p>
+<h2 id="rules-to-declare-a-variable">Rules to declare a variable</h2>
+<ul>
+<li>A variable names can not have any character then underscore <code>_</code>.</li>
+<li>It should not be a keyword of GO language.</li>
+<li>A variable names can not start with an numeric value</li>
+<li>Variable names in go are case sensitive ( variable name <code>system</code> and <code>System</code> are not same ).</li>
+<li>A variable name can not be defined twice.</li>
+</ul>
+<p>Here are a few more examples on how to defining variables:
+This will print &quot;&quot; as <code>string</code> will define the variable system with blank value if we define it with <code>int</code> then the default will be <code>0</code> and so on for different data types.</p>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+	var system string
+	fmt.Println(system)
+}
+</code></pre><p>Here we are defining a variable and assigning a value and printing the same.</p>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+	var system string
+	system = &#34;vipin&#39;s system&#34;
+	fmt.Println(system)
+}
+</code></pre><p>Here we are defining 2 variables <code>system</code> and <code>System</code> they are 2 different names.</p>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+	var system = &#34;vipin&#39;s system&#34;
+	var System = &#34;vipin&#39;s system&#34;
+	fmt.Println(system)
+	fmt.Println(System)
+}
+</code></pre><p>We are defining an integer here.</p>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+	var a = 545
+	fmt.Println(a)
+}
+</code></pre><p>We are defining an rune here.</p>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+	var b = &#39;a&#39;
+	fmt.Println(b)
+}
+</code></pre><p>We are defining an boolean variable here.</p>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+	var c = true
+	fmt.Println(c)
+}
+</code></pre><p>A few examples of defining wrong variable names in GO lang:</p>
+<pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+
+	var import = &#34;wrong variable name because it&#39;s a keyword of the go lang&#34;
+	fmt.Println(import)
+
+	var 1wrong_variable_name = &#34;wrong variable name because it&#39;s starting from a numeric value&#34;
+	fmt.Println(1wrong_variable_name)
+
+	var wrong-variable_name = &#34;wrong variable name as it has `-` in it&#34;
+	fmt.Println(wrong-variable_name)
+
+	var variable_name = &#34;This is a right variable name to understand the concept of case sensitive&#34;
+	fmt.Println(variable_name)
+
+	var variable_name = &#34;wrong variable name as variable_name is already defined&#34;
+	fmt.Println(variable_name)
+}
+</code></pre><p>NOTE: If a Variable name is defined and not used GO will through an error something like this.</p>
+<pre tabindex="0"><code># command-line-arguments
+&lt;your_file_name&gt;.go:&lt;line:number&gt;: &lt;your variable name&gt; declared but not used
+</code></pre><pre tabindex="0"><code>package main
+
+import (&#34;fmt&#34;)
+
+func main(){
+
+	var name=&#34;vipin&#34;
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code># command-line-arguments
+Day06/wrong_variable_name.go:3:9: imported and not used: &#34;fmt&#34;
+Day06/wrong_variable_name.go:7:6: name declared but not used
+</code></pre><h2 id="constant">Constant</h2>
+<p>There is one more type of variable <code>const</code> as the same says you can not change the value of a constant variable.</p>
+<pre tabindex="0"><code>package main
+
+func main(){
+
+	const PI=3.14
+	PI=3.143
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day06/wrong_variable_name.go 
+# command-line-arguments
+Day06/wrong_variable_name.go:6:2: cannot assign to PI (untyped float constant 3.14)
+</code></pre><p>Doc was written in this livestream <a href="https://www.youtube.com/watch?v=LRRA33vWtlo">[Learn Go Day 05]</a>
+and in <a href="https://www.youtube.com/watch?v=BtkTn1kjOiE">[Learn Go Day 06]</a> and in and in <a href="https://www.youtube.com/watch?v=kkNJRjr76Is">[Learn Go Day 07]</a></p>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

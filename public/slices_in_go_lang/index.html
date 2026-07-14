@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slices In Go Lang · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Slices In Go Lang</h1>
+    
+    <div class="post-meta">
+      <time datetime="2024-10-02T00:00:00Z">
+        Oct 2, 2024
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#go</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#slices">Slices</a></li>
+    <li><a href="#difference-between-slice-and-array">Difference Between Slice And Array</a></li>
+    <li><a href="#how-to-create-slice-in-go">How to create slice in Go</a></li>
+    <li><a href="#creating-slice-withfrom-array">Creating Slice With/From Array</a></li>
+    <li><a href="#updating-values-of-slices">Updating Values Of Slices</a></li>
+    <li><a href="#adding-values-to-slice-or-using-append-function-on-slice">Adding Values to slice or Using Append function on Slice</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h2 id="slices">Slices</h2>
+<p>Slice is a data structure that identify the portion of an array by determining it&rsquo;s starting index and length of the portion even during the definition we will be using similar syntax without the length, In GO language slices are similar to array it&rsquo;s just the length of slice is flexible it can be changed. In Slice also we can only store similar type of elements.</p>
+<h2 id="difference-between-slice-and-array">Difference Between Slice And Array</h2>
+<p>Slices are more flexible than array. In array we can not add any element and resize it but in Slice we can add or remove any element and resized it.</p>
+<h2 id="how-to-create-slice-in-go">How to create slice in Go</h2>
+<p>To create a slice in Go we have to follow the syntax mentioned below.
+we have to define the name of the variable then we use <code>[]</code>, then we define the type of collection slice will be for example it will be collection of integers, string, rune and it can be an another slice.</p>
+<p>Here are a few examples.</p>
+<pre tabindex="0"><code>package main
+
+import (
+	&#34;fmt&#34;
+)
+
+func main (){
+
+	var sli1 []int
+	sli2 := []int{ 10, 20, 30, 40, 50 }
+
+	var sli3 = []string{ &#34;A&#34;, &#34;a&#34;, &#34;b&#34;, &#34;B&#34;, `c`, `C` }
+	sli4 := []rune{ &#39;a&#39;, &#39;4&#39;, &#39;-&#39;, &#39;+&#39; }
+
+	sli5 := []bool { true }
+	sli6 := []bool { true, false }
+
+	fmt.Println(sli1, sli2, sli3, sli4, sli5, sli6 )
+
+}
+</code></pre><h2 id="creating-slice-withfrom-array">Creating Slice With/From Array</h2>
+<pre tabindex="0"><code>package main
+ 
+import &#34;fmt&#34;
+ 
+func main() {
+    array := [5]int{ 11, 12, 13, 14, 15 }
+    slice1 := array[2:5]
+    slice2 := array[1:4]
+ 
+    fmt.Println(&#34;Array: &#34;, array)
+    fmt.Println(&#34;Slice: &#34;, slice1)
+    fmt.Println(&#34;Slice: &#34;, slice2)
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day14/slice.go 
+Array:  [11 12 13 14 15]
+Slice:  [13 14 15]
+Slice:  [12 13 14]
+</code></pre><h2 id="updating-values-of-slices">Updating Values Of Slices</h2>
+<p>We can use the index with the slice name to update the value of an index.
+In below example <code>sli[0] = 1000</code> we are updating value of index <code>0</code> with integer value <code>1000</code>.</p>
+<p>Example:</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+
+	sli := []int{ 1, 2, 9:3434 }
+
+	fmt.Println(sli)
+
+	sli[0] = 1000
+
+	fmt.Println(sli)
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day14/update_sli.go 
+[1 2 0 0 0 0 0 0 0 3434]
+[1000 2 0 0 0 0 0 0 0 3434]
+</code></pre><h2 id="adding-values-to-slice-or-using-append-function-on-slice">Adding Values to slice or Using Append function on Slice</h2>
+<p>To add values in a slice we have to use the <code>append</code> function in Go lang.
+this function take two arguments minimum <em>first one is the slice</em> and <em>all other argument are the element you want to add</em> for example <code>append( []int, int )</code> here append function is accepting an slice of integer and a integer it will append elements at the end of the slice.</p>
+<p>This function can concatenate slices too in this case it take <em>two slice</em> as argument with the <code>...</code> operator for example <code>append( slice1, slice2... )</code>.</p>
+<p>One more thing to notice about append function is that it returns a new slice instead of adding the element in the same slice so we have to store our new slice somewhere if we want to use the same somewhere.</p>
+<p>Examples:</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+
+	sli := []int{ 1 }
+
+	fmt.Println(sli)
+	fmt.Println( append( sli, 34 ) )
+
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day14/append.go 
+[1]
+[1 34]
+</code></pre><p>Another Example:</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+
+	sli1 := []int{ 1, 2, 3, 4 }
+	sli2 := []int{ 10, 20, 30, 40 }
+
+	fmt.Println(sli1, sli2)
+	fmt.Println( append( sli1, sli2... ) )
+
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day14/append_all.go 
+[1 2 3 4] [10 20 30 40]
+[1 2 3 4 10 20 30 40]
+</code></pre><p>Another example where we are storing the new slice in a variable.</p>
+<pre tabindex="0"><code>package main
+
+import &#34;fmt&#34;
+
+func main(){
+
+	sli1 := []int{ 1, 2, 3, 4 }
+	sli2 := []int{ 10, 20, 30, 40 }
+
+	fmt.Println( sli1, sli2 )
+	sli1 = append( sli1, sli2... )
+	fmt.Println( sli1, sli2 )
+
+}
+</code></pre><p>Output:</p>
+<pre tabindex="0"><code>go run Day14/store_new_var.go 
+[1 2 3 4] [10 20 30 40]
+[1 2 3 4 10 20 30 40] [10 20 30 40]
+</code></pre><p>Doc was written in this livestream <a href="https://www.youtube.com/watch?v=-Vp6g79I8C8">[Learn Go Day 14]</a></p>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

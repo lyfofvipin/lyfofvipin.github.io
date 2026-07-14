@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nosql on Kumar Vipin Yadav</title>
+    <link>http://localhost:1313/tags/nosql/</link>
+    <description>Recent content in Nosql on Kumar Vipin Yadav</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nosql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL vs. NoSQL Databases and Essential CRUD Commands</title>
+      <link>http://localhost:1313/basics-of-sql/</link>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/basics-of-sql/</guid>
+      <description>&lt;h1 id=&#34;sql-vs-nosql-databases-and-essential-crud-commands&#34;&gt;SQL vs. NoSQL Databases and Essential CRUD Commands&lt;/h1&gt;&#xA;&lt;p&gt;Hello Everyone! Today we are expanding our data architecture module. When building web applications, choosing how your data is stored is one of the most critical structural decisions you will make.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s break down the two main categories of database systems: &lt;strong&gt;SQL (Relational)&lt;/strong&gt; and &lt;strong&gt;NoSQL (Non-Relational)&lt;/strong&gt;, and learn the native language commands used to manage them.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-sql-vs-nosql-the-core-differences&#34;&gt;1. SQL vs. NoSQL: The Core Differences&lt;/h2&gt;&#xA;&lt;p&gt;Every database fits into one of two major design paradigms based on how it structures its internal storage engine.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

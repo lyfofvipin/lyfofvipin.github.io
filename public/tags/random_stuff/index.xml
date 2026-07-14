@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Random_stuff on Kumar Vipin Yadav</title>
+    <link>http://localhost:1313/tags/random_stuff/</link>
+    <description>Recent content in Random_stuff on Kumar Vipin Yadav</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/random_stuff/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basics Of Flask In Python</title>
+      <link>http://localhost:1313/baiscs-of-flask/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/baiscs-of-flask/</guid>
+      <description>&lt;h2 id=&#34;1-the-development-server-why-do-we-run-flask-run&#34;&gt;1. The Development Server: Why Do We Run &lt;code&gt;flask run&lt;/code&gt;?&lt;/h2&gt;&#xA;&lt;p&gt;When building a website, your Python script cannot talk directly to incoming web traffic out of the box. It needs a gateway module to listen to network ports.&lt;/p&gt;&#xA;&lt;p&gt;When you execute the terminal command &lt;code&gt;flask run&lt;/code&gt; (or invoke &lt;code&gt;app.run()&lt;/code&gt;), Flask initializes a built-in, local &lt;strong&gt;Development Web Server&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-happens-behind-the-scenes&#34;&gt;What Happens Behind the Scenes?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Port Binding:&lt;/strong&gt; The server occupies a specific software gateway on your machine—typically &lt;strong&gt;Port 5000&lt;/strong&gt; on your local loopback address (&lt;code&gt;127.0.0.1&lt;/code&gt; or &lt;code&gt;localhost&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;The Infinite Loop:&lt;/strong&gt; The server runs a continuous loop, monitoring that port. When a browser sends a request, the server intercepts the network packets and hands them over to your Python code.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hot Reloading / Debug Mode:&lt;/strong&gt; When debug mode is active, the server monitors your files. The instant you save a change, it restarts itself automatically, allowing you to see updates instantly without manual resets.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-http-methods-status-codes-and-routes&#34;&gt;2. HTTP Methods, Status Codes, and Routes&lt;/h2&gt;&#xA;&lt;p&gt;To process incoming traffic, your server needs to know &lt;em&gt;where&lt;/em&gt; a user is going and &lt;em&gt;what&lt;/em&gt; action they want to perform.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Basics On Web Development</title>
+      <link>http://localhost:1313/web-dev-basics/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web-dev-basics/</guid>
+      <description>&lt;h2 id=&#34;1-networks-the-internet-and-how-it-works&#34;&gt;1. Networks, the Internet, and How It Works&lt;/h2&gt;&#xA;&lt;p&gt;To understand the web, we first have to understand the physical highway it rides on.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-is-a-network&#34;&gt;What is a Network?&lt;/h3&gt;&#xA;&lt;p&gt;A &lt;strong&gt;Network&lt;/strong&gt; is simply a collection of two or more computers or devices linked together so they can share resources, files, and communicate with each other.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-is-the-internet&#34;&gt;What is the Internet?&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Internet&lt;/strong&gt; is literally an internetwork—a global network of millions of smaller networks connected together. It is a massive, physical infrastructure consisting of underground wires, fiber-optic cables running across ocean floors, satellites, and routers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is Virtualization</title>
+      <link>http://localhost:1313/virtulization/</link>
+      <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/virtulization/</guid>
+      <description>&lt;h3 id=&#34;virtualization&#34;&gt;Virtualization&lt;/h3&gt;&#xA;&lt;p&gt;Virtualization is the process of creating a virtual version of something such as a computer system, server. Instead of using physical hardware for each system or resource, virtualization allows multiple systems or functions to run on a single physical machine.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hypervisor&#34;&gt;Hypervisor&lt;/h2&gt;&#xA;&lt;p&gt;A hypervisor (sometimes called a virtual machine monitor, or VMM) is software that creates, runs, and manages virtual machines (VMs) on a physical computer. It acts as a middle layer between the hardware and the operating systems running in the VMs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Before You Start Learning Python</title>
+      <link>http://localhost:1313/basic_intro._before_starting_python/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/basic_intro._before_starting_python/</guid>
+      <description>&lt;h2&gt;What Is Programming?&lt;/h2&gt;&#xA;&lt;div&gt;    Television shows and films often show programmers furiously typing cryptic&#xA;streams of 1s and 0s on glowing screens, but modern programming isn’t&#xA;that mysterious. Programming is simply the act of instructions for&#xA;the computer to perform. These instructions might crunch some numbers,&#xA;modify text, look up information in files.&#xA;All programs use basic instructions as building blocks like,&#xA;“Do this then do that.”&#xA;“If this condition is true, perform this action; otherwise, do that action.”&#xA;“Do this action that number of times.”&#xA;“Keep doing that until this condition is true.”&lt;/div&gt;&#xA;&lt;div&gt;&lt;/div&gt;&#xA;&lt;h2&gt;What Is Python?&lt;/h2&gt;&#xA;&lt;div&gt;    Python refers to the Python programming language  and the&lt;/div&gt;&#xA;Python interpreter software that reads source code  and&#xA;per-forms its instructions.&#xA;The Python interpreter is free to download from http://python.org/.&#xA;and there are versions for Linux, OS X, and Windows.&#xA;&lt;h2&gt;Programmers Don’t Need to Know Much Math&lt;/h2&gt;&#xA;The most common anxiety I hear about learning to program is that people&#xA;think it requires a lot of math. Actually, most programming doesn’t require&#xA;math beyond basic arithmetic. In fact, being good at programming isn’t&#xA;that different from being good at solving Sudoku puzzles.</description>
+    </item>
+  </channel>
+</rss>

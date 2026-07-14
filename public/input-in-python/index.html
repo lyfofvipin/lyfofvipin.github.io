@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taking User Input and Type Casting in Python · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Taking User Input and Type Casting in Python</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-04T00:00:00Z">
+        Jan 4, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-input-function">The <code>input()</code> Function</a>
+      <ul>
+        <li><a href="#storing-and-checking-user-input">Storing and Checking User Input</a></li>
+      </ul>
+    </li>
+    <li><a href="#personalizing-output-with-f-strings">Personalizing Output with F-Strings</a></li>
+    <li><a href="#truthy-vs-falsy-values">Truthy vs Falsy Values</a></li>
+    <li><a href="#building-an-addition-calculator-input-type-casting">Building an Addition Calculator (Input Type Casting)</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="taking-user-input-and-type-casting-in-python">Taking User Input and Type Casting in Python</h1>
+<p>Hello Everyone! Today we are going to look into how we can make our programs interactive by taking inputs directly from the user. We will also see why understanding data types is critical when dealing with user inputs, and how to perform basic math operations with them.</p>
+<h2 id="the-input-function">The <code>input()</code> Function</h2>
+<p>To read data typed by a user from the keyboard, Python provides the built-in <code>input()</code> function. You can pass a string inside the function to display a prompt message to the user.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Some data: &#34;</span>)
+</span></span></code></pre></div><p>When this line runs, the program pauses and waits for the user to type something and press Enter.</p>
+<h3 id="storing-and-checking-user-input">Storing and Checking User Input</h3>
+<p>To actually use the data the user types, you need to store it inside a variable. Let&rsquo;s see what happens to the data type when we accept input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Something: &#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))
+</span></span></code></pre></div><p><strong>CRITICAL RULE:</strong> No matter what the user types (a name, a whole number, or a decimal), Python&rsquo;s <code>input()</code> function <strong>always reads it as a String (<code>str</code>)</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter A number: &#34;</span>)  <span style="color:#6272a4"># User enters: 45</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(a)                       <span style="color:#6272a4"># Output: 45</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))                 <span style="color:#6272a4"># Output: &lt;class &#39;str&#39;&gt;</span>
+</span></span></code></pre></div><p>Even though it looks like a number on the screen, Python treats it as text characters <code>&quot;45&quot;</code>.</p>
+<hr>
+<h2 id="personalizing-output-with-f-strings">Personalizing Output with F-Strings</h2>
+<p>Once you capture a user&rsquo;s input, you can use F-Strings to create customized greetings smoothly without dealing with messy spacing.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Name: &#34;</span>) <span style="color:#6272a4"># User enters: Vipin</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Good Afternoon </span><span style="color:#f1fa8c">{</span>x<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.&#34;</span>)  <span style="color:#6272a4"># Output: Good Afternoon Vipin.</span>
+</span></span></code></pre></div><hr>
+<h2 id="truthy-vs-falsy-values">Truthy vs Falsy Values</h2>
+<p>When converting variables to booleans using <code>bool()</code>, Python categorizes values into two groups: <strong>Truthy</strong> (values that evaluate to <code>True</code>) and <strong>Falsy</strong> (values that evaluate to <code>False</code>).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Truthy Values (Have Substance)</th>
+          <th>Falsy Values (Empty / Zero)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Numbers like <code>45</code>, <code>-760.9</code></td>
+          <td>The number <code>0</code></td>
+      </tr>
+      <tr>
+          <td>Non-empty strings like <code>&quot;rohit&quot;</code></td>
+          <td>An empty string <code>&quot;&quot;</code></td>
+      </tr>
+      <tr>
+          <td>Booleans like <code>True</code></td>
+          <td>Booleans like <code>False</code></td>
+      </tr>
+      <tr>
+          <td>Non-empty lists like <code>[34]</code></td>
+          <td>Empty lists <code>[]</code> or <code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="building-an-addition-calculator-input-type-casting">Building an Addition Calculator (Input Type Casting)</h2>
+<p>Since <code>input()</code> always brings in text, you cannot perform mathematical operations like addition directly on them. If you try to add two input strings, Python will just paste them together (concatenate them) instead of doing math (e.g., <code>&quot;10&quot; + &quot;20&quot;</code> becomes <code>&quot;1020&quot;</code>).</p>
+<p>To fix this, we must explicitly convert the input strings into integers (<code>int</code>) right after capturing them:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Taking 1st number and converting it to an integer</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter 1st Number: &#34;</span>)
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(a)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Taking 2nd number and converting it to an integer</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter 2nd Number: &#34;</span>)
+</span></span><span style="display:flex;"><span>b <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(b)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Now they are integers, so + will add them mathematically!</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(a <span style="color:#ff79c6">+</span> b) 
+</span></span></code></pre></div><p><em>Here is the execution:</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python name_of_program.py
+</span></span><span style="display:flex;"><span>Enter 1st Number: <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>Enter 2nd Number: <span style="color:#bd93f9">20</span>
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">30</span>
+</span></span></code></pre></div>
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

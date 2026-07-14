@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variable and data type  in C · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Variable and data type  in C</h1>
+    
+    <div class="post-meta">
+      <time datetime="2017-06-12T00:00:00Z">
+        Jun 12, 2017
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#c</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rules-to-create-variable-names-in-c">Rules To Create Variable Names in C</a></li>
+    <li><a href="#let-us-discuss-different-data-types-in-c">Let us discuss different data types in C</a>
+      <ul>
+        <li><a href="#primary-data-type"><em>PRIMARY DATA TYPE</em></a></li>
+        <li><a href="#secondary-data-type"><em>SECONDARY DATA TYPE</em></a></li>
+        <li><a href="#primary-data-type-1">PRIMARY DATA TYPE</a>
+          <ul>
+            <li><a href="#integer">Integer</a></li>
+            <li><a href="#float-data-type">Float data type</a></li>
+            <li><a href="#character-data-type">Character data type</a></li>
+            <li><a href="#double-data-type">Double data type</a></li>
+            <li><a href="#void-data-type">Void data type</a></li>
+          </ul>
+        </li>
+        <li><a href="#secondary-data-type-1">SECONDARY DATA TYPE</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-define-variables-in-c">How to define variables in C</a></li>
+    <li><a href="#format-specifiers">Format specifiers</a>
+      <ul>
+        <li><a href="#integers">integers</a></li>
+        <li><a href="#characters">characters</a></li>
+        <li><a href="#float">float</a></li>
+      </ul>
+    </li>
+    <li><a href="#flags-for-format-specifiers">Flags For Format Specifiers</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="using-variables">Using variables</h1>
+<p>C variable is nothing but it is just a name is given to any data type or to any storage area that our program can use.</p>
+<h2 id="rules-to-create-variable-names-in-c">Rules To Create Variable Names in C</h2>
+<p>The name of a variable can be composed of letters, digits and the underscores.</p>
+<ul>
+<li>A variable names can not have any character then underscore <code>_</code>.</li>
+<li>A variable names can not start with an numeric value</li>
+<li>Variable names in C are case sensitive ( variable name <code>system</code> and <code>System</code> are not same ).</li>
+<li>A variable name can not be defined twice.</li>
+<li>It should not be a keyword of c.</li>
+<li>You can not redefine or redeclare a variable in C</li>
+</ul>
+<p><em>NOTE: Name of variable should be of your choice.</em></p>
+<p>Find Correct Names:</p>
+<p><code>void</code></p>
+<p><code>1var</code></p>
+<p><code>_test</code></p>
+<p><code>test-var</code></p>
+<p>A data type is nothing it is just the type of data we are using like if integer character decimal number and Many other kind of data.</p>
+<h2 id="let-us-discuss-different-data-types-in-c">Let us discuss different data types in C</h2>
+<h3 id="primary-data-type"><em>PRIMARY DATA TYPE</em></h3>
+<h3 id="secondary-data-type"><em>SECONDARY DATA TYPE</em></h3>
+<h3 id="primary-data-type-1">PRIMARY DATA TYPE</h3>
+<h4 id="integer">Integer</h4>
+<p>It is Kind of data type which tell that a integer is being used in a program
+in easy language we can say that a number is use in our program.</p>
+<h4 id="float-data-type">Float data type</h4>
+<p>It is also act as double data type it also tell that it is a molecule your program
+but it round off that decimal number.</p>
+<h4 id="character-data-type">Character data type</h4>
+<p>It is a kind of data type which tell that a character
+even that is symbol for a letter or an alphabet is used in our program.</p>
+<h4 id="double-data-type">Double data type</h4>
+<p>This data type tell us that a decimal number is being used a program for printing for taking a decimal number from user
+the same work is being done by float data type but
+float data type round off our number and double data type does not round orf number.</p>
+<h4 id="void-data-type">Void data type</h4>
+<p>This is a data type has no value we use it to set any null or no value to a variable.</p>
+<h3 id="secondary-data-type-1">SECONDARY DATA TYPE</h3>
+<p>This data type use while we learn modular programming
+in c they form using primary data types.</p>
+<h2 id="how-to-define-variables-in-c">How to define variables in C</h2>
+<p>To define variables in C language we have to first mention the type of data like <code>int</code>, <code>float</code> etc..</p>
+<p>Then we mention variable name and setting value during the definition is optional but we can do that.</p>
+<p>Example:</p>
+<p><code>int var_name;</code></p>
+<p><code>float var_name;</code></p>
+<p><code>int var_name = 45;</code></p>
+<p><code>int var_name = +45;</code></p>
+<p><code>int var_name = -45;</code></p>
+<p><code>int var_name = 45, var_name2;</code></p>
+<h2 id="format-specifiers">Format specifiers</h2>
+<p>Format specifiers helps us in printing multiple data types in a single statement.
+They specifies type of data we are using in the statement.</p>
+<h3 id="integers">integers</h3>
+<p><code>%d</code> specifier is used to display integers with decimal base</p>
+<p><code>%o</code> specifier is used to display integers with octal base</p>
+<p><code>%x</code> specifier is used to display integers with hexa base</p>
+<h3 id="characters">characters</h3>
+<p><code>%c</code> specifier is used to display characters example <code>&quot;a&quot;</code>, <code>&quot;(&quot;</code>, <code>&quot;#&quot;</code> etc&hellip;</p>
+<h3 id="float">float</h3>
+<p><code>%f</code> specifier is used to display float till 6 decimal places.</p>
+<p><code>%g</code> specifier is used to display float till user given decimal places ( It will round off the value ).</p>
+<p><code>%e</code> specifier is used to display float in scientific users.</p>
+<h2 id="flags-for-format-specifiers">Flags For Format Specifiers</h2>
+<p>We can use flags with format specifiers to settle our output in a pretty manner.</p>
+<p>Example:</p>
+<p><code>printf(&quot;%4d&quot;, 34)</code></p>
+<p><code>printf(&quot;%.4d&quot;, 34)</code></p>
+<p><code>printf(&quot;%10.4f&quot;, 34.45)</code></p>
+<p><code>printf(&quot;%.4f&quot;, 34.45)</code></p>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

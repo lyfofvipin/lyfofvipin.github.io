@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basics On Web Development · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Basics On Web Development</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-12-29T00:00:00Z">
+        Dec 29, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#random_stuff</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-networks-the-internet-and-how-it-works">1. Networks, the Internet, and How It Works</a>
+      <ul>
+        <li><a href="#what-is-a-network">What is a Network?</a></li>
+        <li><a href="#what-is-the-internet">What is the Internet?</a></li>
+        <li><a href="#how-does-it-work">How Does It Work?</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-the-client-server-model--web-servers">2. The Client-Server Model &amp; Web Servers</a>
+      <ul>
+        <li><a href="#what-is-a-client">What is a Client?</a></li>
+        <li><a href="#what-is-a-server">What is a Server?</a></li>
+        <li><a href="#what-is-a-web-server">What is a Web Server?</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-packets-and-how-data-travels">3. Packets and How Data Travels</a>
+      <ul>
+        <li><a href="#what-is-a-packet">What is a Packet?</a></li>
+        <li><a href="#how-data-travels">How Data Travels</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-web-browsers-vs-search-engines">4. Web Browsers vs. Search Engines</a></li>
+    <li><a href="#5-domain-names-dns-and-how-it-works">5. Domain Names, DNS, and How It Works</a>
+      <ul>
+        <li><a href="#what-is-a-domain">What is a Domain?</a></li>
+        <li><a href="#what-is-dns-domain-name-system">What is DNS (Domain Name System)?</a></li>
+        <li><a href="#how-a-dns-lookup-works">How a DNS Lookup Works:</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-demystifying-protocols-http-vs-https">6. Demystifying Protocols: HTTP vs. HTTPS</a>
+      <ul>
+        <li><a href="#what-is-http">What is HTTP?</a></li>
+        <li><a href="#what-is-https">What is HTTPS?</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-anatomy-of-a-url">7. Anatomy of a URL</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h2 id="1-networks-the-internet-and-how-it-works">1. Networks, the Internet, and How It Works</h2>
+<p>To understand the web, we first have to understand the physical highway it rides on.</p>
+<h3 id="what-is-a-network">What is a Network?</h3>
+<p>A <strong>Network</strong> is simply a collection of two or more computers or devices linked together so they can share resources, files, and communicate with each other.</p>
+<h3 id="what-is-the-internet">What is the Internet?</h3>
+<p>The <strong>Internet</strong> is literally an internetwork—a global network of millions of smaller networks connected together. It is a massive, physical infrastructure consisting of underground wires, fiber-optic cables running across ocean floors, satellites, and routers.</p>
+<h3 id="how-does-it-work">How Does It Work?</h3>
+<p>Every device connected to the internet is assigned a unique identifier called an <strong>IP Address</strong> (Internet Protocol Address), which looks like a string of numbers (e.g., <code>192.168.1.1</code>). Think of an IP address as a digital mailing address. When two computers communicate over the internet, they find each other using these precise numerical addresses.</p>
+<hr>
+<h2 id="2-the-client-server-model--web-servers">2. The Client-Server Model &amp; Web Servers</h2>
+<p>The entire web operates on a fundamental division of labor called the <strong>Client-Server Model</strong>.</p>
+<h3 id="what-is-a-client">What is a Client?</h3>
+<p>The <strong>Client</strong> is the device or application requesting information. When you look at a website on your phone, laptop, or smart TV, your web browser acts as the client.</p>
+<h3 id="what-is-a-server">What is a Server?</h3>
+<p>A <strong>Server</strong> is a high-powered computer that runs 24/7, waiting to &ldquo;serve&rdquo; up data, files, or images to any client that asks for them.</p>
+<h3 id="what-is-a-web-server">What is a Web Server?</h3>
+<p>While a &ldquo;server&rdquo; can refer to the physical machine, a <strong>Web Server</strong> is specific software (like Apache or Nginx) running on that machine. Its sole job is to understand incoming web requests and deliver the correct files (HTML, CSS, JavaScript, images) back to the client&rsquo;s browser.</p>
+<hr>
+<h2 id="3-packets-and-how-data-travels">3. Packets and How Data Travels</h2>
+<p>Data on the internet doesn&rsquo;t travel as one giant file. If you try to download a massive high-definition video all at once, it would clog the network lines.</p>
+<h3 id="what-is-a-packet">What is a Packet?</h3>
+<p>To solve this, files are chopped up into thousands of tiny, bite-sized pieces called <strong>Packets</strong>. Each packet contains:</p>
+<ul>
+<li>A chunk of the actual data payload.</li>
+<li>A header containing metadata (the sender&rsquo;s IP address, the destination&rsquo;s IP address, and the packet&rsquo;s sequence number).</li>
+</ul>
+<h3 id="how-data-travels">How Data Travels</h3>
+<p>When you click a link, the server splits the webpage data into packets. These packets are sent across the internet via devices called <strong>Routers</strong>.</p>
+<p>Routers act like traffic cops, directing each packet along the fastest available path. Because network traffic changes rapidly, individual packets belonging to the exact same file might take completely different routes across the globe. Once all the packets arrive at your browser, they look at the sequence numbers in the headers and reassemble themselves back into the complete webpage you see on your screen.</p>
+<hr>
+<h2 id="4-web-browsers-vs-search-engines">4. Web Browsers vs. Search Engines</h2>
+<p>Beginners frequently confuse these two terms, but they play completely different roles in your web experience.</p>
+<ul>
+<li><strong>Web Browser:</strong> A software application installed locally on your device (e.g., Google Chrome, Safari, Firefox) used to display websites. It takes the code (HTML/CSS) sent by a server and translates it into a visual webpage you can interact with.</li>
+<li><strong>Search Engine:</strong> A website inside the browser (e.g., Google, Bing, DuckDuckGo) used to find other websites. Search engines use automated bots called &ldquo;crawlers&rdquo; to map out the web and create a searchable index of pages.</li>
+</ul>
+<hr>
+<h2 id="5-domain-names-dns-and-how-it-works">5. Domain Names, DNS, and How It Works</h2>
+<p>Computers love numbers, but humans love words. It&rsquo;s much easier to remember <code>google.com</code> than <code>142.250.190.46</code>. This is where domains and the DNS come into play.</p>
+<h3 id="what-is-a-domain">What is a Domain?</h3>
+<p>A <strong>Domain Name</strong> is the human-readable text string we type into a browser to visit a website (e.g., <code>wikipedia.org</code>).</p>
+<h3 id="what-is-dns-domain-name-system">What is DNS (Domain Name System)?</h3>
+<p>The <strong>DNS</strong> is often called the &ldquo;phonebook of the internet.&rdquo; It is a decentralized network of servers whose only job is to map human-readable domain names to their actual computer IP addresses.</p>
+<h3 id="how-a-dns-lookup-works">How a DNS Lookup Works:</h3>
+<ol>
+<li>You type <code>example.com</code> into your browser.</li>
+<li>Your computer checks its local memory cache. If it doesn&rsquo;t know the address, it sends a request to a <strong>DNS Resolver</strong> (usually managed by your Internet Service Provider).</li>
+<li>The resolver asks a chain of specialized servers (Root, TLD, and Authoritative nameservers) until it finds the exact matching record.</li>
+<li>The DNS system returns the IP address (e.g., <code>93.184.216.34</code>) back to your browser.</li>
+<li>Your browser now uses that IP address to talk directly to the target web server.</li>
+</ol>
+<hr>
+<h2 id="6-demystifying-protocols-http-vs-https">6. Demystifying Protocols: HTTP vs. HTTPS</h2>
+<p>Once your browser knows the server&rsquo;s IP address, they need a standardized language to speak to each other. That language is a <strong>Protocol</strong>.</p>
+<h3 id="what-is-http">What is HTTP?</h3>
+<p><strong>HTTP</strong> stands for <em>Hypertext Transfer Protocol</em>. It is the foundational set of rules governing how web browsers and web servers send data back and forth. When a browser sends an HTTP request, the server responds with an HTTP response status code (like <code>200 OK</code> or <code>404 Not Found</code>).</p>
+<h3 id="what-is-https">What is HTTPS?</h3>
+<p><strong>HTTPS</strong> stands for <em>Hypertext Transfer Protocol Secure</em>. The standard HTTP protocol sends data over the wire in plain, readable text. If you type your credit card into an old HTTP site, an attacker sitting on your Wi-Fi network could read it instantly.</p>
+<p>HTTPS adds an explicit layer of security using encryption protocols called <strong>SSL/TLS</strong>. This scrambles the data before it leaves your device, making it completely unreadable to anyone intercepting it along the way.</p>
+<hr>
+<h2 id="7-anatomy-of-a-url">7. Anatomy of a URL</h2>
+<p>A <strong>URL</strong> (Uniform Resource Locator) is the complete web address used to target a specific resource or page on the internet. A URL is composed of several distinct building blocks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>https://blog.example.com:80/courses/web-dev?session=1#intro
+</span></span></code></pre></div><ul>
+<li><strong>Protocol (<code>https://</code>):</strong> Declares the set of communication rules the browser must use to connect.</li>
+<li><strong>Subdomain (<code>blog.</code>):</strong> An optional prefix used to organize separate sections of a larger website ecosystem.</li>
+<li><strong>Domain Name (<code>example.com</code>):</strong> The primary registered destination identity pointing to the target server.</li>
+<li><strong>Port (<code>:80</code>):</strong> The specific digital gateway or channel on the server being targeted. (HTTP defaults to port 80; HTTPS defaults to port 443). Ports are usually hidden in your browser bar automatically.</li>
+<li><strong>Path (<code>/courses/web-dev</code>):</strong> Points to the specific file directory location or page path inside that server&rsquo;s architecture.</li>
+<li><strong>Query Parameters (<code>?session=1</code>):</strong> Extra data keys passed dynamically to the backend server script (separated by a question mark).</li>
+<li><strong>Anchor/Fragment (<code>#intro</code>):</strong> An internal bookmark instruction telling your browser to scroll instantly to a specific heading ID on that page.</li>
+</ul>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

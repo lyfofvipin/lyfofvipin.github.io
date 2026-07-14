@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting Started With Jenkins Pipelines · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Getting Started With Jenkins Pipelines</h1>
+    
+    <div class="post-meta">
+      <time datetime="2024-03-30T00:00:00Z">
+        Mar 30, 2024
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#jenkins</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-continuous-integration">What is Continuous Integration?</a></li>
+    <li><a href="#what-is-continuous-delivery">What is Continuous Delivery?</a></li>
+    <li><a href="#what-is-jenkins-pipeline">What Is Jenkins Pipeline?</a></li>
+    <li><a href="#why-pipeline">Why Pipeline?</a></li>
+    <li><a href="#what-is-jenkins-pipeline-job">What Is Jenkins Pipeline Job?</a></li>
+    <li><a href="#different-between-jenkins-freestyle-and-pipeline-jobs">Different Between Jenkins Freestyle and Pipeline Jobs</a></li>
+    <li><a href="#writing-first-jenkins-pipeline-job">Writing First Jenkins Pipeline Job</a></li>
+    <li><a href="#creating-a-jenkinsfile">Creating a Jenkinsfile</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h2 id="what-is-continuous-integration">What is Continuous Integration?</h2>
+<p>Continuous Integration is a process of integrating code changes from multiple developers in a single project many times. The software is tested immediately after a code commit. With each code commit, code is built and tested.</p>
+<h2 id="what-is-continuous-delivery">What is Continuous Delivery?</h2>
+<p>A continuous delivery (CD) pipeline is an automated expression of your process for getting software from version control right through to your users and customers. Every change to your software (committed in source control) goes through a complex process on its way to being released. This process involves building the software in a reliable and repeatable manner, as well as progressing the built software (called a &ldquo;build&rdquo;) through multiple stages of testing and deployment.</p>
+<h2 id="what-is-jenkins-pipeline">What Is Jenkins Pipeline?</h2>
+<p>In Jenkins, a pipeline is a group of events or jobs which are linked with one another in a sequence.
+Now this can be a group of Freestyle Jobs arranged together with help pf the plugin <a href="https://plugins.jenkins.io/build-pipeline-plugin/">Build Pipeline</a> or we can create a <a href="#what-is-jenkins-pipeline-Job">Jenkins pipeline</a>.</p>
+<h2 id="why-pipeline">Why Pipeline?</h2>
+<p>Jenkins is, fundamentally, an automation engine which supports a number of automation patterns. Pipeline adds a powerful set of automation tools onto Jenkins, supporting use cases that span from simple continuous integration to comprehensive CD pipelines</p>
+<h2 id="what-is-jenkins-pipeline-job">What Is Jenkins Pipeline Job?</h2>
+<p>Jenkins Pipeline Job is a combination of plugins that support the integration and implementation of continuous delivery pipelines using Jenkins for more on the same you can follow <a href="https://www.jenkins.io/doc/book/pipeline">this</a>.</p>
+<h2 id="different-between-jenkins-freestyle-and-pipeline-jobs">Different Between Jenkins Freestyle and Pipeline Jobs</h2>
+<p>Major differences can be seen in these points:</p>
+<ul>
+<li>Code review/iteration on the Pipeline</li>
+<li>Single source of truth for the Pipeline, which can be viewed and edited by multiple members of the project.</li>
+<li>Can be easily shared between multiple Jenkins Server</li>
+<li>Pipelines can survive both planned and unplanned restarts of the Jenkins controller</li>
+<li>The Pipeline plugin supports custom extensions to its DSL and multiple options for integration with other plugins.</li>
+</ul>
+<h2 id="writing-first-jenkins-pipeline-job">Writing First Jenkins Pipeline Job</h2>
+<p>Pipeline as Code describes a set of features that allow Jenkins users to define pipelined job processes with code, stored and versioned in a source repository. These features allow Jenkins to discover.</p>
+<p>Before we move ahead we need to have <a href="https://plugins.jenkins.io/workflow-aggregator/">Pipeline</a> plugin installed on our Jenkins Serer.</p>
+<p>Now to write a Jenkins Pipeline as Code there are two ways of writing scripts <a href="https://www.jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline">Scripted</a> and <a href="https://www.jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline">Declarative</a>. It&rsquo;s recommended to use the declarative syntax because it&rsquo;s pretty easy to write and there is an extra option with the declarative syntax is that you can restart the pipeline from any stage you want which you can not do with scripted.
+But there is limitation as well with the declarative that there is an old <a href="https://issues.jenkins.io/browse/JENKINS-37984">issue</a> that you cannot exceed a single pipeline code more than around 495 lines.</p>
+<p>We will be going through the recommended method for this article.</p>
+<h2 id="creating-a-jenkinsfile">Creating a Jenkinsfile</h2>
+<p>Jenkinsfile Domain Specific  Language (DSL) are basic defined semantic to integrate the jenkins plugins in a single pipeline.</p>
+<p>You can check <a href="https://www.jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline">Declarative Syntax</a> for more detailed info on the same.
+or you can checkout this <a href="https://jenkinsci.github.io/job-dsl-plugin">DSL Syntax</a> to get all the plugin semantic for Pipeline Jobs.</p>
+<p>Now here is the basic pipeline.</p>
+<pre tabindex="0"><code>pipeline{
+    agent &#39;any&#39;
+    stages{
+        stage(&#34;Stage_Name&#34;){
+            steps{
+                sh &#34;echo Test Stage.; pwd; hostname&#34;
+            }
+        }
+    }
+    post{
+        success{
+            cleanWs()
+        }
+    }
+}
+</code></pre><p><code>pipeline</code> &ndash;&gt; This block is a <code>Required</code> and the main block which contains every other block of a pipeline and this is the block from where the pipeline execution starts.
+Now this is not mandatory that Jenkinsfile should start with the pipeline block it can have some other groovy code written about the pipeline block or their can be some properties that can be set before the pipeline.</p>
+<p><code>agent</code> &ndash;&gt; Agent is a <code>Required</code> block is to pass the name of the Jenkins agent on which you want to execute this pipeline now currently I have written <code>any</code> that basically means that the pipeline will be executed on any available agent on Jenkins.</p>
+<p>Below is the syntax if you want to pass a agent name to the same.</p>
+<pre tabindex="0"><code>agent{
+    label &#39;agent_label&#39;
+}
+</code></pre><p><code>stages</code> &ndash;&gt; Stages is a <code>Required</code> block in a Jenkins pipeline this block has multiple stage performing there own defined stage let&rsquo;s say building, testing and deploying.</p>
+<p><code>stage</code> &ndash;&gt; Stage is a <code>Required</code> block in a Jenkins pipeline this block has a steps block or some conditions or any other setting that can apply on a stage.
+Now each stage has there <em>unique name</em> which is also <code>Required</code>.</p>
+<p><code>steps</code> &ndash;&gt; Steps is a <code>Required</code> block in this block we write the actual steps those are performing the tasks it can be running a shell script running a python script a cypress command or can be running steps to archive the logs or can be of sending the mail or anything.</p>
+<p>Here is a little long pipeline with three different stages.</p>
+<pre tabindex="0"><code>pipeline {
+    agent any
+
+    stages {
+        stage(&#39;Build&#39;) {
+            steps {
+                echo &#39;Building..&#39;
+            }
+        }
+        stage(&#39;Test&#39;) {
+            steps {
+                echo &#39;Testing..&#39;
+            }
+        }
+        stage(&#39;Deploy&#39;) {
+            steps {
+                echo &#39;Deploying....&#39;
+            }
+        }
+    }
+}
+</code></pre>
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

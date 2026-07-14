@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json on Kumar Vipin Yadav</title>
+    <link>http://localhost:1313/tags/json/</link>
+    <description>Recent content in Json on Kumar Vipin Yadav</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSON Parsing and Serialization in Python</title>
+      <link>http://localhost:1313/json-module-python/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/json-module-python/</guid>
+      <description>&lt;h1 id=&#34;master-guide-to-json-parsing-and-serialization-in-python&#34;&gt;Master Guide to JSON Parsing and Serialization in Python&lt;/h1&gt;&#xA;&lt;p&gt;Hello Everyone! Today we are exploring &lt;strong&gt;JSON (JavaScript Object Notation)&lt;/strong&gt; and learning how to translate it into native Python objects using the built-in &lt;strong&gt;&lt;code&gt;json&lt;/code&gt;&lt;/strong&gt; module.&lt;/p&gt;&#xA;&lt;p&gt;JSON is the standard format for web data exchange. Whether you are building web APIs, fetching data from external services, or saving local configuration files, you will use JSON constantly.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-what-is-json&#34;&gt;1. What is JSON?&lt;/h2&gt;&#xA;&lt;p&gt;JSON is a lightweight, plain-text, language-independent data format. Even though it has &amp;ldquo;JavaScript&amp;rdquo; in its name, almost all programming languages have built-in tools to read and write it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

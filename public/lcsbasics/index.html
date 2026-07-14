@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computer Science Basics · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Computer Science Basics</h1>
+    
+    <div class="post-meta">
+      <time datetime="2024-11-09T00:00:00Z">
+        Nov 9, 2024
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#cs</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hardware">Hardware:</a></li>
+    <li><a href="#software">Software:</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#system-software">System Software:</a></li>
+    <li><a href="#application-software">Application Software:</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#low-level-languages">Low-Level Languages</a></li>
+    <li><a href="#high-level-languages">High-Level Languages</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#compiler">Compiler</a>
+      <ul>
+        <li><a href="#how-a-compiler-works"><em>How a Compiler Works</em></a></li>
+      </ul>
+    </li>
+    <li><a href="#interpreter">Interpreter</a>
+      <ul>
+        <li><a href="#how-an-interpreter-works"><em>How an Interpreter Works</em></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#frontend-developer">Frontend Developer</a></li>
+    <li><a href="#backend-developer">Backend Developer</a></li>
+    <li><a href="#full-stack-developer">Full-Stack Developer</a></li>
+    <li><a href="#mobile-developer">Mobile Developer</a></li>
+    <li><a href="#devops-engineer">DevOps Engineer</a></li>
+    <li><a href="#game-developer">Game Developer</a></li>
+    <li><a href="#software-engineer">Software Engineer</a></li>
+    <li><a href="#security-developer-security-engineer">Security Developer (Security Engineer)</a></li>
+    <li><a href="#database-developer">Database Developer</a></li>
+    <li><a href="#cloud-developer">Cloud Developer</a></li>
+    <li><a href="#uiux-designer-and-developer">UI/UX Designer (and Developer)</a></li>
+    <li><a href="#artificial-intelligence-ai--machine-learning-ml-developer">Artificial Intelligence (AI) / Machine Learning (ML) Developer</a></li>
+    <li><a href="#embedded-systems-developer">Embedded Systems Developer</a></li>
+    <li><a href="#blockchain-developer">Blockchain Developer</a></li>
+    <li><a href="#quality-assurance-qa-developer--tester">Quality Assurance (QA) Developer / Tester</a></li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <p><em>Hardware and software are two fundamental components of any computing system, and they work together to enable the device to function properly.</em></p>
+<h2 id="hardware">Hardware:</h2>
+<p>Hardware refers to the physical components of a computer or electronic system that you can touch and see. These are the tangible parts that perform the actual tasks of processing, storing, and communicating data.</p>
+<h2 id="software">Software:</h2>
+<p>Software refers to the intangible programs or instructions that tell the hardware how to operate and what tasks to perform. It is the code that makes the hardware functional or to utilize them in the maximum way possible.</p>
+<h1 id="software-can-be-divided-into-two-main-categories">Software can be divided into two main categories</h1>
+<h2 id="system-software">System Software:</h2>
+<p>This includes the operating system (OS) that manages hardware resources and provides a platform for running other programs. Examples include:
+Operating Systems: Windows, macOS, Linux, etc.
+Device Drivers: Small programs that allow the operating system to communicate with hardware components (like printers, graphics cards, etc.).
+Utility Programs: Software that performs maintenance tasks, such as antivirus programs or disk management tools.</p>
+<h2 id="application-software">Application Software:</h2>
+<p>These are programs designed for end-users to perform specific tasks like what&rsquo;s app etc.
+Examples include:
+Productivity Software: Word processors, spreadsheets (e.g., Microsoft Word, Excel).
+Web Browsers: Software for accessing the internet (e.g., Google Chrome, Firefox).
+Games, Media Players, and other Specialized Software: Programs for entertainment, education, or business needs.</p>
+<h1 id="programming-language">Programming language</h1>
+<p>Programming language are the tools developers use to write instructions that computers can execute. Each programming language has its syntax, rules, and areas of application.</p>
+<h2 id="low-level-languages">Low-Level Languages</h2>
+<p>Low-level languages are closer to the hardware and provide less abstraction from the machine&rsquo;s architecture. They give the programmer more control over hardware resources (like memory), but they are generally harder to use due to the complexity of managing things like memory and processor instructions manually.</p>
+<ol>
+<li>
+<p>Closer to Machine Code</p>
+</li>
+<li>
+<p>Manual Memory Management</p>
+</li>
+<li>
+<p>Faster Execution</p>
+</li>
+<li>
+<p>Harder to Learn and Use</p>
+</li>
+<li>
+<p>Platform-Specific</p>
+</li>
+</ol>
+<h2 id="high-level-languages">High-Level Languages</h2>
+<p>High-level languages provide a high level of abstraction from the hardware. They are easier for humans to read and write, focusing more on solving problems than managing system resources.</p>
+<ol>
+<li>
+<p>Abstracted from Hardware</p>
+</li>
+<li>
+<p>Easier to Learn and Use</p>
+</li>
+<li>
+<p>Less Control over Hardware</p>
+</li>
+<li>
+<p>Portability</p>
+</li>
+<li>
+<p>Slower Execution</p>
+</li>
+</ol>
+<h1 id="compilers-and-interpreter">Compilers and Interpreter</h1>
+<p>Compilers and interpreters are both tools that translate source code written in programming languages (like C, Java, or Python) into machine code or an intermediate form that a computer can execute. However, they do this in very different ways.</p>
+<img class="img_center" src="statics/img/compiler_and_interpriter.png" alt="Compilers and Interpreter">
+<h2 id="compiler">Compiler</h2>
+<p>A compiler is a program that translates the entire source code of a program into machine code or an intermediate code in one go. The output is an executable file that can be run later, independently of the source code.</p>
+<h3 id="how-a-compiler-works"><em>How a Compiler Works</em></h3>
+<p>Source Code: The programmer writes code in a programming language (e.g., C, C++, etc..).</p>
+<p>Compilation: The compiler reads the entire source code and translates it into machine code or bytecode (depending on the language). This process happens all at once.</p>
+<p>Executable: After successful compilation, the result is an executable file (like .exe on Windows or a binary file on Linux/macOS). This file can be run on any compatible system without needing the source code or the compiler.</p>
+<p>Execution: Once compiled, the program is executed independently of the compilation process.</p>
+<h2 id="interpreter">Interpreter</h2>
+<p>An interpreter translates and executes the program line-by-line at runtime. It reads each line of source code, translates it to machine code, and then immediately executes it, all in a single process.</p>
+<h3 id="how-an-interpreter-works"><em>How an Interpreter Works</em></h3>
+<p>Source Code: The programmer writes the source code in a high-level programming language (e.g., Python, JavaScript).</p>
+<p>Interpretation: The interpreter processes the code one statement or line at a time. It translates and executes each line as it reads it.</p>
+<p>Execution: The program is executed immediately by the interpreter, without the need for a separate compilation step.</p>
+<h1 id="type-of-developers">Type Of Developers</h1>
+<h2 id="frontend-developer">Frontend Developer</h2>
+<p>Focus: User Interface (UI) and User Experience (UX).</p>
+<p>Responsibilities: Frontend developers are responsible for everything the user interacts with on a website or web application, like layout, design, and functionality.</p>
+<p>Key Skills: HTML, CSS, JavaScript, front-end frameworks (e.g., React, Angular, Vue.js).</p>
+<p>Tools: Code editors (VS Code, Sublime), version control (Git), debugging tools.</p>
+<h2 id="backend-developer">Backend Developer</h2>
+<p>Focus: Server-side logic, databases, and APIs.</p>
+<p>Responsibilities: Backend developers work on the server, databases, and application logic that powers the front. They handle data processing, server requests, authentication, and more.</p>
+<p>Key Skills: Programming languages (Python, Java, Ruby, Node.js, C#, PHP), database management (SQL, NoSQL), API development.
+Tools: Server environments (Apache, Nginx), cloud platforms (AWS, Azure), databases (MySQL, MongoDB), version control.</p>
+<h2 id="full-stack-developer">Full-Stack Developer</h2>
+<p>Focus: Both frontend and backend.</p>
+<p>Responsibilities: Full-stack developers can work on both the client-side and the server-side of an application. They handle the entire flow of data between the frontend and backend.</p>
+<p>Key Skills: Combination of frontend and backend technologies (HTML/CSS/JavaScript for frontend, Node.js, Python, or Ruby for backend, etc.).</p>
+<p>Tools: Same as frontend and backend, but with the added ability to manage both ends of a web application.</p>
+<h2 id="mobile-developer">Mobile Developer</h2>
+<p>Focus: Developing mobile applications for smartphones and tablets.</p>
+<p>Responsibilities: Mobile developers specialize in building apps for iOS, Android, or cross-platform solutions.</p>
+<p>Key Skills: Swift (for iOS), Kotlin/Java (for Android), React Native, Flutter (cross-platform), mobile UI/UX principles.</p>
+<p>Tools: IDEs like Xcode (for iOS), Android Studio (for Android), and tools for mobile testing.</p>
+<h2 id="devops-engineer">DevOps Engineer</h2>
+<p>Focus: System automation, deployment, and infrastructure management.</p>
+<p>Responsibilities: DevOps engineers bridge the gap between development and operations by focusing on automation, continuous integration/continuous deployment (CI/CD), and infrastructure as code.</p>
+<p>Key Skills: Linux/Unix, cloud platforms (AWS, Azure, Google Cloud), containerization (Docker, Kubernetes), CI/CD tools (Jenkins, CircleCI).</p>
+<p>Tools: Version control systems, cloud management tools, automation tools, monitoring tools.</p>
+<h2 id="game-developer">Game Developer</h2>
+<p>Focus: Creating video games across different platforms (PC, consoles, mobile).</p>
+<p>Responsibilities: Game developers work on creating game logic, physics, graphics, AI, and multiplayer aspects of games.</p>
+<p>Key Skills: C++, C#, Unity, Unreal Engine, game design principles, 3D graphics, game physics.</p>
+<p>Tools: Game engines (Unity, Unreal Engine), IDEs, graphics design tools, sound and animation tools.</p>
+<h2 id="software-engineer">Software Engineer</h2>
+<p>Focus: Designing and building software applications.</p>
+<p>Responsibilities: Software engineers are responsible for developing software solutions, typically by applying engineering principles and methods.</p>
+<p>Key Skills: Knowledge of algorithms, data structures, design patterns, software testing, various programming languages (Java, Python, C++).</p>
+<p>Tools: IDEs, version control systems, debugging tools, testing frameworks.</p>
+<h2 id="security-developer-security-engineer">Security Developer (Security Engineer)</h2>
+<p>Focus: Ensuring the security of applications and systems.</p>
+<p>Responsibilities: Security developers focus on protecting software from vulnerabilities, data breaches, and other security threats.</p>
+<p>Key Skills: Encryption, secure coding practices, penetration testing, threat modeling.</p>
+<p>Tools: Security analysis tools, firewall management, intrusion detection systems.</p>
+<h2 id="database-developer">Database Developer</h2>
+<p>Focus: Database design, management, and optimization.</p>
+<p>Responsibilities: Database developers create and maintain databases, write queries, and optimize performance. They ensure that data is stored securely and efficiently.</p>
+<p>Key Skills: SQL, NoSQL, database management systems (MySQL, PostgreSQL, MongoDB), data modeling.</p>
+<p>Tools: Database management tools, query optimization tools, version control for database schemas.</p>
+<h2 id="cloud-developer">Cloud Developer</h2>
+<p>Focus: Cloud computing and services.</p>
+<p>Responsibilities: Cloud developers design and build applications that run on cloud platforms, taking advantage of scalable, distributed computing resources.</p>
+<p>Key Skills: Cloud platforms (AWS, Azure, Google Cloud), serverless architecture, microservices.</p>
+<p>Tools: Cloud SDKs, containerization tools (Docker), cloud-specific IDEs and deployment tools.</p>
+<h2 id="uiux-designer-and-developer">UI/UX Designer (and Developer)</h2>
+<p>Focus: User Interface (UI) and User Experience (UX) design.</p>
+<p>Responsibilities: UI/UX designers and developers focus on how users interact with a system. They design and implement interfaces that are intuitive, visually appealing, and responsive.</p>
+<p>Key Skills: User research, reframing, prototyping (Figma, Sketch), frontend development (HTML/CSS/JS), accessibility principles.</p>
+<p>Tools: Design tools (Figma, Adobe XD), web development tools (for frontend implementation).</p>
+<h2 id="artificial-intelligence-ai--machine-learning-ml-developer">Artificial Intelligence (AI) / Machine Learning (ML) Developer</h2>
+<p>Focus: Building systems that can learn from data and make decisions.</p>
+<p>Responsibilities: AI/ML developers work on algorithms and models that enable computers to recognize patterns, make predictions, or automate tasks without explicit programming.</p>
+<p>Key Skills: Python, R, deep learning frameworks (TensorFlow, PyTorch), data analysis, natural language processing (NLP), computer vision.</p>
+<p>Tools: Machine learning libraries, data preprocessing tools, cloud services with AI/ML capabilities.</p>
+<h2 id="embedded-systems-developer">Embedded Systems Developer</h2>
+<p>Focus: Developing software for hardware devices.</p>
+<p>Responsibilities: Embedded systems developers write software for embedded systems like microcontrollers, IoT devices, robotics, and consumer electronics.</p>
+<p>Key Skills: C, C++, Assembly, real-time operating systems (RTOS), hardware interfacing.</p>
+<p>Tools: Embedded IDEs, debugging tools, hardware platforms (Raspberry Pi, Arduino).</p>
+<h2 id="blockchain-developer">Blockchain Developer</h2>
+<p>Focus: Developing decentralized applications and systems using blockchain technology.</p>
+<p>Responsibilities: Blockchain developers create and maintain blockchain networks, smart contracts, and decentralized applications (dApps).</p>
+<p>Key Skills: Solidity (for Ethereum), smart contract development, cryptography, decentralized technologies.</p>
+<p>Tools: Blockchain platforms (Ethereum, Hyperledger), testing frameworks (Truffle), wallets, blockchain explorers.</p>
+<h2 id="quality-assurance-qa-developer--tester">Quality Assurance (QA) Developer / Tester</h2>
+<p>Focus: Software testing and ensuring code quality.</p>
+<p>Responsibilities: QA developers write tests, automate testing processes, and identify bugs and issues in the software. They ensure the software is functioning as expected before release.</p>
+<p>Key Skills: Test automation frameworks (Selenium, JUnit), manual testing techniques, debugging, performance testing.</p>
+<p>Tools: Testing tools, CI/CD pipelines, version control systems.</p>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

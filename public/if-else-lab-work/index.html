@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practical Lab Exercises Conditional Logic Problems in Python · Kumar Vipin Yadav</title>
+  
+  
+  <meta name="description" content="Let&#39;s Do it!">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+
+  <body>
+    <div class="site-layout">
+      <header class="site-header">
+  <div class="header-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
+  </div>
+</header>
+
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="/">Kumar Vipin Yadav</a>
+    <span class="sidebar-subtitle">Let's Do it!</span>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a href="/python/" class="nav-link">
+          Python
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/c/" class="nav-link">
+          C
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/go/" class="nav-link">
+          Go
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/jenkins/" class="nav-link">
+          Jenkins
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/containers/" class="nav-link">
+          Containers
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/meetups/" class="nav-link">
+          Meetups
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/random_stuff/" class="nav-link">
+          General Stuff
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+
+      
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Practical Lab Exercises Conditional Logic Problems in Python</h1>
+    
+    <div class="post-meta">
+      <time datetime="2025-01-07T00:00:00Z">
+        Jan 7, 2025
+      </time>
+      
+      <span class="post-tags">
+        
+        <span class="tag">#python</span>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  
+  <nav class="post-toc">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#index-of-problems">Index of Problems</a></li>
+    <li><a href="#code-implementations">Code Implementations</a>
+      <ul>
+        <li><a href="#1-even-or-odd-number">1. Even or Odd Number</a>
+          <ul>
+            <li><a href="#implementation-variations">Implementation Variations:</a></li>
+            <li><a href="#voter-eligibility-milestone-extension">Voter Eligibility Milestone Extension:</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-positive-negative-or-zero">2. Positive, Negative, or Zero</a>
+          <ul>
+            <li><a href="#basic-positivenegative-script">Basic Positive/Negative Script:</a></li>
+            <li><a href="#complete-3-way-structural-check">Complete 3-Way Structural Check:</a></li>
+            <li><a href="#absolute-value-converter-challenge">Absolute Value Converter Challenge:</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-age-category-checker">3. Age Category Checker</a></li>
+        <li><a href="#4-grade-calculator--milestone-checker">4. Grade Calculator &amp; Milestone Checker</a>
+          <ul>
+            <li><a href="#cricket-century-milestone-script">Cricket Century Milestone Script:</a></li>
+            <li><a href="#standard-letter-grade-brackets">Standard Letter Grade Brackets:</a></li>
+            <li><a href="#exact-metric-match-vs-passing-status-layouts">Exact Metric Match vs Passing Status Layouts:</a></li>
+          </ul>
+        </li>
+        <li><a href="#5-vowel-or-consonant-checker">5. Vowel or Consonant Checker</a>
+          <ul>
+            <li><a href="#basic-character-matching-chains">Basic Character Matching Chains:</a></li>
+            <li><a href="#case-sensitivity-double-check-chains">Case Sensitivity Double Check Chains:</a></li>
+            <li><a href="#optimized-membership-container-strategy">Optimized Membership Container Strategy:</a></li>
+          </ul>
+        </li>
+        <li><a href="#6-simple-login-system--admin-permissions">6. Simple Login System &amp; Admin Permissions</a>
+          <ul>
+            <li><a href="#credential-verification-login-block">Credential Verification Login Block:</a></li>
+            <li><a href="#simple-permissions-validator">Simple Permissions Validator:</a></li>
+          </ul>
+        </li>
+        <li><a href="#7-maximum-of-two-and-three-numbers">7. Maximum of Two and Three Numbers</a>
+          <ul>
+            <li><a href="#comparing-two-numbers-difference-output-strategy">Comparing Two Numbers (Difference Output Strategy):</a></li>
+            <li><a href="#comparing-three-numbers-using-logical-operators">Comparing Three Numbers (Using Logical Operators):</a></li>
+            <li><a href="#comparing-three-numbers-using-nested-conditions">Comparing Three Numbers (Using Nested Conditions):</a></li>
+          </ul>
+        </li>
+        <li><a href="#8-days-in-a-month">8. Days in a Month</a></li>
+        <li><a href="#9-divisibility-rules-3-5-or-both">9. Divisibility Rules (3, 5, or Both)</a>
+          <ul>
+            <li><a href="#basic-modulus-truthiness-flag">Basic Modulus Truthiness Flag:</a></li>
+            <li><a href="#unified-target-multipliers-script">Unified Target Multipliers Script:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </nav>
+  
+
+  <div class="post-content">
+    <h1 id="practical-lab-exercises-conditional-logic-problems-in-python">Practical Lab Exercises: Conditional Logic Problems in Python</h1>
+<p>Hello Everyone! Today we are going to dive into a complete, hands-on practical lab workbook. We will solve 9 core logical programming challenges using our knowledge of <code>if</code>, <code>elif</code>, and <code>else</code> structures.</p>
+<h2 id="index-of-problems">Index of Problems</h2>
+<p>Click on any challenge below to jump straight to its code implementation and logical breakdown:</p>
+<ul>
+<li>Even or Odd Number</li>
+<li>Positive, Negative, or Zero</li>
+<li>Age Category Checker</li>
+<li>Grade Calculator &amp; Milestone Checker</li>
+<li>Vowel or Consonant Checker</li>
+<li>Simple Login System &amp; Admin Permissions</li>
+<li>Maximum of Two and Three Numbers</li>
+<li>Days in a Month</li>
+<li>Divisibility Rules (3, 5, or Both)</li>
+</ul>
+<hr>
+<h2 id="code-implementations">Code Implementations</h2>
+<h3 id="1-even-or-odd-number">1. Even or Odd Number</h3>
+<p>This program asks the user to enter a number and checks whether the number is even or odd using the modulus operator (<code>%</code>). If a number is perfectly divisible by 2, the remainder is 0.</p>
+<h4 id="implementation-variations">Implementation Variations:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Quick Test Script</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">52</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;A 1 Even Number h&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;A 1 Odd Number h&#34;</span>)
+</span></span></code></pre></div><h4 id="voter-eligibility-milestone-extension">Voter Eligibility Milestone Extension:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Age: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">18</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Yes you can vote.&#34;</span>)
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Select your leader wisely.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;No you can not vote.&#34;</span>)
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Come after&#34;</span>, <span style="color:#bd93f9">18</span> <span style="color:#ff79c6">-</span> a)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Program Completed.&#34;</span>)
+</span></span></code></pre></div><hr>
+<h3 id="2-positive-negative-or-zero">2. Positive, Negative, or Zero</h3>
+<p>This program tracks whether an integer value is greater than zero, less than zero, or equal to zero. It also includes an absolute value converter.</p>
+<h4 id="basic-positivenegative-script">Basic Positive/Negative Script:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;-ve &#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;+ve&#34;</span>)
+</span></span></code></pre></div><h4 id="complete-3-way-structural-check">Complete 3-Way Structural Check:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>number <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter a number: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> number <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Number is positive.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> number <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Number is negative&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Number is 0&#34;</span>)
+</span></span></code></pre></div><h4 id="absolute-value-converter-challenge">Absolute Value Converter Challenge:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Converts any negative integer to its positive absolute counterpart</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter A number: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(a <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>)
+</span></span></code></pre></div><hr>
+<h3 id="3-age-category-checker">3. Age Category Checker</h3>
+<p>Classifies users into specific generational brackets based on their age input boundary limits.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>age <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Age: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> age <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">50</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Senior&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> age <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">30</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Adult&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> age <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">20</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Teenager&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> age <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">20</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Child&#34;</span>)
+</span></span></code></pre></div><hr>
+<h3 id="4-grade-calculator--milestone-checker">4. Grade Calculator &amp; Milestone Checker</h3>
+<p>These scripts demonstrate standard grading brackets, custom tier boundaries, and conditional exam passing verifications.</p>
+<h4 id="cricket-century-milestone-script">Cricket Century Milestone Script:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>run <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">150</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> run <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">100</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Full&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> run <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">50</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Half&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Nothing&#34;</span>)
+</span></span></code></pre></div><h4 id="standard-letter-grade-brackets">Standard Letter Grade Brackets:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>score <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">80</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> score <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">90</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;A&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> score <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">80</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;B&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> score <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">70</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;C&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> score <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">60</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;D&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;F&#34;</span>)
+</span></span></code></pre></div><h4 id="exact-metric-match-vs-passing-status-layouts">Exact Metric Match vs Passing Status Layouts:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Pass or Fail Exam Checker</span>
+</span></span><span style="display:flex;"><span>number <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter your marks: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> number <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">33</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Yes you have passed the exam.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;You failed try again next year.&#34;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Fixed Point Match Layout</span>
+</span></span><span style="display:flex;"><span>marks <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter your marks: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> marks <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">100</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;A+&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> marks <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">80</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;1st&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> marks <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">60</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;2nd&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> marks <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">33</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;3rd&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;You failed.&#34;</span>)
+</span></span></code></pre></div><hr>
+<h3 id="5-vowel-or-consonant-checker">5. Vowel or Consonant Checker</h3>
+<p>This program inspects a single string text character to verify whether it matches a collection of vowel characters.</p>
+<h4 id="basic-character-matching-chains">Basic Character Matching Chains:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;i&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;a&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;e&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;i&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;o&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;u&#34;</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Vowel&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Consonant&#34;</span>)
+</span></span></code></pre></div><h4 id="case-sensitivity-double-check-chains">Case Sensitivity Double Check Chains:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;I&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;a&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;e&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;i&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;o&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;u&#34;</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Vowel&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;A&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;E&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;I&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;O&#34;</span> <span style="color:#ff79c6">or</span> a <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;U&#34;</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Vowel&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Consonant&#34;</span>)
+</span></span></code></pre></div><h4 id="optimized-membership-container-strategy">Optimized Membership Container Strategy:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>char <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter only 1 character: &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> char <span style="color:#ff79c6">in</span> <span style="color:#f1fa8c">&#34;aeiouAEIOU&#34;</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Vowel&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Consonant&#34;</span>)
+</span></span></code></pre></div><hr>
+<h3 id="6-simple-login-system--admin-permissions">6. Simple Login System &amp; Admin Permissions</h3>
+<p>Simulates a secure dashboard portal entry checking two independent text string assignments using logical links.</p>
+<h4 id="credential-verification-login-block">Credential Verification Login Block:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>username <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;admin&#34;</span>
+</span></span><span style="display:flex;"><span>password <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;123&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>user <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Username: &#34;</span>)
+</span></span><span style="display:flex;"><span>passw <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Password: &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> user <span style="color:#ff79c6">==</span> username <span style="color:#ff79c6">and</span> passw <span style="color:#ff79c6">==</span> password:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Login Success.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Invalid Username Or Password.&#34;</span>)
+</span></span></code></pre></div><h4 id="simple-permissions-validator">Simple Permissions Validator:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>username <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter Your Username: &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> username <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;admin&#34;</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;You can add people&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;You can not add people&#34;</span>)
+</span></span></code></pre></div><hr>
+<h3 id="7-maximum-of-two-and-three-numbers">7. Maximum of Two and Three Numbers</h3>
+<p>Takes numerical dimensions from a keyboard interface and extracts the maximum total metric balance.</p>
+<h4 id="comparing-two-numbers-difference-output-strategy">Comparing Two Numbers (Difference Output Strategy):</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter A: &#34;</span>))
+</span></span><span style="display:flex;"><span>b <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter B: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">&gt;</span> b:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(a <span style="color:#ff79c6">-</span> b)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(b <span style="color:#ff79c6">-</span> a)
+</span></span></code></pre></div><h4 id="comparing-three-numbers-using-logical-operators">Comparing Three Numbers (Using Logical Operators):</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter 1st number: &#34;</span>))
+</span></span><span style="display:flex;"><span>b <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter 2nd number: &#34;</span>))
+</span></span><span style="display:flex;"><span>c <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter 3rd number: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">&gt;=</span> b <span style="color:#ff79c6">and</span> a <span style="color:#ff79c6">&gt;=</span> c:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(a)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> b <span style="color:#ff79c6">&gt;=</span> a <span style="color:#ff79c6">and</span> b <span style="color:#ff79c6">&gt;=</span> c:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(b)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(c)
+</span></span></code></pre></div><h4 id="comparing-three-numbers-using-nested-conditions">Comparing Three Numbers (Using Nested Conditions):</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">&gt;=</span> b:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">&gt;=</span> c:
+</span></span><span style="display:flex;"><span>          <span style="color:#8be9fd;font-style:italic">print</span>(a)
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#8be9fd;font-style:italic">print</span>(c)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> b <span style="color:#ff79c6">&gt;=</span> c:
+</span></span><span style="display:flex;"><span>          <span style="color:#8be9fd;font-style:italic">print</span>(b)
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#8be9fd;font-style:italic">print</span>(c)
+</span></span></code></pre></div><hr>
+<h3 id="8-days-in-a-month">8. Days in a Month</h3>
+<p>This script reads a numerical calendar index value (1-12) and prints the corresponding number of calendar days assigned to that section.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>month <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter A month: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">2</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;28 Days&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">or</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">3</span> <span style="color:#ff79c6">or</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">5</span> <span style="color:#ff79c6">or</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">7</span> <span style="color:#ff79c6">or</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">8</span> <span style="color:#ff79c6">or</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">10</span> <span style="color:#ff79c6">or</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">12</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;31 Days&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">4</span> <span style="color:#ff79c6">or</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">6</span> <span style="color:#ff79c6">or</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">9</span> <span style="color:#ff79c6">or</span> month <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">11</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;30 Days&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Invalid Month.&#34;</span>)
+</span></span></code></pre></div><hr>
+<h3 id="9-divisibility-rules-3-5-or-both">9. Divisibility Rules (3, 5, or Both)</h3>
+<p>Evaluates incoming digital numerical variables for common multiples by sorting multi-factor checks first.</p>
+<h4 id="basic-modulus-truthiness-flag">Basic Modulus Truthiness Flag:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># Remainder evaluate shortcut</span>
+</span></span><span style="display:flex;"><span>number <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter A number: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> number <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">5</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Not divisible by 5&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Yes divisible by 5.&#34;</span>)
+</span></span></code></pre></div><h4 id="unified-target-multipliers-script">Unified Target Multipliers Script:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>number <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">float</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;Enter A number: &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> number <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">3</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">and</span> number <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">5</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;divisible by both 3 and 5&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> number <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">3</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;divisible by 3&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">elif</span> number <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">5</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;divisible by 5&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Not divisible by 3 and 5&#34;</span>)
+</span></span></code></pre></div><p><em>Note: Checking for both <code>3</code> and <code>5</code> using <code>and</code> must always happen at the top, or else individual branch matches will incorrectly intercept the calculation first!</em></p>
+
+  </div>
+</article>
+
+        </div>
+      </main>
+    </div>
+    
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
+    <div class="social-icons">
+      
+      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      
+      
+      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      
+      
+      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </a>
+      
+      
+      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

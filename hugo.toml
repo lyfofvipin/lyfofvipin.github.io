@@ -1,0 +1,80 @@
+baseURL = "https://lyfofvipin.github.io/"
+languageCode = "en-us"
+title = "Kumar Vipin Yadav"
+theme = "pidev"
+
+[pagination]
+  pagerSize = 20
+
+# Preserve Jekyll URL scheme: /:title
+[permalinks]
+  python = "/:contentbasename/"
+  c = "/:contentbasename/"
+  go = "/:contentbasename/"
+  jenkins = "/:contentbasename/"
+  containers = "/:contentbasename/"
+  meetups = "/:contentbasename/"
+  random_stuff = "/:contentbasename/"
+
+[params]
+  description = "Let's Do it!"
+  author = "Kumar Vipin Yadav"
+  dateFormat = "Jan 2, 2006"
+
+  [params.social]
+    github = "lyfofvipin"
+    twitter = "lyfofvipin"
+    facebook = "lyfofvipin"
+    linkedin = "lyfofvipin"
+    youtube_channel = "UCogjiQoMtBFOI-jT9y_hQSQ"
+    telegram = "lyfofvipin"
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+    noClasses = true
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+    name = "Python"
+    url = "/python/"
+    weight = 1
+  [[menu.main]]
+    name = "C"
+    url = "/c/"
+    weight = 2
+  [[menu.main]]
+    name = "Go"
+    url = "/go/"
+    weight = 3
+  [[menu.main]]
+    name = "Jenkins"
+    url = "/jenkins/"
+    weight = 4
+  [[menu.main]]
+    name = "Containers"
+    url = "/containers/"
+    weight = 5
+  [[menu.main]]
+    name = "Meetups"
+    url = "/meetups/"
+    weight = 6
+  [[menu.main]]
+    name = "General Stuff"
+    url = "/random_stuff/"
+    weight = 7
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 8
