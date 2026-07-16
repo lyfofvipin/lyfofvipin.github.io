@@ -4,26 +4,27 @@ tags:
 - fastapi
 - backend
 - async
-- databases
-title: Basics Of FastAPI In Python
+- sqlmodel
+title: Basics Of FastAPI In Python (SQLModel Edition)
+
 ---
-# The Comprehensive Guide to Modern API Development with FastAPI and SQLAlchemy
 
-Hello Everyone! Today we are shifting into modern backend design **FastAPI**.
+# The Comprehensive Guide to Modern API Development with FastAPI and SQLModel
 
-While Flask is an excellent synchronous framework, **FastAPI** is a cutting-edge, high-performance web framework designed from the ground up for building production-ready APIs using modern Python features. It leverages asynchronous execution (`async`/`await`), automatic structural data validation via **Pydantic**, and native documentation generation out of the box.
+Hello Everyone! Today we are shifting into modern backend design with **FastAPI**. 
 
-Let's break down how to rebuild our entire backend pipeline using FastAPI, exploring why it has become the standard for modern enterprise development.
+Instead of writing classic, verbose object-relational mappings, we are using **SQLModel** to handle our data persistence. SQLModel is a cutting-edge library that unifies **Pydantic** and **SQLAlchemy** into a single data design tool. This means a single Python class acts as both your network validation gate and your physical database layout, eliminating redundant code entirely.
+
+---
 
 ## 1. The ASGI Server Architecture: Why `uvicorn main:app --reload`?
 
-In Flask, we used a WSGI (Web Server Gateway Interface) development server, which handles requests sequentially (one after the other). FastAPI uses **ASGI** (Asynchronous Server Gateway Interface), which is designed to handle thousands of concurrent incoming network connections simultaneously.
+FastAPI uses **ASGI** (Asynchronous Server Gateway Interface), which is designed to handle thousands of concurrent incoming network connections simultaneously.
 
 When you run `uvicorn main:app --reload` in your terminal, you are launching **Uvicorn**, a lightning-fast ASGI server wrapper.
 
 ### Why Do We Run Uvicorn?
-
-* **Asynchronous Concurrency:** Traditional servers block a worker thread whenever a request is waiting on something slow (like a slow database query or an external API call). An ASGI server pauses the waiting request, handles hundreds of other incoming requests in the meantime, and resumes the original request the millisecond the database answers.
+* **Asynchronous Concurrency:** Traditional synchronous servers block a execution thread whenever a request is waiting on something slow (like an external API call). An ASGI server pauses the waiting request, handles hundreds of other incoming requests in the meantime, and resumes the original request the millisecond the background system answers.
 * **The Application Reference (`main:app`):** `main` tells Uvicorn to look inside your `main.py` script file, and `app` points directly to the instantiated FastAPI object inside it.
 * **`--reload` (Hot Swapping):** Monitors your code changes. The exact instant you hit save, the Uvicorn workers reboot safely in milliseconds.
 
@@ -34,12 +35,10 @@ When you run `uvicorn main:app --reload` in your terminal, you are launching **U
 FastAPI handles routing explicitly, using standard Python type hints to ensure data validation before it ever enters your backend functions.
 
 ### Operations and Decorator Syntax
-
 FastAPI maps HTTP actions directly onto decorator methods named after the action itself (e.g., `@app.get()`, `@app.post()`, `@app.put()`, `@app.delete()`).
 
 ### Returning Explicit Status Codes
-
-Instead of passing numbers or manual tuples back, FastAPI provides a clean `status` module that makes your code highly readable and readable.
+Instead of passing numbers or manual tuples back, FastAPI provides a clean `status` module that makes your code highly readable.
 
 ```python
 from fastapi import FastAPI, status
@@ -59,7 +58,7 @@ def health_check():
 FastAPI treats path parameters and query parameters with strict structural precision. It reads your function signature and automatically converts and validates incoming data types.
 
 ```python
-from fastapi import FastAPI, Path, Query
+from fastapi import FastAPI
 
 app = FastAPI()
 
@@ -80,23 +79,18 @@ def search_database(q: str = None, limit: int = 10):
 
 ---
 
-## 4. Input Validation Layer: Pydantic Schemas
+## 4. Input Validation Layer: SQLModel Blueprints
 
-One of FastAPI's greatest strengths is its native integration with **Pydantic**.
-
-### What is a Pydantic Model?
-
-When users submit `POST` form data or complex JSON payloads, we need a clean, structured way to validate the data before processing it. A Pydantic model defines the exact shape, structural rules, and data types that the incoming request payload **must** match.
+One of FastAPI's greatest strengths is its native integration with the validation ecosystem. With **SQLModel**, we can declare a model that serves a dual purpose: it acts as a database table entity and a request validation layout simultaneously.
 
 ```python
-from typing import Optional
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 
 # Define the structural schema blueprint for incoming registration requests
 class UserSignUpSchema(BaseModel):
-    username: str = Field(..., min_length=3, max_length=20)
+    username: str = Field(min_length=3, max_length=20)
     email: str
-    age: int = Field(..., ge=18) # Age must be greater than or equal to 18
+    age: int = Field(ge=18) # Age must be greater than or equal to 18
     premium_member: bool = False
 
 ```
@@ -107,11 +101,11 @@ class UserSignUpSchema(BaseModel):
 
 FastAPI is highly optimized for JSON API data exchange out of the box, but it can easily process classic HTML form submissions by installing the `python-multipart` module.
 
-Here is how to capture both JSON and Form inputs side-by-side using the same Pydantic schema logic:
+Here is how to capture both JSON and Form inputs side-by-side:
 
 ```python
-from fastapi import FastAPI, Form, Depends
-from pydantic import BaseModel
+from fastapi import FastAPI, Form
+from pydantic import BaseModel, Field
 
 app = FastAPI()
 
@@ -125,7 +119,6 @@ def add_student_json(payload: StudentPayload):
     return {"source": "JSON Body", "received_data": payload.dict()}
 
 # B. Capturing traditional HTML Form Data (Web Form submission behavior)
-# We use Depends to unpack form elements directly into our schema layout cleanly
 @app.post("/students/form")
 def add_student_form(name: str = Form(...), course: str = Form(...)):
     return {"source": "HTML Form", "name": name, "course": course}
@@ -134,84 +127,61 @@ def add_student_form(name: str = Form(...), course: str = Form(...)):
 
 ---
 
-## 6. Asynchronous Database Integrations with SQLAlchemy ORM
+## 6. Database Integrations with SQLModel Sessions
 
-To fully leverage FastAPI’s high-performance architecture, your database layer should ideally support asynchronous operations. We will use the async features of **SQLAlchemy** to build an isolated, non-blocking database pipeline.
-
-### The Async Complete Data Pipeline Setup
+Now let's establish our live database connection pipeline. We will initialize our SQLite engine, create our tables, and set up a clean dependency injection generator using a standard context `Session` block.
 
 ```python
-import os
-from fastapi import FastAPI, Depends, HTTPException, status
-from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
-from sqlalchemy.orm import declarative_base, sessionmaker
-from sqlalchemy import Column, Integer, String, select
-from pydantic import BaseModel
+from fastapi import FastAPI, Depends, status
+from sqlmodel import SQLModel, create_engine, Session, select, Field
+from typing import List
 
-# 1. Initialize FastAPI Application
-app = FastAPI(title="Async FastAPI Database Pipeline")
+class User(SQLModel, table=True):
+    id: int = Field(default=None, primary_key=True)
+    username: str = Field(min_length=3, max_length=20, index=True)
+    email: str
+    age: int = Field(ge=18)  # Age must be greater than or equal to 18
+    premium_member: bool = False
 
-# 2. Database Architectural Configurations (Using Async SQLite driver)
-DATABASE_URL = "sqlite+aiosqlite:///./fastapi_app.db"
+app = FastAPI(title="FastAPI SQLModel Pipeline")
 
-engine = create_async_engine(DATABASE_URL, echo=True)
-AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
-Base = declarative_base()
+database_file = "sqlite:///database.db"
+engine = create_engine(database_file, connect_args={"check_same_thread": False})
 
-# 3. SQLAlchemy Database Model Class Definition
-class DBStudent(Base):
-    __tablename__ = "students"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)
-    course = Column(String, nullable=False)
+# Automatically initialize physical tables on application startup
+SQLModel.metadata.create_all(engine)
 
-# 4. Initialize Database Tables on Startup Loop Context
-@app.on_event("startup")
-async def startup_database_tables():
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+# Dependency Injection Pattern to manage and yield database sessions safely
+def get_db_session():
+    with Session(engine) as db:
+        yield db  # Closes the database transaction loop cleanly after request execution
 
-# 5. Dependency Injection Pattern to manage Database Sessions safely
-async def get_db_session():
-    async with AsyncSessionLocal() as session:
-        yield session # Yield ensures the session cleanly closes after the request completes
+# --- CORE WRITE ROUTE INTEGRATION ---
+@app.post("/users", response_model=User, status_code=status.HTTP_201_CREATED)
+def create_user_record(user: User, db: Session = Depends(get_db_session)):
+    db.add(user)
+    db.commit()
+    db.refresh(user)  # Populates the object with its new auto-generated database ID
+    return user
 
-# 6. Pydantic Validation Schema for Request Data Inputs
-class StudentCreateSchema(BaseModel):
-    name: str
-    course: str
-
-# 7. Complete Core Write Route Integration
-@app.post("/students", status_code=status.HTTP_201_CREATED)
-async def create_student_record(payload: StudentCreateSchema, db: AsyncSession = Depends(get_db_session)):
-    # Instantiate database model using data validated by Pydantic
-    new_student = DBStudent(name=payload.name, course=payload.course)
-    
-    db.add(new_student)
-    await db.commit()       # Await the database write operation without blocking the server
-    await db.refresh(new_student)
-    return new_student
-
-# 8. Complete Core Read Route Integration
-@app.get("/students")
-async def fetch_all_students(db: AsyncSession = Depends(get_db_session)):
-    # Execute query using an explicit select statement
-    result = await db.execute(select(DBStudent))
-    students_list = result.scalars().all()
-    return students_list
-
+# --- CORE READ ROUTE INTEGRATION ---
+@app.get("/users", response_model=List[User])
+def fetch_all_users(db: Session = Depends(get_db_session)):
+    # Using SQLModel's custom, clean select statement syntax
+    statement = select(User)
+    users_list = db.exec(statement).all()
+    return users_list
 ```
 
 ---
 
 ## 7. Session Cookies vs. Stateless JWT Architecture
 
-In Flask, we relied on server-side sessions, where the server keeps track of logged-in users by storing state data in memory or files. For modern APIs, FastAPI shifts to a stateless **JWT (JSON Web Token)** architecture.
+For modern APIs, FastAPI shifts away from legacy stateful tracking to a stateless **JWT (JSON Web Token)** architecture.
 
 ### Why Use JWT Over Server Sessions?
 
-* **Stateless Scaling:** In a stateless setup, the server does not save any session data in its memory. Instead, once a user logs in, the server generates a signed cryptographic token called a JWT and hands it to the browser.
+* **Stateless Scaling:** In a stateless setup, the server does not save any session tokens in its memory. Instead, once a user logs in, the server generates a signed cryptographic token called a JWT and hands it to the browser.
 * **Self-Contained Data:** The client attaches this token to the header of every subsequent request. The server simply verifies the token's signature using its secret key. If the signature is valid, the request is instantly authorized, making it highly scalable across multi-server networks.
 
 ---
@@ -225,7 +195,6 @@ from datetime import datetime, timedelta
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt, JWTError
-from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -293,7 +262,7 @@ def view_admin_panel(current_user: dict = Depends(get_current_user_gate)):
 
 One of the most useful out-of-the-box features of FastAPI is its automatic interactive documentation.
 
-The moment you declare your Pydantic schemas and add type hints to your routes, FastAPI automatically generates a complete openAPI documentation portal for your project.
+The moment you declare your SQLModel models and add type hints to your routes, FastAPI automatically generates a complete openAPI documentation portal for your project.
 
 ### How to Access the Docs Portal
 
