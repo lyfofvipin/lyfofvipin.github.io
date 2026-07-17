@@ -43,7 +43,7 @@ theme = "pidev"
     endLevel = 4
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON"]
 
 [menu]
   [[menu.main]]

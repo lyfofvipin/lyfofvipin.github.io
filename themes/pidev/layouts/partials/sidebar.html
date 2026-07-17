@@ -1,22 +1,48 @@
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-brand">
-    <a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Title }}</a>
-    <span class="sidebar-subtitle">Let's Do it!</span>
+    <a href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}">
+      <span class="brand-text">
+        <span class="brand-name">{{ .Site.Title }}</span>
+        <span class="sidebar-subtitle">Let's Do it!</span>
+      </span>
+    </a>
   </div>
   
   <nav class="sidebar-nav">
     <ul class="nav-list">
       <li class="nav-item">
-        <a href="{{ .Site.BaseURL | relURL }}" class="nav-link{{ if .IsHome }} active{{ end }}">Home</a>
+        <a href="{{ .Site.BaseURL | relURL }}" class="nav-link{{ if .IsHome }} active{{ end }}" title="Home">
+          <span class="nav-label">Home</span>
+        </a>
       </li>
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
       <li class="nav-item">
-        <a href="{{ .URL | relURL }}" class="nav-link{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq $currentPage.RelPermalink .URL) }} active{{ end }}">
-          {{ .Name }}
+        <a href="{{ .URL | relURL }}" class="nav-link{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq $currentPage.RelPermalink .URL) }} active{{ end }}" title="{{ .Name }}">
+          <span class="nav-label">{{ .Name }}</span>
         </a>
       </li>
       {{ end }}
     </ul>
   </nav>
+
+  <div class="sidebar-settings">
+    <button type="button" class="setting-btn" id="theme-toggle" aria-label="Toggle light or dark theme" title="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <span id="theme-toggle-label" class="theme-label">Dark</span>
+    </button>
+  </div>
 </aside>

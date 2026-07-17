@@ -14,7 +14,7 @@ In golang we write sting inside \`\` ( back quote ) or "" ( double quote) for ex
 
 Here is the visual representation of a String:
 
-<img class="img_center" src="statics/img/string.png" alt="If-Else">
+<img class="img_center" src="/statics/img/string.png" alt="If-Else">
 
 In a string we have index value of each character (we can call them rune also as they are a single character ) and we can access them using there index value for example `0` has `V` it can be written as `string_name[index_value]`.
 

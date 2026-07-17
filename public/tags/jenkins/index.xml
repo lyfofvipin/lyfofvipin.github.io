@@ -1,61 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Jenkins on Kumar Vipin Yadav</title>
-    <link>http://localhost:1313/tags/jenkins/</link>
-    <description>Recent content in Jenkins on Kumar Vipin Yadav</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Using Jenkins CLI, API And Other Jenkins Tips</title>
-      <link>http://localhost:1313/jenkins_cli_api_and_other_tips/</link>
-      <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/jenkins_cli_api_and_other_tips/</guid>
-      <description>&lt;h2 id=&#34;how-to-use-jenkins-cli&#34;&gt;How To Use Jenkins CLI&lt;/h2&gt;&#xA;&lt;p&gt;Once we have our Jenkins Server up and running we can use Jenkins CLI to perform all the actions in case if you don&amp;rsquo;t have any browser or you want to do some sort of automation. You can use Jenkins CLI to fetch the details or to to perform almost all the task you can do from the GUI.&lt;/p&gt;&#xA;&lt;p&gt;To get the Jenkins CLI you have to download &lt;code&gt;jenkins-cli.jar&lt;/code&gt; file you can do the same by visiting.&#xA;&lt;code&gt;curl -OL http://localhost:8080/jnlpJars/jenkins-cli.jar&lt;/code&gt; ( Replace &lt;code&gt;http://localhost:8080&lt;/code&gt; with your Jenkins Home URL ) or&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Getting Started With Jenkins Configuration As Code</title>
-      <link>http://localhost:1313/jenkins_configuration_as_code/</link>
-      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/jenkins_configuration_as_code/</guid>
-      <description>&lt;h2 id=&#34;what-is-jcasc&#34;&gt;What Is JCASC&lt;/h2&gt;&#xA;&lt;p&gt;Jenkins Configurations As Code as the name says It&amp;rsquo;s a configuration of the entire Jenkins Server in form of code ( yaml ).&#xA;A Jenkins Server have lots of configuration like Jobs, Agent, Credentials, Script Approvals, Global Variables, Plugin Configurations, User, Role Management and Shared Library.&lt;/p&gt;&#xA;&lt;h2 id=&#34;if-you-have-a-jenkins-server-running&#34;&gt;If You Have A Jenkins Server Running&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;NOTE: Make sure Jenkins has Configuration as Code plugin installed&lt;/em&gt;&#xA;If you want to see the JCASC or YAML configuration of your Jenkins you can check the same by visiting &lt;code&gt;Manage Jenkins -&amp;gt; Configuration as Code -&amp;gt; View Configuration&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Getting Started With Shared Library In Jenkins</title>
-      <link>http://localhost:1313/shared_lib/</link>
-      <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/shared_lib/</guid>
-      <description>&lt;h2 id=&#34;why-shared-library&#34;&gt;Why Shared Library&lt;/h2&gt;&#xA;&lt;p&gt;Shared library help us to archive the DRY ( Do Not Repeat ) concept. Means that there might be scenarios where you need to repeat some steps you can use Shared Library to write your code there that can be used in more then one job.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-setup-for-shared-library&#34;&gt;How To Setup For Shared Library&lt;/h2&gt;&#xA;&lt;p&gt;To Setup a shared library in Jenkins you need 2 configuration one is the repository structure and second is the adding the repository in the Jenkins configuration and you need to have some knowledge of groovy.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Getting Started With Seed Job In Jenkins</title>
-      <link>http://localhost:1313/seed_job/</link>
-      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/seed_job/</guid>
-      <description>&lt;h2 id=&#34;what-is-seed-job&#34;&gt;What Is Seed Job&lt;/h2&gt;&#xA;&lt;p&gt;We are using Jenkins to automate our day to day things but creating jobs in Jenkins manually is kind of a manual intervention so to automate jobs creation we use Seed Job.&#xA;A seed Job is a combination of Jenkins modules and groovy code.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Note: To use seed job do install the plugin name Job DSL&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;creating-freestyle-job-using-seed-job&#34;&gt;Creating FreeStyle Job Using Seed Job&lt;/h2&gt;&#xA;&lt;p&gt;Here is a sample seed job creating a freestyle job.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Getting Started With Parameters And Triggers In Jenkins Pipeline Job</title>
-      <link>http://localhost:1313/jenkins_pipeline_parameters_triggers/</link>
-      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/jenkins_pipeline_parameters_triggers/</guid>
-      <description>&lt;h2 id=&#34;how-to-add-parameters-in-jenkinsfile&#34;&gt;How To Add Parameters In Jenkinsfile&lt;/h2&gt;&#xA;&lt;p&gt;Jenkins parameters can drive the flow using decision making statements In this blog I have the basic syntax how you can use parameters in the pipeline job or in a Jenkinsfile.&#xA;For more details on each parameters you can checkout my this video.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/embed/Tm1-0dffX_A&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Tm1-0dffX_A/hqdefault.jpg&#34; alt=&#34;Parameterized Jobs In Jenkins&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Now let&amp;rsquo;s dive into the code here is a sample pipeline to use different type of parameter.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Getting Started With Jenkins Pipelines</title>
-      <link>http://localhost:1313/jenkins_pipeline/</link>
-      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/jenkins_pipeline/</guid>
-      <description>&lt;h2 id=&#34;what-is-continuous-integration&#34;&gt;What is Continuous Integration?&lt;/h2&gt;&#xA;&lt;p&gt;Continuous Integration is a process of integrating code changes from multiple developers in a single project many times. The software is tested immediately after a code commit. With each code commit, code is built and tested.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-continuous-delivery&#34;&gt;What is Continuous Delivery?&lt;/h2&gt;&#xA;&lt;p&gt;A continuous delivery (CD) pipeline is an automated expression of your process for getting software from version control right through to your users and customers. Every change to your software (committed in source control) goes through a complex process on its way to being released. This process involves building the software in a reliable and repeatable manner, as well as progressing the built software (called a &amp;ldquo;build&amp;rdquo;) through multiple stages of testing and deployment.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Getting Started With Jenkins</title>
-      <link>http://localhost:1313/jenkins_intro_and_install/</link>
-      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/jenkins_intro_and_install/</guid>
-      <description>&lt;h1 id=&#34;what-is-jenkins&#34;&gt;What Is Jenkins?&lt;/h1&gt;&#xA;&lt;p&gt;Jenkins is a self contained open source automation server that can automate almost everything from building and testing to delivering deployment of applications.&#xA;In this lecture series I will try my best to cover almost all of the above.&lt;/p&gt;&#xA;&lt;h1 id=&#34;installing-jenkins&#34;&gt;Installing Jenkins&lt;/h1&gt;&#xA;&lt;p&gt;For Installing the Jenkins on different OS you have multiple methods follow the &lt;a href=&#34;https://www.jenkins.io/doc/book/installing&#34;&gt;official doc&lt;/a&gt; and install according to your specification.&lt;/p&gt;&#xA;&lt;h2 id=&#34;using-the-war-file&#34;&gt;Using the .war file&lt;/h2&gt;&#xA;&lt;p&gt;For this guide I will be using the .war file method because I think that is the easiest one.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jenkins on Kumar Vipin Yadav</title><link>https://lyfofvipin.github.io/tags/jenkins/</link><description>Recent content in Jenkins on Kumar Vipin Yadav</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 12 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lyfofvipin.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Jenkins CLI, API And Other Jenkins Tips</title><link>https://lyfofvipin.github.io/jenkins_cli_api_and_other_tips/</link><pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/jenkins_cli_api_and_other_tips/</guid><description>&lt;h2 id="how-to-use-jenkins-cli"&gt;How To Use Jenkins CLI&lt;/h2&gt;
+&lt;p&gt;Once we have our Jenkins Server up and running we can use Jenkins CLI to perform all the actions in case if you don&amp;rsquo;t have any browser or you want to do some sort of automation. You can use Jenkins CLI to fetch the details or to to perform almost all the task you can do from the GUI.&lt;/p&gt;
+&lt;p&gt;To get the Jenkins CLI you have to download &lt;code&gt;jenkins-cli.jar&lt;/code&gt; file you can do the same by visiting.
+&lt;code&gt;curl -OL http://localhost:8080/jnlpJars/jenkins-cli.jar&lt;/code&gt; ( Replace &lt;code&gt;http://localhost:8080&lt;/code&gt; with your Jenkins Home URL ) or&lt;/p&gt;</description></item><item><title>Getting Started With Jenkins Configuration As Code</title><link>https://lyfofvipin.github.io/jenkins_configuration_as_code/</link><pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/jenkins_configuration_as_code/</guid><description>&lt;h2 id="what-is-jcasc"&gt;What Is JCASC&lt;/h2&gt;
+&lt;p&gt;Jenkins Configurations As Code as the name says It&amp;rsquo;s a configuration of the entire Jenkins Server in form of code ( yaml ).
+A Jenkins Server have lots of configuration like Jobs, Agent, Credentials, Script Approvals, Global Variables, Plugin Configurations, User, Role Management and Shared Library.&lt;/p&gt;
+&lt;h2 id="if-you-have-a-jenkins-server-running"&gt;If You Have A Jenkins Server Running&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;NOTE: Make sure Jenkins has Configuration as Code plugin installed&lt;/em&gt;
+If you want to see the JCASC or YAML configuration of your Jenkins you can check the same by visiting &lt;code&gt;Manage Jenkins -&amp;gt; Configuration as Code -&amp;gt; View Configuration&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Getting Started With Shared Library In Jenkins</title><link>https://lyfofvipin.github.io/shared_lib/</link><pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/shared_lib/</guid><description>&lt;h2 id="why-shared-library"&gt;Why Shared Library&lt;/h2&gt;
+&lt;p&gt;Shared library help us to archive the DRY ( Do Not Repeat ) concept. Means that there might be scenarios where you need to repeat some steps you can use Shared Library to write your code there that can be used in more then one job.&lt;/p&gt;
+&lt;h2 id="how-to-setup-for-shared-library"&gt;How To Setup For Shared Library&lt;/h2&gt;
+&lt;p&gt;To Setup a shared library in Jenkins you need 2 configuration one is the repository structure and second is the adding the repository in the Jenkins configuration and you need to have some knowledge of groovy.&lt;/p&gt;</description></item><item><title>Getting Started With Seed Job In Jenkins</title><link>https://lyfofvipin.github.io/seed_job/</link><pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/seed_job/</guid><description>&lt;h2 id="what-is-seed-job"&gt;What Is Seed Job&lt;/h2&gt;
+&lt;p&gt;We are using Jenkins to automate our day to day things but creating jobs in Jenkins manually is kind of a manual intervention so to automate jobs creation we use Seed Job.
+A seed Job is a combination of Jenkins modules and groovy code.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Note: To use seed job do install the plugin name Job DSL&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="creating-freestyle-job-using-seed-job"&gt;Creating FreeStyle Job Using Seed Job&lt;/h2&gt;
+&lt;p&gt;Here is a sample seed job creating a freestyle job.&lt;/p&gt;</description></item><item><title>Getting Started With Parameters And Triggers In Jenkins Pipeline Job</title><link>https://lyfofvipin.github.io/jenkins_pipeline_parameters_triggers/</link><pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/jenkins_pipeline_parameters_triggers/</guid><description>&lt;h2 id="how-to-add-parameters-in-jenkinsfile"&gt;How To Add Parameters In Jenkinsfile&lt;/h2&gt;
+&lt;p&gt;Jenkins parameters can drive the flow using decision making statements In this blog I have the basic syntax how you can use parameters in the pipeline job or in a Jenkinsfile.
+For more details on each parameters you can checkout my this video.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/embed/Tm1-0dffX_A"&gt;&lt;img src="https://img.youtube.com/vi/Tm1-0dffX_A/hqdefault.jpg" alt="Parameterized Jobs In Jenkins"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now let&amp;rsquo;s dive into the code here is a sample pipeline to use different type of parameter.&lt;/p&gt;</description></item><item><title>Getting Started With Jenkins Pipelines</title><link>https://lyfofvipin.github.io/jenkins_pipeline/</link><pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/jenkins_pipeline/</guid><description>&lt;h2 id="what-is-continuous-integration"&gt;What is Continuous Integration?&lt;/h2&gt;
+&lt;p&gt;Continuous Integration is a process of integrating code changes from multiple developers in a single project many times. The software is tested immediately after a code commit. With each code commit, code is built and tested.&lt;/p&gt;
+&lt;h2 id="what-is-continuous-delivery"&gt;What is Continuous Delivery?&lt;/h2&gt;
+&lt;p&gt;A continuous delivery (CD) pipeline is an automated expression of your process for getting software from version control right through to your users and customers. Every change to your software (committed in source control) goes through a complex process on its way to being released. This process involves building the software in a reliable and repeatable manner, as well as progressing the built software (called a &amp;ldquo;build&amp;rdquo;) through multiple stages of testing and deployment.&lt;/p&gt;</description></item><item><title>Getting Started With Jenkins</title><link>https://lyfofvipin.github.io/jenkins_intro_and_install/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/jenkins_intro_and_install/</guid><description>&lt;h1 id="what-is-jenkins"&gt;What Is Jenkins?&lt;/h1&gt;
+&lt;p&gt;Jenkins is a self contained open source automation server that can automate almost everything from building and testing to delivering deployment of applications.
+In this lecture series I will try my best to cover almost all of the above.&lt;/p&gt;
+&lt;h1 id="installing-jenkins"&gt;Installing Jenkins&lt;/h1&gt;
+&lt;p&gt;For Installing the Jenkins on different OS you have multiple methods follow the &lt;a href="https://www.jenkins.io/doc/book/installing"&gt;official doc&lt;/a&gt; and install according to your specification.&lt;/p&gt;
+&lt;h2 id="using-the-war-file"&gt;Using the .war file&lt;/h2&gt;
+&lt;p&gt;For this guide I will be using the .war file method because I think that is the easiest one.&lt;/p&gt;</description></item></channel></rss>

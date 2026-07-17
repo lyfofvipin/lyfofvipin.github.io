@@ -4,7 +4,7 @@ tags:
 - meetup
 title: Fedora 30 Meetup and Release  Party
 ---
-<img class="img_center" src="statics/img/f30_release_party.png" alt="Fedora Release Party">
+<img class="img_center" src="/statics/img/f30_release_party.png" alt="Fedora Release Party">
 
 Fedora 30 Meetup and release  party
 

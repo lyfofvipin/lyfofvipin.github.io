@@ -1,26 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Fastapi on Kumar Vipin Yadav</title>
-    <link>http://localhost:1313/tags/fastapi/</link>
-    <description>Recent content in Fastapi on Kumar Vipin Yadav</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/fastapi/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Architectural Deep Dive into Django vs Flask vs FastAPI</title>
-      <link>http://localhost:1313/baics-of-django/</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/baics-of-django/</guid>
-      <description>&lt;p&gt;Hello Everyone! Today we are looking at the heavy hitter of Python web frameworks: &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If Flask is a lightweight toolkit and FastAPI is a high-performance validation gate, Django is a fully functional web ecosystem. It operates under a &lt;strong&gt;&amp;ldquo;Batteries-Included&amp;rdquo;&lt;/strong&gt; philosophy, meaning it provides almost everything you need to build an enterprise application (such as authentication, database management, and administrative dashboards) out of the box without requiring third-party libraries.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s break down exactly how Django functions, map out how it stacks up against Flask and FastAPI, and build a complete application pipeline using modern Django architectural standards.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Basics Of FastAPI In Python</title>
-      <link>http://localhost:1313/basics-of-fastapi/</link>
-      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/basics-of-fastapi/</guid>
-      <description>&lt;h1 id=&#34;the-comprehensive-guide-to-modern-api-development-with-fastapi-and-sqlalchemy&#34;&gt;The Comprehensive Guide to Modern API Development with FastAPI and SQLAlchemy&lt;/h1&gt;&#xA;&lt;p&gt;Hello Everyone! Today we are shifting into modern backend design &lt;strong&gt;FastAPI&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;While Flask is an excellent synchronous framework, &lt;strong&gt;FastAPI&lt;/strong&gt; is a cutting-edge, high-performance web framework designed from the ground up for building production-ready APIs using modern Python features. It leverages asynchronous execution (&lt;code&gt;async&lt;/code&gt;/&lt;code&gt;await&lt;/code&gt;), automatic structural data validation via &lt;strong&gt;Pydantic&lt;/strong&gt;, and native documentation generation out of the box.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s break down how to rebuild our entire backend pipeline using FastAPI, exploring why it has become the standard for modern enterprise development.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fastapi on Kumar Vipin Yadav</title><link>https://lyfofvipin.github.io/tags/fastapi/</link><description>Recent content in Fastapi on Kumar Vipin Yadav</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://lyfofvipin.github.io/tags/fastapi/index.xml" rel="self" type="application/rss+xml"/><item><title>The Architectural Deep Dive into Django vs Flask vs FastAPI</title><link>https://lyfofvipin.github.io/baics-of-django/</link><pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/baics-of-django/</guid><description>&lt;p&gt;Hello Everyone! Today we are looking at the heavy hitter of Python web frameworks: &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If Flask is a lightweight toolkit and FastAPI is a high-performance validation gate, Django is a fully functional web ecosystem. It operates under a &lt;strong&gt;&amp;ldquo;Batteries-Included&amp;rdquo;&lt;/strong&gt; philosophy, meaning it provides almost everything you need to build an enterprise application (such as authentication, database management, and administrative dashboards) out of the box without requiring third-party libraries.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s break down exactly how Django functions, map out how it stacks up against Flask and FastAPI, and build a complete application pipeline using modern Django architectural standards.&lt;/p&gt;</description></item><item><title>Basics Of FastAPI In Python (SQLModel Edition)</title><link>https://lyfofvipin.github.io/basics-of-fastapi/</link><pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/basics-of-fastapi/</guid><description>&lt;h1 id="the-comprehensive-guide-to-modern-api-development-with-fastapi-and-sqlmodel"&gt;The Comprehensive Guide to Modern API Development with FastAPI and SQLModel&lt;/h1&gt;
+&lt;p&gt;Hello Everyone! Today we are shifting into modern backend design with &lt;strong&gt;FastAPI&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Instead of writing classic, verbose object-relational mappings, we are using &lt;strong&gt;SQLModel&lt;/strong&gt; to handle our data persistence. SQLModel is a cutting-edge library that unifies &lt;strong&gt;Pydantic&lt;/strong&gt; and &lt;strong&gt;SQLAlchemy&lt;/strong&gt; into a single data design tool. This means a single Python class acts as both your network validation gate and your physical database layout, eliminating redundant code entirely.&lt;/p&gt;</description></item></channel></rss>

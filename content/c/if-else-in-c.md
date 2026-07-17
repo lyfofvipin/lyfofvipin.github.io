@@ -8,7 +8,7 @@ title: If Else In C
 
 In C programming, the `if-else` statement is used to make decisions in the code. It allows you to execute a block of code based on whether a condition is `true` or `false`.
 
-<img class="img_center" src="statics/img/if_else.png" alt="If-Else">
+<img class="img_center" src="/statics/img/if_else.png" alt="If-Else">
 
 
 Syntax:
@@ -31,7 +31,7 @@ else {
 
 `if` block: This block of code runs if the condition is true.
 
-<img class="img_center" src="statics/img/if_only.png" alt="If-Else">
+<img class="img_center" src="/statics/img/if_only.png" alt="If-Else">
 
 Syntax:
 ```

@@ -6,7 +6,7 @@ title: Ansible Pune Meetup June 2k19
 ---
 Ansible Pune Meetup
 
-<img class="img_center" src="statics/img/python_pune_june.png" alt="Python Pune June">
+<img class="img_center" src="/statics/img/python_pune_june.png" alt="Python Pune June">
 
 It's always fun to meet new people to learn new things and get something new, So I join Ansible Pune Meetup ( 29 june 2019 ).
 

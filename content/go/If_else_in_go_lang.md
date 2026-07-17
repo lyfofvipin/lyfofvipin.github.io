@@ -31,7 +31,7 @@ Bring some Coffee Powder
 ```
 
 Here is a flow diagram to understand the same.
-<img class="img_center" src="statics/img/if_else.png" alt="If-Else">
+<img class="img_center" src="/statics/img/if_else.png" alt="If-Else">
 
 It's not mandatory to `else` with if You can use `if` you can just end the program after if only.
 so the statement goes like
@@ -42,7 +42,7 @@ Make Coffee
 ```
 
 Here is a flow diagram to understand the same.
-<img class="img_center" src="statics/img/if_only.png" alt="If-Else">
+<img class="img_center" src="/statics/img/if_only.png" alt="If-Else">
 
 And in the last comes the `if-else-if-else...` part so here we can use more then one condition in a program for example.
 
@@ -65,7 +65,7 @@ Yes It's Sunday.
 ```
 
 Here is the flow diagram to understand the same.
-<img class="img_center" src="statics/img/if_else_if_else_if_else....png" alt="If-Else">
+<img class="img_center" src="/statics/img/if_else_if_else_if_else....png" alt="If-Else">
 
 Let's checkout the IF-Else statement Syntax in GO lang.
 

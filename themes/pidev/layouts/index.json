@@ -1,0 +1,15 @@
+[
+{{- $pages := where .Site.RegularPages "Type" "ne" "" -}}
+{{- $first := true -}}
+{{- range $pages -}}
+{{- if not $first -}},{{- end -}}
+{{- $first = false -}}
+{
+  "title": {{ .Title | jsonify }},
+  "url": {{ .RelPermalink | jsonify }},
+  "section": {{ (.Section | default "page") | jsonify }},
+  "summary": {{ .Summary | plainify | truncate 160 | jsonify }},
+  "date": {{ .Date.Format "2006-01-02" | jsonify }}
+}
+{{- end -}}
+]

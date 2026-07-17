@@ -1,19 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Django on Kumar Vipin Yadav</title>
-    <link>http://localhost:1313/tags/django/</link>
-    <description>Recent content in Django on Kumar Vipin Yadav</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/django/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Architectural Deep Dive into Django vs Flask vs FastAPI</title>
-      <link>http://localhost:1313/baics-of-django/</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/baics-of-django/</guid>
-      <description>&lt;p&gt;Hello Everyone! Today we are looking at the heavy hitter of Python web frameworks: &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If Flask is a lightweight toolkit and FastAPI is a high-performance validation gate, Django is a fully functional web ecosystem. It operates under a &lt;strong&gt;&amp;ldquo;Batteries-Included&amp;rdquo;&lt;/strong&gt; philosophy, meaning it provides almost everything you need to build an enterprise application (such as authentication, database management, and administrative dashboards) out of the box without requiring third-party libraries.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s break down exactly how Django functions, map out how it stacks up against Flask and FastAPI, and build a complete application pipeline using modern Django architectural standards.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Django on Kumar Vipin Yadav</title><link>https://lyfofvipin.github.io/tags/django/</link><description>Recent content in Django on Kumar Vipin Yadav</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://lyfofvipin.github.io/tags/django/index.xml" rel="self" type="application/rss+xml"/><item><title>The Architectural Deep Dive into Django vs Flask vs FastAPI</title><link>https://lyfofvipin.github.io/baics-of-django/</link><pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/baics-of-django/</guid><description>&lt;p&gt;Hello Everyone! Today we are looking at the heavy hitter of Python web frameworks: &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If Flask is a lightweight toolkit and FastAPI is a high-performance validation gate, Django is a fully functional web ecosystem. It operates under a &lt;strong&gt;&amp;ldquo;Batteries-Included&amp;rdquo;&lt;/strong&gt; philosophy, meaning it provides almost everything you need to build an enterprise application (such as authentication, database management, and administrative dashboards) out of the box without requiring third-party libraries.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s break down exactly how Django functions, map out how it stacks up against Flask and FastAPI, and build a complete application pipeline using modern Django architectural standards.&lt;/p&gt;</description></item></channel></rss>

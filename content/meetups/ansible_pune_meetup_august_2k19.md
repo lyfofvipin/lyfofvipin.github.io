@@ -4,7 +4,7 @@ tags:
 - meetup
 title: Ansible Pune Meetup August 2k19
 ---
-<img class="img_center" src="statics/img/python_pune_aug.jpg" alt="Python Pune June">
+<img class="img_center" src="/statics/img/python_pune_aug.jpg" alt="Python Pune June">
 
 <strong>The more you learn the more you earn.</strong>
 So I am back with one more event report. 😜

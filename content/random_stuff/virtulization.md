@@ -11,7 +11,7 @@ Virtualization is the process of creating a virtual version of something such as
 ## Hypervisor
 A hypervisor (sometimes called a virtual machine monitor, or VMM) is software that creates, runs, and manages virtual machines (VMs) on a physical computer. It acts as a middle layer between the hardware and the operating systems running in the VMs.
 
-<img class="img_center" src="statics/img/hypervisor.png" alt="Hypervisor">
+<img class="img_center" src="/statics/img/hypervisor.png" alt="Hypervisor">
 
 ### Examples:
 

@@ -10,7 +10,7 @@ An Array is a collection of several elements of similar data type, where we can 
 
 Here is the visual representation of a Array of Integer type:
 
-<img class="img_center" src="statics/img/array.png" alt="If-Else">
+<img class="img_center" src="/statics/img/array.png" alt="If-Else">
 
 Above array is a collection of 5 integers `10, 20, 30, 40, 50` and has index values `0,1,2,3,4`.
 
@@ -216,7 +216,7 @@ go run Day13/2Darray.go
 ```
 
 Here is a visual representation of the same:
-<img class="img_center" src="statics/img/2darray.png" alt="If-Else">
+<img class="img_center" src="/statics/img/2darray.png" alt="If-Else">
 
 ## Accessing Values in Array
 

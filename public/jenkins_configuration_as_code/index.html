@@ -1,173 +1,18 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Getting Started With Jenkins Configuration As Code · Kumar Vipin Yadav</title>
-  
-  
-  <meta name="description" content="Let&#39;s Do it!">
-  
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-  
-  
-  
-    <link rel="stylesheet" href="/css/style.css">
-  
-</head>
-
-  <body>
-    <div class="site-layout">
-      <header class="site-header">
-  <div class="header-container">
-    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
-    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
-  </div>
-</header>
-
-      <aside class="sidebar" id="sidebar">
-  <div class="sidebar-brand">
-    <a href="/">Kumar Vipin Yadav</a>
-    <span class="sidebar-subtitle">Let's Do it!</span>
-  </div>
-  
-  <nav class="sidebar-nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="/" class="nav-link">Home</a>
-      </li>
-      
-      
-      <li class="nav-item">
-        <a href="/python/" class="nav-link">
-          Python
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/c/" class="nav-link">
-          C
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/go/" class="nav-link">
-          Go
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/jenkins/" class="nav-link">
-          Jenkins
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/containers/" class="nav-link">
-          Containers
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/meetups/" class="nav-link">
-          Meetups
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/random_stuff/" class="nav-link">
-          General Stuff
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/about/" class="nav-link">
-          About
-        </a>
-      </li>
-      
-    </ul>
-  </nav>
-</aside>
-
-      
-      <main class="main-content">
-        <div class="content-wrapper">
-          
-<article class="post-single">
-  <header class="post-header">
-    <h1 class="post-title">Getting Started With Jenkins Configuration As Code</h1>
-    
-    <div class="post-meta">
-      <time datetime="2024-05-05T00:00:00Z">
-        May 5, 2024
-      </time>
-      
-      <span class="post-tags">
-        
-        <span class="tag">#jenkins</span>
-        
-      </span>
-      
-    </div>
-  </header>
-
-  
-  <nav class="post-toc">
-    <h2 class="toc-title">On this page</h2>
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#what-is-jcasc">What Is JCASC</a></li>
-    <li><a href="#if-you-have-a-jenkins-server-running">If You Have A Jenkins Server Running</a></li>
-    <li><a href="#how-to-write-jcasc">How To Write JCASC</a>
-      <ul>
-        <li><a href="#adding-role-base-strategy-via-jcasc">Adding Role Base Strategy Via JCASC</a></li>
-        <li><a href="#adding-global-variables-via-jcasc">Adding Global Variables Via JCASC</a></li>
-        <li><a href="#adding-agent-via-jcasc">Adding Agent Via JCASC</a></li>
-        <li><a href="#adding-user-management-via-jcasc">Adding User Management Via JCASC</a></li>
-        <li><a href="#adding-update-center-via-jcasc">Adding Update Center Via JCASC</a></li>
-        <li><a href="#adding-credentials-via-jcasc">Adding Credentials Via JCASC</a></li>
-        <li><a href="#adding-script-approvals-via-jcasc">Adding Script Approvals Via JCASC</a></li>
-        <li><a href="#adding-shared-library-via-jcasc">Adding Shared Library Via JCASC</a></li>
-        <li><a href="#adding-seed-jobs-in-jcasc">Adding Seed Jobs In JCASC</a></li>
-      </ul>
-    </li>
-    <li><a href="#complete-jcasc">Complete JCASC</a></li>
-    <li><a href="#setup-new-jenkins-server-with-jcasc">Setup New Jenkins Server With JCASC</a>
-      <ul>
-        <li><a href="#download-the-jar-file-for-plugin-installation-manager">Download the jar file for plugin-installation-manager</a></li>
-        <li><a href="#stating-the-jenkins-server">Stating The Jenkins Server</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </nav>
-  
-
-  <div class="post-content">
-    <h2 id="what-is-jcasc">What Is JCASC</h2>
-<p>Jenkins Configurations As Code as the name says It&rsquo;s a configuration of the entire Jenkins Server in form of code ( yaml ).
-A Jenkins Server have lots of configuration like Jobs, Agent, Credentials, Script Approvals, Global Variables, Plugin Configurations, User, Role Management and Shared Library.</p>
-<h2 id="if-you-have-a-jenkins-server-running">If You Have A Jenkins Server Running</h2>
-<p><em>NOTE: Make sure Jenkins has Configuration as Code plugin installed</em>
-If you want to see the JCASC or YAML configuration of your Jenkins you can check the same by visiting <code>Manage Jenkins -&gt; Configuration as Code -&gt; View Configuration</code>.</p>
-<p>You can download the same by visiting <code>Manage Jenkins -&gt; Configuration as Code -&gt; Download Configuration</code>.</p>
-<p>Now you can apply new configurations from here <code>Manage Jenkins -&gt; Configuration as Code -&gt; Apply new configuration</code> ( This can be useful while debugging or checking some configurations before pushing the changes to production )</p>
-<h2 id="how-to-write-jcasc">How To Write JCASC</h2>
-<p>Here are a few examples of configuring things in jenkins via JCASC file.</p>
-<h3 id="adding-role-base-strategy-via-jcasc">Adding Role Base Strategy Via JCASC</h3>
-<p>In Jenkins there can be 100s of user now you can not make all of them admin so Jenkins has role base user management where you can give limited access to users based on the needs.</p>
-<p>How to use the same:</p>
-<pre tabindex="0"><code>  authorizationStrategy:
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Getting Started With Jenkins Configuration As Code · Kumar Vipin Yadav</title><meta name=description content="Let's Do it!"><script>(function(){try{var e=localStorage.getItem("pidev-theme")||"dark";document.documentElement.setAttribute("data-theme",e)}catch{}})()</script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel=stylesheet><link rel=stylesheet href=/css/style.css></head><body><div class=site-layout><header class=site-header><div class=header-container><button class=sidebar-toggle id=sidebar-toggle aria-label="Toggle navigation">
+<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<a href=/ class=site-title-mobile>Kumar Vipin Yadav</a><div class=header-actions><button type=button class=header-theme-toggle id=theme-toggle-mobile aria-label="Toggle light or dark theme">
+<svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+<svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button></div></div></header><aside class=sidebar id=sidebar><div class=sidebar-brand><a href=/ title="Kumar Vipin Yadav"><span class=brand-text><span class=brand-name>Kumar Vipin Yadav</span>
+<span class=sidebar-subtitle>Let's Do it!</span></span></a></div><nav class=sidebar-nav><ul class=nav-list><li class=nav-item><a href=/ class=nav-link title=Home><span class=nav-label>Home</span></a></li><li class=nav-item><a href=/python/ class=nav-link title=Python><span class=nav-label>Python</span></a></li><li class=nav-item><a href=/c/ class=nav-link title=C><span class=nav-label>C</span></a></li><li class=nav-item><a href=/go/ class=nav-link title=Go><span class=nav-label>Go</span></a></li><li class=nav-item><a href=/jenkins/ class=nav-link title=Jenkins><span class=nav-label>Jenkins</span></a></li><li class=nav-item><a href=/containers/ class=nav-link title=Containers><span class=nav-label>Containers</span></a></li><li class=nav-item><a href=/meetups/ class=nav-link title=Meetups><span class=nav-label>Meetups</span></a></li><li class=nav-item><a href=/random_stuff/ class=nav-link title="General Stuff"><span class=nav-label>General Stuff</span></a></li><li class=nav-item><a href=/about/ class=nav-link title=About><span class=nav-label>About</span></a></li></ul></nav><div class=sidebar-settings><button type=button class=setting-btn id=theme-toggle aria-label="Toggle light or dark theme" title="Toggle theme">
+<svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+<svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<span id=theme-toggle-label class=theme-label>Dark</span></button></div></aside><main class=main-content><div class=site-search id=site-search><label class=search-label for=search-input><svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span class=visually-hidden>Search posts</span>
+</label><input type=search id=search-input class=search-input placeholder="Search posts…" autocomplete=off spellcheck=false aria-controls=search-results aria-expanded=false><div class=search-results id=search-results role=listbox hidden></div></div><div class=content-wrapper><article class=post-single><header class=post-header><h1 class=post-title>Getting Started With Jenkins Configuration As Code</h1><div class=post-meta><time datetime=2024-05-05T00:00:00Z>May 5, 2024
+</time><span class=post-tags><span class=tag>#jenkins</span></span></div></header><nav class=post-toc><h2 class=toc-title>On this page</h2><nav id=TableOfContents><ul><li><a href=#what-is-jcasc>What Is JCASC</a></li><li><a href=#if-you-have-a-jenkins-server-running>If You Have A Jenkins Server Running</a></li><li><a href=#how-to-write-jcasc>How To Write JCASC</a><ul><li><a href=#adding-role-base-strategy-via-jcasc>Adding Role Base Strategy Via JCASC</a></li><li><a href=#adding-global-variables-via-jcasc>Adding Global Variables Via JCASC</a></li><li><a href=#adding-agent-via-jcasc>Adding Agent Via JCASC</a></li><li><a href=#adding-user-management-via-jcasc>Adding User Management Via JCASC</a></li><li><a href=#adding-update-center-via-jcasc>Adding Update Center Via JCASC</a></li><li><a href=#adding-credentials-via-jcasc>Adding Credentials Via JCASC</a></li><li><a href=#adding-script-approvals-via-jcasc>Adding Script Approvals Via JCASC</a></li><li><a href=#adding-shared-library-via-jcasc>Adding Shared Library Via JCASC</a></li><li><a href=#adding-seed-jobs-in-jcasc>Adding Seed Jobs In JCASC</a></li></ul></li><li><a href=#complete-jcasc>Complete JCASC</a></li><li><a href=#setup-new-jenkins-server-with-jcasc>Setup New Jenkins Server With JCASC</a><ul><li><a href=#download-the-jar-file-for-plugin-installation-manager>Download the jar file for plugin-installation-manager</a></li><li><a href=#stating-the-jenkins-server>Stating The Jenkins Server</a></li></ul></li></ul></nav></nav><div class=post-content><h2 id=what-is-jcasc>What Is JCASC</h2><p>Jenkins Configurations As Code as the name says It&rsquo;s a configuration of the entire Jenkins Server in form of code ( yaml ).
+A Jenkins Server have lots of configuration like Jobs, Agent, Credentials, Script Approvals, Global Variables, Plugin Configurations, User, Role Management and Shared Library.</p><h2 id=if-you-have-a-jenkins-server-running>If You Have A Jenkins Server Running</h2><p><em>NOTE: Make sure Jenkins has Configuration as Code plugin installed</em>
+If you want to see the JCASC or YAML configuration of your Jenkins you can check the same by visiting <code>Manage Jenkins -> Configuration as Code -> View Configuration</code>.</p><p>You can download the same by visiting <code>Manage Jenkins -> Configuration as Code -> Download Configuration</code>.</p><p>Now you can apply new configurations from here <code>Manage Jenkins -> Configuration as Code -> Apply new configuration</code> ( This can be useful while debugging or checking some configurations before pushing the changes to production )</p><h2 id=how-to-write-jcasc>How To Write JCASC</h2><p>Here are a few examples of configuring things in jenkins via JCASC file.</p><h3 id=adding-role-base-strategy-via-jcasc>Adding Role Base Strategy Via JCASC</h3><p>In Jenkins there can be 100s of user now you can not make all of them admin so Jenkins has role base user management where you can give limited access to users based on the needs.</p><p>How to use the same:</p><pre tabindex=0><code>  authorizationStrategy:
     roleBased:
       roles:
         global:
@@ -176,14 +21,12 @@ If you want to see the JCASC or YAML configuration of your Jenkins you can check
           name: &#34;admin&#34;
           permissions:
           - &#34;Overall/Administer&#34;
-</code></pre><h3 id="adding-global-variables-via-jcasc">Adding Global Variables Via JCASC</h3>
-<pre tabindex="0"><code>  globalNodeProperties:
+</code></pre><h3 id=adding-global-variables-via-jcasc>Adding Global Variables Via JCASC</h3><pre tabindex=0><code>  globalNodeProperties:
   - envVars:
       env:
       - key: &#34;ProductVersion&#34;
         value: &#34;1.1&#34;
-</code></pre><h3 id="adding-agent-via-jcasc">Adding Agent Via JCASC</h3>
-<pre tabindex="0"><code>nodes:
+</code></pre><h3 id=adding-agent-via-jcasc>Adding Agent Via JCASC</h3><pre tabindex=0><code>nodes:
   - permanent:
       labelString: &#34;test-agent&#34;
       launcher:
@@ -197,10 +40,7 @@ If you want to see the JCASC or YAML configuration of your Jenkins you can check
       numExecutors: 5
       remoteFS: &#34;/var/jenkins&#34;
       retentionStrategy: &#34;always&#34;
-</code></pre><h3 id="adding-user-management-via-jcasc">Adding User Management Via JCASC</h3>
-<p>This example is creating 2 users in Jenkins database if you want to use LDAP config check the example 2 and for SSO/SAML setup check Example 3.</p>
-<p>Example 1:</p>
-<pre tabindex="0"><code>  securityRealm:
+</code></pre><h3 id=adding-user-management-via-jcasc>Adding User Management Via JCASC</h3><p>This example is creating 2 users in Jenkins database if you want to use LDAP config check the example 2 and for SSO/SAML setup check Example 3.</p><p>Example 1:</p><pre tabindex=0><code>  securityRealm:
     local:
       users:
       - id: &#34;test&#34;
@@ -215,8 +55,7 @@ If you want to see the JCASC or YAML configuration of your Jenkins you can check
         properties:
           - mailer:
               emailAddress: &#34;abc@jenkins.com&#34;
-</code></pre><p>Example 2:</p>
-<pre tabindex="0"><code>ldap:
+</code></pre><p>Example 2:</p><pre tabindex=0><code>ldap:
       cache:
         size: 100
         ttl: 10
@@ -228,8 +67,7 @@ If you want to see the JCASC or YAML configuration of your Jenkins you can check
           groupSearchFilter: (&amp; (cn={0}) (objectclass=GroupOfUniqueNames))
       userIdStrategy: CaseInsensitive
       groupIdStrategy: CaseInsensitive
-</code></pre><p>Example 3:</p>
-<pre tabindex="0"><code>  saml:
+</code></pre><p>Example 3:</p><pre tabindex=0><code>  saml:
       binding: &#34;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect&#34;
       groupsAttributeName: &#34;Role&#34;
       emailAttributeName: &#34;email&#34;
@@ -248,8 +86,7 @@ If you want to see the JCASC or YAML configuration of your Jenkins you can check
         privateKeyAlias: saml-key
         forceSignRedirectBindingAuthnRequest: true
         wantsAssertionsSigned: true
-</code></pre><p>for SAML you have to add the SSO settings also:</p>
-<pre tabindex="0"><code>security:
+</code></pre><p>for SAML you have to add the SSO settings also:</p><pre tabindex=0><code>security:
   kerberosSso:
     enabled: true
     krb5Location: &#39;/etc/krb5.conf&#39;
@@ -262,13 +99,11 @@ If you want to see the JCASC or YAML configuration of your Jenkins you can check
     allowDelegation: false
     allowUnsecureBasic: true
     promptNtlm: false
-</code></pre><h3 id="adding-update-center-via-jcasc">Adding Update Center Via JCASC</h3>
-<pre tabindex="0"><code>  updateCenter:
+</code></pre><h3 id=adding-update-center-via-jcasc>Adding Update Center Via JCASC</h3><pre tabindex=0><code>  updateCenter:
     sites:
     - id: &#34;default&#34;
       url: &#34;https://updates.jenkins.io/update-center.json&#34;
-</code></pre><h3 id="adding-credentials-via-jcasc">Adding Credentials Via JCASC</h3>
-<pre tabindex="0"><code>credentials:
+</code></pre><h3 id=adding-credentials-via-jcasc>Adding Credentials Via JCASC</h3><pre tabindex=0><code>credentials:
   system:
     domainCredentials:
     - credentials:
@@ -279,14 +114,12 @@ If you want to see the JCASC or YAML configuration of your Jenkins you can check
           scope: GLOBAL
           username: &#34;root&#34;
           usernameSecret: true
-</code></pre><h3 id="adding-script-approvals-via-jcasc">Adding Script Approvals Via JCASC</h3>
-<pre tabindex="0"><code>security:
+</code></pre><h3 id=adding-script-approvals-via-jcasc>Adding Script Approvals Via JCASC</h3><pre tabindex=0><code>security:
   scriptApproval:
     approvedSignatures:
     - &#34;staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods putAt java.lang.Object\
       \ java.lang.String java.lang.Object&#34;
-</code></pre><h3 id="adding-shared-library-via-jcasc">Adding Shared Library Via JCASC</h3>
-<pre tabindex="0"><code>unclassified:
+</code></pre><h3 id=adding-shared-library-via-jcasc>Adding Shared Library Via JCASC</h3><pre tabindex=0><code>unclassified:
   globalLibraries:
     libraries:
     - defaultVersion: &#34;master&#34;
@@ -296,13 +129,9 @@ If you want to see the JCASC or YAML configuration of your Jenkins you can check
           scm:
             git:
               remote: &#34;https://github.com/lyfofvipin/jenkins_tutorials.git&#34;
-</code></pre><h3 id="adding-seed-jobs-in-jcasc">Adding Seed Jobs In JCASC</h3>
-<pre tabindex="0"><code>jobs:
+</code></pre><h3 id=adding-seed-jobs-in-jcasc>Adding Seed Jobs In JCASC</h3><pre tabindex=0><code>jobs:
   - url: https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jobs/seed_job.groovy
-</code></pre><p>All the above are most commonly used configs feel free to use the based on your requirements.</p>
-<h2 id="complete-jcasc">Complete JCASC</h2>
-<p>Here an complete JCASC configuration based on what we have learned in this lecture series.</p>
-<pre tabindex="0"><code>jenkins:
+</code></pre><p>All the above are most commonly used configs feel free to use the based on your requirements.</p><h2 id=complete-jcasc>Complete JCASC</h2><p>Here an complete JCASC configuration based on what we have learned in this lecture series.</p><pre tabindex=0><code>jenkins:
   systemMessage: &#34;This is a test JCASC Server for more check the playlist https://www.youtube.com/playlist?list=PL1qKudIXSmxp5KkZMDm2-c_K8Q2QU3VPM&#34;
 
   agentProtocols:
@@ -397,72 +226,8 @@ tool:
 
 jobs:
   - url: https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jobs/seed_job.groovy
-</code></pre><h2 id="setup-new-jenkins-server-with-jcasc">Setup New Jenkins Server With JCASC</h2>
-<p>Let&rsquo;s start a Jenkins instance with the <code>Configuration as Code</code> plugin installed we will be using the tool <a href="https://github.com/jenkinsci/plugin-installation-manager-tool">plugin-installation-manager-tool</a> but there are ways to do the same in rpm install method or on container method to setup Jenkins.</p>
-<p>The JCasC plugin searches for <code>CASC_JENKINS_CONFIG</code> in the system environment variable.</p>
-<ul>
-<li>You can pass the JCASC file PATH with this variable here file Name can be anything you want. Example: <code>CASC_JENKINS_CONFIG=&quot;/home/vipikuma/casc.yaml&quot;</code>. Or</li>
-<li>You can pass the URL of the YAML file in this variable. Example: <code>CASC_JENKINS_CONFIG=&quot;https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml&quot;</code></li>
-</ul>
-<h3 id="download-the-jar-file-for-plugin-installation-manager">Download the jar file for plugin-installation-manager</h3>
-<p>Visit  <a href="https://github.com/jenkinsci/plugin-installation-manager-tool/releases/latest">releases</a> of plugin-installation-manager and download the war file from there by the time I am writing this post the latest version is <code>2.12.17</code>.</p>
-<p><code>curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.17/jenkins-plugin-manager-2.12.17.jar</code></p>
-<p>and Download the latest Jenkins Version from <a href="https://get.jenkins.io/war-stable/latest">here</a>.</p>
-<p><code>curl -OL https://get.jenkins.io/war-stable/latest/jenkins.war</code></p>
-<h3 id="stating-the-jenkins-server">Stating The Jenkins Server</h3>
-<p>Setting the Jenkins Home directory</p>
-<p><code>export JENKINS_HOME=&quot;.jenkins&quot;</code></p>
-<p>Setting the CASC file to be used</p>
-<p><code>export CASC_JENKINS_CONFIG=&quot;https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml&quot;</code></p>
-<p>Download the plugins before starting the Jenkins Server</p>
-<p><code>java -jar jenkins-plugin-manager-*.jar --war jenkins.war --plugin-download-directory ${JENKINS_HOME}/plugins --plugins configuration-as-code job-dsl credentials git role-strategy pipeline-github-lib workflow-job ssh-slaves</code></p>
-<p>Validate installed plugin via command</p>
-<p><code>ls ${JENKINS_HOME}/plugins/</code>.</p>
-<p>Now Start Jenkins Server</p>
-<p><code>java -jar jenkins.war</code></p>
-<p>For more on the same checkout <a href="https://www.jenkins.io/doc/book/managing/casc/">Jenkins CASC</a></p>
-
-  </div>
-</article>
-
-        </div>
-      </main>
-    </div>
-    
-    <footer class="site-footer">
-  <div class="footer-container">
-    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
-    <div class="social-icons">
-      
-      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-      </a>
-      
-      
-      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-      </a>
-      
-      
-      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-      </a>
-      
-      
-      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-      </a>
-      
-      
-      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-      </a>
-      
-    </div>
-  </div>
-</footer>
-
-    
-    <script src="/js/main.js"></script>
-  </body>
-</html>
+</code></pre><h2 id=setup-new-jenkins-server-with-jcasc>Setup New Jenkins Server With JCASC</h2><p>Let&rsquo;s start a Jenkins instance with the <code>Configuration as Code</code> plugin installed we will be using the tool <a href=https://github.com/jenkinsci/plugin-installation-manager-tool>plugin-installation-manager-tool</a> but there are ways to do the same in rpm install method or on container method to setup Jenkins.</p><p>The JCasC plugin searches for <code>CASC_JENKINS_CONFIG</code> in the system environment variable.</p><ul><li>You can pass the JCASC file PATH with this variable here file Name can be anything you want. Example: <code>CASC_JENKINS_CONFIG="/home/vipikuma/casc.yaml"</code>. Or</li><li>You can pass the URL of the YAML file in this variable. Example: <code>CASC_JENKINS_CONFIG="https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml"</code></li></ul><h3 id=download-the-jar-file-for-plugin-installation-manager>Download the jar file for plugin-installation-manager</h3><p>Visit <a href=https://github.com/jenkinsci/plugin-installation-manager-tool/releases/latest>releases</a> of plugin-installation-manager and download the war file from there by the time I am writing this post the latest version is <code>2.12.17</code>.</p><p><code>curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.17/jenkins-plugin-manager-2.12.17.jar</code></p><p>and Download the latest Jenkins Version from <a href=https://get.jenkins.io/war-stable/latest>here</a>.</p><p><code>curl -OL https://get.jenkins.io/war-stable/latest/jenkins.war</code></p><h3 id=stating-the-jenkins-server>Stating The Jenkins Server</h3><p>Setting the Jenkins Home directory</p><p><code>export JENKINS_HOME=".jenkins"</code></p><p>Setting the CASC file to be used</p><p><code>export CASC_JENKINS_CONFIG="https://raw.githubusercontent.com/lyfofvipin/jenkins_tutorials/master/jcasc.yaml"</code></p><p>Download the plugins before starting the Jenkins Server</p><p><code>java -jar jenkins-plugin-manager-*.jar --war jenkins.war --plugin-download-directory ${JENKINS_HOME}/plugins --plugins configuration-as-code job-dsl credentials git role-strategy pipeline-github-lib workflow-job ssh-slaves</code></p><p>Validate installed plugin via command</p><p><code>ls ${JENKINS_HOME}/plugins/</code>.</p><p>Now Start Jenkins Server</p><p><code>java -jar jenkins.war</code></p><p>For more on the same checkout <a href=https://www.jenkins.io/doc/book/managing/casc/>Jenkins CASC</a></p></div></article></div></main></div><footer class=site-footer><div class=footer-container><p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p><div class=social-icons><a href=https://github.com/lyfofvipin target=_blank rel="noopener noreferrer" aria-label=GitHub><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
+</a><a href=https://twitter.com/lyfofvipin target=_blank rel="noopener noreferrer" aria-label=Twitter><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg>
+</a><a href=https://linkedin.com/in/lyfofvipin target=_blank rel="noopener noreferrer" aria-label=LinkedIn><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+</a><a href=https://t.me/lyfofvipin target=_blank rel="noopener noreferrer" aria-label=Telegram><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+</a><a href=https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ target=_blank rel="noopener noreferrer" aria-label=YouTube><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78.0 00-1.94-2C18.88 4 12 4 12 4s-6.88.0-8.6.46a2.78 2.78.0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78.0 003.4 19c1.72.46 8.6.46 8.6.46s6.88.0 8.6-.46a2.78 2.78.0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a></div></div></footer><script src=/js/main.js></script><script src=/js/search.js></script></body></html>

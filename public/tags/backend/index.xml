@@ -1,40 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Backend on Kumar Vipin Yadav</title>
-    <link>http://localhost:1313/tags/backend/</link>
-    <description>Recent content in Backend on Kumar Vipin Yadav</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/backend/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Architectural Deep Dive into Django vs Flask vs FastAPI</title>
-      <link>http://localhost:1313/baics-of-django/</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/baics-of-django/</guid>
-      <description>&lt;p&gt;Hello Everyone! Today we are looking at the heavy hitter of Python web frameworks: &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If Flask is a lightweight toolkit and FastAPI is a high-performance validation gate, Django is a fully functional web ecosystem. It operates under a &lt;strong&gt;&amp;ldquo;Batteries-Included&amp;rdquo;&lt;/strong&gt; philosophy, meaning it provides almost everything you need to build an enterprise application (such as authentication, database management, and administrative dashboards) out of the box without requiring third-party libraries.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s break down exactly how Django functions, map out how it stacks up against Flask and FastAPI, and build a complete application pipeline using modern Django architectural standards.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Basics Of FastAPI In Python</title>
-      <link>http://localhost:1313/basics-of-fastapi/</link>
-      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/basics-of-fastapi/</guid>
-      <description>&lt;h1 id=&#34;the-comprehensive-guide-to-modern-api-development-with-fastapi-and-sqlalchemy&#34;&gt;The Comprehensive Guide to Modern API Development with FastAPI and SQLAlchemy&lt;/h1&gt;&#xA;&lt;p&gt;Hello Everyone! Today we are shifting into modern backend design &lt;strong&gt;FastAPI&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;While Flask is an excellent synchronous framework, &lt;strong&gt;FastAPI&lt;/strong&gt; is a cutting-edge, high-performance web framework designed from the ground up for building production-ready APIs using modern Python features. It leverages asynchronous execution (&lt;code&gt;async&lt;/code&gt;/&lt;code&gt;await&lt;/code&gt;), automatic structural data validation via &lt;strong&gt;Pydantic&lt;/strong&gt;, and native documentation generation out of the box.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s break down how to rebuild our entire backend pipeline using FastAPI, exploring why it has become the standard for modern enterprise development.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>SQL vs. NoSQL Databases and Essential CRUD Commands</title>
-      <link>http://localhost:1313/basics-of-sql/</link>
-      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/basics-of-sql/</guid>
-      <description>&lt;h1 id=&#34;sql-vs-nosql-databases-and-essential-crud-commands&#34;&gt;SQL vs. NoSQL Databases and Essential CRUD Commands&lt;/h1&gt;&#xA;&lt;p&gt;Hello Everyone! Today we are expanding our data architecture module. When building web applications, choosing how your data is stored is one of the most critical structural decisions you will make.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s break down the two main categories of database systems: &lt;strong&gt;SQL (Relational)&lt;/strong&gt; and &lt;strong&gt;NoSQL (Non-Relational)&lt;/strong&gt;, and learn the native language commands used to manage them.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-sql-vs-nosql-the-core-differences&#34;&gt;1. SQL vs. NoSQL: The Core Differences&lt;/h2&gt;&#xA;&lt;p&gt;Every database fits into one of two major design paradigms based on how it structures its internal storage engine.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Basics Of Flask In Python</title>
-      <link>http://localhost:1313/baiscs-of-flask/</link>
-      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/baiscs-of-flask/</guid>
-      <description>&lt;h2 id=&#34;1-the-development-server-why-do-we-run-flask-run&#34;&gt;1. The Development Server: Why Do We Run &lt;code&gt;flask run&lt;/code&gt;?&lt;/h2&gt;&#xA;&lt;p&gt;When building a website, your Python script cannot talk directly to incoming web traffic out of the box. It needs a gateway module to listen to network ports.&lt;/p&gt;&#xA;&lt;p&gt;When you execute the terminal command &lt;code&gt;flask run&lt;/code&gt; (or invoke &lt;code&gt;app.run()&lt;/code&gt;), Flask initializes a built-in, local &lt;strong&gt;Development Web Server&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-happens-behind-the-scenes&#34;&gt;What Happens Behind the Scenes?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Port Binding:&lt;/strong&gt; The server occupies a specific software gateway on your machine—typically &lt;strong&gt;Port 5000&lt;/strong&gt; on your local loopback address (&lt;code&gt;127.0.0.1&lt;/code&gt; or &lt;code&gt;localhost&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;The Infinite Loop:&lt;/strong&gt; The server runs a continuous loop, monitoring that port. When a browser sends a request, the server intercepts the network packets and hands them over to your Python code.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hot Reloading / Debug Mode:&lt;/strong&gt; When debug mode is active, the server monitors your files. The instant you save a change, it restarts itself automatically, allowing you to see updates instantly without manual resets.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-http-methods-status-codes-and-routes&#34;&gt;2. HTTP Methods, Status Codes, and Routes&lt;/h2&gt;&#xA;&lt;p&gt;To process incoming traffic, your server needs to know &lt;em&gt;where&lt;/em&gt; a user is going and &lt;em&gt;what&lt;/em&gt; action they want to perform.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Backend on Kumar Vipin Yadav</title><link>https://lyfofvipin.github.io/tags/backend/</link><description>Recent content in Backend on Kumar Vipin Yadav</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://lyfofvipin.github.io/tags/backend/index.xml" rel="self" type="application/rss+xml"/><item><title>The Architectural Deep Dive into Django vs Flask vs FastAPI</title><link>https://lyfofvipin.github.io/baics-of-django/</link><pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/baics-of-django/</guid><description>&lt;p&gt;Hello Everyone! Today we are looking at the heavy hitter of Python web frameworks: &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If Flask is a lightweight toolkit and FastAPI is a high-performance validation gate, Django is a fully functional web ecosystem. It operates under a &lt;strong&gt;&amp;ldquo;Batteries-Included&amp;rdquo;&lt;/strong&gt; philosophy, meaning it provides almost everything you need to build an enterprise application (such as authentication, database management, and administrative dashboards) out of the box without requiring third-party libraries.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s break down exactly how Django functions, map out how it stacks up against Flask and FastAPI, and build a complete application pipeline using modern Django architectural standards.&lt;/p&gt;</description></item><item><title>Basics Of FastAPI In Python (SQLModel Edition)</title><link>https://lyfofvipin.github.io/basics-of-fastapi/</link><pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/basics-of-fastapi/</guid><description>&lt;h1 id="the-comprehensive-guide-to-modern-api-development-with-fastapi-and-sqlmodel"&gt;The Comprehensive Guide to Modern API Development with FastAPI and SQLModel&lt;/h1&gt;
+&lt;p&gt;Hello Everyone! Today we are shifting into modern backend design with &lt;strong&gt;FastAPI&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Instead of writing classic, verbose object-relational mappings, we are using &lt;strong&gt;SQLModel&lt;/strong&gt; to handle our data persistence. SQLModel is a cutting-edge library that unifies &lt;strong&gt;Pydantic&lt;/strong&gt; and &lt;strong&gt;SQLAlchemy&lt;/strong&gt; into a single data design tool. This means a single Python class acts as both your network validation gate and your physical database layout, eliminating redundant code entirely.&lt;/p&gt;</description></item><item><title>SQL vs. NoSQL Databases and Essential CRUD Commands</title><link>https://lyfofvipin.github.io/basics-of-sql/</link><pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/basics-of-sql/</guid><description>&lt;h1 id="sql-vs-nosql-databases-and-essential-crud-commands"&gt;SQL vs. NoSQL Databases and Essential CRUD Commands&lt;/h1&gt;
+&lt;p&gt;Hello Everyone! Today we are expanding our data architecture module. When building web applications, choosing how your data is stored is one of the most critical structural decisions you will make.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s break down the two main categories of database systems: &lt;strong&gt;SQL (Relational)&lt;/strong&gt; and &lt;strong&gt;NoSQL (Non-Relational)&lt;/strong&gt;, and learn the native language commands used to manage them.&lt;/p&gt;
+&lt;h2 id="1-sql-vs-nosql-the-core-differences"&gt;1. SQL vs. NoSQL: The Core Differences&lt;/h2&gt;
+&lt;p&gt;Every database fits into one of two major design paradigms based on how it structures its internal storage engine.&lt;/p&gt;</description></item><item><title>Basics Of Flask In Python</title><link>https://lyfofvipin.github.io/baiscs-of-flask/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate><guid>https://lyfofvipin.github.io/baiscs-of-flask/</guid><description>&lt;h2 id="1-the-development-server-why-do-we-run-flask-run"&gt;1. The Development Server: Why Do We Run &lt;code&gt;flask run&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;When building a website, your Python script cannot talk directly to incoming web traffic out of the box. It needs a gateway module to listen to network ports.&lt;/p&gt;
+&lt;p&gt;When you execute the terminal command &lt;code&gt;flask run&lt;/code&gt; (or invoke &lt;code&gt;app.run()&lt;/code&gt;), Flask initializes a built-in, local &lt;strong&gt;Development Web Server&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id="what-happens-behind-the-scenes"&gt;What Happens Behind the Scenes?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Port Binding:&lt;/strong&gt; The server occupies a specific software gateway on your machine—typically &lt;strong&gt;Port 5000&lt;/strong&gt; on your local loopback address (&lt;code&gt;127.0.0.1&lt;/code&gt; or &lt;code&gt;localhost&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Infinite Loop:&lt;/strong&gt; The server runs a continuous loop, monitoring that port. When a browser sends a request, the server intercepts the network packets and hands them over to your Python code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hot Reloading / Debug Mode:&lt;/strong&gt; When debug mode is active, the server monitors your files. The instant you save a change, it restarts itself automatically, allowing you to see updates instantly without manual resets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="2-http-methods-status-codes-and-routes"&gt;2. HTTP Methods, Status Codes, and Routes&lt;/h2&gt;
+&lt;p&gt;To process incoming traffic, your server needs to know &lt;em&gt;where&lt;/em&gt; a user is going and &lt;em&gt;what&lt;/em&gt; action they want to perform.&lt;/p&gt;</description></item></channel></rss>

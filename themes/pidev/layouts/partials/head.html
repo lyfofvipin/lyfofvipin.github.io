@@ -6,6 +6,15 @@
   {{ with .Site.Params.description }}
   <meta name="description" content="{{ . }}">
   {{ end }}
+
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('pidev-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

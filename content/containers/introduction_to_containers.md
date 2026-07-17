@@ -20,7 +20,7 @@ A container is a lightweight, portable, and self-sufficient software package tha
 Here let's say you have 3 kids at your home and if you are using VM like structure you have to give 3 rooms to them.
 But if you are using Containers like structure you can have a bunker bed and all 3 of them can have there own space and other rooms can be used for some other work.
 
-<img class="img_center" src="statics/img/podmandemo.png" alt="Virtual Machines (VMs) vs. Containers">
+<img class="img_center" src="/statics/img/podmandemo.png" alt="Virtual Machines (VMs) vs. Containers">
 
 ## Virtual Machines (VMs) vs. Containers
 

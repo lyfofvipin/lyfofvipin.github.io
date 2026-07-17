@@ -71,7 +71,7 @@ High-level languages provide a high level of abstraction from the hardware. They
 
 Compilers and interpreters are both tools that translate source code written in programming languages (like C, Java, or Python) into machine code or an intermediate form that a computer can execute. However, they do this in very different ways.
 
-<img class="img_center" src="statics/img/compiler_and_interpriter.png" alt="Compilers and Interpreter">
+<img class="img_center" src="/statics/img/compiler_and_interpriter.png" alt="Compilers and Interpreter">
 
 
 ## Compiler

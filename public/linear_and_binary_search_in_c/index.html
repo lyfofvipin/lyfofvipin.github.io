@@ -1,144 +1,19 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Linear And Binary Search In C · Kumar Vipin Yadav</title>
-  
-  
-  <meta name="description" content="Let&#39;s Do it!">
-  
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-  
-  
-  
-    <link rel="stylesheet" href="/css/style.css">
-  
-</head>
-
-  <body>
-    <div class="site-layout">
-      <header class="site-header">
-  <div class="header-container">
-    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
-    <a href="/" class="site-title-mobile">Kumar Vipin Yadav</a>
-  </div>
-</header>
-
-      <aside class="sidebar" id="sidebar">
-  <div class="sidebar-brand">
-    <a href="/">Kumar Vipin Yadav</a>
-    <span class="sidebar-subtitle">Let's Do it!</span>
-  </div>
-  
-  <nav class="sidebar-nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="/" class="nav-link">Home</a>
-      </li>
-      
-      
-      <li class="nav-item">
-        <a href="/python/" class="nav-link">
-          Python
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/c/" class="nav-link">
-          C
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/go/" class="nav-link">
-          Go
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/jenkins/" class="nav-link">
-          Jenkins
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/containers/" class="nav-link">
-          Containers
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/meetups/" class="nav-link">
-          Meetups
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/random_stuff/" class="nav-link">
-          General Stuff
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a href="/about/" class="nav-link">
-          About
-        </a>
-      </li>
-      
-    </ul>
-  </nav>
-</aside>
-
-      
-      <main class="main-content">
-        <div class="content-wrapper">
-          
-<article class="post-single">
-  <header class="post-header">
-    <h1 class="post-title">Linear And Binary Search In C</h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-07-26T00:00:00Z">
-        Jul 26, 2018
-      </time>
-      
-      <span class="post-tags">
-        
-        <span class="tag">#c</span>
-        
-      </span>
-      
-    </div>
-  </header>
-
-  
-  <nav class="post-toc">
-    <h2 class="toc-title">On this page</h2>
-    <nav id="TableOfContents"></nav>
-  </nav>
-  
-
-  <div class="post-content">
-    <p>Let&rsquo;s discuss about function with arrays:-</p>
-<p>When we pass an array to the function the target variable is the reference of passed array.
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Linear And Binary Search In C · Kumar Vipin Yadav</title><meta name=description content="Let's Do it!"><script>(function(){try{var e=localStorage.getItem("pidev-theme")||"dark";document.documentElement.setAttribute("data-theme",e)}catch{}})()</script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel=stylesheet><link rel=stylesheet href=/css/style.css></head><body><div class=site-layout><header class=site-header><div class=header-container><button class=sidebar-toggle id=sidebar-toggle aria-label="Toggle navigation">
+<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<a href=/ class=site-title-mobile>Kumar Vipin Yadav</a><div class=header-actions><button type=button class=header-theme-toggle id=theme-toggle-mobile aria-label="Toggle light or dark theme">
+<svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+<svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button></div></div></header><aside class=sidebar id=sidebar><div class=sidebar-brand><a href=/ title="Kumar Vipin Yadav"><span class=brand-text><span class=brand-name>Kumar Vipin Yadav</span>
+<span class=sidebar-subtitle>Let's Do it!</span></span></a></div><nav class=sidebar-nav><ul class=nav-list><li class=nav-item><a href=/ class=nav-link title=Home><span class=nav-label>Home</span></a></li><li class=nav-item><a href=/python/ class=nav-link title=Python><span class=nav-label>Python</span></a></li><li class=nav-item><a href=/c/ class=nav-link title=C><span class=nav-label>C</span></a></li><li class=nav-item><a href=/go/ class=nav-link title=Go><span class=nav-label>Go</span></a></li><li class=nav-item><a href=/jenkins/ class=nav-link title=Jenkins><span class=nav-label>Jenkins</span></a></li><li class=nav-item><a href=/containers/ class=nav-link title=Containers><span class=nav-label>Containers</span></a></li><li class=nav-item><a href=/meetups/ class=nav-link title=Meetups><span class=nav-label>Meetups</span></a></li><li class=nav-item><a href=/random_stuff/ class=nav-link title="General Stuff"><span class=nav-label>General Stuff</span></a></li><li class=nav-item><a href=/about/ class=nav-link title=About><span class=nav-label>About</span></a></li></ul></nav><div class=sidebar-settings><button type=button class=setting-btn id=theme-toggle aria-label="Toggle light or dark theme" title="Toggle theme">
+<svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+<svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<span id=theme-toggle-label class=theme-label>Dark</span></button></div></aside><main class=main-content><div class=site-search id=site-search><label class=search-label for=search-input><svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span class=visually-hidden>Search posts</span>
+</label><input type=search id=search-input class=search-input placeholder="Search posts…" autocomplete=off spellcheck=false aria-controls=search-results aria-expanded=false><div class=search-results id=search-results role=listbox hidden></div></div><div class=content-wrapper><article class=post-single><header class=post-header><h1 class=post-title>Linear And Binary Search In C</h1><div class=post-meta><time datetime=2018-07-26T00:00:00Z>Jul 26, 2018
+</time><span class=post-tags><span class=tag>#c</span></span></div></header><div class=post-content><p>Let&rsquo;s discuss about function with arrays:-</p><p>When we pass an array to the function the target variable is the reference of passed array.
 So that any operation on the reference variable will be performed It will directly affect
 the original value of the variable.
-Let&rsquo;s discuss with help of some example.</p>
-<ol>
-<li>Let&rsquo;s take two array and print there sum using a function.</li>
-</ol>
-<p><a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/sum-of-2-array-in-3rd-using-function.c"><mark>sum</mark>-of-2-array-in-3rd-using-function.c</a></p>
-<pre tabindex="0"><code>    int main()
+Let&rsquo;s discuss with help of some example.</p><ol><li>Let&rsquo;s take two array and print there sum using a function.</li></ol><p><a class="css-truncate-target js-navigation-open js-tree-finder-path" href=https://github.com/lyfofvipin/PROGRSMMING/blob/master/sum-of-2-array-in-3rd-using-function.c><mark>sum</mark>-of-2-array-in-3rd-using-function.c</a></p><pre tabindex=0><code>    int main()
     {
         int a[] = {1,2,3,4,5};
         int b[] = {1,2,3,4,5};
@@ -162,17 +37,9 @@ Let&rsquo;s discuss with help of some example.</p>
         for( i = 0 ; i &lt; 5 ; i++ )
             z[i] = x[i]+y[i];
     }
-</code></pre><p>Output:-</p>
-<pre tabindex="0"><code>2  4  6  8  10
-</code></pre><p>In above program <code> x </code>,<code> y </code> and <code> z </code> are reference of <code> a </code> and <code> b </code>
-and <code> c </code>
-respectively. so as we change value of <code> z </code> in sum function same changes will take place
-in <code> c </code> also.</p>
-<ol start="2">
-<li>Let&rsquo;s copy an array into other using function.</li>
-</ol>
-<p><a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/array-copy-function.c">array-<mark>copy</mark>-function.c</a></p>
-<pre tabindex="0"><code>    int main()
+</code></pre><p>Output:-</p><pre tabindex=0><code>2  4  6  8  10
+</code></pre><p>In above program <code>x </code>,<code> y </code>and <code>z </code>are reference of <code>a </code>and <code>b </code>and <code>c </code>respectively. so as we change value of <code>z </code>in sum function same changes will take place
+in <code>c </code>also.</p><ol start=2><li>Let&rsquo;s copy an array into other using function.</li></ol><p><a class="css-truncate-target js-navigation-open js-tree-finder-path" href=https://github.com/lyfofvipin/PROGRSMMING/blob/master/array-copy-function.c>array-<mark>copy</mark>-function.c</a></p><pre tabindex=0><code>    int main()
     {
         int a[] = {1,2,3,4,5};
         int b[5],i;
@@ -195,16 +62,11 @@ in <code> c </code> also.</p>
         for( i = 0 ; i &lt;span id=&#34;mce_SELREST_start&#34; style=&#34;overflow:hidden;line-height:0;&#34;&gt;&amp;#65279;&lt;/span&gt;&lt; 5 ; i++ )
             y[i] = x[i];
     }
-</code></pre><p>Output:-</p>
-<pre tabindex="0"><code>1  2  3  4  5
-</code></pre><p>In above program we will take values from <code> x </code> and store them in <code> y </code> and,
-as a result value will stored in <code> b </code>.</p>
-<h2>Linear search:-</h2>
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/Linear-search.c"><mark>Lin</mark>ear-search.c</a>
-<p>The following code implements linear search (Searching algorithm) which is used to find whether,
+</code></pre><p>Output:-</p><pre tabindex=0><code>1  2  3  4  5
+</code></pre><p>In above program we will take values from <code>x </code>and store them in <code>y </code>and,
+as a result value will stored in <code>b </code>.</p><h2>Linear search:-</h2><a class="css-truncate-target js-navigation-open js-tree-finder-path" href=https://github.com/lyfofvipin/PROGRSMMING/blob/master/Linear-search.c><mark>Lin</mark>ear-search.c</a><p>The following code implements linear search (Searching algorithm) which is used to find whether,
 a given number is present in an array and if it is present then at what location it occurs.
-If you give duplicate value then it will return first occurrence of element.</p>
-<pre tabindex="0"><code>#include&lt;stdio.h&gt;
+If you give duplicate value then it will return first occurrence of element.</p><pre tabindex=0><code>#include&lt;stdio.h&gt;
 int main()
 {
     int a[5], i, c , b = -1;
@@ -238,8 +100,7 @@ int search (int a[] , int b )
             return i;
     }
 }
-</code></pre><p>Output:-</p>
-<pre tabindex="0"><code>Enter your array :
+</code></pre><p>Output:-</p><pre tabindex=0><code>Enter your array :
 Enter a number :23
 Enter a number :45
 Enter a number :56
@@ -249,13 +110,9 @@ Enter a number u want to search :34
 Element is present in array at 3.
 </code></pre><p>In our this Linear search program we have taken an array as input and find a number in that.
 we check each element and if any element match our entered value then we return it&rsquo;s index value,
-and print it, else we return nothing It means there is not such kind of value exist.</p>
-<h2>Binary Search:-</h2>
-<a class="css-truncate-target js-navigation-open js-tree-finder-path" href="https://github.com/lyfofvipin/PROGRSMMING/blob/master/Binary-search.c"><mark>Bin</mark>ary-search.c</a>
-<p>This code implements binary search in C language.
+and print it, else we return nothing It means there is not such kind of value exist.</p><h2>Binary Search:-</h2><a class="css-truncate-target js-navigation-open js-tree-finder-path" href=https://github.com/lyfofvipin/PROGRSMMING/blob/master/Binary-search.c><mark>Bin</mark>ary-search.c</a><p>This code implements binary search in C language.
 It can only be used for sorted arrays, but it&rsquo;s fast as compared to linear search.
-If you wish to use binary search on an array which isn&rsquo;t sorted, then you must sort it using some sorting technique say merge sort and then use the binary search algorithm to find the desired. Element in the list. If the element to be searched is found then its position is printed.</p>
-<pre tabindex="0"><code>#include&lt;stdio.h&gt;
+If you wish to use binary search on an array which isn&rsquo;t sorted, then you must sort it using some sorting technique say merge sort and then use the binary search algorithm to find the desired. Element in the list. If the element to be searched is found then its position is printed.</p><pre tabindex=0><code>#include&lt;stdio.h&gt;
 int main()
 {
     int a[5],i,b,c = -1;
@@ -293,8 +150,7 @@ int search(int a[],int b,int h)
         }
     return 0;
 }
-</code></pre><p>Output:-</p>
-<pre tabindex="0"><code>Enter your array : 
+</code></pre><p>Output:-</p><pre tabindex=0><code>Enter your array : 
 Enter a number :1
 Enter a number :2
 Enter a number :3
@@ -306,54 +162,12 @@ Element is present in array.
 then we return 0 and loop will stop and if element is not on mid position of array then we check,
 is our element less or greater then the mid then we find value between mid and the last position,
 of array or in between first and mid position of array respectively.
-and if mid position cross the last position and we can&rsquo;t find our element then we</p>
-<p>return 0,
-and stop loop.</p>
-<pre tabindex="0"><code> NOTE : Data must be sorted If we use binary search for searching an item in a array.```
+and if mid position cross the last position and we can&rsquo;t find our element then we</p><p>return 0,
+and stop loop.</p><pre tabindex=0><code> NOTE : Data must be sorted If we use binary search for searching an item in a array.```
  
 We will read about sorting algorithms in next blog post.
-</code></pre>
-  </div>
-</article>
-
-        </div>
-      </main>
-    </div>
-    
-    <footer class="site-footer">
-  <div class="footer-container">
-    <p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p>
-    <div class="social-icons">
-      
-      <a href="https://github.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-      </a>
-      
-      
-      <a href="https://twitter.com/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-      </a>
-      
-      
-      <a href="https://linkedin.com/in/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-      </a>
-      
-      
-      <a href="https://t.me/lyfofvipin" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-      </a>
-      
-      
-      <a href="https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-      </a>
-      
-    </div>
-  </div>
-</footer>
-
-    
-    <script src="/js/main.js"></script>
-  </body>
-</html>
+</code></pre></div></article></div></main></div><footer class=site-footer><div class=footer-container><p>&copy; 2026 Kumar Vipin Yadav. All rights reserved.</p><div class=social-icons><a href=https://github.com/lyfofvipin target=_blank rel="noopener noreferrer" aria-label=GitHub><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
+</a><a href=https://twitter.com/lyfofvipin target=_blank rel="noopener noreferrer" aria-label=Twitter><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg>
+</a><a href=https://linkedin.com/in/lyfofvipin target=_blank rel="noopener noreferrer" aria-label=LinkedIn><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+</a><a href=https://t.me/lyfofvipin target=_blank rel="noopener noreferrer" aria-label=Telegram><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+</a><a href=https://www.youtube.com/channel/UCogjiQoMtBFOI-jT9y_hQSQ target=_blank rel="noopener noreferrer" aria-label=YouTube><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78.0 00-1.94-2C18.88 4 12 4 12 4s-6.88.0-8.6.46a2.78 2.78.0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78.0 003.4 19c1.72.46 8.6.46 8.6.46s6.88.0 8.6-.46a2.78 2.78.0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a></div></div></footer><script src=/js/main.js></script><script src=/js/search.js></script></body></html>
