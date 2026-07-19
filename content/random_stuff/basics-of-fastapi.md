@@ -67,7 +67,7 @@ app = FastAPI()
 def read_item(item_id: int):
     # FastAPI automatically throws a clean '422 Unprocessable Entity' error 
     # if a user tries to send a string like "/items/abc" instead of an integer.
-    return {"item_id": item_id, "type": type(item_id).__name__}
+    return {"item_id": item_id, "type": str(type(item_id))}
 
 # 2. Query Parameters (Extracted automatically from URL query strings)
 @app.get("/search")
@@ -105,7 +105,7 @@ Here is how to capture both JSON and Form inputs side-by-side:
 
 ```python
 from fastapi import FastAPI, Form
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -179,6 +179,10 @@ def fetch_all_users(db: Session = Depends(get_db_session)):
 
 For modern APIs, FastAPI shifts away from legacy stateful tracking to a stateless **JWT (JSON Web Token)** architecture.
 
+Session Cookies (Stateful): The server is the "source of truth." It creates a session in a database or cache (like Redis) and gives the client a random ID string (the cookie). Every request requires the server to look up this ID to see who the user is.
+
+Stateless JWTs: The token itself is the "source of truth." The server encrypts user data into a string, signs it with a secret key, and hands it to the client. The server doesn't store anything; it just validates the signature on subsequent requests.
+
 ### Why Use JWT Over Server Sessions?
 
 * **Stateless Scaling:** In a stateless setup, the server does not save any session tokens in its memory. Instead, once a user logs in, the server generates a signed cryptographic token called a JWT and hands it to the browser.
@@ -194,7 +198,8 @@ Let's build a secure authentication pipeline using JWT tokens. To make this work
 from datetime import datetime, timedelta
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from jose import jwt, JWTError
+import jwt
+from jwt.exceptions import InvalidTokenError
 
 app = FastAPI()
 
@@ -215,24 +220,18 @@ def create_access_token(data: dict):
 
 # --- MIDDLEWARE AUTHENTICATION GATE DEPENDENCY ---
 async def get_current_user_gate(token: str = Depends(oauth2_scheme)):
-    credentials_exception = HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Could not validate signature credentials. Please log in again.",
-        headers={"WWW-Authenticate": "Bearer"},
-    )
     try:
         # Decode the cryptographically signed JWT token payload
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         username: str = payload.get("sub")
         role: str = payload.get("role")
         if username is None:
-            raise credentials_exception
+            raise Exception("Login Error", "Please Enter Valid Username Or Password.")            
         return {"username": username, "role": role}
-    except JWTError:
-        raise credentials_exception
+    except InvalidTokenError:  # Replaced JWTError with PyJWT's exception
+        raise Exception("Login Error", "Please Enter Valid Username Or Password.")
 
 # --- ROUTES ---
-
 @app.post("/token")
 def authenticate_user(form_data: OAuth2PasswordRequestForm = Depends()):
     # Simulated database validation check
@@ -240,7 +239,7 @@ def authenticate_user(form_data: OAuth2PasswordRequestForm = Depends()):
         # Generate token payload containing identity markers and authorization roles
         token = create_access_token(data={"sub": form_data.username, "role": "admin"})
         return {"access_token": token, "token_type": "bearer"}
-    
+
     raise HTTPException(status_code=400, detail="Incorrect username or password configuration.")
 
 @app.get("/admin/panel")
@@ -250,8 +249,7 @@ def view_admin_panel(current_user: dict = Depends(get_current_user_gate)):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN, 
             detail="Access Denied: You do not have sufficient authorization privileges."
-        )
-        
+        )        
     return {"message": f"Welcome back Administrator {current_user['username']}! Opening control systems..."}
 
 ```
