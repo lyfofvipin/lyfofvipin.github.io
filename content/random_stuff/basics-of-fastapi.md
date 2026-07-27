@@ -51,6 +51,18 @@ def health_check():
 
 ```
 
+Or the same can be done by response module
+```python
+from fastapi import FastAPI, status, Response
+
+app = FastAPI()
+
+@app.get("/health")
+def health_check(response: Response):
+    response.status_code = status.HTTP_401_UNAUTHORIZED
+    return {"status": "operational", "message": "Server is running smoothly."}
+```
+
 ---
 
 ## 3. Advanced Dynamic Routing and Data Extraction
@@ -74,7 +86,6 @@ def read_item(item_id: int):
 def search_database(q: str = None, limit: int = 10):
     # Matches URLs like: /search?q=python&limit=5
     return {"query": q, "limit": limit}
-
 ```
 
 ---
