@@ -1,3 +1,11 @@
+---
+date: '2026-03-03'
+tags:
+- python
+- multithreading
+- beginners
+title: Multithreading in Python
+
 # Real-World Magic: 4 Simple Uses of Multithreading in Everyday Software
 
 If you've ever used an app that stayed responsive while downloading a massive file, or watched a video game stream smoothly while background music plays, you’ve experienced **multithreading**.
