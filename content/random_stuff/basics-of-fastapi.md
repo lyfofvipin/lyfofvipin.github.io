@@ -230,7 +230,7 @@ def create_access_token(data: dict):
     return jwt.encode(payload_to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
 # --- MIDDLEWARE AUTHENTICATION GATE DEPENDENCY ---
-async def get_current_user_gate(token: str = Depends(oauth2_scheme)):
+def get_current_user_gate(token: str = Depends(oauth2_scheme)):
     try:
         # Decode the cryptographically signed JWT token payload
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
@@ -267,7 +267,93 @@ def view_admin_panel(current_user: dict = Depends(get_current_user_gate)):
 
 ---
 
-## 9. Automatic Interactive Documentation (Swagger UI)
+## 9. File Management: Uploading, Processing & Downloading Files
+
+FastAPI makes handling binary files, media uploads, and file downloads straightforward using `UploadFile`, `File`, and standard response types like `FileResponse`.
+
+```python
+import os
+from fastapi import FastAPI, File, UploadFile, HTTPException, status
+from fastapi.responses import FileResponse
+
+app = FastAPI()
+
+# Directory configuration for file storage
+UPLOAD_DIR = "uploaded_files"
+
+# Ensure the upload directory exists
+if not os.path.exists(UPLOAD_DIR):
+    os.makedirs(UPLOAD_DIR)
+
+# --- 1. SINGLE FILE UPLOADING ---
+@app.post("/upload/single-file")
+async def upload_single_file(file: UploadFile = File(...)):
+
+    destination_file_path = os.path.join(UPLOAD_DIR, file.filename)
+
+    # Read binary bytes from upload stream
+    content = await file.read()
+
+    # Save to local disk using standard open()
+    with open(destination_file_path, "wb") as buffer:
+        buffer.write(content)
+
+    return {
+        "filename": file.filename,
+        "message": "File uploaded successfully!"
+    }
+
+
+# --- 2. MULTIPLE FILES UPLOADING ---
+@app.post("/upload/multiple-files", status_code=status.HTTP_201_CREATED)
+async def upload_multiple_files(files: list[UploadFile] = File(...)):
+    """
+    Accepts an array of files via multipart/form-data.
+    """
+    saved_files = []
+
+    for file in files:
+        destination_path = os.path.join(UPLOAD_DIR, file.filename)
+        content = await file.read()
+        
+        with open(destination_path, "wb") as buffer:
+            buffer.write(content)
+            
+        saved_files.append(file.filename)
+
+    return {
+        "uploaded_count": len(saved_files),
+        "filenames": saved_files,
+        "message": "All files uploaded successfully!"
+    }
+
+
+# --- 3. FILE DOWNLOADING (FileResponse) ---
+@app.get("/download/{filename}")
+def download_file(filename: str):
+    """
+    Downloads a requested file from server storage.
+    Uses FileResponse to send the file directly to the client.
+    """
+    file_path = os.path.join(UPLOAD_DIR, filename)
+
+    # Verify file existence on disk
+    if not os.path.isfile(file_path):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, 
+            detail="Requested file does not exist on the server."
+        )
+
+    return FileResponse(
+        path=file_path,
+        filename=filename,
+        media_type="application/octet-stream"
+    )
+```
+
+---
+
+## 10. Automatic Interactive Documentation (Swagger UI)
 
 One of the most useful out-of-the-box features of FastAPI is its automatic interactive documentation.
 
