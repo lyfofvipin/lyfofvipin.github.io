@@ -5,6 +5,7 @@ tags:
 - multithreading
 - beginners
 title: Multithreading in Python
+---
 
 # Real-World Magic: 4 Simple Uses of Multithreading in Everyday Software
 
