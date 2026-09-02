@@ -4,21 +4,25 @@ tags:
 - random_stuff
 title: Basics On Web Development
 ---
+
 ## 1. Networks, the Internet, and How It Works
 
 To understand the web, we first have to understand the physical highway it rides on.
 
 ### What is a Network?
 
-A **Network** is simply a collection of two or more computers or devices linked together so they can share resources, files, and communicate with each other.
+A **Network** is simply a collection of two or more computers or devices linked together so they can communicate with each other.
 
 ### What is the Internet?
 
 The **Internet** is literally an internetwork—a global network of millions of smaller networks connected together. It is a massive, physical infrastructure consisting of underground wires, fiber-optic cables running across ocean floors, satellites, and routers.
 
+You can check this website for these wires connecting continents and countries:
+https://www.submarinecablemap.com
+
 ### How Does It Work?
 
-Every device connected to the internet is assigned a unique identifier called an **IP Address** (Internet Protocol Address), which looks like a string of numbers (e.g., `192.168.1.1`). Think of an IP address as a digital mailing address. When two computers communicate over the internet, they find each other using these precise numerical addresses.
+Every device connected to the internet is assigned a unique identifier called an **IP Address** (Internet Protocol Address), which looks like a long numbers (e.g., `192.168.1.1`). Think of an IP address as a address given to a computer or to any device so that each devise should know who to send data or like from whom it can request data.
 
 ---
 
@@ -32,30 +36,35 @@ The **Client** is the device or application requesting information. When you loo
 
 ### What is a Server?
 
-A **Server** is a high-powered computer that runs 24/7, waiting to "serve" up data, files, or images to any client that asks for them.
+A **Server** is a computer that runs 24/7, waiting to "serve" data, files, or images to any client that asks for them, Or you can make your systems as a local servers to test thing or to build apps that later can be deployed on any main server.
 
 ### What is a Web Server?
 
-While a "server" can refer to the physical machine, a **Web Server** is specific software (like Apache or Nginx) running on that machine. Its sole job is to understand incoming web requests and deliver the correct files (HTML, CSS, JavaScript, images) back to the client's browser.
+While a "server" can refer to any machine, a **Web Server** is specific software (like Apache, Nginx or some language's local http servers) running on that machine. Its sole job is to understand incoming web requests and deliver the correct files (HTML, CSS, JavaScript, images) back to the client.
 
+Try creating a python webserver via command:
+
+```bash
+python -m http.server
+```
 ---
 
-## 3. Packets and How Data Travels
+## 3. How Data Travel On Internet
 
-Data on the internet doesn't travel as one giant file. If you try to download a massive high-definition video all at once, it would clog the network lines.
+Data on the internet doesn't travel as one giant file. If you try to download a massive high-definition video all at once, it would take a lot of resources at once and that is not good.
 
 ### What is a Packet?
 
-To solve this, files are chopped up into thousands of tiny, bite-sized pieces called **Packets**. Each packet contains:
+To solve this, files are cut into thousands of tiny, bite-sized pieces called **Packets**. Each packet contains:
 
-* A chunk of the actual data payload.
-* A header containing metadata (the sender's IP address, the destination's IP address, and the packet's sequence number).
+* A actual data payload.
+* A header containing metadata (the sender's address, the destination's address, and the packet's sequence number).
 
 ### How Data Travels
 
-When you click a link, the server splits the webpage data into packets. These packets are sent across the internet via devices called **Routers**.
+When you click a link, the server splits the webpage data into packets. These packets are sent across the internet via **Routers**.
 
-Routers act like traffic cops, directing each packet along the fastest available path. Because network traffic changes rapidly, individual packets belonging to the exact same file might take completely different routes across the globe. Once all the packets arrive at your browser, they look at the sequence numbers in the headers and reassemble themselves back into the complete webpage you see on your screen.
+Routers act like traffic police, directing each packet along the fastest available path. Because network traffic changes rapidly, individual packets belonging to the exact same file might take completely different routes across the globe. Once all the packets arrive at your client/(browser mostly), they look at the sequence numbers in the headers and arrange themselves back into the complete webpage you see on your screen.
 
 ---
 
@@ -64,7 +73,8 @@ Routers act like traffic cops, directing each packet along the fastest available
 Beginners frequently confuse these two terms, but they play completely different roles in your web experience.
 
 * **Web Browser:** A software application installed locally on your device (e.g., Google Chrome, Safari, Firefox) used to display websites. It takes the code (HTML/CSS) sent by a server and translates it into a visual webpage you can interact with.
-* **Search Engine:** A website inside the browser (e.g., Google, Bing, DuckDuckGo) used to find other websites. Search engines use automated bots called "crawlers" to map out the web and create a searchable index of pages.
+
+* **Search Engine:** A website inside the browser (e.g., Google, Bing, DuckDuckGo) used to find other websites. Search engines use bots called "crawlers" to see the map of the web and create a searchable index of pages like we have index in books.
 
 ---
 
@@ -74,7 +84,7 @@ Computers love numbers, but humans love words. It's much easier to remember `goo
 
 ### What is a Domain?
 
-A **Domain Name** is the human-readable text string we type into a browser to visit a website (e.g., `wikipedia.org`).
+A **Domain Name** is the human-readable text string we type into a browser to visit a website (e.g., `https://lyfofvipin.github.io`).
 
 ### What is DNS (Domain Name System)?
 
